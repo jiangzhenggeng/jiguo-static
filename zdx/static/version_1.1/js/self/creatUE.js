@@ -1,0 +1,1 @@
+define(["jquery","ueditor"],function(a,b){function c(a){var c=b.getEditor(a,{serverUrl:window.FILE_UPLOAD_URL});return c.addListener("beforepaste",function(a,b){b.html&&(b.html=b.html.replace(/<img[^>](\/>|>)/ig,""))}),c}return{init:c}})

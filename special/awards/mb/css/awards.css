@@ -1,0 +1,722 @@
+@charset "utf-8";
+/*公共重置样式*/
+*{padding:0;margin:0;}
+html,body{
+	font-family: "HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+li{
+	list-style: none;
+}
+.common{
+	width: 100%;
+}
+
+.header{
+	box-sizing: border-box;
+	width: 100%;
+	height: 12.94rem;
+	padding-top: 1.2rem;
+	background: url(../images/header_bg.png) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.nav{
+	height: 1.2rem;
+	background-color: #030611;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	font-size: 0.22rem;
+	color: #fff;
+	padding: 0 0.35rem;
+	z-index: 20;
+}
+.gticLogo{
+	width: 160px;
+	height: 100%;
+	background: url(../images/titleLogo.png) no-repeat;
+	background-size: 100% auto;
+	background-position: left center;
+}
+.menu{
+	width: .46rem;
+	height: .34rem;
+	background: url(../images/menu.png) no-repeat;
+	background-size: 100% 100%;
+}
+.closeMenu{
+	width: .4rem;
+	height: .4rem;
+	background: url(../images/close.png) no-repeat;
+	background-size: 100% 100%;
+}
+.header_awards{
+	width: 85px;
+	height: 85px;
+	margin: 20px auto 0;
+	text-align: center;
+}
+@media screen and (min-width: 345px) {
+	.header_awards{
+		width: 110px;
+		height: 110px;
+		margin: 20px auto 0;
+	}
+}
+@media screen and (min-width: 370px) {
+	.header_awards{
+		width: 130px;
+		height: 130px;
+		margin: 20px auto 0;
+	}
+}
+@media screen and (min-width: 400px) {
+	.header_awards{
+		width: 150px;
+		height: 150px;
+		margin: 30px auto 0;
+	}
+}
+
+.header_awards img{
+	width: 100%;
+	height: auto;
+}
+.texture{
+	margin: 15px auto 0;
+	width: 6.8rem;
+	height: 3.36rem;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+	opacity: 0.6;
+	line-height: 18px;
+}
+.signUpType{
+	width: 4.76rem;
+	display: flex;
+	-webkit-display: -webkit-box;
+	justify-content: space-between;
+
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	margin-left: -2.38rem;
+
+}
+.signUpType a{
+	box-sizing: border-box;
+	width: 2.2rem;
+	height: 30px;
+	line-height: 30px;
+	background-color: transparent;
+	text-align: center;
+	font-weight: 300;
+	font-size: 0.24rem;
+	color: #fff;
+	box-shadow: 0 0 1px #FFFFFF;
+	border-radius: 0;
+}
+.signUpType a.on{
+	background-color: #305FF1;
+	box-shadow: 0 0 1px #305FF1;
+}
+.next{
+	width: 0.2rem;
+	height: 0.2rem;
+	background: url(../images/next.png) no-repeat;
+	background-size: 100% auto;
+	-webkit-animation:jump 1s linear infinite;
+	-moz-animation: jump 1s linear infinite;
+	animation:jump 1s linear infinite;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -0.1rem;
+}
+@-webkit-keyframes jump{
+	0%{transform: translateY(0);}
+	50%{transform: translateY(-8px);}
+	100%{transform: translateY(0);}
+}
+@-moz-keyframes jump{
+	0%{transform: translateY(0);}
+	50%{transform: translateY(-8px);}
+	100%{transform: translateY(0);}
+}
+@keyframes jump{
+	0%{transform: translateY(0);}
+	50%{transform: translateY(-8px);}
+	100%{transform: translateY(0);}
+}
+/*奖项类型*/
+.awardsType{
+	position: relative;
+}
+.awardsType ul{
+	width: 100%;
+	height: 5rem;
+}
+.awardsType ul li{
+	width: 50%;
+	height: 100%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.awardsType ul:first-of-type li:first-of-type{
+	background: url(../images/biange.png) no-repeat;
+	background-size: auto 105%;
+}
+.awardsType ul:first-of-type li:nth-of-type(2){
+	background: url(../images/gongye.png) no-repeat center center;
+	background-size: auto 112%;
+}
+.awardsType ul:nth-of-type(2) li:nth-of-type(1){
+	background: url(../images/chuangxin.png) no-repeat;
+	background-size: auto 105%;
+}
+.awardsType ul:nth-of-type(2) li:nth-of-type(2){
+	background: url(../images/xinrui.png) no-repeat;
+	background-size: auto 105%;
+}
+.awardsType ul:last-of-type li:nth-of-type(1){
+	background: url(../images/shangye.png) no-repeat;
+	background-size: auto 105%;
+}
+.awardsType ul:last-of-type li:nth-of-type(2){
+	background: url(../images/chuangye.png) no-repeat;
+	background-size: auto 105%;
+}
+.awardsType ul li div{
+	width: 1.3rem;
+	min-width: 85px;
+}
+.awardsType ul li div img{
+	display: block;
+	width: 60px;
+	height: auto;
+	margin:0 auto;
+}
+.awardsType .awardsName{
+	display: block;
+	width: 100%;
+	margin-top: 0.162rem;
+	font-size: 0.18rem;
+	color: #ffffff;
+	text-align: center;
+}
+/*报名参评详细内容*/
+.awardsIntro{
+	width: 100%;
+	height: 13.34rem;
+	position: absolute;
+	background-color: #5077f2;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: none;
+	flex-wrap: wrap;
+	z-index: 999;
+	justify-content: center;
+	align-content: space-between;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+.awardsIntro>div{
+	width: 90%;
+	height: 33.3333%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.awardsIntroTop{
+	border-bottom: 1px solid #264fd1;
+}
+.awardsIntroTop>dl{
+	width: 2.7rem;
+	height: 2.95rem;
+}
+.awardsIntroTop dl dt,.awardsIntroTop dl dt img{
+	width:2.596rem;
+	height: 2.241rem;
+}
+.awardsIntroTop dl dt{
+	margin: 0 auto;
+}
+.awardsIntroTop dl dd{
+	font-size: .36rem;
+	line-height: .5rem;
+	color: #fff;
+	text-align: center;
+}
+.awardsIntroMid{
+	color: #fff;
+	font-size: 14px;
+	line-height:22px;
+	text-align: center;
+}
+.awardsIntroBtm{
+	flex-direction: column;
+}
+.signUp{
+	display: block;
+	width: 3rem;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	text-align: center;
+	color: #5077f2;
+	font-size: 14px;
+	margin: 0 auto;
+}
+.closeAwardsIntro{
+	width: .4rem;
+	height: .4rem;
+	background: url(../images/close.png) no-repeat;
+	background-size: 100% 100%;
+	margin-top: 1.206rem;
+}
+/*评审进度*/
+.selectionProcess{
+  width: 100%;
+  height: 7.5rem;
+  /*opacity: 0.5;*/
+  background: url(../images/selectionProcessBg.png) no-repeat;
+  background-size:  auto 200%;
+  padding-top: .86rem;
+}
+.title{
+	width: 5.33rem;
+	height: .82rem;
+	margin: 0 auto; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.doubleHr{
+	width: 1.51rem;
+	height: .03rem;
+	border-top: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
+	float: left;
+	position: relative;
+	top:-2px;
+}
+.titleText{
+	width: 1.87rem;
+	height: 100%;
+	text-align: center;
+}
+.titleText h3{
+	font-size: 18px;
+	height: .53rem;
+	line-height: .53rem;
+	font-weight: 300;
+}
+.titleText p{
+	height: .25rem;
+	font-size: .18rem;
+	line-height: .25rem;
+	margin-top: .04rem;
+	opacity: 0.3;
+}
+.describe{
+	width: 7.0rem;
+	line-height: 18px;
+	text-align: center;
+	margin: .65rem auto 0;
+	color: #595959;
+	font-size: .24rem;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.current{
+	box-sizing: border-box;
+	width: 6.8rem;
+	border: 1px solid #eee;
+	border-radius: 2px;
+ 	background-color: #ffffff;
+  	box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
+  	margin: .82rem auto 0;
+  	padding: 45px 8px;
+  	display: flex;
+}
+.current dl{
+	width: .99rem;
+	min-width: 78px;
+	position: relative;
+}
+.current dl dt{
+	width: .28rem;
+ 	height: .28rem;
+  	/*border: solid 1px #e5e5e5;*/
+  	/*border-radius: 100%;*/
+  	margin: 0 auto;
+}
+.current dl dt span{
+	display: block;
+	width: .08rem;
+  	height: .08rem;
+ 	background-color: #858585;
+  	margin:.1rem auto .1rem;
+  	border-radius:100%;
+}
+.current .on{
+	background-color: #5077f2;
+}
+.current dl dd{
+	width: 100%;
+	text-align: center;
+}
+.current dl dd h3{
+	line-height:.33rem;
+	margin-top: .11rem;
+	color: #595959;
+	font-size: 14px;
+	font-weight: 300;
+	margin: 0 auto;
+}
+.current dl dd p{
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 1px;
+	color: #808080;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.singleHr{
+	width: 1.5rem;
+  	height: 1px;
+  	background-color: #e1e1e1;
+  	float:left;
+  	margin-top: .135rem;
+}
+.current dl:last-of-type{
+	margin-left: -.33rem;
+	width: 1.58rem;
+}
+.current dl:last-of-type dt{
+	width: .99rem;
+}
+.adress{
+	line-height: 15px;
+	text-align: center;
+	font-size: 12px;
+	color: #808080;
+	margin-top: 5px;
+}
+
+.current .now{
+	border: solid 1px #e5e5e5;
+	border-radius: 100%;
+	margin-bottom: .08rem;
+}
+.current .now span{
+	background-color:#5077F2;
+}
+
+.review{
+	width: 100%;
+	height: 13.34rem;
+	background: url(../images/review_bg.png) no-repeat;
+	background-size: cover;
+	padding-top: .71rem;
+
+}
+.reviewTitle{
+	width: 4.5rem;
+	height: 1.1rem;
+	margin:0 auto;
+	line-height: .4rem;
+	font-size: .4rem;
+	color: #fff;
+}
+.reviewTitle p:first-of-type span{
+	font-size: .28rem;
+}
+.reviewTitle p:last-of-type{
+	font-size: .6rem;
+	line-height: .84rem;
+	margin-top: -.14rem;
+	font-weight: 600;
+}
+.jury{
+	box-sizing: border-box;
+	width: 4.5rem;
+	height: 4.6rem;
+	background-color: #4b4b4b;
+  	box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.5);
+  	margin: .57rem auto 0;
+  	padding-top: .75rem;
+	/*border: 1px solid rgb(48, 95, 241);*/
+	position: relative;
+}
+
+.jury:before{
+	display: block;
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 0px;
+	bottom: 0px;
+	background-image: url(add.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.jury h3{
+	width: 3.49rem;
+	height: .86rem;
+	line-height: .5rem;
+	font-size: .36rem;
+  	font-weight: 600;
+  	color: #fff;
+  	margin:0 auto;
+  	font-weight: 500;
+  	
+}
+.jury .number{
+	margin-top: 3px;
+	opacity: 0.3;
+	font-size: .24rem;
+	line-height: .33rem;
+	font-weight: 300;
+}
+.jury p{
+	width: 3.49rem;
+	height: 1.68rem;
+	margin: .4rem auto 0;
+	line-height: 15px;
+	font-size: .20rem;
+	color: #b3b3b3;
+	letter-spacing: 0.4px;
+	text-align: justify;
+}
+.editorJury{
+	margin-top: .6rem;
+}
+
+.footer{
+	width: 100%;
+	height: 7.2rem;
+	background: url(../images/selectionProcessBg.png) no-repeat;
+	background-size: auto 200%;
+	padding-top: .91rem;
+	position: relative;
+}
+.footer .doubleHr{
+	height: .08rem;
+}
+.company{
+	width: 6.8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin: .47rem auto 0;
+}
+.zhidx{
+	width: 1.21rem;
+	height: .57rem;
+}
+.awe{
+	width: .8rem;
+	height: .5rem;
+}
+.jiguo{
+	width: 1.2rem;
+	height: .46rem;
+}
+.gfk{
+	width: .45rem;
+	height: .45rem;
+}
+.qq{
+	width: 1.48rem;
+	height: .42rem;
+}
+.contact{
+	margin-top: .5rem;
+}
+.consult{
+	width: 5.68rem;
+	margin: .586rem auto 0;
+	display: flex;
+	justify-content: space-between;
+}
+.consult>div{
+	width: 1.77rem;
+
+}
+.consult>div dl{
+	width: 100%;
+	min-width: 90px;
+}
+.consult>div dl dt{
+	box-sizing: border-box;
+	width: 1.2rem;
+	min-width: 61px;
+  	height: 1.2rem;
+  	background-color: #f0f0f0;
+  	margin: 0 auto;
+  	padding-top: .86rem;
+ }
+.consult>div dl dt p{
+	height: .28rem;
+	line-height: .28rem;
+	color: #000000;
+	opacity: 0.5;
+	font-size: .2rem;
+	text-align: center;
+}
+.consult>div dl dd{
+	text-align: center;
+	margin-top: .15rem;
+}
+.consult>div dl dd h4{
+	  height: .33rem;
+	  opacity: 0.8;
+	  font-size: .24rem;
+	  font-weight: 600;
+	  color: #000000;
+	  line-height: .33rem;
+}
+.consult>div dl dd p{
+  height: .25rem;
+  opacity: 0.6;
+  font-size: .18rem;
+  letter-spacing: 0.4px;
+  color: #000000;
+}
+.consult .verticalLine{
+	width: 1px;
+  	height: 1.88rem;
+  	opacity: 0.1;
+  	background-color: #000000;
+}
+.gtic{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: .6rem;
+	background:#f5f5f5 url(../images/gticLogo.png) no-repeat center center;
+	background-size: auto .31rem;
+}
+
+/*菜单遮罩*/
+.shade{
+	display: none;
+	width: 100%;
+	height: 10rem;
+	position: fixed;
+	top: 1.2rem;
+	left: 0;
+	right: 0;
+	background-color: #000;
+	opacity: 0.9;
+	z-index: 100;
+}
+.awardsMenu{
+	width: 80%;
+	padding-top: .87rem;
+	margin: 0 auto;
+	text-align: center;
+}
+.awardsMenu li{
+	margin-bottom:.6rem;
+	height: .67rem;
+	line-height: .67rem;
+	font-size: .48rem;
+	color: #fff;
+	letter-spacing: 1.1px;
+	opacity: 0.7;
+}
+
+/*获奖名单*/
+.winners{
+	background: url("../images/winners/winners_bg.png") no-repeat;
+	background-size: cover;
+}
+.winnersContent{
+	padding: .8rem 0 .42rem;
+}
+.winners .titleText h3{
+	color: #fff;
+}
+.winners .titleText p{
+	color: #fff;
+	opacity: 0.5;
+}
+.winners-list{
+	width: 5.1rem;
+	margin: 0 auto;
+}
+.winners-list li{
+	border-bottom: 2px solid rgba(255,255,255,0.1);
+	padding: .5rem 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+.winners-list li:last-of-type{
+	border-bottom: none;
+}
+.item-title dt{
+	width: 1.384rem;
+	margin: 0 auto;
+}
+.item-title dt img{
+	width: 100%;
+	height: auto;
+}
+.item-title dd{
+	line-height: .45rem;
+	font-size: .32rem;
+	letter-spacing: 0.7px;
+	color: #ffffff;
+}
+.item-des{
+	margin-top: .2rem;
+	line-height: 18px;
+	opacity: 0.6;
+	font-size: .2rem;
+	letter-spacing: 0.4px;
+	color: #ffffff;
+}
+.item-people{
+	margin-top: .36rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.more-item-people{
+	width: 7.5rem;
+	margin-left: -1.2rem;
+}
+.item-people dl{
+	width: 1.2rem;
+	margin-right: .1rem;
+}
+.item-people dl:after{
+	margin-right: 0;
+}
+.item-people dl>img{
+	width: 100%;
+	height: auto;
+}

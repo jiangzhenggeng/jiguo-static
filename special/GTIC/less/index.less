@@ -1,0 +1,741 @@
+@absolute: absolute;
+@pos: -10px;
+@-webkit-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-moz-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-ms-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-o-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+//next
+.next {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  .icon {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    @time: 1s;
+    height: inherit;
+    background-image: url(../images/head_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px auto;
+    -webkit-animation: jump @time ease infinite;
+    -moz-animation: jump @time ease infinite;
+    -ms-animation: jump @time ease infinite;
+    -o-animation: jump @time ease infinite;
+    animation: jump @time ease infinite;
+  }
+
+}
+
+//title
+.title {
+  .ch {
+    font-size: 32px;
+    color: #5077F2;
+    margin-bottom: 5px;
+  }
+  .en {
+    color: #082138;
+    opacity: .3;
+
+  }
+}
+
+//gtic park center
+.center {
+  .pic {
+    padding-top: 200px;
+    margin-bottom: 40px;
+    img {
+      height: 150px;
+    }
+
+  }
+  p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .go {
+    width: 210px;
+    height: 30px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 50px;
+    line-height: 30px;
+    .arrow {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: url("../images/go.png");
+      background-size: 100% 100%;
+    }
+  }
+}
+
+//loading
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .center {
+    width: 18%;
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+    }
+    .wait {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(255, 255, 255, .4);
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10%;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+  }
+
+}
+
+//nav颜色
+.navColor {
+  background-color: #fff !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  a {
+    color: #343434 !important;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+//nav
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 100;
+  color: #fff;
+  a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  img {
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 40px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    height: 65px;
+    li {
+      float: left;
+      height: 65px;
+      margin: 0 22px;
+
+      a {
+        width: 100%;
+        height: 65px;
+        line-height: 65px;
+      }
+
+    }
+    .active {
+      a {
+        position: relative;
+      }
+      a:after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        margin-left: -21px;
+        width: 42px;
+        height: 2px;
+        background-color: #5077F2;
+
+      }
+      a[data-self]:after {
+        width: 84px;
+        margin-left: -42px;
+      }
+    }
+  }
+}
+
+//地图
+.BMap_Marker {
+  div {
+    left: -10px !important;
+    img {
+      width: 100%;
+    }
+  }
+
+  .BMapLabel {
+    display: none !important;
+  }
+}
+
+//header
+#header {
+  text-align: center;
+  .introduce {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    img:nth-child(1) {
+      display: block;
+      width: 160px;
+      margin: 0 auto;
+      margin-bottom: 35px;
+    }
+    img:nth-child(2) {
+      display: block;
+      width: 770px;
+      margin: 0 auto;
+    }
+  }
+  .host {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    span {
+      display: block;
+      font-size: 18px;
+    }
+    span:before, span:after {
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, .5);
+      margin: 0 10px 5px 10px;
+    }
+    img {
+      height: 40px;
+      margin: 20px 15px 35px 15px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .next {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    .icon {
+      position: absolute;
+      width: 100%;
+      @time: 1s;
+      height: inherit;
+      background-image: url(../images/head_next.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 12px auto;
+      -webkit-animation: jump @time ease infinite;
+      -moz-animation: jump @time ease infinite;
+      -ms-animation: jump @time ease infinite;
+      -o-animation: jump @time ease infinite;
+      animation: jump @time ease infinite;
+    }
+
+  }
+}
+
+//关于峰会
+#about {
+  position: relative;
+  margin-top: 65px;
+  text-align: center;
+  .top {
+    height: 520px;
+    padding-top: 30px;
+    .left {
+      float: left;
+      box-shadow: 0px 8px 12px #ccc;
+      img {
+        width: 540px;
+      }
+    }
+    .right {
+      overflow: hidden;
+      padding-left: 60px;
+      padding-top: 65px;
+      text-align: left;
+      .title {
+        .ch {
+          font-size: 32px;
+          color: #5077F2;
+          margin-bottom: 5px;
+        }
+        .en {
+          color: #082138;
+          opacity: .3;
+
+        }
+      }
+      .introduce {
+        p {
+          font-size: 18px;
+          color: rgba(0, 0, 0, .5);
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 55px;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin-right: 80px;
+        .num {
+          color: #5077F2;
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 1.4;
+        }
+        .name {
+          color: #4c4c4c;
+        }
+      }
+      li:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+
+  }
+  .next {
+    position: relative;
+    margin-top: 80px;
+    .icon {
+      background-image: url(../images/about_next.png);
+      background-size: 18px auto;
+    }
+  }
+}
+
+//演讲嘉宾
+#guest {
+  background: url("../images/guest_bg.png") no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  padding-top: 70px;
+  text-align: center;
+  padding-bottom: 20px;
+  .title {
+    .ch:before, .ch:after {
+      content: "";
+      display: inline-block;
+      width: 200px;
+      height: 6px;
+      border: 1px solid #4d4d4d;
+      border-right: none;
+      border-left: none;
+      margin: 8px;
+    }
+    .en {
+      color: #fff;
+    }
+  }
+  .swiper_box {
+    width: 100%;
+    margin-top: 55px;
+    ul {
+      width: 1150px;
+      margin: 0 auto;
+      li {
+        float: left;
+        height: 280px;
+        margin: 0 20px 40px 20px;
+        color: #f2f4f5;
+        text-align: center;
+        width: 16%;
+        img {
+          width: 148px;
+          height: 148px;
+          border: 4px solid rgba(255, 255, 255, .2);
+        }
+        .name {
+          margin: 30px 0 15px;
+          font-size: 24px;
+        }
+        .company {
+          font-size: 14px;
+        }
+
+      }
+    }
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+    }
+    .swiper-pagination-bullet-active {
+      border: 0;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 30px;
+      margin-top: -35px;
+      z-index: 10;
+      cursor: pointer;
+      -moz-background-size: 30px 30px;
+      -webkit-background-size: 30px 230px;
+      background-size: 30px 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+    .swiper-button-prev {
+      background: url("../images/guest_left.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      margin-left: 40px;
+    }
+    .swiper-button-next {
+      background: url("../images/guest_right.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      margin-right: 40px;
+    }
+  }
+
+}
+
+//GTIC
+#GTIC {
+  position: relative;
+  width: 100%;
+  height: 860px;
+  background: url("../images/GTIC-bg.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  .next {
+    .icon {
+      background-image: url("../images/next.png");
+      background-size: 18px auto;
+    }
+  }
+}
+
+//PARK
+#park {
+  position: relative;
+  width: 100%;
+  height: 860px;
+  background: url("../images/park_bg.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  .center {
+    .pic {
+      padding-top: 260px;
+    }
+    .go {
+      height: 32px;
+      line-height: 32px;
+      font-size: 18px;
+    }
+  }
+  .next {
+    .icon {
+      background-image: url("../images/next.png");
+      background-size: 18px auto;
+    }
+  }
+}
+
+//报名
+#enroll {
+  text-align: center;
+  padding-top: 60px;
+  ul {
+    li {
+      display: inline-block;
+      width: 440px;
+      height: 440px;
+      margin: 60px 50px 80px 50px;
+      text-align: center;
+      background-image: url("../images/enoll_bg.png");
+      background-size: 100% 100%;
+      .english {
+        margin-top: 150px;
+        color: rgba(0, 0, 0, .5);
+        font-size: 18px;
+      }
+      .china {
+        margin: 20px 0 40px 0;
+        font-size: 24px;
+        color: #052238;
+      }
+      .now {
+        width: 170px;
+        height: 35px;
+        margin: 0 auto;
+        border: 1px solid #5077F2;
+        text-align: center;
+        line-height: 35px;
+        color: #5077F2;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+//大会地址
+#address {
+  position: relative;
+  width: 100%;
+  //#dituContent {
+  //  width: 100%;
+  //  height: 860px;
+  //  margin: 0 auto;
+  //  border: #ccc solid 1px
+  //}
+  //.mask {
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  z-index: 1;
+  //  width: 100%;
+  //  height: 100%;
+  //  background-color: rgba(0, 0, 0, .5);
+  //}
+  img {
+    width: 100%;
+    max-height: 860px;
+  }
+  .info {
+    position: absolute;
+    top: 230px;
+    left: 180px;
+    z-index: 3;
+    width: 540px;
+    height: 400px;
+    padding: 55px 35px 0 35px;
+    border: 8px solid rgba(0, 0, 0, .4);
+    background-color: #fff;
+    .title {
+      font-size: 40px;
+      color: #5077F2;
+      margin-bottom: 10px;
+      .english {
+        font-size: 18px;
+        color: #b3b3b3;
+      }
+    }
+    .hotel {
+      color: #404040;
+      p {
+        line-height: 25px;
+      }
+    }
+    .location {
+      margin-top: 100px;
+      font-size: 18px;
+      color: #888;
+      line-height: 22px;
+    }
+  }
+  .location {
+
+  }
+}
+
+//合作伙伴
+#partner {
+  width: 100%;
+  padding: 100px 0 100px 0;
+  text-align: center;
+
+  ul {
+    display: block;
+    text-align: center;
+    li {
+      display: inline-block;
+      _display: inline;
+      zoom: 1;
+      line-height: 120px;
+      width: 210px;
+      img {
+        width: 180px;
+        margin: 0 auto;
+      }
+
+    }
+  }
+}
+
+//联系我们
+#contact {
+  width: 100%;
+  height: 860px;
+  background: url("../images/connect-bg.png");
+  background-size: 100% 100%;
+  padding: 230px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  .box {
+    .title {
+      color: #fff;
+      padding-bottom: 80px;
+      border-bottom: 2px solid rgba(255, 255, 255, .3);
+      margin-bottom: 100px;
+      .ch {
+        color: #fff;
+      }
+      .en {
+        color: #fff;
+      }
+    }
+    .event {
+      display: inline-block;
+      _display: inline;
+      zoom: 1;
+      margin-right: 50px;
+      width: 160px;
+      height: 180px;
+      .shadow {
+        width: 160px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(0, 0, 0, .4);
+        line-height: 150px;
+      }
+      .name {
+        line-height: 3;
+      }
+    }
+
+    .logo {
+      width: 415px;
+      margin: 0;
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+
+  }
+}
+
+//footer
+#footer {
+  height: 270px;
+  color: #112032;
+  .box {
+    padding: 0 65px;
+    .top {
+      display: inline-block;
+      _display: inline;
+      zoom: 1;
+      height: 190px;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 40px 0 60px 0;
+      .logo {
+        float: left;
+        img {
+          height: 90px;
+          vertical-align: middle;
+        }
+      }
+      .word {
+        overflow: hidden;
+        line-height: 2;
+        font-size: 16px;
+        padding-left: 65px;
+      }
+    }
+    .bottom {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      font-size: 18px;
+    }
+  }
+}
+
+//

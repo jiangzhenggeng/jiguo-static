@@ -1,0 +1,612 @@
+@view-base: 750;
+@font-size-num: 100;
+//(min-width:750px)
+@view-md-font-size: ceil(@font-size-num*750/@view-base); //100
+//(min-width:600px)
+@view-smp-font-size: ceil(@font-size-num*600/@view-base); //
+//(min-width:414px)
+@view-sm-font-size: ceil(@font-size-num*414/@view-base); //
+//(min-width:350px)
+@view-xsp-font-size: ceil(@font-size-num*350/@view-base); //
+//(min-width:320px)
+@view-xs-font-size: ceil(@font-size-num*320/@view-base); //
+
+@media (min-width: 320px) {
+  html {
+    font-size: @view-xs-font-size*1px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 350px) {
+  html {
+    font-size: @view-xsp-font-size*1px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 414px) {
+  html {
+    font-size: @view-sm-font-size*1px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: @view-smp-font-size*1px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 750px) {
+  html {
+    font-size: @view-md-font-size*1px;
+    font-weight: 400;
+  }
+}
+
+//next
+@pos: -0.1rem;
+@-webkit-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-moz-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-ms-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-o-keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: @pos;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+//title
+.title {
+  padding: 0.8rem 0;
+  .ch {
+    font-size: 0.48rem;
+    color: #5077F2;
+    line-height: 1.5;
+  }
+  .en {
+    color: #082138;
+    opacity: .4;
+    font-size: 0.18rem;
+
+  }
+}
+
+//next
+.next {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  height: 0.5rem;
+  left: 0;
+  overflow: hidden;
+  .icon {
+    position: absolute;
+    width: 100%;
+    @time: 1s;
+    height: inherit;
+    background-image: url(../../images/head_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px auto;
+    -webkit-animation: jump @time ease infinite;
+    -moz-animation: jump @time ease infinite;
+    -ms-animation: jump @time ease infinite;
+    -o-animation: jump @time ease infinite;
+    animation: jump @time ease infinite;
+  }
+
+}
+
+//loading
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+  .center {
+    width: 33.333%;
+    height: 1.2rem;
+    margin: 65% auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .wait {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      margin-top: 0.5rem;
+      background-color: rgba(255, 255, 255, .4);
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10%;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+  }
+
+}
+
+//nav
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 1rem;
+  z-index: 100;
+  background-color: #0B1023;
+  img[data-logo] {
+    height: 0.4rem;
+    line-height: 1rem;
+    margin-left: 0.35rem;
+    margin-top: 0.3rem;
+  }
+
+  .menu {
+    margin-right: 0.1rem;
+    img {
+      height: 0.34rem;
+      padding: 0 0.35rem;
+      margin: 0.33rem 0;
+    }
+  }
+  .navbar {
+    ul {
+      margin-top: 10%;
+      li {
+        width: 100%;
+        line-height: 3;
+        text-align: center;
+        a {
+          font-size: 0.48rem;
+          line-height: 2;
+          color: rgba(255, 255, 255, .7);
+        }
+      }
+    }
+
+  }
+}
+
+//首图
+#header {
+  text-align: center;
+  position: relative;
+  .introduce {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    img:nth-child(1) {
+      display: block;
+      width: 50%;
+      margin: 10% auto;
+    }
+    img:nth-child(2) {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  .host {
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    span {
+      display: block;
+      font-size: 18px;
+    }
+    span:before, span:after {
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, .5);
+      margin: 0 10px 5px 10px;
+    }
+    li {
+      display: inline-block;
+      _display: inline;
+      zoom: 1;
+      text-align: center;
+      margin: 0.15rem 0.05rem 0.2rem 0.05rem;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      img {
+        height: 0.5rem;
+        text-align: center;
+      }
+
+    }
+    p {
+      margin-bottom: 0.1rem;
+      font-size: 0.2rem;
+    }
+  }
+
+}
+
+//关于峰会
+#about {
+  text-align: center;
+  width: 100%;
+  .introduce {
+    font-size: 0.24px;
+    color: rgba(0, 0, 0, .3);
+    padding: 0 0.7rem;
+    p {
+      margin-bottom: 0.4rem;
+      font-weight: 400;
+      font-size: 0.24rem;
+    }
+  }
+  ul {
+    width: 100%;
+    padding: 0.7rem 0;
+    li {
+      display: inline-block;
+      _display: inline;
+      zoom: 1;
+      width: 40%;
+      margin-bottom: 0.2rem;
+      img {
+        display: block;
+        width: 1rem;
+        margin: 0 auto;
+      }
+      .num {
+        color: #5077F2;
+        font-size: 0.48rem;
+        line-height: 2;
+      }
+      .name {
+        color: rgba(0, 0, 0, .5);
+        font-size: 0.24rem;
+      }
+
+    }
+  }
+
+}
+
+//演讲嘉宾
+#guest {
+  background: url("../../images/guest-mb.png") no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  text-align: center;
+  .title {
+    .ch:before, .ch:after {
+      content: "";
+      display: inline-block;
+      width: 1.6rem;
+      height: 0.1rem;
+      border: 1px solid #4d4d4d;
+      border-right: none;
+      border-left: none;
+      margin: 0.1rem;
+      color: #fff;
+      font-size: 0.42rem;
+    }
+    .en {
+      color: #fff;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 0.12rem;
+    height: 0.12rem;
+    border: 1px solid #fff;
+  }
+  .swiper-pagination-bullet-active {
+    border: 0;
+  }
+  ul {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    li {
+      float: left;
+      width: 25%;
+      margin: 0.25rem 0;
+      color: #fff;
+      text-align: center;
+      height: 3rem;
+      img {
+        width: 1.48rem;
+        height: 1.48rem;
+        border: 0.04rem solid rgba(255, 255, 255, .2);
+      }
+      .name {
+        font-size: 0.28rem;
+        line-height: 2;
+        img {
+          height: 0.3rem;
+          line-height: 2;
+          border: 0;
+        }
+      }
+      .company {
+        font-size: 0.18rem;
+      }
+
+    }
+  }
+
+}
+
+//GTIC   park
+#GTIC, #park {
+  position: relative;
+  width: 100%;
+  background: url("../../images/gtic-mb-bg.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 2rem 0.5rem;
+  .pic {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    img {
+      width: 3rem;
+    }
+  }
+  p {
+    font-size: 0.2rem;
+    line-height: 2;
+    color: #fff;
+  }
+  .go {
+    width: 3.5rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    color: #fff;
+    font-size: 0.24rem;
+    font-weight: 400;
+    margin: 1.2rem auto 0 auto;
+    border: 1px solid #fff;
+    .arrow {
+      display: inline-block;
+      width: 0.16rem;
+      height: 0.16rem;
+      background: url(../../images/go.png);
+      background-size: 100% 100%;
+    }
+  }
+
+}
+
+#park {
+  background: url("../../images/park-mb.png");
+  background-size: 100% 100%;
+  padding: 3rem 0.5rem;
+  .pic {
+    width: 100%;
+    img {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+//enroll
+#enroll {
+  text-align: center;
+  li {
+    width: 5rem;
+    height: 3rem;
+    border: 1px solid #5077F2;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    margin-bottom: 0.8rem;
+    a {
+      display: block;
+      width: 100%;
+      padding-top: 1rem;
+      .center {
+        img {
+          width: 0.55rem;
+        }
+        .china {
+          font-size: 0.24rem;
+          color: #434343;
+          line-height: 2;
+        }
+        .english {
+          color: #b3b3b3;
+          font-size: 0.14rem;
+        }
+      }
+
+    }
+  }
+}
+
+//address
+#address {
+  width: 100%;
+  .map {
+    width: 100%;
+    img {
+      width: 100%;
+
+    }
+  }
+  .info {
+    padding: 0.5rem 0.35rem 0 0.35rem;
+    .location {
+      font-size: 0.36rem;
+      color: #5077F2;
+      margin-bottom: 0.15rem;
+      .english {
+        color: #ccc;
+        font-size: 0.2rem;
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 0.6rem;
+          height: 0.03rem;
+          background-color: #ccc;
+          margin: 0 0.1rem;
+
+        }
+      }
+    }
+    .hotel {
+      margin-top: 0.15rem;
+      margin-bottom: 0.4rem;
+      p {
+        color: #000;
+        font-size: 0.24rem;
+        line-height: 1.3;
+      }
+      .en {
+        font-size: 0.16rem;
+        color: rgba(0, 0, 0, .3);
+
+      }
+    }
+    .detail {
+      color: #595959;
+      font-size: 0.24rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+//partner
+#partner {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  .title {
+    padding: 0.45rem 0;
+  }
+  ul {
+    width: 100%;
+    padding: 0 0.35rem;
+    li {
+      display: inline-block;
+      _display: inline;
+      zoom: 1;
+      width: 18%;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      img {
+        width: 89%;
+      }
+    }
+  }
+}
+
+//contact
+#contact {
+  text-align: center;
+  color: #fff;
+  font-size: 0.24rem;
+  background: url("../../images/connect-bg.png");
+  background-size: 100% 100%;
+  .title {
+    width: 80%;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    margin: 0 auto;
+    padding: 0.4rem 0;
+    .ch {
+      font-size: 0.42rem;
+      color: #fff;
+    }
+    .en {
+      font-size: 0.18rem;
+      color: #fff;
+    }
+  }
+  .event {
+    display: inline-block;
+    _display: inline;
+    zoom: 1;
+    width: 30%;
+    padding: 0.7rem 0 1.2rem;
+    .shadow {
+      width: 1.6rem;
+      height: 1.1rem;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(0, 0, 0, .4);
+      line-height: 5.5;
+    }
+    .name {
+      line-height: 2;
+    }
+    .email {
+      font-size: 0.22rem;
+    }
+  }
+}
+
+//footer
+#footer {
+  margin: 0.45rem 1.3rem 0.1rem 1.3rem;
+  .logo {
+
+    img {
+      display: block;
+      width: 2.8rem;
+      margin: 0 auto;
+    }
+  }
+  .word {
+    font-size: 0.18rem;
+    color: rgba(0, 0, 0, .3);
+    font-weight: 400;
+    margin: 0.35rem 0;
+    line-height: 1.3;
+  }
+  .bottom {
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 0.86rem;
+    }
+  }
+}
