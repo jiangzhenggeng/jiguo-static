@@ -39,14 +39,14 @@ define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown
         }
         //显示报告
         function showBlog() {
-            var p = 0;
+            var limit = 0;
             var html='';
             var tplWrapperCache = tplEngine.init($('#apply-report-wrapper-tpl').html());
             var tplFunCache = tplEngine.init($('#apply-report-list-tpl').html());
             function showReport() {
                 $.get('/api/event/Getarticle', {
                     id: eventid,
-                    p: p,
+                    limit: limit,
                     size: 3
                 }, function (replyData) {
                     if (replyData.success == 'true') {
@@ -64,6 +64,7 @@ define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown
                         if (replyData.result.data.length < 3) {
                             $('.look-more-artical').removeClass('more').html('没有更多了~');
                         }
+                        limit = replyData.limit;
                     } else {
                         $('#apply-report-list').append('<span class="error">数据错误</span>');
                     }
@@ -72,7 +73,6 @@ define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown
 
             showReport();
             $('body').on('click', '.more',function () {
-                p++;
                 showReport();
             });
         }
