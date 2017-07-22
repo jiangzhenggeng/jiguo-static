@@ -48,21 +48,6 @@ define(['jquery','ueditor','zeroclipboard'],function ($,UE,zcl) {
         var _editor = UE.getEditor(id,{
             serverUrl:url,
             onready:function(){
-                $(_editor.body).find('img[_url]').each(function () {
-                    $(this).replaceWith('<embed ' +
-                        'type="application/x-shockwave-flash" ' +
-                        'class="edui-faked-video" ' +
-                        'pluginspage="http://www.macromedia.com/go/getflashplayer" ' +
-                        'src="'+$(this).attr('_url')+'" ' +
-                        'width="'+$(this).attr('width')+'" ' +
-                        'height="'+$(this).attr('height')+'" ' +
-                        'wmode="transparent" ' +
-                        'play="true" ' +
-                        'loop="false" ' +
-                        'menu="false" ' +
-                        'allowscriptaccess="never" ' +
-                        'allowfullscreen="true"/>');
-                });
                 var tipsHtml = '<div class="tooltip" style="display: none;"><div class="tooltip_inner"></div><i class="tooltip_arrow"></i></div>';
                 $('body').append(tipsHtml);
                 var tooltip = $('.tooltip');

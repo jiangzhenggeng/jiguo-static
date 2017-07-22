@@ -144,7 +144,7 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
                 return;
             }
             if($("#discount").length>0){
-                if(discount<=0||discount>=10||cost_dis<=0||cost_dis>=10){
+                if(discount<=0||discount>=10||cost_dis<0||cost_dis>=10){
                     layer.msg('请填入正确的折扣');
                     return;
                 }
