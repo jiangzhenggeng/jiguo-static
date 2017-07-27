@@ -585,6 +585,14 @@
   max-width: 100%;
   margin: 15px auto;
 }
+.content-left .article-content-show p .load_img {
+  background-color: #eeedeb;
+  border: 1px solid #eeedeb;
+  background-size: 146px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../ext_img/default-logo.png);
+}
 .content-left .article-praise-user {
   margin: 75px 0;
   position: relative;

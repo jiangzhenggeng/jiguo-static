@@ -72,8 +72,10 @@ define(['require','jquery','app/scrollStatus'],function (require,$){
                         $(this).attr({
                             'width':w,
                             'height':h,
-                            'src':loadUrl
+                            // 'src':loadUrl
+                            'src':''
                         });
+                        $(this).addClass('load_img');
                     }
                     $(this).attr(_src2,src);
                 }
