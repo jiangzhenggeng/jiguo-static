@@ -14,7 +14,7 @@ function listDir($dir){
         if( is_dir($dir.'/'.$file)){
             listDir($dir.'/'.$file);
         }else{
-            echo str_replace('/Users/jiangzg/PhpstormProjects/JianZG/cdn/static/Mb/tools/../','http://cdn.jiguo.com/static/Mb/',$dir.'/'.$file).'<br/>';
+            echo str_replace('/Users/jiangzg/PhpstormProjects/JianZG/cdn/static/Mb/tools/../','http://cdn.jiguo.com/static/Mb/',$dir.'/'.$file).PHP_EOL;
         }
     }
 }
