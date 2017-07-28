@@ -313,6 +313,7 @@
 .apply-box li .desc .name {
   font-size: 14px;
   color: #4f81bd;
+  margin: 0;
 }
 .apply-box li .desc .name .time {
   float: right;
