@@ -224,6 +224,7 @@ define(['jquery','layer','app/common','template','app/event','app/createUE'],fun
                         }
                     });
                     allCost=allCost.toFixed(2);
+                    if(isNaN(allCost)) allCost=0;
                     playBody.find(".allNum").html(allNum);
                     playBody.find("#buying_num").val(allNum);
 

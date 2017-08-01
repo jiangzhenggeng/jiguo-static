@@ -135,7 +135,7 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
             var inventory=$("#inventory").val();
             var old_price=$("#old-price").val();
             var price,cost_spec;
-            if(!(Math.floor(inventory) == inventory)){
+            if(inventory==''||!(Math.floor(inventory) == inventory)){
                 layer.msg('请填入正确的库存');
                 return;
             }
@@ -144,7 +144,7 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
                 return;
             }
             if($("#discount").length>0){
-                if(discount<=0||discount>=10||cost_dis<0||cost_dis>=10){
+                if(!((discount>0&&discount<10&&discount!='')&&(cost_dis>=0&&cost_dis<10&&cost_dis!=''))){
                     layer.msg('请填入正确的折扣');
                     return;
                 }
@@ -214,6 +214,9 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
             }
         });
         allCost=allCost.toFixed(2);
+        //没有成本价时成本显示为0
+        if(isNaN(allCost)) allCost=0;
+
         $(".allNum").html(allNum);
         $("#buying_num").val(allNum);
 
@@ -288,12 +291,6 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
         if($('#type').val()==2 && $('#discount').val()==''){
             layer.msg("请填写折扣");
             $("#discount").trigger('focus');
-            return;
-        }
-
-        if($('#type').val()==2 && $('#cost_discount').val()==''){
-            layer.msg("请填写成本折扣");
-            $("#cost_discount").trigger('focus');
             return;
         }
 
