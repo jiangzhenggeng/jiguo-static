@@ -50,7 +50,8 @@ define([
 
             var searchPageHeader = $('.search-page-header'),
                 keywordDom = searchPageHeader.find('#keyword'),
-                showKeyword = $('#show-keyword');
+                showKeyword = $('#show-keyword'),
+                timer = null;
             keywordDom.loading = false;
             //搜索事件绑定
             searchPageHeader.on('click','[data-search-page-submit]',function () {
@@ -58,11 +59,17 @@ define([
                 keywordDom.limit = 0;
                 _search.apply(keywordDom,[_callBack,true]);
             }).on('keyup','#keyword',function () {
+                clearTimeout(timer);
+                timer=setTimeout(goSearch,500);
+            });
+
+            //触发搜索器
+            function goSearch() {
                 keywordDom.limit = 0;
                 keywordDom.keyword = keywordDom.val();
                 _search.apply(keywordDom,[_callBack,true]);
                 showKeyword.html( keywordDom.keyword );
-            });
+            }
 
             //初始化数据绑定
             keywordDom.type = __type__;
@@ -155,7 +162,8 @@ define([
             }
 
             //第一次进入页面自动触发第一次搜索
-            keywordDom.trigger('keyup');
+            // keywordDom.trigger('keyup');
+            goSearch();
 
             clickLoading.click(function () {
                 _search.apply(keywordDom,[_callBack,false]);
