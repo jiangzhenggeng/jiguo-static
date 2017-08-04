@@ -3043,7 +3043,7 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   top: -10px;
 }
 .nav .nav-user li:last-of-type a {
-  max-width: 200px;
+  max-width: 140px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
