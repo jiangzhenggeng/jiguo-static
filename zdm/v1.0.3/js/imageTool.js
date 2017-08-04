@@ -537,7 +537,7 @@ function captureLinkInfo(slecter){
             slecter.find('#title').val(replayData.data.name);
             slecter.find('#laiyuan').val(replayData.data.mall);
             slecter.find('#price').val(replayData.data.price);
-            slecter.find('#price2').html(replayData.data.price);
+            slecter.find('#mark_price').html(replayData.data.mark_price);
 
             if( isArray(replayData.data.pic) ){
                 var s_img = replayData.data.pic.shift();
