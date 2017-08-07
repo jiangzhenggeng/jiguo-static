@@ -49,7 +49,7 @@ function menuCommmon() {
 
 		$.get('/admin/ajax/GetNew',function (replayDate) {
 			if(replayDate.data>0){
-				$('.badrg').html(replayDate.data).removeClass('none');
+				$('.commentMsg').html(replayDate.data).removeClass('none');
 			}
 		},'json');
 

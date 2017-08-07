@@ -97,11 +97,23 @@ function addBuySetting(selecter,insertData){
 						</div>\
 					</div>\
 				</div>\
+				<div class="Z-sub-row">\
+				<iframe name="productLink" style="width:100%;height:300px;border:1px solid #f0f0f0;" src="'+insertData.url+'"></iframe>\
+				</div>\
 			</div>\
 			<input class="buyLinkInfo-pid" value="'+insertData.pid+'" name="product[buylink]['+buyLinkInfo+'][pid]" type="hidden"/>\
 			<div class="Z-clear"></div>\
 		</div>';
+
 	selecter.append(html);
+    //处理iframe不能显示的网站
+	var iframe=selecter.find('iframe'),
+		amazon='www.amazon.cn',
+		kaola='www.kaola.com';
+	if(insertData.url.indexOf(amazon)>0||insertData.url.indexOf(kaola)>0){
+		iframe.remove();
+	}
+
 	//模拟select
 	dataZselectBind(selecter.find('[data-Z-select]'));
 }
@@ -157,7 +169,7 @@ function editProductImageComplete(selecter,_this){
 }
 
 /*********************
-* 设置产品封面
+* 设置产品封面hu
 *********************/
 function settingProductImageCover(selecter,_this){
 	var _this = $(_this).parent();
