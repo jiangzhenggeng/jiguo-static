@@ -238,7 +238,9 @@ a{
 .share-app-open-text{
 	color:#de3d11;
 }
-
+table td,table th{
+	border: none;
+}
 
 
 
