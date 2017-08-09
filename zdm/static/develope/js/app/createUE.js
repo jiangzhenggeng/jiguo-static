@@ -70,6 +70,49 @@ define(['jquery','ueditor','zeroclipboard'],function ($,UE,zcl) {
         var _editor = UE.getEditor(id,{
             serverUrl:url,
         });
+        //判断图片地址是否在本地
+        _editor.addListener("afterSetContent afterPaste",function(a,b){
+            function _matchImgCheck($string){
+                if($string=='')return true;
+                var notSrc = [],
+                    imgAddrList = ['pic.jiguo.com','s1.jiguo.com'];
+
+                $string.replace(/<img[^>]*src\s*=(\'|\")(.+?)\1/ig,function(match_all,match_target,src,resource){
+                    var _src = src;
+                    src = src.toLocaleLowerCase();
+                    //排除自己服务器绝对地址
+                    if(src.substr(0,1)=='/' && src.substr(0,2)!='//'){
+                        return;
+                    }
+                    //排除自己服务器相对地址
+                    if(src.substr(0,8)!='https://' && src.substr(0,7)!='http://'){
+                        return;
+                    }
+                    var $is_pass = false;
+                    for (var i=0 ; i < imgAddrList.length; i++ ){
+                        //如果不是自己的服务器地址
+                        if(src.indexOf(imgAddrList[i])!==-1){
+                            $is_pass = true;
+                        }
+                    }
+                    if($is_pass===false){
+                        notSrc.push(_src);
+                    }
+                });
+                return notSrc;
+            }
+            var notSrc = _matchImgCheck(this.getContent());
+            if(notSrc.length){
+                $(this.document).find('head').append('<style>.edui-image-not-jiguo-zdm-addr{border:5px solid red;}</style>');
+                $(this.body).find('img[src]').each(function () {
+                    for(var i=0 ; i < notSrc.length ;i++){
+                        if($(this).attr('src')==notSrc[i]){
+                            $(this).addClass('edui-image-not-jiguo-zdm-addr');
+                        }
+                    }
+                });
+            }
+        });
         _editor.setContent(content);
     }
     return{
