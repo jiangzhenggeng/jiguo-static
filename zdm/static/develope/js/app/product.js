@@ -35,6 +35,14 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
                 dom.find('.link-mall').val(replyData.result.mall);
                 dom.find('.link-price').val(replyData.result.price);
                 dom.find('[data-has]').attr('checked', 'true');
+                dom.find('iframe').attr('src', replyData.result.url);
+                //处理iframe不能显示的网站
+                var iframe=dom.find('iframe'),
+                    amazon='www.amazon.cn',
+                    kaola='www.kaola.com';
+                if(replyData.result.url.indexOf(amazon)>0||replyData.result.url.indexOf(kaola)>0){
+                    iframe.remove();
+                }
                 writeProduct(replyData);
             }
         })
