@@ -26,23 +26,16 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
             layer.msg('请填写链接地址');
             return false;
         }
-        layer.msg('信息查询中', {time: 999});
+        layer.msg('抓取中', {time: 99999});
         common.ajax('post', '/admin2/casperjs/index', {
             url: url
         }, 'JSON', function (replyData) {
             isSending = false;
+            layer.msg(replyData.errorMsg);
             if (dom) {
                 dom.find('.link-mall').val(replyData.result.mall);
                 dom.find('.link-price').val(replyData.result.price);
                 dom.find('[data-has]').attr('checked', 'true');
-                dom.find('iframe').attr('src', replyData.result.url);
-                //处理iframe不能显示的网站
-                var iframe=dom.find('iframe'),
-                    amazon='www.amazon.cn',
-                    kaola='www.kaola.com';
-                if(replyData.result.url.indexOf(amazon)>0||replyData.result.url.indexOf(kaola)>0){
-                    iframe.remove();
-                }
                 writeProduct(replyData);
             }
         })
@@ -57,11 +50,12 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
             layer.msg('请填写链接地址');
             return false;
         }
-        layer.msg('信息查询中', {time: 999});
+        var l=layer.msg('信息查询中', {time: 99999});
         common.ajax('post', '/admin2/casperjs/GetCardUrl', {
             url: url
         }, 'JSON', function (replyData) {
             isFinding = false;
+            layer.msg(replyData.errorMsg);
             callback(replyData);
         })
     }
