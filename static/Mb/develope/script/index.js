@@ -146,7 +146,7 @@ define([
             cacheLimit = localDataCache.getPageCacheData( sessionKey + 'limit' ),
             cacheBox = localDataCache.getPageCacheData( sessionKey + 'box' ),
             scrollTopPoint = localDataCache.getPageCacheData( sessionKey + 'point' );
-        if( typeof window.__no_session_cache__=='undefined' && cacheBox && cacheData ){
+        if( !window.__no_session_cache__ && cacheBox && cacheData && String(cacheData||'').length>100 ){
 
             $(cacheBox).html(cacheData);
             o.options.sendData.limit = cacheLimit;
@@ -162,7 +162,7 @@ define([
             // 设置了-webkit-overflow-scroll:touch window.scroll不生效
             $('[data-touchBox]').scroll(function () {
                 var scrollTop = $('[data-touchBox]').scrollTop()+$('[data-touchBox]').height() + 200 ;
-                localDataCache.setPageCacheData( sessionKey + 'point', $(window).scrollTop() );
+                //localDataCache.setPageCacheData( sessionKey + 'point', $(window).scrollTop() );
                 if(o.loading && o.options.fireDom.length && scrollTop>o.options.fireDom.offset().top ){
                     o.run();
                 }
@@ -170,12 +170,16 @@ define([
         }else{
             $(window).scroll(function(){
                 var scrollTop = $(window).scrollTop()+$(window).height() + 200 ;
-                localDataCache.setPageCacheData( sessionKey + 'point', $(window).scrollTop() );
+                //localDataCache.setPageCacheData( sessionKey + 'point', $(window).scrollTop() );
                 if(o.loading && o.options.fireDom.length && scrollTop>o.options.fireDom.offset().top ){
                     o.run();
                 }
             });
         }
+
+        $('body').click(function () {
+            localDataCache.setPageCacheData( sessionKey + 'point', $(window).scrollTop() );
+        });
 
     }
     //清除缓存
