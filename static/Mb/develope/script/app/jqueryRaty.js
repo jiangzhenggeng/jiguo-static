@@ -212,7 +212,8 @@ define(['jquery'],function ($){
 
       return cancel;
     }, _createScore: function() {
-      return $('<input />', { type: 'hidden', name: this.opt.scoreName }).appendTo(this);
+      var name = typeof this.opt.scoreName=='function'?this.opt.scoreName.call(this):this.opt.scoreName;
+      return $('<input />', { type: 'hidden', name: name }).appendTo(this);
     }, _createStars: function() {
       var that = $(this);
 

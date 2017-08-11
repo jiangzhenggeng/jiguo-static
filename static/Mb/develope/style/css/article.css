@@ -845,6 +845,161 @@ body {
 .immediately-wrap .mark-logo.used {
   background-image: url("../images/coupon/mark-used.png");
 }
+.user-percent-score-content .user-circle-score-wrap {
+  position: relative;
+}
+.user-percent-score-content .user-circle-score {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-percent-score-content .sub-title {
+  color: rgba(0, 0, 0, 0.5);
+}
+.user-percent-score-content .self-score {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+}
+.user-percent-score-content .show-percent-circle {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.user-percent-score-content .show-percent-line {
+  background-color: #f0f0f0;
+  padding: 12px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 110px;
+  overflow: hidden;
+}
+.user-percent-score-content .show-percent-line .score-larg {
+  width: 80px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-percent-score-content .show-percent-line .score {
+  font-size: 56px;
+}
+.user-percent-score-content .show-percent-line .score-tips {
+  font-size: 14px;
+}
+.user-percent-score-content .show-percent-line .show-line {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user-percent-score-content .show-percent-line .line-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-percent-score-content .show-percent-line .line-title {
+  font-size: 12px;
+  margin-right: 5px;
+}
+.user-percent-score-content .show-percent-line .line-bar-wrap {
+  flex: 1;
+  height: 10px;
+  background-color: #DCDCDC;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.user-percent-score-content .show-percent-line .line-bar-wrap .line-bar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(-90deg, #f7561c 0%, #fa9161 100%);
+  background-image: linear-gradient(-90deg, #f7561c 0%, #fa9161 100%);
+  border-radius: 2px;
+  -moz-transition: width 1.2s;
+  -webkit-transition: width 1.2s;
+  -o-transition: width 1.2s;
+  transition: width 1.2s;
+}
+.user-percent-score-content .user-percent-score {
+  width: 265px;
+  margin: auto;
+  overflow: hidden;
+}
+.user-percent-score-content .user-percent-score .user-score-desc {
+  font-size: 14px;
+  color: #333333;
+}
+.user-percent-score-content .user-percent-score .user-score-item {
+  margin: 0 0 15px 0;
+}
+.user-percent-score-content .user-percent-score .user-score-tips {
+  font-size: 12px;
+  color: #B3B3B3;
+}
+.user-percent-score-content .user-percent-score .user-score-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-percent-score-content .user-percent-score .user-score-title {
+  margin-bottom: 5px;
+}
+.user-percent-score-content .user-percent-score .user-score-icon-box {
+  position: relative;
+  height: 22px;
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0;
+}
+.user-percent-score-content .user-percent-score .user-score-icon-box img {
+  height: 100%;
+}
+.user-percent-score-content .user-percent-score .user-score-icon-desc {
+  color: #F5603A;
+  font-size: 12px;
+  margin-left: 20px;
+  width: 45px;
+  text-align: right;
+}
+.user-percent-score-content .user-submit-score {
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+}
+.user-percent-score-content .user-submit-score .btn {
+  background-color: #F5603A !important;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  width: 200px;
+  height: 35px;
+}
+.user-percent-score-content .user-submit-score .btn:active {
+  background-color: #e14c26 !important;
+}
+.user-percent-score-content .user-submit-score .btn.red {
+  background-color: #F5603A !important;
+}
+.user-percent-score-content .user-submit-score .btn.gray {
+  background-color: #ccc !important;
+}
 .main-body #praise-list-box {
   background-color: #fff;
   margin: 10px 0;

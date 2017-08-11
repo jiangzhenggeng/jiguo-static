@@ -1,7 +1,25 @@
 
 .user-percent-score-content{
+  .user-circle-score-wrap{
+    position: relative;
+  }
+  .user-circle-score{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .sub-title{
     color: rgba(0,0,0,0.5);
+  }
+  .self-score{
+    color: rgba(0,0,0,0.8);
+    font-size: 14px;
   }
   .show-percent-circle{
     display: -ms-flexbox;
@@ -17,9 +35,15 @@
     display: flex;
     flex-direction: row;
     text-align: center;
+    height: 110px;
+    overflow: hidden;
     .score-larg{
       width: 80px;
       margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
     .score{
       font-size: 56px;
@@ -45,33 +69,40 @@
       margin-right: 5px;
     }
 
-    .line-bar{
+    .line-bar-wrap{
       flex:1;
       height: 10px;
       background-color: #DCDCDC;
       border-radius: 2px;
       position: relative;
       overflow: hidden;
-      &:after{
-        content: '';
-        display: block;
+      .line-bar{
+        @s : 1.2s;
         position: absolute;
-        width: 80%;
+        width: 0%;
         height: 100%;
         background-image: -webkit-linear-gradient(-90deg, #F7561C 0%, #FA9161 100%);
         background-image: linear-gradient(-90deg, #F7561C 0%, #FA9161 100%);
         border-radius: 2px;
+        -moz-transition: width @s;
+        -webkit-transition: width @s;
+        -o-transition: width @s;
+        transition: width @s;
       }
     }
   }
 
-  @w : 260px;
+  @w : 265px;
   .user-percent-score{
     width: @w;
     margin: auto;
+    overflow: hidden;
     .user-score-desc{
       font-size: 14px;
       color: #333333;
+    }
+    .user-score-item{
+      margin: 0 0 15px 0;
     }
     .user-score-tips{
       font-size: 12px;
@@ -84,6 +115,10 @@
       align-items: center;
     }
 
+    .user-score-title{
+      margin-bottom: 5px;
+    }
+
     .user-score-icon-box{
       position: relative;
       height: 22px;
@@ -92,7 +127,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
+      font-size: 0;
       img{
         height: 100%;
       }
@@ -101,7 +137,35 @@
     .user-score-icon-desc{
       color: #F5603A;
       font-size: 12px;
-      margin-left: 10px;
+      margin-left: 20px;
+      width: 45px;
+      text-align: right;
+    }
+  }
+
+  //提交按钮
+  .user-submit-score{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+    .btn{
+      background-color:#F5603A !important;
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 2px;
+      width: 200px;
+      height: 35px;
+
+      &:active{
+        background-color: #F5603A - 20% !important;
+      }
+      &.red{
+        background-color: #F5603A !important;
+      }
+      &.gray{
+        background-color: #ccc !important;
+      }
     }
   }
 }
