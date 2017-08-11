@@ -28,7 +28,7 @@ define('BASE',dirname(__FILE__).'/../compression_'.$viesion.'/');
 
 listDir(BASE.'script');
 
-echo '<br><br><br>';
+echo PHP_EOL;
 
 listDir(BASE.'style');
 

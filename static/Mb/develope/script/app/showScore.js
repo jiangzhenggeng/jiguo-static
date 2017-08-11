@@ -154,6 +154,33 @@ define([
                        _this.css('width',_this.attr('data-width') * 10 + '%' );
                    },30);
                 });
+                // var score_box = $('[data-my-score]');
+                // var score = score_box.html();
+                // console.log( score );
+                //
+                // var time = time || 800;
+                // var now = new Date().getTime();
+                // var dr = 13;
+                // var timeer = null;
+                //
+                // function _getCurrScore(allTime,dfTime,score,start_score) {
+                //     return (start_score + dfTime / allTime * ( score - start_score )).toFixed(1);
+                // }
+                // function exec() {
+                //     var curr_now = new Date().getTime();
+                //     timeer && clearTimeout(timeer);
+                //     if( curr_now<now + time ){
+                //         score_box.html( _getCurrScore(time,curr_now - now , score , 0 ) );
+                //         timeer = setTimeout(function () {
+                //             exec();
+                //         },dr);
+                //     }else{
+                //         timeer && clearTimeout(timeer);
+                //         score_box.html( score );
+                //     }
+                // }
+                // exec();
+
             }
             $.get('/api/article/GetBlogScore',{
                 blogid:blogid
