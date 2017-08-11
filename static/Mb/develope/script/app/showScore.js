@@ -178,18 +178,21 @@ define([
                 wrapBox.html(html);
 
                 //已经评分啦
-                if( (replayDate.result.my_score>0 && replayDate.result.is_score) || replayDate.result.has_can_score!=1 ){
+                if( replayDate.result.score_num ){
                     var show_percent_line = $('.show-percent-line');
                     if(show_percent_line.length){
-                        var offsetTop = show_percent_line.offset().top;
                         $(window).on('scroll.userscore',function () {
-                            if( $(window).scrollTop() + $(window).height() + 60 > offsetTop ){
+                            var offsetTop = show_percent_line.offset().top;
+                            if( $(window).scrollTop() + $(window).height() - 150 > offsetTop ){
                                 showBar();
                                 $(window).off('scorll.userscore');
                             }
                         }).trigger('scroll.userscore');
                     }
-                }else{
+                }
+
+                if( replayDate.result.has_can_score && replayDate.result.my_score<=0 ){
+
                     var createScorCircle = new _require_self_.createScorCircle($('.show-percent-circle').eq(0) );
 
                     var icon_box = $('.user-score-icon-box');
