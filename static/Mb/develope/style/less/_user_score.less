@@ -1,0 +1,107 @@
+
+.user-percent-score-content{
+  .sub-title{
+    color: rgba(0,0,0,0.5);
+  }
+  .show-percent-circle{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .show-percent-line{
+    background-color: #f0f0f0;
+    padding: 12px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    .score-larg{
+      width: 80px;
+      margin-right: 10px;
+    }
+    .score{
+      font-size: 56px;
+    }
+    .score-tips{
+      font-size: 14px;
+    }
+
+    .show-line{
+      flex:1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .line-item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .line-title{
+      font-size: 12px;
+      margin-right: 5px;
+    }
+
+    .line-bar{
+      flex:1;
+      height: 10px;
+      background-color: #DCDCDC;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        background-image: -webkit-linear-gradient(-90deg, #F7561C 0%, #FA9161 100%);
+        background-image: linear-gradient(-90deg, #F7561C 0%, #FA9161 100%);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  @w : 260px;
+  .user-percent-score{
+    width: @w;
+    margin: auto;
+    .user-score-desc{
+      font-size: 14px;
+      color: #333333;
+    }
+    .user-score-tips{
+      font-size: 12px;
+      color: #B3B3B3;
+    }
+
+    .user-score-icon{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .user-score-icon-box{
+      position: relative;
+      height: 22px;
+      flex: 1;
+      flex-wrap: nowrap;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      img{
+        height: 100%;
+      }
+    }
+
+    .user-score-icon-desc{
+      color: #F5603A;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+}
