@@ -138,6 +138,8 @@ define([
                 desc = '比较好';
             }else if(score==5){
                 desc = '很出色';
+            }else if(score==0){
+                desc = '请打分';
             }
             return desc;
         },
