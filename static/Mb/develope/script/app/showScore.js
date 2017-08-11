@@ -207,7 +207,7 @@ define([
                     if( !window.URL['uid'] ){
                         readOnly = true;
                         wrapBox.on('click','.user-score-icon-box img',function () {
-                            unitTool.msg('请先登录');
+                            window.location = '/mb/user/login.html';
                         });
                     }
                     icon_box.raty({
@@ -220,7 +220,7 @@ define([
                         },
                         click: function(score) {
                             if( !window.URL['uid'] ){
-                                unitTool.msg('请先登录');
+                                window.location = '/mb/user/login.html';
                                 return;
                             }
                             var p = $(this).attr('data-p');
@@ -248,7 +248,7 @@ define([
 
                     user_submit_score.on('click','.btn',function () {
                         if( !window.URL['uid'] ){
-                            unitTool.msg('请先登录');
+                            window.location = '/mb/user/login.html';
                             return;
                         }
                         if( !complete ){
