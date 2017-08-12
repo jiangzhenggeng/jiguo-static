@@ -1,6 +1,6 @@
 
 requirejs.config({
-    baseUrl: "http://cdn.jiguo.com/static/Pc/compression_3.0/script/",
+    baseUrl: "http://cdn.jiguo.com/static/Pc/compression_3.1/script/",
     waitSeconds: 0,
     paths: {
         'ueditor': 'http://www.jiguo.com/protected/extensions/ueditor/ueditor.all.min',
