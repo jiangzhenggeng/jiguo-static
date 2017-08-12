@@ -115,7 +115,8 @@ define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown
                         var parent=$this.parent();
                         var btn=parent.siblings('.meta-btn').find('a');
                         var href=btn.data('href')||'';
-                        btn.removeClass('gray').addClass('red').attr('href',href).text('立即申请');
+                        var btn_text = btn.attr('data-bun-text') || '立即申请';
+                        btn.removeClass('gray').addClass('red').attr('href',href).text(btn_text);
                         parent.remove();
                     }
                 })
