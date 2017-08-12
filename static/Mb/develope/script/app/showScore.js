@@ -39,7 +39,7 @@ define([
                             </linearGradient>\
                         </defs>\
                         <circle cx="'+this.cx_cy.cx+'px" cy="'+this.cx_cy.cy+'px" r="'+this.r+'px" stroke-width="'+this.stroke_width+'px" stroke="#e5e5e5" fill="none"></circle>\
-                        <circle id="'+id+'" stroke="url(#grad1)" fill="none" stroke-dasharray="'+this.curr_percent+'px '+this.perimeter+'px" cx="'+this.cx_cy.cx+'px" cy="'+this.cx_cy.cy+'px" r="'+this.r+'px" stroke-width="'+this.stroke_width+'px" transform="matrix(0,-1,1,0,0,'+this.width+')"></circle>\
+                        <circle id="'+id+'" stroke="url(#grad1)" fill="none" stroke-dasharray="'+this.curr_percent+'px '+this.perimeter+'px" cx="'+this.cx_cy.cx+'px" cy="'+this.cx_cy.cy+'px" r="'+this.r+'px" stroke-width="'+this.stroke_width+'px" transform="translate(56, 56) rotate(-90.000000) translate(-56.000000, -56.000000)"></circle>\
                     </svg>\
                     <div class="user-circle-score">\
                         <div id="g1-'+id+'" style="display:'+(this.curr_percent?'block':'none')+'">\
