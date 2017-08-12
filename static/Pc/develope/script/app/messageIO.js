@@ -87,6 +87,10 @@ define(['require','jquery','socket.io'],function (require,$,io){
                     if(typeof(_msg.zan)!='undefined' && parseInt(_msg.zan)>0){
                         tempFunc(_msg.zan,'.zannews');
                     }
+
+                    if(typeof(_msg.score)!='undefined' && parseInt(_msg.score)>0){
+                        tempFunc(_msg.score,'.scorenews');
+                    }
                 }
 
                 //外层角标

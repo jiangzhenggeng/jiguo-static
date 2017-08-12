@@ -652,6 +652,41 @@
       line-height: 24px;
     }
   }
+
+  //文章评分
+  .article-score{
+    font-size: 36px;
+  }
+  .article-desc{
+    color: #F5603A;
+  }
+  .show-line{
+    .line-item{
+      margin-bottom: 8px;
+    }
+    .line-title{
+      float: left;
+    }
+    .line-bar-wrap{
+      width: 180px;
+      height: 10px;
+      border-radius: 2px;
+      background-color: #DCDCDC;
+      margin-left: 10px;
+      display: inline-block;
+      .line-bar{
+        width: 0%;
+        height: 10px;
+        border-radius: 2px;
+        background: -webkit-linear-gradient(left, #F98E5E, #F7561C);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
+        background: #F98E5E;
+        background: -moz-linear-gradient(left, #F98E5E, #F7561C);
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#F98E5E), to(#F7561C));
+      }
+    }
+  }
 }
 
 //预设置卡片大小
@@ -765,6 +800,120 @@ iframe{
       margin-top: 25px;
     }
   }
+}
+
+//文章评分
+.user-percent-score{
+  width: 500px;
+  margin: 0 auto;
+  .show-percent-circle{
+    width: 172px;
+    height: 172px;
+    float: left;
+    margin-top: 33px;
+  }
+  .user-circle-score-wrap{
+    position: relative;
+    .user-circle-score{
+      position: absolute;
+      width: 100%;
+      height: 172px;
+      left: 0;
+      top: 0;
+      text-align: center;
+      display: table;
+      &>div{
+        vertical-align: middle;
+      }
+    }
+  }
+  .user-score-list{
+    margin-left: 235px;
+  }
+  .user-score-tips{
+    color: #B3B3B3;
+  }
+  .user-score-icon-box{
+    width: auto!important;
+    display: inline-block;
+    img{
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  .user-score-item{
+    margin-bottom: 10px;
+  }
+  .user-score-title{
+    margin-bottom: 5px;
+  }
+  .user-score-desc{
+    font-size: 14px;
+  }
+  .user-score-icon-desc{
+    display: inline-block;
+    vertical-align: middle;
+    color: #b3b3b3;
+    &.orange{
+      color: #F5603A;
+    }
+  }
+}
+.user-submit-score{
+  margin-top:50px;
+  cursor: pointer;
+  .sub-score-btn{
+    width: 196px;
+    height: 35px;
+    margin:0 auto;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    background-color: #CCCCCC;
+    &.on{
+      background-color: #F5603A;
+    }
+  }
+}
+.choice-event-box{
+  .article-score{
+    font-size: 48px;
+  }
+  .article-desc{
+    color: #F5603A;
+  }
+  .show-line{
+    .line-item{
+      margin-bottom: 15px;
+    }
+    .line-title{
+      float: left;
+      font-size: 14px;
+    }
+    .line-bar-wrap{
+      width: 286px;
+      height: 13px;
+      border-radius: 4px;
+      background-color: #DCDCDC;
+      margin-left: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      .line-bar{
+        width: 0%;
+        height: 13px;
+        border-radius: 4px;
+        background: -webkit-linear-gradient(left, #F98E5E, #F7561C);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
+        background: #F98E5E;
+        background: -moz-linear-gradient(left, #F98E5E, #F7561C);
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#F98E5E), to(#F7561C));
+      }
+    }
+  }
+}
+.orange{
+  color: #F5603A;
 }
 
 @import "_inner_crad";

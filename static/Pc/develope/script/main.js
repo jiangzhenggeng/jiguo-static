@@ -36,6 +36,8 @@ define("main",[
     'app/userCenterInfor',
     'app/videoAdapt',
     'app/viewport',
+    'app/jqueryRaty',
+    'app/showScore',
     'vip'
 ],function (){
 

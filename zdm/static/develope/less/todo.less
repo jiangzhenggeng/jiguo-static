@@ -224,3 +224,86 @@
     color: #fff;
   }
 }
+
+//评星
+.report-star-box {
+  .star-wrap{
+    zoom: 1;
+    padding: 2px 0;
+    position: relative;
+    z-index: 999;
+    line-height:1.2em;
+    width: 320px;
+    border-right: 1px solid #ccc;
+    position: relative;
+    &>div{
+      margin: 5px 0;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+    &:before{
+      display: inline-block;
+      content: '';
+      border: 12px solid transparent;
+      border-left-color: #ccc;
+      position: absolute;
+      top: 40px;
+      right: -24px;
+    }
+    &:after{
+      display: inline-block;
+      content: '';
+      border: 10px solid transparent;
+      border-left-color: #fff;
+      position: absolute;
+      top: 42px;
+      right: -20px;
+    }
+    span{
+      height: 18px;
+      display: block;
+      line-height: 18px;
+      float: left;
+      &.title{
+        width: 125px;
+        text-align: right;
+        margin-right: 5px;
+      }
+    }
+    ul{
+      float: left;
+      width: 130px;
+      font-size: 0;
+      li{
+        width: 20%;
+        display: inline-block;
+        height: 18px;
+        vertical-align: middle;
+        background: url("../images/i-gray-star.png") no-repeat center center;
+        background-size: 18px auto;
+        cursor: pointer;
+        &.on{
+          background: url("../images/i-red-star.png") no-repeat center center;
+          background-size: 18px auto;
+        }
+      }
+    }
+    .result{
+      margin-left: 20px;
+      padding-top: 2px;
+      span{
+        color: #ff6d02;
+      }
+      em{
+        color: #999999;
+      }
+    }
+  }
+  .total-score-wrap{
+    width: 120px;
+    text-align: center;
+  }
+}

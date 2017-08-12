@@ -119,6 +119,7 @@ body {
 }
 .footer .footer-bottom {
   background: #f4f4f4;
+  height: 36px;
   text-align: center;
 }
 @keyframes heart_like {
@@ -266,7 +267,6 @@ body {
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 100px;
-  overflow-y: auto;
 }
 .image-view-box .image-show-content {
   height: 100%;
@@ -1886,9 +1886,6 @@ body {
   color: #d9d9d9;
   text-decoration: line-through;
 }
-.endgray {
-  color: #d9d9d9;
-}
 .c-4c4c4c {
   color: #4c4c4c;
 }
@@ -2196,17 +2193,16 @@ ul.event-show-card-warp li {
   -moz-border-radius: 5px;
   overflow: hidden;
   margin-right: 29px;
-  width: 246px;
+  width: 248px;
   float: left;
   cursor: pointer;
-  border: 1px solid #f0f0f0;
 }
 ul.event-show-card-warp li:last-child {
   margin-right: 0;
 }
 ul.event-show-card-warp .img-box img {
-  width: 246px;
-  height: 153px;
+  width: 248px;
+  height: 155px;
   display: block;
 }
 ul.event-show-card-warp .desc-box {
@@ -2220,6 +2216,7 @@ ul.event-show-card-warp .desc-box .hover-box {
   padding: 15px;
   width: 216px;
   background: #fff;
+  border: 1px solid #f2f2f2;
   left: 0;
   height: auto;
   border-top: none;
@@ -2569,9 +2566,6 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   width: 95px;
 }
 .header .menu .menu-warp li.app-download {
-  width: 95px;
-}
-.header .menu .menu-warp li.information {
   width: 80px;
 }
 .header .menu .menu-warp li a {
@@ -2603,10 +2597,6 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
 }
 .header .menu .menu-warp li.app-download i {
   background-position: -208px -29px;
-}
-.header .menu .menu-warp li.information.on a,
-.header .menu .menu-warp li.information:hover a {
-  color: #fe584d;
 }
 .header .menu .menu-warp li.app-download.on i,
 .header .menu .menu-warp li.app-download:hover i {
@@ -3043,7 +3033,7 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   top: -10px;
 }
 .nav .nav-user li:last-of-type a {
-  max-width: 140px;
+  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3177,9 +3167,6 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   color: #999999;
   font-size: 12px;
   margin-right: 17px;
-}
-.footer .footer-bottom p {
-  line-height: 24px;
 }
 .dialog .dialog-warp {
   background: #fff;

@@ -201,3 +201,81 @@
   background-color: #fc6b6b;
   color: #fff;
 }
+.report-star-box .star-wrap {
+  zoom: 1;
+  padding: 2px 0;
+  z-index: 999;
+  line-height: 1.2em;
+  width: 320px;
+  border-right: 1px solid #ccc;
+  position: relative;
+}
+.report-star-box .star-wrap > div {
+  margin: 5px 0;
+}
+.report-star-box .star-wrap > div:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.report-star-box .star-wrap:before {
+  display: inline-block;
+  content: '';
+  border: 12px solid transparent;
+  border-left-color: #ccc;
+  position: absolute;
+  top: 40px;
+  right: -24px;
+}
+.report-star-box .star-wrap:after {
+  display: inline-block;
+  content: '';
+  border: 10px solid transparent;
+  border-left-color: #fff;
+  position: absolute;
+  top: 42px;
+  right: -20px;
+}
+.report-star-box .star-wrap span {
+  height: 18px;
+  display: block;
+  line-height: 18px;
+  float: left;
+}
+.report-star-box .star-wrap span.title {
+  width: 125px;
+  text-align: right;
+  margin-right: 5px;
+}
+.report-star-box .star-wrap ul {
+  float: left;
+  width: 130px;
+  font-size: 0;
+}
+.report-star-box .star-wrap ul li {
+  width: 20%;
+  display: inline-block;
+  height: 18px;
+  vertical-align: middle;
+  background: url("../images/i-gray-star.png") no-repeat center center;
+  background-size: 18px auto;
+  cursor: pointer;
+}
+.report-star-box .star-wrap ul li.on {
+  background: url("../images/i-red-star.png") no-repeat center center;
+  background-size: 18px auto;
+}
+.report-star-box .star-wrap .result {
+  margin-left: 20px;
+  padding-top: 2px;
+}
+.report-star-box .star-wrap .result span {
+  color: #ff6d02;
+}
+.report-star-box .star-wrap .result em {
+  color: #999999;
+}
+.report-star-box .total-score-wrap {
+  width: 120px;
+  text-align: center;
+}
