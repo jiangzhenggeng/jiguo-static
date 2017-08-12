@@ -146,40 +146,43 @@ define([
         init:function () {
             var userScoreCacheFn = tplEngine.init( $('#user-score-tpl').html() );
             var _require_self_ = this;
-
+            var _first_score = 0;
             function showBar() {
+                var score_box = $('[data-my-score]');
+                var score = score_box.html();
+                if(_first_score==score) return;
                 $('.show-line').find('[data-animate][data-width]').each(function () {
                     var _this = $(this);
                    setTimeout(function () {
                        _this.css('width',_this.attr('data-width') * 10 + '%' );
                    },30);
                 });
-                // var score_box = $('[data-my-score]');
-                // var score = score_box.html();
-                // console.log( score );
-                //
-                // var time = time || 800;
-                // var now = new Date().getTime();
-                // var dr = 13;
-                // var timeer = null;
-                //
-                // function _getCurrScore(allTime,dfTime,score,start_score) {
-                //     return (start_score + dfTime / allTime * ( score - start_score )).toFixed(1);
-                // }
-                // function exec() {
-                //     var curr_now = new Date().getTime();
-                //     timeer && clearTimeout(timeer);
-                //     if( curr_now<now + time ){
-                //         score_box.html( _getCurrScore(time,curr_now - now , score , 0 ) );
-                //         timeer = setTimeout(function () {
-                //             exec();
-                //         },dr);
-                //     }else{
-                //         timeer && clearTimeout(timeer);
-                //         score_box.html( score );
-                //     }
-                // }
-                // exec();
+
+                var time = 1200;
+                var now = new Date().getTime();
+                var dr = 13;
+                var timeer = null;
+
+                function _getCurrScore(allTime,dfTime,score,start_score) {
+                    return (start_score + dfTime / allTime * ( score - start_score )).toFixed(1);
+                }
+                function exec() {
+                    var curr_now = new Date().getTime();
+                    timeer && clearTimeout(timeer);
+                    if( curr_now<now + time ){
+                        var curr_score = _getCurrScore(time,curr_now - now , score , 0 );
+                        score_box.html( curr_score );
+                        _first_score = curr_score;
+                        timeer = setTimeout(function () {
+                            exec();
+                        },dr);
+                    }else{
+                        timeer && clearTimeout(timeer);
+                        score_box.html( score );
+                        _first_score = score;
+                    }
+                }
+                exec();
 
             }
             $.get('/api/article/GetBlogScore',{
@@ -213,8 +216,8 @@ define([
                         $(window).on('scroll.userscore',function () {
                             var offsetTop = show_percent_line.offset().top;
                             if( $(window).scrollTop() + $(window).height() - 150 > offsetTop ){
+                                $(window).off('scroll.userscore');
                                 showBar();
-                                $(window).off('scorll.userscore');
                             }
                         }).trigger('scroll.userscore');
                     }
