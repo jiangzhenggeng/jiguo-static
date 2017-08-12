@@ -114,7 +114,7 @@ define([
             if( score<6 ){
                 desc = '';
             }else if(score<8){
-                desc = '良心之作';
+                desc = '用心之作';
             }else if(score<9){
                 desc = '干货好文';
             }else if(score<=10){
