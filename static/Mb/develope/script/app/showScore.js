@@ -149,7 +149,7 @@ define([
             var _first_score = 0;
             function showBar() {
                 var score_box = $('[data-my-score]');
-                var score = score_box.html();
+                var score = score_box.attr('data-my-score');
                 if(_first_score==score) return;
                 $('.show-line').find('[data-animate][data-width]').each(function () {
                     var _this = $(this);
@@ -215,7 +215,7 @@ define([
                     if(show_percent_line.length){
                         $(window).on('scroll.userscore',function () {
                             var offsetTop = show_percent_line.offset().top;
-                            if( $(window).scrollTop() + $(window).height() - 150 > offsetTop ){
+                            if( $(window).scrollTop() + $(window).height() - 60 > offsetTop ){
                                 $(window).off('scroll.userscore');
                                 showBar();
                             }
