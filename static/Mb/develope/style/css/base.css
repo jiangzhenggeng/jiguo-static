@@ -2624,3 +2624,61 @@ a {
   margin-right: 5px;
   font-style: normal;
 }
+.announcement-main .announcement-wrap {
+  position: relative;
+  padding: 0 12px;
+  color: #666666;
+  font-size: 12px;
+  height: 46px;
+  overflow: hidden;
+  background: #fff;
+  padding-left: 46px;
+}
+.announcement-main .announcement-wrap:after {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  margin-top: -13px;
+  content: '';
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-image: url(../images/announcement.png);
+  background-size: 12px auto;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.announcement-main .announcement-wrap:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 37px;
+  top: 50%;
+  margin-top: -12px;
+  width: 1px;
+  height: 24px;
+  background-color: #D1D1D1;
+}
+.announcement-main li {
+  height: 46px;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.announcement-main li a {
+  word-wrap: break-word;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  line-height: 18px;
+  max-height: 36px;
+}
+.announcement-main .username {
+  color: #4270A5;
+}

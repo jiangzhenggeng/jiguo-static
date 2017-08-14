@@ -48,7 +48,8 @@ define("main",[
     'index',
     'article',
     'app/showScore',
-    'app/jqueryRaty'
+    'app/jqueryRaty',
+    'app/announcement'
 ],function (){
 
 });
