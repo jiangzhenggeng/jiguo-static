@@ -21,7 +21,7 @@ define([
         this.stroke_width = 10;
         this.box = $(box);
         this.perimeter = Math.ceil(Math.PI * (this.width - this.stroke_width));
-        this.curr_percent = curr_percent || 0;
+        this.curr_percent = curr_percent || this.perimeter;
 
         this.r = (this.width - this.stroke_width) / 2;
         this.cx_cy = {
@@ -40,7 +40,7 @@ define([
                             </linearGradient>\
                         </defs>\
                         <circle cx="'+this.cx_cy.cx+'px" cy="'+this.cx_cy.cy+'px" r="'+this.r+'px" stroke-width="'+this.stroke_width+'px" stroke="#e5e5e5" fill="none"></circle>\
-                        <circle id="'+id+'" stroke="url(#grad1)" fill="none" stroke-dasharray="'+this.curr_percent+'px '+this.perimeter+'px" cx="'+this.cx_cy.cx+'px" cy="'+this.cx_cy.cy+'px" r="'+this.r+'px" stroke-width="'+this.stroke_width+'px" transform="translate(86, 86) rotate(-90.000000) translate(-86.000000, -86.000000)"></circle>\
+                        <circle id="'+id+'" stroke="url(#grad1)" fill="none" stroke-dasharray="'+this.perimeter+'px '+this.perimeter+'px" stroke-dashoffset="'+this.curr_percent+'px" cx="'+this.cx_cy.cx+'px" cy="'+this.cx_cy.cy+'px" r="'+this.r+'px" stroke-width="'+this.stroke_width+'px" transform="translate(86, 86) rotate(-90.000000) translate(-86.000000, -86.000000)"></circle>\
                     </svg>\
                     <div class="user-circle-score">\
                         <div id="g1-'+id+'" style="display:'+(this.curr_percent?'table-cell':'none')+'">\
@@ -97,7 +97,7 @@ define([
         _setScor:function (_score) {
             this.start_score = _score;
             this.circle.attr({
-                'stroke-dasharray':Math.ceil( _score * this.perimeter )+'px '+this.perimeter+'px',
+                'stroke-dashoffset':Math.ceil( (1-_score) * this.perimeter )+'px ',
                 'stroke-linecap':'round'
             });
             var s = (_score * 10).toFixed(1);

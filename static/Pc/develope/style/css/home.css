@@ -504,6 +504,35 @@
   color: #999;
   text-align: center;
 }
+.hot-event-warp .event-notice-wrap {
+  height: 40px;
+  width: 424px;
+  overflow: hidden;
+  line-height: 40px;
+}
+.hot-event-warp .event-notice-wrap .notice-bd li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+.hot-event-warp .event-notice-wrap .notice-bd li a {
+  color: #999;
+}
+.hot-event-warp .event-notice-wrap .notice-bd li b {
+  color: #666;
+}
+.hot-event-warp .event-notice-wrap .notice-bd li i {
+  display: inline-block;
+  width: 9px;
+  height: 13px;
+  background: url("../images/notice.png") no-repeat center center;
+  background-size: 9px 13px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
+}
 .main-choice-event .choice-event-box {
   margin-top: 20px;
 }
