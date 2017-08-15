@@ -12,8 +12,8 @@ define([
     return {
         init:function () {
             var tpl = '<% for(var i in data){ %>' +
-                '<li><a href="/mb/event/index/<%=data[i].eventid%>.html">' +
-                '【<%=data[i].play_name%>】' +
+                '<li><a href="/mb/event/index/<%=data[i].eventid%>.html" class="announcement-item">' +
+                '<span class="announcement-event-name"><%=data[i].play_name%></span>' +
                 '<span class="username"><%=data[i].username%></span>' +
                 '<%=data[i].content%>' +
                 '</a></li>' +

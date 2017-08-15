@@ -2628,17 +2628,17 @@ a {
   position: relative;
   padding: 0 12px;
   color: #666666;
-  font-size: 12px;
+  font-size: 13px;
   height: 46px;
   overflow: hidden;
-  background: #fff;
-  padding-left: 46px;
+  background: #f7f7f7;
+  padding-left: 50px;
 }
 .announcement-main .announcement-wrap:after {
   position: absolute;
   left: 12px;
   top: 50%;
-  margin-top: -13px;
+  margin-top: -14px;
   content: '';
   display: block;
   width: 26px;
@@ -2662,7 +2662,6 @@ a {
 }
 .announcement-main li {
   height: 46px;
-  background-color: #fff;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2678,7 +2677,13 @@ a {
   overflow: hidden;
   line-height: 18px;
   max-height: 36px;
+  position: relative;
+  top: 1px;
 }
-.announcement-main .username {
-  color: #4270A5;
+.announcement-main .announcement-item {
+  color: #999999;
+}
+.announcement-main .announcement-event-name {
+  color: #666666;
+  margin-right: 8px;
 }
