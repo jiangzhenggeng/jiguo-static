@@ -29,5 +29,5 @@ tests/_support/_generated
 
 framework/*
 git.sh
-
-
+.gitignore
+static/Pc/compression_3.0
