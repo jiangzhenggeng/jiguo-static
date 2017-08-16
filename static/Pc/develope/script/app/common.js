@@ -25,7 +25,7 @@ define([
         //ipad适配
         viewport.init();
 
-        var html = '<div class="quick-speed-top">' +
+        var html = '<div class="quick-speed-top" style="display: none">' +
             '<a href="/feedback/isfeedback" target="_blank">' +
             '<span class="right-feedback-into" data-badge-warp-feedback></span></a>' +
             '<a href="javascript:;" data-quick-speed-top>' +

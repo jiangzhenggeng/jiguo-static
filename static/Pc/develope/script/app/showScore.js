@@ -15,6 +15,7 @@ define([
 ],function (
     $,global,layer,unitTool,jqueryRaty,tplEngine,common
 ){
+    var TOTAL_SCORE = 10;
 
     function createScorCircle(box,width,curr_percent) {
         this.width = width || 112;
@@ -97,10 +98,10 @@ define([
         _setScor:function (_score) {
             this.start_score = _score;
             this.circle.attr({
-                'stroke-dashoffset':Math.ceil( (1-_score) * this.perimeter )+'px ',
+                'stroke-dashoffset':Math.ceil( (1 - _score * TOTAL_SCORE / 10 ) * this.perimeter ) +'px',
                 'stroke-linecap':'round'
             });
-            var s = (_score * 10).toFixed(1);
+            var s = (_score * TOTAL_SCORE).toFixed(1);
             this.score.html( s );
             this.desc.html( this._getScoreDesc( _score ) );
             //console.log( Math.ceil( _score * this.perimeter )+'px '+this.perimeter+'px',_score)
@@ -109,7 +110,7 @@ define([
             return start_score + dfTime / allTime * ( score - start_score );
         },
         _getScoreDesc:function ( _score ) {
-            var score = (_score * 10);
+            var score = (_score * TOTAL_SCORE);
             var desc = '';
             if( score<6 ){
                 desc = '';
@@ -171,6 +172,11 @@ define([
                     video_score:0,
                     pic_score:0
                 };
+                var hasVideo = true;
+                if(replayDate.result.video==0){
+                    hasVideo = false;
+                    TOTAL_SCORE = 9;
+                }
                 var html = userScoreCacheFn({
                         data:replayDate.result,
                         submitScore:submitScore
@@ -222,49 +228,55 @@ define([
                             common.login();
                         });
                     }
-                    icon_box.raty({
-                        readOnly:readOnly,
-                        number:5,
-                        starOff:require.toUrl('../style/images/score/xing_1.svg'),
-                        starOn:require.toUrl('../style/images/score/xing_2.svg'),
-                        score: function() {
-                            return $(this).attr('data-number');
-                        },
-                        mouseover: function (score) {
-                            $(this).next().html( _require_self_.getXingDesc(score) ).addClass('orange');
-                        },
-                        mouseout: function (score) {
-                            if($(this).attr('data-number')>0){
-                                $(this).next().html( _require_self_.getXingDesc(score) );
-                            }else{
-                                $(this).next().html( '请评分' ).removeClass('orange');
+                    icon_box.each(function (i,el) {
+                        var _readOnly = readOnly || $(this).parent().parent().hasClass('no-video');
+                        $(el).raty({
+                            readOnly:_readOnly,
+                            number:5,
+                            starOff:_readOnly?require.toUrl('../style/images/score/xing_3.svg'):require.toUrl('../style/images/score/xing_1.svg'),
+                            starOn:_readOnly?require.toUrl('../style/images/score/xing_3.svg'):require.toUrl('../style/images/score/xing_2.svg'),
+                            score: function() {
+                                return $(this).attr('data-number');
+                            },
+                            mouseover: function (score) {
+                                if(_readOnly) return;
+                                $(this).next().html( _require_self_.getXingDesc(score) ).addClass('orange');
+                            },
+                            mouseout: function (score) {
+                                if(_readOnly) return;
+                                if($(this).attr('data-number')>0){
+                                    $(this).next().html( _require_self_.getXingDesc(score) );
+                                }else{
+                                    $(this).next().html( '请评分' ).removeClass('orange');
+                                }
+                            },
+                            click: function(score) {
+                                if( !window.URL['uid'] ){
+                                    common.login();
+                                    return;
+                                }
+                                var p = $(this).attr('data-p');
+                                var has_score = p * score;
+                                $(this).attr('data-score',has_score * 2);
+                                $(this).attr('data-number',score);
+                                $(this).next().html( _require_self_.getXingDesc(score) ).addClass('orange');
+                                if(($('.user-score-icon-desc.orange').length>=4 && hasVideo)||
+                                    ($('.user-score-icon-desc.orange').length>=3 && !hasVideo)){
+                                    $('.sub-score-btn').addClass('on');
+                                }
+                                setShowScore();
+                                submitScore[ $(this).attr('data-submit-key') ] = score * 2;
                             }
-                        },
-                        click: function(score) {
-                            if( !window.URL['uid'] ){
-                                common.login();
-                                return;
-                            }
-                            var p = $(this).attr('data-p');
-                            var has_score = p * score;
-                            $(this).attr('data-score',has_score * 2);
-                            $(this).attr('data-number',score);
-                            $(this).next().html( _require_self_.getXingDesc(score) ).addClass('orange');
-                            if($('.user-score-icon-desc.orange').length>=4){
-                                $('.sub-score-btn').addClass('on');
-                            }
-                            setShowScore();
-                            submitScore[ $(this).attr('data-submit-key') ] = score * 2;
-                        }
+                        });
                     });
-
 
                     user_submit_score.on('click','.sub-score-btn',function () {
                         if( !window.URL['uid'] ){
                             common.login();
                             return;
                         }
-                        if($('.user-score-icon-desc.orange').length<4){
+                        if(($('.user-score-icon-desc.orange').length<4 && hasVideo)||
+                            ($('.user-score-icon-desc.orange').length<3 && !hasVideo)){
                             layer.msg('请先评分');
                             return;
                         }

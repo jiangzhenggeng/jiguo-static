@@ -41,7 +41,7 @@
 }
 .report-star-box .star-wrap span.title {
     width: 125px;
-    text-align: right;
+    text-align: left;
     margin-right: 5px;
 }
 .report-star-box .star-wrap ul {
@@ -60,6 +60,10 @@
 }
 .report-star-box .star-wrap ul li.on {
     background: url("../images/i-red-star.png") no-repeat center center;
+    background-size: 18px auto;
+}
+.report-star-box .star-wrap ul li.disabled {
+    background: url("../images/i-disable-star.png") no-repeat center center;
     background-size: 18px auto;
 }
 .report-star-box .star-wrap .result {
