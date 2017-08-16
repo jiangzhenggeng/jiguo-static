@@ -33,7 +33,7 @@ body p{
 p img[src]{
 	max-width:100%!important;
 	height:auto!important;
-	display: block ;
+	display: inline-block ;
 	margin: 15px auto;
 }
 p span{
