@@ -14,6 +14,7 @@ define([
 ],function (
     $,global,layer,unitTool,jqueryRaty,tplEngine
 ){
+    var TOTAL_SCORE = 10;
 
     function createScorCircle(box,width,curr_percent) {
         this.width = width || 112;
@@ -97,10 +98,10 @@ define([
         _setScor:function (_score) {
             this.start_score = _score;
             this.circle.attr({
-                'stroke-dashoffset':Math.ceil( (1 - _score) * this.perimeter ) +'px',
+                'stroke-dashoffset':Math.ceil( (1 - _score * TOTAL_SCORE / 10 ) * this.perimeter ) +'px',
                 'stroke-linecap':'round'
             });
-            var s = (_score * 10).toFixed(1);
+            var s = (_score * TOTAL_SCORE).toFixed(1);
             this.score.html( s );
             this.desc.html( this._getScoreDesc( _score ) );
             //console.log( Math.ceil( _score * this.perimeter )+'px '+this.perimeter+'px',_score)
@@ -109,7 +110,7 @@ define([
             return start_score + dfTime / allTime * ( score - start_score );
         },
         _getScoreDesc:function ( _score ) {
-            var score = (_score * 10);
+            var score = (_score * TOTAL_SCORE);
             var desc = '';
             if( score<6 ){
                 desc = '';
@@ -199,6 +200,10 @@ define([
                     video_score:0,
                     pic_score:0
                 };
+                if(replayDate.result.video==0){
+                    TOTAL_SCORE = 9;
+                    submitScore.video_score = 0.0000001
+                }
 
                 var complete = false;
 
@@ -245,40 +250,43 @@ define([
                             window.location = '/mb/user/login.html';
                         });
                     }
-                    icon_box.raty({
-                        readOnly:readOnly,
-                        number:5,
-                        starOff:require.toUrl('../style/images/score/xing_1.svg'),
-                        starOn:require.toUrl('../style/images/score/xing_2.svg'),
-                        score: function() {
-                            return $(this).attr('data-number');
-                        },
-                        click: function(score) {
-                            if( !window.URL['uid'] ){
-                                window.location = '/mb/user/login.html';
-                                return;
-                            }
-                            var p = $(this).attr('data-p');
-                            var has_score = p * score;
-                            $(this).attr('data-score',has_score * 2);
-                            $(this).attr('data-number',score);
-                            $(this).next().html( _require_self_.getXingDesc(score) );
-                            setShowScore();
-                            submitScore[ $(this).attr('data-submit-key') ] = score * 2;
-
-                            for(var i in submitScore){
-                                if(submitScore[i]==0){
-                                    complete = false;
-                                    break;
+                    icon_box.each(function () {
+                        var _readOnly = readOnly || $(this).parent().parent().hasClass('no-video');
+                        $(this).raty({
+                            readOnly: _readOnly,
+                            number:5,
+                            starOff:_readOnly?require.toUrl('../style/images/score/xing_3.svg'):require.toUrl('../style/images/score/xing_1.svg'),
+                            starOn:_readOnly?require.toUrl('../style/images/score/xing_3.svg'):require.toUrl('../style/images/score/xing_2.svg'),
+                            score: function() {
+                                return $(this).attr('data-number');
+                            },
+                            click: function(score) {
+                                if( !window.URL['uid'] ){
+                                    window.location = '/mb/user/login.html';
+                                    return;
                                 }
-                                complete = true;
+                                var p = $(this).attr('data-p');
+                                var has_score = p * score;
+                                $(this).attr('data-score',has_score * 2);
+                                $(this).attr('data-number',score);
+                                $(this).next().html( _require_self_.getXingDesc(score) );
+                                setShowScore();
+                                submitScore[ $(this).attr('data-submit-key') ] = score * 2;
+
+                                for(var i in submitScore){
+                                    if(submitScore[i]==0){
+                                        complete = false;
+                                        break;
+                                    }
+                                    complete = true;
+                                }
+                                if(!complete){
+                                    user_submit_score.find('.btn').removeClass('red').addClass('gray');
+                                }else{
+                                    user_submit_score.find('.btn').removeClass('gray').addClass('red');
+                                }
                             }
-                            if(!complete){
-                                user_submit_score.find('.btn').removeClass('red').addClass('gray');
-                            }else{
-                                user_submit_score.find('.btn').removeClass('gray').addClass('red');
-                            }
-                        }
+                        });
                     });
 
                     user_submit_score.on('click','.btn',function () {
