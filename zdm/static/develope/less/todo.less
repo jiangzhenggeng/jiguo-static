@@ -269,7 +269,7 @@
       float: left;
       &.title{
         width: 125px;
-        text-align: right;
+        text-align: left;
         margin-right: 5px;
       }
     }
@@ -287,6 +287,10 @@
         cursor: pointer;
         &.on{
           background: url("../images/i-red-star.png") no-repeat center center;
+          background-size: 18px auto;
+        }
+        &.disabled{
+          background: url("../images/i-disable-star.png") no-repeat center center;
           background-size: 18px auto;
         }
       }

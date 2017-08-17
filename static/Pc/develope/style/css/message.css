@@ -39,6 +39,17 @@
 .user-msg-detail .name.blue {
   color: #4f81bd;
 }
+.edit-name {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  background-color: #ECECEC;
+  color: #999999;
+  margin-left: 10px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 2px;
+}
 time.time {
   float: right;
 }
