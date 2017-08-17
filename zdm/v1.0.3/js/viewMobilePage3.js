@@ -101,7 +101,7 @@ function viewMobilePage(){
 		btnIframe.className = 'iframePreviewAll';
 
 		randomIDViewDomObj.find('.Z-vitrual-mobile-warp')
-			.append('<iframe class="iframePreviewAll" name="iframePreviewApp" id="iframePreviewApp" src="/admin/article/Preview.html" style="display:none; width: 320px; height: 568px; overflow: hidden; border: 0px; margin: 0px; padding: 0px;"></iframe>')
+			.append('<iframe class="iframePreviewAll" name="iframePreviewApp" id="iframePreviewApp" src="/admin/article/Preview.html?_='+(new Date()).getTime()+'" style="display:none; width: 320px; height: 568px; overflow: hidden; border: 0px; margin: 0px; padding: 0px;"></iframe>')
 			.focus().get(0).appendChild(btnIframe);
 		return randomIDViewDomObj;
 	}
