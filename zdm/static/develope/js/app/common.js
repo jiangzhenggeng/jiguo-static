@@ -104,7 +104,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             $(this).parent().remove();
         });
     };
-    function upload(data, ul, input_name, multiple) {
+    function upload(data, ul, input_name, multiple,callback) {
         var upUrl = 'http://zdm.jiguo.com/admin2/ajax/upload';
         var xhr = new XMLHttpRequest();
         xhr.open('POST', upUrl);
@@ -126,6 +126,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                         }
 
                         removeImage();
+                        (callback||function () {})();
                     }
                 }
             }
@@ -221,6 +222,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         removeImage: removeImage,
         //设置封面
         setCover: setCover,
+        upload:upload
 
     }
 })

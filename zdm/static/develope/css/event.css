@@ -666,3 +666,80 @@ Z-uploadify-banner
   border-bottom: 1px solid #000;
   color: #555555;
 }
+#Z-image-up-wxcode_share_pic li:first-child {
+  width: 188px !important;
+}
+.wxcode-share-wrap {
+  position: fixed;
+  left: -99999px;
+  top: 0;
+}
+.wxcode-share-inner {
+  width: 750px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+.wxcode-share-wrap .wxcode-share-cover {
+  overflow: hidden;
+  height: 375px;
+}
+.wxcode-share-wrap .wxcode-share-cover img {
+  width: 100%;
+}
+.wxcode-share-wrap .wxcode-share-desc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 110px;
+  margin-top: 60px;
+}
+.wxcode-share-text {
+  flex: 1;
+}
+.wxcode-share-btn-wrap {
+  width: 200px;
+}
+.wxcode-share-btn-wrap .wxcode-share-btn {
+  background-color: #EE4418;
+  border-radius: 5px;
+  width: 100%;
+  height: 72px;
+  overflow: hidden;
+  position: relative;
+}
+.wxcode-share-btn-wrap .wxcode-share-btn-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  top: 10px;
+}
+.wxcode-share-text {
+  color: #333333;
+  font-size: 48px;
+}
+.share-t1 .n2,
+.share-t2 .n2 {
+  margin-left: 20px;
+}
+.share-t2 .n1 {
+  color: #F66039;
+}
+.share-t2 .n2 {
+  color: #B3B3B3;
+  position: relative;
+}
+.share-t2 .n2 i {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #B3B3B3;
+  display: block;
+}
