@@ -633,6 +633,68 @@ input[type=text],select{
     color: #CE813D;
   }
 }
+//原创投稿关联订单
+.order-list-box{
+  padding: 39px 30px;
+  .order-list-header{
+    font-size: 18px;
+    line-height: 25px;
+    padding-left:12px;
+    color: #333;
+  }
+  .order-list-body{
+    margin-top:36px;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 0 12px;
+  }
+  .order-list-wrap-parent{
+    overflow-x: hidden;
+  }
+  .order-list-wrap{
+    margin-top:10px;
+    overflow: auto;
+    height: 268px;
+    width: 560px;
+    li{
+      width: 515px;
+      height: 50px;
+      border:1px solid #E6E6E6;
+      margin-bottom: 10px;
+      line-height: 50px;
+      padding-left: 26px;
+      font-size: 14px;
+      cursor: pointer;
+      &.on{
+        border-color: #F66039;
+        color: #F66039;
+      }
+    }
+  }
+  .submit-btn-wrap{
+    margin-top: 43px;
+    text-align: center;
+    div{
+      display: inline-block;
+      cursor: pointer;
+    }
+    .order-list-Original{
+      border-bottom:1px solid #F66039;
+      color: #F66039;
+    }
+    .sub-btn{
+      width: 325px;
+      height: 44px;
+      background-color: #F66039;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 18px;
+      border-radius: 2px;
+      line-height: 44px;
+    }
+  }
+
+}
 
 //试用消息
 .message-list-box{
