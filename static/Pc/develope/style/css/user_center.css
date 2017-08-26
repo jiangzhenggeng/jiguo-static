@@ -606,6 +606,66 @@ select {
   padding: 5px 10px;
   color: #CE813D;
 }
+.order-list-box {
+  padding: 39px 30px;
+}
+.order-list-box .order-list-header {
+  font-size: 18px;
+  line-height: 25px;
+  padding-left: 12px;
+  color: #333;
+}
+.order-list-box .order-list-body {
+  margin-top: 36px;
+  border-bottom: 1px solid #D8D8D8;
+  padding: 0 12px;
+}
+.order-list-box .order-list-wrap-parent {
+  overflow-x: hidden;
+}
+.order-list-box .order-list-wrap {
+  margin-top: 10px;
+  overflow: auto;
+  height: 268px;
+  width: 560px;
+}
+.order-list-box .order-list-wrap li {
+  width: 515px;
+  height: 50px;
+  border: 1px solid #E6E6E6;
+  margin-bottom: 10px;
+  line-height: 50px;
+  padding-left: 26px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.order-list-box .order-list-wrap li.on {
+  border-color: #F66039;
+  color: #F66039;
+}
+.order-list-box .submit-btn-wrap {
+  margin-top: 43px;
+  text-align: center;
+}
+.order-list-box .submit-btn-wrap div {
+  display: inline-block;
+  cursor: pointer;
+}
+.order-list-box .submit-btn-wrap .order-list-Original {
+  border-bottom: 1px solid #F66039;
+  color: #F66039;
+}
+.order-list-box .submit-btn-wrap .sub-btn {
+  width: 325px;
+  height: 44px;
+  background-color: #F66039;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 18px;
+  border-radius: 2px;
+  line-height: 44px;
+}
 .message-list-box .icon-event-message-faile {
   background-position: -473px -731px;
 }
