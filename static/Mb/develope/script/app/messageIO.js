@@ -14,11 +14,11 @@ define(['require', 'jquery', 'socket.io'], function (require, $, io) {
      */
     function _pushNotification(userssid) {
         // 连接服务端
-        var socket = io('http://io.jiguo.com:2126');
-        //     x_id = String('id-'+Math.random()).replace('.','');
-        // if(require.toUrl(x_id).indexOf('static/Mb/develope/script/'+x_id)){
-        //     socket = io('http://msg.jiguo.com:2126');
-        // }
+        var socket = io('http://io.jiguo.com:2126'),
+            x_id = String('id-'+Math.random()).replace('.','');
+        if(require.toUrl(x_id).indexOf('static/Mb/develope/script/'+x_id)){
+            socket = io('http://msg.jiguo.com:2126');
+        }
         // 连接后登录
         socket.on('connect', function () {
             socket.emit('login', userssid);
