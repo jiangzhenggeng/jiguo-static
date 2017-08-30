@@ -169,10 +169,12 @@ define([
                     layer.msg('请填写评论内容',{time:window.URL['diagloaTime']});
                     return;
                 }
+
                 if(sendTopComment){
-                    sendTopComment = true;
                     return;
                 }
+                sendTopComment = true;
+
                 $.get('/api/comment/PostComment',{
                     id:blogid,
                     type:2,
@@ -228,10 +230,11 @@ define([
                     layer.msg('请填写评论内容',{time:window.URL['diagloaTime']});
                     return;
                 }
+
                 if(sendSubComment){
-                    sendSubComment = true;
                     return;
                 }
+                sendSubComment = true;
                 $.get('/api/comment/PostComment',{
                     id:blogid,
                     type:2,
