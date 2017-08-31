@@ -112,7 +112,7 @@ define([
 
               btn_text = '立即申请';
               left_top = freeObj.find('input[name*="buying_name"]').val();
-              right_top = '限'+freeObj.find('input[name*="buying_num"]').val()+freeObj.find('input[name*="quantifier"]').val();
+              right_top = '限'+freeObj.find('[data-all-number]').attr('data-all-number')+freeObj.find('input[name*="quantifier"]').val();
               left_bottom = '免费';
               right_bottom = '原价 ￥' + freeObj.find('input[name*="buying_price"]').val();
               //专享
@@ -137,7 +137,7 @@ define([
                     oTb = $(this);
                     discount = val;
                   }
-                  var num = parseInt($(this).find('input[name*="\[model\]"][name*="\[buying_num\]"]').val());
+                  var num = parseInt($(this).find('[data-all-number]').attr('data-all-number'));
                   if(!isNaN(num) && num>0 ){
                     total += num;
                   }
@@ -158,12 +158,7 @@ define([
                 var oTb = payObj.find('.Z-card-list-box').first(),
                     discount = String(oTb.find('input[name*="discount"]').val() || '').replace(/\.0+$/, '');
                 left_top = discount + '折试用';
-                right_top = '限' + oTb.find('input[name*="\[buying_num\]"]').filter(function () {
-                  if( $(this).attr('name').indexOf('model')==-1){
-                    return true;
-                  }
-                  return false;
-                }).val() + oTb.find('input[name*="quantifier"]').val();
+                right_top = '限' + oTb.find('[data-all-number]').attr('data-all-number') + oTb.find('input[name*="quantifier"]').val();
                 left_bottom = '￥' + oTb.find('.yan-number.Z-red').html();
                 right_bottom = '原价 ' + oTb.find('.card-number .Z-gray').html();
               }
