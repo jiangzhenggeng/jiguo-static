@@ -38,6 +38,8 @@ define("main",[
     'app/viewport',
     'app/jqueryRaty',
     'app/showScore',
+    'app/md5',
+    'app/login',
     'vip'
 ],function (){
 

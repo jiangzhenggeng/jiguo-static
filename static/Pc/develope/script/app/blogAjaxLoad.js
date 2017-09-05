@@ -185,7 +185,11 @@ define([
                 if(len){
                     var html = tplFunCache({data: repalyData.result});
                     $('#relative-article-warp').show();
-                    $('#relative-article').append(html);
+                    if(sendData.limit >0){
+                        $('#relative-article').append(html);
+                    }else{
+                        $('#relative-article').html(html);
+                    }
                     common.collect('#relative-article');
                     $(".next").attr("limit-data",repalyData.limit);
 

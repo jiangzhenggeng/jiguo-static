@@ -60,18 +60,6 @@ define([
             });
         },
         applyUser:function () {
-            //ajax加载用户申请流数据
-            new hotEvent.ajaxLoad({
-                url:'/api/comment/GetEventApply',
-                boxDom:$('#event-apply-user-list'),
-                tplDom:$('#event-apply-user-list-tpl'),
-                firWarp:$('#event-apply-user-list-fire'),
-                triggerType:'click',
-                size:10,
-                data:{
-                    id:eventid
-                }
-            });
             //点击展开按钮
             $('#event-apply-user-list').on('click','p.open-btn',function () {
                 var p = $(this).parent().parent();
@@ -309,18 +297,15 @@ define([
             });
         }
         //加载体验报告
-        ,getEventBlogList:function () {
+        ,getEventBlogList:function (limit) {
             new hotEvent.ajaxLoad({
                 url:'/api/event/EventLinkBlog',
                 boxDom:$('#blogAjaxLoad'),
                 tplDom:'#event-load-blog-tpl',
                 firWarp:'.event-blog-list',
+                limit:limit,
                 triggerType:'click',
                 dataChange:function (data,options) {
-                    if(data.result.meta.count>0){
-                        $(options.boxDom).parent().parent().show();
-                    }
-                    $('#event-blog-list-tips').html('共有'+data.result.meta.count+'篇关于'+data.result.meta.name+'的报告');
                     data.result = data.result.blog;
                     return data;
                 },

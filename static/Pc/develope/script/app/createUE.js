@@ -3,8 +3,8 @@
  //创建百度编辑器
  +----------------------------------------------------------
  */
-
 define(['require','jquery','ueditor','layer'],function (require,$,UE,layer){
+    window.FILE_UPLOAD_URL = window.UEDITOR_HOME_URL + 'php/controller.php?uid='+window.URL['uid']+'&code='+window.URL['uploadCode'];
     layer.ready();
     function _createUE(id) {
         var _editor = UE.getEditor(id,{
