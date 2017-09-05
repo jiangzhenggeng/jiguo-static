@@ -89,7 +89,7 @@ define([
 
         //正在加载标志,避免连续加载
         self.load = true;
-        self.limit = 0;
+        self.limit = self.options.limit || 0;
 
         //请求数据
         var sendData = $.extend({},self.options.data);
@@ -165,7 +165,9 @@ define([
             }
         });
         //第一次加载
-        loadData(null,self.options.data);
+        if(!self.options.limit){
+            loadData(null,self.options.data);
+        }
     }
 
 

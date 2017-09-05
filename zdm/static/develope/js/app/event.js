@@ -593,6 +593,14 @@ define(['jquery', 'layer', 'app/common','template','laydate','app/addEvent'], fu
             layer.msg('请填写产品介绍');
             return false;
         }
+        if(formSelecter.find('#E-keywords').val()==''){
+            layer.msg('请填写关键词');
+            return false;
+        }
+        if(formSelecter.find('#E-seodesc').val()==''){
+            layer.msg('请填写活动描述');
+            return false;
+        }
         if(!isEditPlayModel()){
             layer.msg('玩法中有待修改的规格参数');
             return false;

@@ -23,7 +23,7 @@ define([
             lazyload,messageIO,search,tplEngine,unitTool,
             $,scrollStatus,hDownload){
 
-    homeAjaxLoad.init();
+    // homeAjaxLoad.init();
     //公共模块
     common.collect();
 

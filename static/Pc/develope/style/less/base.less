@@ -919,17 +919,53 @@ ul.event-show-card-warp{
   }
   li{
     float: left;
-    margin: 0 5px;
     a{
       display: block;
       font-size: 14px;
-      color: #346680;
-      padding: 0 5px;
+      color: #3F3F3F;
+      border: 1px solid #EDEDED;
+      width: 27px;
+      height: 27px;
+      line-height: 27px;
     }
-    &.hidden a,
-    &.selected a{
-      color: #b2b2b2;
+    &:not(.morepage){
+      a{
+        &:hover{
+          color: #fff;
+          background-color: #F66039;
+          border-color: #F66039;
+        }
+      }
     }
+    &:not(.page){
+      a{
+        width: auto;
+        padding: 0 10px;
+      }
+    }
+    &:nth-last-of-type(3){
+      a{
+        border-right: 1px solid #EDEDED;
+      }
+    }
+  }
+  .hidden a,
+  .selected a{
+    color: #fff;
+    background-color: #F66039;
+    border-color: #F66039;
+  }
+  .page{
+    a{
+      width: 27px;
+      border-right:none;
+    }
+  }
+  .first,.previous{
+    margin-right: 13px;
+  }
+  .next,.last{
+    margin-left: 13px;
   }
 }
 
@@ -946,7 +982,7 @@ ul.event-show-card-warp{
     height: auto !important;
     background-color: transparent;
     overflow: hidden;
-    z-index: 1;
+    z-index: 5;
     display: block;
   }
   & a{

@@ -6,10 +6,8 @@
  */
 ;
 window.EV_C = {};
-
 window.EV_C['host'] = 'http://www.jiguo.com';
 window.UEDITOR_HOME_URL = window.EV_C['host']+'/protected/extensions/ueditor/';
-window.FILE_UPLOAD_URL = window.UEDITOR_HOME_URL + 'php/controller.php?uid='+window.URL['uid']+'&code='+window.URL['uploadCode'];
 
 var js = document.scripts,script, jsPath;
 for(var i = 0 ; i < js.length ;i++ ){

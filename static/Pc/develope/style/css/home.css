@@ -356,7 +356,7 @@
 }
 .event-scorll {
   margin-top: 20px;
-  height: 620px;
+  max-height: 620px;
   overflow: hidden;
   position: relative;
 }
@@ -455,7 +455,9 @@
   height: 10px;
   background-color: #D8D8D8;
 }
-.hot-event-warp .load-hot-event-wrap {
+.hot-event-warp .load-hot-event-wrap,
+.hot-event-warp .load-pay-event-wrap,
+.hot-event-warp .load-app-event-wrap {
   width: 100%;
   position: absolute;
   bottom: 0;

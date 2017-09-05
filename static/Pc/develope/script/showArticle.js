@@ -48,14 +48,6 @@ define([
     //获取点赞用户列表
     blogAjaxLoad.getPariseList(blogid);
 
-    //获取相关文章
-    blogAjaxLoad.getRelative({
-        id:blogid,
-        type:4,
-        size:4,
-        limit:0
-    });
-
     /**
      * 43.【PC】正文图片截取，当前是截取的图片的上方部分，变更为截取图片的中间部分
      * @type {any}
@@ -73,4 +65,71 @@ define([
     comment.init();
     //初始化发布pingl
     comment.sendComment();
+
+    return{
+        loadRelative:function () {
+            //获取相关文章
+            blogAjaxLoad.getRelative({
+                id:blogid,
+                type:4,
+                size:4,
+                limit:0
+            });
+
+            //加载更多相关文章
+
+            // 下一页
+            $("#relative-article-warp").on("click",".next",function(){
+                if($(this).hasClass("next-stop")){
+                    return;
+                }
+                var ulWidth=730;
+                var slide=$(".choice-event-content-wrap");
+                var slideWidth=slide.width();
+                var slideLeft=slide.position().left;
+                var limitNum=$(this).attr("limit-data");
+
+                if(slide.is(":animated")) {
+                    return;
+                }
+                $(".prev").removeClass("prev-stop");
+
+                //如果本页内容是最后一页，触发加载器
+                if(slideLeft<=2*ulWidth-slideWidth){
+                    blogAjaxLoad.getRelative({
+                        id:blogid,
+                        size:4,
+                        type:4,
+                        limit:limitNum||1
+                    });
+                }else{
+                    slide.animate({left:"-=730px"},500);
+                }
+
+            });
+
+            //前一页
+            $("#relative-article-warp").on("click",".prev",function(){
+                var ulWidth=730;
+                var slide=$(".choice-event-content-wrap");
+                var slideLeft=slide.position().left;
+                var _this=$(this);
+                if(slide.is(":animated")) {
+                    return;
+                }
+                $(".next").removeClass("next-stop");
+
+                if(slideLeft+ulWidth>10){
+                    _this.addClass("prev-stop");
+                    return;
+                }
+                slide.animate({left:"+=730px"},500,function(){
+                    slideLeft=slide.position().left;
+                    if(slideLeft+ulWidth>10){
+                        _this.addClass("prev-stop");
+                    }
+                });
+            });
+        }
+    }
 });
