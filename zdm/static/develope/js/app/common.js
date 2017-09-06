@@ -77,6 +77,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             bth: ['确定', '取消'],
         }, function () {
             if (!callback) {
+                layer.msg('操作中',{time:999999});
                 ajax('post', url, data, 'JSON', function () {
                     layer.msg('操作成功', function () {
                         window.location.reload();
