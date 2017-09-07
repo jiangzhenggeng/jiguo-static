@@ -23,7 +23,7 @@ define([
     lazyload.init('.article-content-show img');
 
     //获取关联产品
-    blogAjaxLoad.getLinkProduct(blogid);
+    // blogAjaxLoad.getLinkProduct(blogid);
 
     //点赞
     blogAjaxLoad.praise({
