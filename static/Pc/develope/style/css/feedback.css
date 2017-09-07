@@ -2475,7 +2475,6 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   font-size: 14px;
   color: #3F3F3F;
   border: 1px solid #EDEDED;
-  width: 27px;
   height: 27px;
   line-height: 27px;
 }
@@ -2491,14 +2490,14 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
 .page-box li:nth-last-of-type(3) a {
   border-right: 1px solid #EDEDED;
 }
-.page-box .hidden a,
-.page-box .selected a {
+.page-box li.selected a {
   color: #fff;
   background-color: #F66039;
   border-color: #F66039;
 }
 .page-box .page a {
-  width: 27px;
+  min-width: 17px;
+  padding: 0 5px;
   border-right: none;
 }
 .page-box .first,
