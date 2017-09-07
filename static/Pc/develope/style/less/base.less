@@ -924,7 +924,6 @@ ul.event-show-card-warp{
       font-size: 14px;
       color: #3F3F3F;
       border: 1px solid #EDEDED;
-      width: 27px;
       height: 27px;
       line-height: 27px;
     }
@@ -948,16 +947,16 @@ ul.event-show-card-warp{
         border-right: 1px solid #EDEDED;
       }
     }
-  }
-  .hidden a,
-  .selected a{
-    color: #fff;
-    background-color: #F66039;
-    border-color: #F66039;
+    &.selected a{
+      color: #fff;
+      background-color: #F66039;
+      border-color: #F66039;
+    }
   }
   .page{
     a{
-      width: 27px;
+      min-width: 17px;
+      padding: 0 5px;
       border-right:none;
     }
   }
