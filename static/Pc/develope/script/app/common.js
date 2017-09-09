@@ -105,8 +105,20 @@ define([
 
 
     function _login() {
-        var id = K.randomId(),
-            html = $('#login-input-tpl').html();
+        var html = '',
+            back_url = window.URL['backUrl'];
+        $.post('/api/user/GetUrl',{back_url:back_url},function (rd,status) {
+            if(status=='success'){
+                html = tplEngine.init($('#login-input-tpl').html(),{data:rd.result});
+                loginBox(html);
+            }else{
+              layer.msg(rd.errorMsg);
+            }
+        },'json');
+    }
+
+    function loginBox(html) {
+        var id = K.randomId();
         layer.ready(function () {
             var lId = layer.open({
                 type: 1,
