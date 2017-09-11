@@ -349,12 +349,20 @@ define([
             })
         }
         ,alertTips:function () {
-            console.log(window.URL['login']);
             $('body').on('click','[data-alert]',function () {
                 if(!window.URL['login']){
                     return;
                 }
-                layer.msg($(this).attr('data-alert'));
+                $.post('/api/user/islogin',{},function (replayData) {
+                    if(replayData.success=='true'){
+                        if(replayData.result.login==1){
+                            layer.msg($(this).attr('data-alert'));
+                        }else{
+                            common.login();
+                        }
+                    }
+                },'json');
+
             });
         }
     };
