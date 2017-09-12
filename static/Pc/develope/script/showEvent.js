@@ -72,21 +72,21 @@ define([
             layer.ready();
             $('body').on('click','[data-event-apply-input-box]',function (e) {
                 e.preventDefault();
-
+                var _this = this;
                 if( (typeof popularize =='undefined') && !window.URL['login']){
                     common.login();
                     return;
                 }
 
-                if($(this).attr('data-alert')){
+                if($(_this).attr('data-alert')){
                     return;
                 }
                 //获取用户手机号
                 $.post('/api/user/GetUserTel',{},function (rd) {
                     var id = K.randomId(),
                         html = $('#event-apply-input-tpl').html(),
-                        meta_id=$(this).closest('[data-metaid]').attr('data-metaid'),
-                        remark=$(this).attr('data-remark'),
+                        meta_id=$(_this).closest('[data-metaid]').attr('data-metaid'),
+                        remark=$(_this).attr('data-remark'),
                         applydata={
                             remark: remark,
                             mobile: rd.result
@@ -356,10 +356,11 @@ define([
                 if(!window.URL['login']){
                     return;
                 }
+                var _this=this;
                 $.post('/api/user/islogin',{},function (replayData) {
                     if(replayData.success=='true'){
                         if(replayData.result.login==1){
-                            layer.msg($(this).attr('data-alert'));
+                            layer.msg($(_this).attr('data-alert'));
                         }else{
                             common.login();
                         }
