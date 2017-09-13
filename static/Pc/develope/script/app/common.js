@@ -25,11 +25,36 @@ define([
         //ipad适配
         viewport.init();
 
-        var html = '<div class="quick-speed-top" style="display: none">' +
-            '<a href="/feedback/isfeedback" target="_blank">' +
-            '<span class="right-feedback-into" data-badge-warp-feedback></span></a>' +
-            '<a href="javascript:;" data-quick-speed-top>' +
-            '<i class="icon icon-quick-speed-top"></i></a></div>';
+        var html = '<div class="quick-speed-top">'+
+                        '<a href="javascript:;">'+
+                            '<div class="query-speed-box query-tel">'+
+                                '<i class="query-tel-icon"></i>'+
+                                '<div class="query-content query-tel-content">'+
+                                    '<p class="ft-16 query-tel-txt">400-001-9217</p>'+
+                                    '<p class="ft-12 query-tel-time">周一到周五 10:00-19:00</p>'+
+                                '</div>'+
+                            '</div>'+
+                        '</a>'+
+                        '<a href="javascript:;">'+
+                            '<div class="query-speed-box query-wx">'+
+                                '<i class="query-wx-icon"></i>'+
+                                '<div class="query-content query-wx-content">'+
+                                    '<div class="query-wx-erweima"></div>'+
+                                    '<p class="ft-12 query-wx-txt">极果平平微信：jiguopp</p>'+
+                                '</div>'+
+                            '</div>'+
+                        '</a>'+
+                        '<a href="/feedback/isfeedback" target="_blank">'+
+                            '<div class="query-speed-box">'+
+                                '<i class="query-feedback-icon"></i>'+
+                            '</div>'+
+                        '</a>'+
+                        '<a href="javascript:;" data-quick-speed-top>'+
+                            '<div class="query-speed-box query-top">'+
+                                '<i class="query-top-icon"></i>'+
+                            '</div>'+
+                        '</a>'+
+                    '</div>';
 
         $('body').append(html);
         var speedBox = $('.quick-speed-top'),
