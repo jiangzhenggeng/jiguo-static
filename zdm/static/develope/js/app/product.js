@@ -111,6 +111,99 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
         });
 
     };
+
+//初始化产品分类
+
+    function initCategory(id) {
+        //热门分类
+        $('.hot-category').on('click','span',function () {
+            var txt = '',
+                fname = $(this).data('fname'),
+                sname = $(this).data('sname'),
+                name = $(this).text(),
+                id = $(this).data('id');
+            txt = fname + '>' + sname + '>' + name;
+            $('#P-category-show').val(txt);
+            $('#P-category').val(id);
+            getAllCategory(id);
+        });
+
+        //产品分类搜索
+        var timer = null;
+        $('#P-search').on('focus',function () {
+            $('#search-category-list').show();
+        }).on('blur',function () {
+            setTimeout(function () {
+                $('#search-category-list').hide();
+            },200)
+        }).on('keyup',function () {
+            var val = $(this).val();
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                getCategory(val);
+            },500);
+        });
+
+        function getCategory(val) {
+            $.get('/admin/product/GetCategoryForKeyord',{str:val},function (replayData) {
+                var html = template('search-category-list-tpl',replayData);
+                $('#search-category-list').html(html);
+            },'json');
+        }
+
+        $('#search-category-list').on('click','li',function () {
+            var id = $(this).data('pid'),
+                text = $(this).find('.category-text').text();
+            $('#P-category-show').val(text);
+            $('#P-category').val(id);
+            $('#search-category-list').hide();
+            getAllCategory(id);
+        });
+
+        //所有分类
+        function getAllCategory(id) {
+            $.get('/admin/product/GetCateGoryTree',{id:id},function (replayData) {
+                var html = template('category-list-tpl',replayData);
+                $('#category-list').html(html);
+            },'json');
+        }
+
+        getAllCategory(id);
+
+        $('.category-list').on('mouseenter','.first-category li',function () {
+            var fid = $(this).data('fid');
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.second-category-'+fid).show().siblings().hide();
+            $('.third-category').find('div').hide();
+        });
+        $('.category-list').on('mouseenter','.second-category li',function () {
+            var sid = $(this).data('sid');
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.third-category-'+sid).show().siblings().hide();
+        });
+
+        $('.category-list').on('click','.third-category li',function () {
+            var txt = '',
+                fname = $(this).data('fname'),
+                sname = $(this).data('sname'),
+                name = $(this).text(),
+                id = $(this).data('id');
+            txt = fname + '>' + sname + '>' + name;
+            $('#P-category-show').val(txt);
+            $('#P-category').val(id);
+            $(this).addClass('checked').closest('div').siblings().find('.checked').removeClass('checked');
+        });
+
+        //全部分类显示/隐藏
+        $('.category-wrap').on('click',function () {
+            $('#category-list').css({display:'flex'});
+        }).on('mouseleave',function () {
+            var id = $(this).find('#P-category').val();
+            $('#category-list').css({display:'none'});
+            getAllCategory(id);
+        });
+    }
+
 //展示相同链接产品
     function showProductByUrl(content, callback) {
         common.showBox('相同链接产品', '800px', '550px', content, callback)
@@ -273,13 +366,8 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
             $('.Z-image-up-input').focus();
             return false;
         }
-        var categoryed = true;
-        $('#product-category select').each(function () {
-            if ($(this).val() <= 0) {
-                categoryed = false;
-            }
-        });
-        if (!categoryed) {
+
+        if ($('P-category').val()=='') {
             layer.msg('请选择分类');
             return false;
         }
@@ -317,6 +405,7 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
         findProduct: findProduct,
         chooseBrand: chooseBrand,
         submit: submit,
+        initCategory:initCategory
     };
 
 })
