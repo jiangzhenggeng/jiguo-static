@@ -2509,47 +2509,102 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   margin-left: 13px;
 }
 .quick-speed-top {
+  display: none;
   right: 0;
   bottom: 0;
 }
 .quick-speed-top,
 .quick-speed-top a {
   position: fixed;
-  width: 33px;
+  width: 40px;
   height: auto !important;
   background-color: transparent;
-  overflow: hidden;
   z-index: 5;
-  display: block;
 }
 .quick-speed-top a {
   position: static !important;
-  width: 31px;
-  margin-top: 5px;
 }
-.quick-speed-top .icon-quick-speed-top {
+.quick-speed-top .query-speed-box {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #EFEFEF;
+  position: relative;
+}
+.quick-speed-top .query-speed-box:hover {
+  background-color: #EAEAEA;
+}
+.quick-speed-top .query-speed-box:hover .query-content {
   display: block;
-  width: 31px;
-  height: 72px;
-  background-position: -92px -431px;
 }
-.quick-speed-top .quick-comment .icon-quick-speed-top.icon-quick-speed-top {
-  background-position: -92px -559px;
+.quick-speed-top .query-tel,
+.quick-speed-top .query-wx {
+  border-bottom: none;
 }
-.quick-speed-top .right-feedback-into {
-  background: #ffffff url("../images/feedback.png") no-repeat center center;
-  background-size: 10px 53px;
-  border-radius: 4px;
+.quick-speed-top .query-top,
+.quick-speed-top .query-comment {
+  margin-top: 10px;
+}
+.quick-speed-top i {
+  width: 40px;
+  height: 40px;
   display: block;
-  height: 58px;
-  width: 20px;
-  border: 1px solid #ededed;
-  box-sizing: content-box;
+}
+.quick-speed-top i.query-tel-icon {
+  background: url("../images/lxwm/tel.png") no-repeat center center;
+  background-size: 16px auto;
+}
+.quick-speed-top i.query-wx-icon {
+  background: url("../images/lxwm/wx.png") no-repeat center center;
+  background-size: 21px auto;
+}
+.quick-speed-top i.query-feedback-icon {
+  background: url("../images/lxwm/feedback.png") no-repeat center center;
+  background-size: 20px auto;
+}
+.quick-speed-top i.query-comment-icon {
+  background: url("../images/lxwm/comment.png") no-repeat center center;
+  background-size: 20px auto;
+}
+.quick-speed-top i.query-top-icon {
+  background: url("../images/lxwm/top.png") no-repeat center center;
+  background-size: 14px auto;
+}
+.quick-speed-top .query-content {
+  background-color: #fff;
+  border: 1px solid #F0F0F0;
   text-align: center;
-  padding: 6px 4px;
-  line-height: 15px;
-  font-size: 12px;
-  color: #4d4d4d;
+  position: absolute;
+  display: none;
+}
+.quick-speed-top .query-content.query-tel-content {
+  width: 191px;
+  height: 42px;
+  left: -200px;
+  top: 0;
+}
+.quick-speed-top .query-content.query-wx-content {
+  width: 130px;
+  padding: 4px;
+  left: -148px;
+  top: -42px;
+}
+.quick-speed-top .query-tel-txt {
+  line-height: 23px;
+  color: #4D4D4D;
+}
+.quick-speed-top .query-tel-time {
+  line-height: 16px;
+  color: #B3B3B3;
+}
+.quick-speed-top .query-wx-erweima {
+  width: 130px;
+  height: 130px;
+  background: url("../images/lxwm/jiguopp.png") no-repeat center center;
+  background-size: 130px auto;
+}
+.quick-speed-top .query-wx-txt {
+  color: #666;
   font-weight: 600;
 }
 .blank-header {

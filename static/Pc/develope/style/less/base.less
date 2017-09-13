@@ -973,57 +973,104 @@ ul.event-show-card-warp{
 
 //快速回到顶部
 .quick-speed-top{
-
+  display: none;
   &,
   & a{
     position: fixed;
-    width: 33px;
+    width: 40px;
     height: auto !important;
     background-color: transparent;
-    overflow: hidden;
     z-index: 5;
-    display: block;
   }
   & a{
     position: static !important;
-    width: 31px;
-    margin-top: 5px;
-    //height: 80px;
-    //border: 1px solid #ededed;
-    //background-color: #fff;
-    //.border-radius(3px);
   }
   &{
     right: 0;
     bottom:0;
   }
-  .icon-quick-speed-top{
-    display: block;
-    width: 31px;
-    height: 72px;
-    background-position: -92px -431px;
+  .query-speed-box{
+    width: 40px;
+    height:40px;
+    background-color: #fff;
+    border:1px solid #EFEFEF;
+    position: relative;
   }
-
-  .quick-comment .icon-quick-speed-top.icon-quick-speed-top{
-    background-position: -92px -559px;
+  .query-speed-box:hover{
+    background-color: #EAEAEA;
+    .query-content{
+      display: block;
+    }
   }
-
-  .right-feedback-into{
-    background:#fff url("../images/feedback.png") no-repeat center center;
-    background-size: 10px 53px;
-    border-radius: 4px;
+  .query-tel,.query-wx{
+    border-bottom: none;
+  }
+  .query-top,.query-comment{
+    margin-top: 10px;
+  }
+  i{
+    width: 40px;
+    height:40px;
     display: block;
-    height: 58px;
-    width: 20px;
-    border: 1px solid #ededed;
-    box-sizing: content-box;
+    &.query-tel-icon{
+      background: url("../images/lxwm/tel.png") no-repeat center center;
+      background-size:16px auto;
+    }
+    &.query-wx-icon{
+      background: url("../images/lxwm/wx.png") no-repeat center center;
+      background-size:21px auto;
+    }
+    &.query-feedback-icon{
+      background: url("../images/lxwm/feedback.png") no-repeat center center;
+      background-size:20px auto;
+    }
+    &.query-comment-icon{
+      background: url("../images/lxwm/comment.png") no-repeat center center;
+      background-size:20px auto;
+    }
+    &.query-top-icon{
+      background: url("../images/lxwm/top.png") no-repeat center center;
+      background-size:14px auto;
+    }
+  }
+  .query-content{
+    background-color: #fff;
+    border:1px solid #F0F0F0;
     text-align: center;
-    padding: 6px 4px;
-    line-height: 15px;
-    font-size: 12px;
-    color: #4d4d4d;
+    position: absolute;
+    display: none;
+    &.query-tel-content{
+      width: 191px;
+      height:42px;
+      left:-200px;
+      top:0;
+    }
+    &.query-wx-content{
+      width: 130px;
+      padding: 4px;
+      left:-148px;
+      top:-42px;
+    }
+  }
+  .query-tel-txt{
+    line-height: 23px;
+    color: #4D4D4D;
+  }
+  .query-tel-time{
+    line-height: 16px;
+    color: #B3B3B3;
+  }
+  .query-wx-erweima{
+    width: 130px;
+    height:130px;
+    background: url("../images/lxwm/jiguopp.png") no-repeat center center;
+    background-size: 130px auto;
+  }
+  .query-wx-txt{
+    color: #666;
     font-weight: 600;
   }
+
 }
 //全局公共头尾
 @import "_header";

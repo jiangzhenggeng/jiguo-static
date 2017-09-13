@@ -12,7 +12,7 @@ define([
 ], function ($,tplEngine,unitTool,layer) {
 
     return {
-        searchAll:function (__type__,__cid__,__limit__) {
+        searchAll:function (__type__,__cid__) {
             //搜索器
             function _search(callBack,over) {
                 var _this = this;
@@ -64,10 +64,10 @@ define([
             });
 
             //触发搜索器
-            function goSearch(limit) {
-                keywordDom.limit = limit || 0;
+            function goSearch() {
+                keywordDom.limit = 0;
                 keywordDom.keyword = keywordDom.val();
-                _search.apply(keywordDom,[_callBack,true,limit]);
+                _search.apply(keywordDom,[_callBack,true]);
                 showKeyword.html( keywordDom.keyword );
             }
 
@@ -75,7 +75,6 @@ define([
             keywordDom.type = __type__;
             keywordDom.cid = __cid__;
             keywordDom.sys = 'pc';
-            keywordDom.limit = __limit__ || '0';
             keywordDom.size = 8;
 
             //初始化搜索对象
@@ -96,7 +95,7 @@ define([
             }
 
             //搜索结果回调函数
-            function _callBack(replatDate,over,__limit__) {
+            function _callBack(replatDate,over) {
                 var hasData = true,
                     len = 0,
                     _this = this;
@@ -107,7 +106,7 @@ define([
                             boxArray[i].warpBox.show();
                             if(boxArray[i].htmlBox.length){
                                 hasData = false;
-                                if(over && (__limit__<=0)){
+                                if(over){
                                     boxArray[i].htmlBox.html( boxArray[i].cacheFn({data:replatDate.result[listArray[i]] }) );
                                 }else{
                                     boxArray[i].htmlBox.append( boxArray[i].cacheFn({data:replatDate.result[listArray[i]] }) );
@@ -134,9 +133,8 @@ define([
                                 }
                             }
                         }else{
-                            if(__limit__<=0){
                                 boxArray[i].warpBox.hide();
-                            }
+
                         }
                         boxArray[i].warpBox.attr('data-number', unitTool.getLength(replatDate.result[listArray[i]] ) );
                     }
@@ -161,9 +159,9 @@ define([
                 return url;
             }
 
-            //第一次进入页面自动触发第一次搜索,分类页面第一次触发搜索limit传值
+            //第一次进入页面自动触发第一次搜索
             // keywordDom.trigger('keyup');
-                goSearch(__limit__);
+                goSearch();
 
             clickLoading.click(function () {
                 _search.apply(keywordDom,[_callBack,false]);
