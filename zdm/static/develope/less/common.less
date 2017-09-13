@@ -1182,3 +1182,97 @@ data-list
   text-overflow: ellipsis;
   word-break: break-all;
 }
+
+//产品分类
+.category-wrap{
+  position: relative;
+}
+.icon-down{
+  display: block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #999;
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  cursor: pointer;
+}
+.search-category-list{
+  position: absolute;
+  background: #fff;
+  min-width: 300px;
+  z-index: 2;
+  padding: 5px 10px;
+  border: 1px solid #ededed;
+  max-height: 300px;
+  top: 40px;
+  left: 0;
+  overflow-y: auto;
+  li{
+    &:hover{
+      color: #fc6b6b;
+      span{
+        color: #fc6b6b!important;
+      }
+    }
+  }
+}
+.category-list{
+  position: absolute;
+  z-index: 2;
+  width: 600px;
+  display: none;
+}
+.category-list{
+  &>div{
+    background: #fff;
+    border: 1px solid #ededed;
+    text-align: center;
+    float: left;
+  }
+  li{
+    line-height: 30px;
+    cursor: pointer;
+  }
+  .on{
+    background-color: #f7f7f7;
+  }
+}
+.first-category{
+  width: 150px;
+}
+.second-category{
+  width:100px;
+}
+.second-category{
+  li{
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+.third-category{
+  flex: 1;
+}
+.third-category{
+  div{
+    min-height: 300px;
+    padding: 20px;
+  }
+}
+.third-category{
+  div{
+    li{
+      float: left;
+      padding: 0 10px;
+      &:hover{
+        color: #fff;
+        background-color: #ff0000;
+      }
+    }
+    .checked{
+      color: #fff;
+      background-color: #ff0000;
+    }
+  }
+}
