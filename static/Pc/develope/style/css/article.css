@@ -576,6 +576,7 @@
 }
 .content-left .article-content-show p {
   margin: 15px 0;
+  word-wrap: break-word;
 }
 .content-left .article-content-show p img[src] {
   display: block;
