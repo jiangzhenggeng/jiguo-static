@@ -9,12 +9,16 @@ UE.plugins['my_style'] = function(){
 	  var me = this;
 
 	  if( me.queryCommandState("title_h3")==1 ){
+	    var range = me.selection.getRange();
 		var path = this.selection.getStartElementPath();
 		for(var i=0;i<path.length;i++){
 		    if( path[i].tagName=='H3' ){
 		      var p = me.document.createElement('p');
-		      p.innerText = path[i].innerText;
+		      var textNode = me.document.createTextNode( path[i].innerText );
+		      p.appendChild( textNode );
 			  path[i].parentNode.replaceChild(p,path[i]);
+			  range.setStart(textNode,range.startOffset)
+				.setEnd(textNode,range.endOffset).collapse(true).select(true);
 			  break;
             }
         }

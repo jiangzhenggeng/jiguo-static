@@ -494,6 +494,7 @@
 
             var __this__ = this;
             var setInitContent = function () {
+
 			    var html = me.body.innerHTML.replace(/\s/g,'');
 			    var text = me.body.innerText.replace(/\s/g,'');
 				if ( html.length<50 && text.length<=0 ) {
@@ -572,19 +573,19 @@
             };
 
             if (!browser.ie9below) {
-                var __timer = null;
-			  me.addListener('keyup', function (e) {
-				__timer && clearTimeout(__timer);
-				__timer = setTimeout(function () {
-                    fn( me.document.body );
-                    if(removeNode && removeNode.length ){
-                      var item;
-                      while (item = removeNode.pop() ){
-                        domUtils.remove( item );
-                      }
-                    }
-                  },700);
-			  });
+                // var __timer = null;
+			  // me.addListener('keyup', function (e) {
+				// __timer && clearTimeout(__timer);
+				// __timer = setTimeout(function () {
+               //      fn( me.document.body );
+               //      if(removeNode && removeNode.length ){
+               //        var item;
+               //        while (item = removeNode.pop() ){
+               //          domUtils.remove( item );
+               //        }
+               //      }
+               //    });
+			  // });
 
 			  me.addListener('focus blur clearBlock', function (e) {
 				setTimeout(function () {
@@ -1035,7 +1036,7 @@
                 sel.removeAllRanges()
             }
 
-            //this.fireEvent('blur selectionchange');
+            this.fireEvent('blur selectionchange');
         },
         /**
          * 初始化UE事件及部分事件代理

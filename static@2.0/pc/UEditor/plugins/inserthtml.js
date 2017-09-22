@@ -113,43 +113,67 @@ UE.commands['inserthtml'] = {
         //列表单独处理
         var li = domUtils.findParentByTagName(range.startContainer,'li',true);
         if(li){
-            var next,last;
-            while(child = div.firstChild){
-                //针对hr单独处理一下先
-                while(child && (child.nodeType == 3 || !domUtils.isBlockElm(child) || child.tagName=='HR' )){
-                    next = child.nextSibling;
-                    range.insertNode( child).collapse();
-                    last = child;
-                    child = next;
-
+            if(
+              div.getElementsByTagName('img').length ||
+			  div.getElementsByTagName('hr').length ||
+			  div.getElementsByTagName('iframe').length ||
+			  div.getElementsByTagName('embed').length
+            ){
+              var child,curr,i=0;
+			  while( child = div.firstChild ){
+                if( i==0 ){
+				  range.insertNode( child );
+				  var pN = child.parentNode;
+				  while (!domUtils.isBody(pN)) {
+					domUtils.breakParent(child, pN);
+					pN = child.parentNode;
+				  }
+				  range.setStartAfter(child).collapse(true).select(true);
+                }else if(curr){
+				  domUtils.insertAfter(curr,child);
+				  range.setStartAfter(curr).collapse(true).select(true);
                 }
-                if(child){
-                    if(/^(ol|ul)$/i.test(child.tagName)){
-                        while(child.firstChild){
-                            last = child.firstChild;
-                            domUtils.insertAfter(li,child.firstChild);
-                            li = li.nextSibling;
-                        }
-                        domUtils.remove(child)
-                    }else{
-                        var tmpLi;
-                        next = child.nextSibling;
-                        tmpLi = me.document.createElement('li');
-                        domUtils.insertAfter(li,tmpLi);
-                        tmpLi.appendChild(child);
-                        last = child;
-                        child = next;
-                        li = tmpLi;
-                    }
-                }
-            }
-            li = domUtils.findParentByTagName(range.startContainer,'li',true);
-            if(domUtils.isEmptyBlock(li)){
-                domUtils.remove(li)
-            }
-            if(last){
+				curr = child;
+				i++;
+              }
+            }else{
+			  var next,last;
+			  while(child = div.firstChild){
+				//针对hr单独处理一下先
+				while(child && (child.nodeType == 3 || !domUtils.isBlockElm(child) || child.tagName=='HR' )){
+				  next = child.nextSibling;
+				  range.insertNode( child).collapse();
+				  last = child;
+				  child = next;
+				}
+				if(child){
+				  if(/^(ol|ul)$/i.test(child.tagName)){
+					while(child.firstChild){
+					  last = child.firstChild;
+					  domUtils.insertAfter(li,child.firstChild);
+					  li = li.nextSibling;
+					}
+					domUtils.remove(child)
+				  }else{
+					var tmpLi;
+					next = child.nextSibling;
+					tmpLi = me.document.createElement('li');
+					domUtils.insertAfter(li,tmpLi);
+					tmpLi.appendChild(child);
+					last = child;
+					child = next;
+					li = tmpLi;
+				  }
+				}
+			  }
+			  li = domUtils.findParentByTagName(range.startContainer,'li',true);
+			  if(domUtils.isEmptyBlock(li)){
+				domUtils.remove(li)
+			  }
+			  if(last){
 
-                range.setStartAfter(last).collapse(true).select(true)
+				range.setStartAfter(last).collapse(true).select(true)
+			  }
             }
         }else{
             while ( child = div.firstChild ) {
@@ -198,7 +222,7 @@ UE.commands['inserthtml'] = {
                             next.lastChild &&
                             !domUtils.isBr(next.lastChild)
                         ){
-                            //next.appendChild(me.document.createElement('br'));
+                            next.appendChild(me.document.createElement('br'));
                         }
                         hadBreak = 1;
                     }

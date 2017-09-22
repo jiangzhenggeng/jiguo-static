@@ -69,7 +69,7 @@ require('./plugins/keystrokes');
 require('./plugins/autolink');
 require('./plugins/autoheight');
 // require('./plugins/autofloat');
-// require('./plugins/video');
+require('./plugins/video');
 // require('./plugins/table.core');
 // require('./plugins/table.cmds');
 // require('./plugins/table.action');

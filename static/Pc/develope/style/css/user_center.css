@@ -127,6 +127,26 @@ select {
   font-size: 24px;
   line-height: 40px;
 }
+.user-right .user-header-first h3 {
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 40px;
+}
+.user-right .user-header-small {
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  line-height: 38px;
+  display: inline-block;
+}
+.user-right .user-header-small a {
+  color: #999999;
+}
+.user-right .user-header-small.on {
+  border-bottom: 2px solid #FE594D;
+}
+.user-right .user-header-small.on a {
+  color: #4C4C4C;
+}
 .user-left + .user-right {
   width: 789px;
   float: right;

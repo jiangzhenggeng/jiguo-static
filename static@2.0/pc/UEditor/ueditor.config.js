@@ -68,13 +68,13 @@ window.UEDITOR_CONFIG = {
 	}
 
 	var toolsTips = {
-	  'undo':'撤销（'+command+' Z）',
-	  'redo':'重做（'+command+' '+shift+' Z）',
+	  'undo':'撤销 （'+command+' Z）',
+	  'redo':'重做 （'+command+' '+shift+' Z）',
 	  'title_h3':'小标题',
-	  'bold':'加粗（'+command+' B）',
-	  'horizontal':'分隔线（'+command+' '+shift+' S）',
-	  'insertorderedlist2':'有序列表（'+command+' '+shift+' 7）',
-	  'insertunorderedlist2':'无序列表（'+command+' '+shift+' 8）',
+	  'bold':'粗体 （'+command+' B）',
+	  'horizontal':'分隔线 （'+command+' '+shift+' S）',
+	  'insertorderedlist2':'有序列表 （'+command+' '+shift+' 7）',
+	  'insertunorderedlist2':'无序列表 （'+command+' '+shift+' 8）',
 	  'justifyleft':'左对齐',
 	  'justifycenter':'居中',
 	  'justifyright':'右对齐',
@@ -307,7 +307,7 @@ window.UEDITOR_CONFIG = {
 
   //设置远程图片是否抓取到本地保存
   ,catchRemoteImageEnable: true //设置是否抓取远程图片
-
+  ,catcherLocalDomainUse:false //禁用域名
   //pageBreakTag
   //分页标识符,默认是_ueditor_page_break_tag_
   //,pageBreakTag:'_ueditor_page_break_tag_'

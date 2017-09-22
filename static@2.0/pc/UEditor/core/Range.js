@@ -1473,7 +1473,6 @@
             var win = domUtils.getWindow(this.document),
                 sel = win.getSelection(),
                 txtNode;
-            if( !sel.focusNode ) return this;
             //FF下关闭自动长高时滚动条在关闭dialog时会跳
             //ff下如果不body.focus将不能定位闭合光标到编辑器内
             browser.gecko ? this.document.body.focus() : win.focus();

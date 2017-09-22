@@ -6,7 +6,7 @@
 }
 .__editor__container__ img{
     display: block;
-    margin: auto;
+    margin: 5px auto;
 }
 .__editor__container__ .editor__reinstate-wrap{
     background: rgba(0,0,0,0.90);
@@ -27,11 +27,11 @@
     height: 1px;
     border: none;
     clear: both;
-    margin: 10px auto;
+    margin: 20px auto;
     display: block;
 }
 .__editor__container__ .title_h3{
-    color: #B3B3B3;
+    color: #666666;
     font-size: 16px;
     line-height: 28px;
     margin: 25px 0;
@@ -43,8 +43,7 @@
     display: block;
     left: 0;
     height: 22px;
-    top:50%;
-    margin-top: -11px;
+    top:3px;
     width: 4px;
     content: '';
     position: absolute;
@@ -59,6 +58,7 @@
 .__editor__container__ .list-paddingleft-2 li{
     font-size: 16px;
     color: #333;
+    list-style: initial;
 }
 
 .__editor__container__ #initContent{
