@@ -146,6 +146,7 @@ define([
             var userScoreCacheFn = tplEngine.init( $('#report-score-tpl').html() );
             var rightUserScoreCacheFn = tplEngine.init( $('#right-report-score-tpl').html() );
             var _require_self_ = this;
+            var scrollFlag = true;
 
             function showBar(right) {
                 if(right=='right'){
@@ -197,13 +198,14 @@ define([
                 showBar('right');
                 //已经评分啦
                 if( replayDate.result.has_can_score!=1 ){
-                    var show_percent_line = $('.buy-item-warp');
+                    var show_percent_line = $('.userscore');
                     if(show_percent_line.length){
-                        var offsetTop = show_percent_line.offset().top;
                         $(window).on('scroll.userscore',function () {
+                            if(!scrollFlag) return;
+                            var offsetTop = show_percent_line.offset().top;
                             if( $(window).scrollTop() + $(window).height() + 60 > offsetTop ){
+                                scrollFlag = false;
                                 showBar();
-                                $(window).off('scorll.userscore');
                             }
                         }).trigger('scroll.userscore');
                     }
