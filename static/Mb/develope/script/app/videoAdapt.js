@@ -49,7 +49,10 @@ define(['require','jquery'],function (require,$){
             }else if(src.match("youku.com")){
                 src.match(/http:\/\/player.youku.com\/player.php\/sid\/(.+)\/v.swf/);
                 src = 'http://player.youku.com/embed/'+RegExp.$1;
-            }
+            }else if(src.match(/sohu\.com(.*?)v\.swf/i)){
+							src.match(/sohu\.com(.*?)v\.swf(.*?)id=(\d+)/i);
+							src = 'http://tv.sohu.com/upload/static/share/share_play.html#4059416_'+RegExp.$3+'_0_2_1';
+						}
             _this.attr({src:src, height:VideoHeight, width:VideoWidth});
         });
     }
