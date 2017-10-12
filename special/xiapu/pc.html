@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if (!IsPC()) {
+            window.location = 'mb/';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>夏普</title>
+    <link rel="stylesheet" href="css/index2.css">
+</head>
+<body>
+    <div class="nav">
+        <p>
+            <a class="on" href="javascript:;" id="first" data-target="index">首页</a>
+            <a href="javascript:;" id="second" data-target="sjjh">升级计划</a>
+            <a href="javascript:;" id="third" data-target="sqty">申请体验</a>
+            <a href="javascript:;" id="fourth" data-target="rmxp">热门新品</a>
+            <a href="javascript:;" id="fifth" data-target="tybg">体验报告</a>
+            <a href="javascript:;" id="sixth" data-target="tysp">体验视频</a>
+            <a href="javascript:;" id="seventh" data-target="hdhg">活动回顾</a>
+        </p>
+    </div>
+    <div class="banner" id="index"></div>
+    <div class="main">
+        <div class="sjjh common" id="sjjh">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">夏普双十一理想生活升级计划</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <div class="product clear">
+                    <div class="p-left">
+                        <div class="img">
+                            <a href="https://mall.jd.com/index-1000003257.html" target="_blank">
+                                <img src="images/tv.png" alt="">
+                                <div class="shadow">夏普电视</div>
+                            </a>
+                        </div>
+                        <div class="img">
+                            <a href="https://mall.jd.com/index-1000003200.html" target="_blank">
+                                <img src="images/kqjhq.png" alt="">
+                                <div class="shadow">夏普空气净化器</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-right">
+                        <div class="img">
+                            <a href="https://sharp.tmall.com/search.htm?spm=a220m.1000858.1000725.7.3865a893siZLQz&user_number_id=2993567440&rn=910785fe7166b5d375015a9065ecb645&keyword=%CF%C4%C6%D5%CF%B4%D2%C2%B0%F4" target="_blank">
+                                <img src="images/xyb.png" alt="">
+                                <div class="shadow">夏普洗衣棒</div>
+                            </a>
+                        </div>
+                        <div class="img">
+                            <a href="https://mall.jd.com/index-1000014146.html" target="_blank">
+                                <img src="images/bx.png" alt="">
+                                <div class="shadow">夏普冰箱</div>
+                            </a>
+                        </div>
+                        <div class="img">
+                            <a href="javascript:;">
+                                <img src="images/wsg.png" alt="">
+                                <div class="shadow">夏普无水锅</div>
+                            </a>
+                        </div>
+                        <div class="img">
+                            <a href="https://mall.jd.com/view_search-606768-4353456-1-0-20-1.html" target="_blank">
+                                <img src="images/xyj.png" alt="">
+                                <div class="shadow">夏普洗衣机</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-banner">
+                    <a href="javascript:;">
+                        <img src="images/activity.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sqty common" id="sqty">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">夏普双十一爆款产品免费体验</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <div class="activity-banner">
+                    <a href="javascript:;">
+                        <img src="images/mfty.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rmxp common" id="rmxp">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">夏普热门新品</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <ul class="clear" id="xinpin-list-box">
+
+                </ul>
+            </div>
+        </div>
+        <div class="tybg common" id="tybg">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">极果首席体验师热门体验报告</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <div class="blog-list">
+                    <ul class="clear" id="blog-list-box">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li class="on firstPage"></li>
+                    <li class="sencondPage"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tysp common" id="tysp">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">夏普电视体验视频</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <div class="video-box clear">
+                    <div class="show-video">
+                        <iframe width="706" height="394" src="http://player.youku.com/embed/XMjg2ODAxMzYyOA==" frameborder="0"></iframe>
+                    </div>
+                    <div class="video-list">
+                        <ul>
+                            <li class="on" data-url="http://player.youku.com/embed/XMjg2ODAxMzYyOA==">
+                                <img src="images/video1.jpg" alt="">
+                                <div class="shadow"></div>
+                            </li>
+                            <li data-url="http://player.youku.com/embed/XMjg5OTg1MDkyOA==">
+                                <img src="images/video2.jpg" alt="">
+                                <div class="shadow"></div>
+                            </li>
+                            <li data-url="http://player.youku.com/embed/XMjg2ODAwODU1Ng==">
+                                <img src="images/video3.jpg" alt="">
+                                <div class="shadow"></div>
+                            </li>
+                            <li data-url="http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0">
+                                <img src="images/video4.jpg" alt="">
+                                <div class="shadow"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hdhg common" id="hdhg">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">夏普电视往期爆品试用活动回顾</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <div class="hdhg-list">
+                    <a href="http://www.jiguo.com/event/index/1381.html" target="_blank">
+                        <img src="images/wqhg1.png" alt="">
+                    </a>
+                    <a href="http://www.jiguo.com/event/index/985.html" target="_blank">
+                        <img src="images/wqhg2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="typhg common">
+            <div class="title-wrap">
+                <div class="title">
+                    <span>[</span>
+                    <span class="title-text">夏普电视时尚体验趴回顾</span>
+                    <span>]</span>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <div class="typhg-list">
+                    <div class="hd">
+                        <ul>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47664.html" target="_blank">
+                                    <img src="images/typ/typ1.jpg" alt="">
+                                    <div class="shadow">收获多：AQUOS夏普旷视系列电视线下活动，干货和美女一样都不少</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47676.html" target="_blank">
+                                    <img src="images/typ/typ2.jpg" alt="">
+                                    <div class="shadow">你的家值得一台更好的电视，AQUOS夏普旷视系列电视极果体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47691.html" target="_blank">
+                                    <img src="images/typ/typ3.jpg" alt="">
+                                    <div class="shadow">极果AQUOS夏普旷视系列电视线下时尚体验趴，给你电视想不到的薄</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47697.html" target="_blank">
+                                    <img src="images/typ/typ4.jpg" alt="">
+                                    <div class="shadow">美食、美女、好产品一个都不能少——记极果首次线下时尚体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47705.html" target="_blank">
+                                    <img src="images/typ/typ5.jpg" alt="">
+                                    <div class="shadow">被极致外形吸引，被色彩和音效打动，电视就买这样的</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47723.html" target="_blank">
+                                    <img src="images/typ/typ6.jpg" alt="">
+                                    <div class="shadow">AQUOS夏普旷视系列电视VS极果，北京极客线下PARTY（视频花絮）</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47751.html" target="_blank">
+                                    <img src="images/typ/typ7.jpg" alt="">
+                                    <div class="shadow">原来电视多得是你不知道的功能！AQUOS夏普旷视系列电视体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47752.html" target="_blank">
+                                    <img src="images/typ/typ8.jpg" alt="">
+                                    <div class="shadow">我的极果时尚体验之旅</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47753.html" target="_blank">
+                                    <img src="images/typ/typ9.jpg" alt="">
+                                    <div class="shadow">全面满足家用及专业需求的旗舰电视——AQUOS夏普旷视系列电视极果体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47761.html" target="_blank">
+                                    <img src="images/typ/typ10.jpg" alt="">
+                                    <div class="shadow">时尚体验趴嗨到爆！环球小姐加特林怒怼渣电视 | 极果 x 夏普</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47769.html" target="_blank">
+                                    <img src="images/typ/typ11.jpg" alt="">
+                                    <div class="shadow">极果 X AQUOS夏普旷视系列电视线下体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47775.html" target="_blank">
+                                    <img src="images/typ/typ12.jpg" alt="">
+                                    <div class="shadow">王者归来</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47777.html" target="_blank">
+                                    <img src="images/typ/typ13.jpg" alt="">
+                                    <div class="shadow">尽享时尚、追忆过去——极果&AQUOS夏普旷世系列电视体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47787.html" target="_blank">
+                                    <img src="images/typ/typ14.jpg" alt="">
+                                    <div class="shadow">难得的线下体验，各路大神和极果小编现身</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47806.html" target="_blank">
+                                    <img src="images/typ/typ15.jpg" alt="">
+                                    <div class="shadow">身临其境、完美邂逅。AQUOS夏普旷视S60线下体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47821.html" target="_blank">
+                                    <img src="images/typ/typ16.jpg" alt="">
+                                    <div class="shadow">极果的首趴——果真旷世不框视</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47853.html" target="_blank">
+                                    <img src="images/typ/typ17.jpg" alt="">
+                                    <div class="shadow">不一样的线下活动---AQUOS夏普旷视系列电视体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47857.html" target="_blank">
+                                    <img src="images/typ/typ18.jpg" alt="">
+                                    <div class="shadow">夏普旷视AQUOS电视，你值得一看！！</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47859.html" target="_blank">
+                                    <img src="images/typ/typ19.jpg" alt="">
+                                    <div class="shadow">一个注定不凡的午后，跳出边“框”看“视”界，极果AQUOS夏普旷视系列电视线下体验欢聚趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47860.html" target="_blank">
+                                    <img src="images/typ/typ20.jpg" alt="">
+                                    <div class="shadow">与情怀相关：那些年我们追过的电视剧 - AQUOS夏普旷视系列电视线下体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47862.html" target="_blank">
+                                    <img src="images/typ/typ21.jpg" alt="">
+                                    <div class="shadow">聚会，见证王者归来</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47867.html" target="_blank">
+                                    <img src="images/typ/typ22.jpg" alt="">
+                                    <div class="shadow">我来帝都看电视----AQUOS夏普旷视系列电视极果大网线下面基趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47901.html" target="_blank">
+                                    <img src="images/typ/typ23.jpg" alt="">
+                                    <div class="shadow">极果组局电视趴 AQUOS夏普带你体验旷世不框视</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47926.html" target="_blank">
+                                    <img src="images/typ/typ24.jpg" alt="">
+                                    <div class="shadow">我与极果君的旷世之约</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47936.html" target="_blank">
+                                    <img src="images/typ/typ25.jpg" alt="">
+                                    <div class="shadow">重返那些年——极果AQUOS夏普旷视系列电视线下体验趴回顾</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47942.html" target="_blank">
+                                    <img src="images/typ/typ26.jpg" alt="">
+                                    <div class="shadow">旷世之作，共享影音饕餮盛宴！</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47944.html" target="_blank">
+                                    <img src="images/typ/typ27.jpg" alt="">
+                                    <div class="shadow">极果线下趴——欢乐多~AQUOS夏普旷视新品发布会</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47946.html" target="_blank">
+                                    <img src="images/typ/typ28.jpg" alt="">
+                                    <div class="shadow">极果线下第一趴----AQUOS夏普旷视系列电视</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/47947.html" target="_blank">
+                                    <img src="images/typ/typ29.jpg" alt="">
+                                    <div class="shadow">终于等到你，一场久等的线下体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/48014.html" target="_blank">
+                                    <img src="images/typ/typ30.jpg" alt="">
+                                    <div class="shadow">极果线下趴—汇集多位大咖 带你体验夏普旷视系列新品</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/48025.html" target="_blank">
+                                    <img src="images/typ/typ31.jpg" alt="">
+                                    <div class="shadow">极果线下爬梯之夏普旷世系列电视时尚体验趴</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/48121.html" target="_blank">
+                                    <img src="images/typ/typ32.jpg" alt="">
+                                    <div class="shadow">一台电视就是一套家庭影院 | AQUOS 夏普旷视系列电视时尚体验趴体验</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/article/article/48354.html" target="_blank">
+                                    <img src="images/typ/typ33.jpg" alt="">
+                                    <div class="shadow">AQUOS夏普旷视系列电视线下体验趴  一个美好的周末</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Copyright © 2017 极果 All rights reserved. 京ICP备14052927号</div>
+
+    <script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="js/superSlide.js"></script>
+    <script type="text/javascript" src="js/template-native.js"></script>
+    <script type="text/javascript" src="js/index1.js"></script>
+
+    <script type="text/html" id="xinpin-list-tpl">
+        <%for(var i in data){%>
+        <li>
+            <a href="http://www.jiguo.com/article/article/<%=data[i].blogid%>.html" target="_blank">
+                <div class="img">
+                    <img src="http://s1.jiguo.com/<%=data[i].cover%>/640?imageView2/1/w/520/h/400/q/100" alt="">
+                </div>
+                <div class="desc">
+                    <div class="title"><%=data[i].title%></div>
+                    <div class="price"><%=data[i].format.middle_left%></div>
+                    <div class="source">
+                        <div class="mall"><%=data[i].format.bottom_left%></div>
+                        <div class="time"><%=data[i].addtime%></div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <%}%>
+    </script>
+    <script type="text/html" id="blog-list-tpl">
+        <%for(var i in data){%>
+            <li>
+                <a href="http://www.jiguo.com/article/article/<%=data[i].blogid%>.html" target="_blank">
+                    <div class="img">
+                        <img src="http://s1.jiguo.com/<%=data[i].cover%>/640?imageView2/1/w/520/h/400/q/100" alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="title"><%=data[i].title%></div>
+                        <div class="info">
+                            <div class="author">
+                                <img src="<%=data[i].avatar%>/230x230" alt="">
+                                <span><%=data[i].author%></span>
+                            </div>
+                            <div class="query-num">
+                                <span class="zan"><i class="icon-zan"></i><%=data[i].praise%></span>
+                                <span class="comment"><i class="icon-comment"></i><%=data[i].reply%></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        <%}%>
+    </script>
+</body>
+</html>

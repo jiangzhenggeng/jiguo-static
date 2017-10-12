@@ -1297,6 +1297,12 @@ a {
 .icon.icon-uee:before {
   background-position: -24px -272px;
 }
+.icon.icon-youpin:before {
+  background-image: url(../images/menu/gray.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+}
 .icon.icon-mall:before {
   background-position: -174px -26px;
 }
@@ -2557,6 +2563,9 @@ a {
 }
 .side-menu li.on .icon.icon-uee:before {
   background-position: -54px -272px;
+}
+.side-menu li.on .icon.icon-youpin:before {
+  background-image: url(../images/menu/red.png);
 }
 .side-menu li.on .icon.icon-mall:before {
   background-position: -174px -55px;
