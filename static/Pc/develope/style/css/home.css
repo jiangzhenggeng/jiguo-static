@@ -440,9 +440,9 @@
 .hot-event-warp .common-cell-title > a {
   display: inline-block;
   width: 130px;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid transparent;
   position: relative;
-  bottom: -2px;
+  bottom: -1px;
   text-align: center;
 }
 .hot-event-warp .common-cell-title > a.on {

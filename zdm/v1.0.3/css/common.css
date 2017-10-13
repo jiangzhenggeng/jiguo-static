@@ -140,6 +140,9 @@ body {
 	min-width: 150px !important;
 	width:150px !important;
 }
+.Z-w-170{
+	width:170px !important;
+}
 .Z-w-270{
 	width:270px !important;
 }
@@ -157,6 +160,9 @@ body {
 .Z-w-370 {
 	min-width: 370px !important;
 	width: 370px !important;
+}
+.Z-w-460 {
+	width: 460px !important;
 }
 .Z-w-500{
 	width:500px !important;
@@ -351,6 +357,10 @@ body {
 .Z-menu li.news > a{
 	background-size: 18px auto;
 	background-image:url(../images/news.svg);
+}
+.Z-menu li.youpin > a{
+	background-size: 18px auto;
+	background-image:url(../images/i-youpin.png);
 }
 .Z-menu li dl{
 	display: none;

@@ -38,7 +38,7 @@ define(['require','jquery'],function (require,$){
             }
             return '';
         }
-
+        http://share.vrs.sohu.com/1445050/v.swf&topBar=1&autoplay=false&plid=6229210&pub_catecode=0&from=page
         vidoeBox.each(function () {
             src = $(this).attr('src');
             var id = 'iframe'+Math.random().toString().replace('.','');

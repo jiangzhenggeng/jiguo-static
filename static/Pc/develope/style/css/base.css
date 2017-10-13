@@ -54,7 +54,7 @@ ins {
   color: #4c4c4c;
 }
 li {
-  list-style-type: none;
+  list-style: none;
 }
 body,
 input,
@@ -2971,6 +2971,29 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
 }
 .new-header .logo h1 img {
   height: 50px;
+}
+.new-header .yp-logo {
+  width: 217px;
+  height: 47px;
+  margin: 17px 30px 0 0;
+}
+.new-header .yp-logo h1 {
+  position: relative;
+}
+.new-header .yp-logo a {
+  display: block;
+}
+.new-header .yp-logo img {
+  width: 217px;
+}
+.new-header .yp-logo .yp-txt {
+  color: #827523;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: -9px;
 }
 .new-header .new-search-warp {
   width: 535px;

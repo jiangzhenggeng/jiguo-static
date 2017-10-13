@@ -31,3 +31,5 @@ framework/*
 git.sh
 .gitignore
 static/Pc/compression_3.0
+zdx/*
+.gitignore
