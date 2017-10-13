@@ -58,6 +58,9 @@ img {
   vertical-align: middle;
   border: none;
 }
+li {
+  list-style-type: none;
+}
 a {
   text-decoration: none;
   color: #595959;
@@ -1293,6 +1296,12 @@ a {
 }
 .icon.icon-uee:before {
   background-position: -24px -272px;
+}
+.icon.icon-youpin:before {
+  background-image: url(../images/menu/gray.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
 }
 .icon.icon-mall:before {
   background-position: -174px -26px;
@@ -2555,6 +2564,9 @@ a {
 .side-menu li.on .icon.icon-uee:before {
   background-position: -54px -272px;
 }
+.side-menu li.on .icon.icon-youpin:before {
+  background-image: url(../images/menu/red.png);
+}
 .side-menu li.on .icon.icon-mall:before {
   background-position: -174px -55px;
 }
@@ -2683,4 +2695,24 @@ a {
 .announcement-main .announcement-event-name {
   color: #666666;
   margin-right: 8px;
+}
+.bottom-bar.show-app-down-warp {
+  background: #FF5442;
+  box-shadow: 0 2px 4px 0 rgba(255, 84, 66, 0.7);
+  border-radius: 30px;
+  width: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  line-height: normal;
+  height: auto;
+  border: none;
+  position: fixed;
+  z-index: 3;
+}
+.bottom-bar.show-app-down-warp > a {
+  color: #fff;
+  display: block;
+  line-height: 32px;
+  padding: 0 18px;
 }

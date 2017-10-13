@@ -284,27 +284,6 @@ body {
   font-size: 14px;
   border-radius: 25px;
 }
-.show-app-down-warp + .bottom-bar {
-  display: none;
-}
-.show-app-down-warp {
-  line-height: normal;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: none;
-}
-.show-app-down {
-  padding: 7px 12px;
-}
-.show-app-down .show-app-logo img {
-  height: 36px;
-}
-.show-app-down-btn-warp {
-  line-height: 36px;
-}
-.show-app-down-btn-warp .btn {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
 .artical-relative-header {
   color: #000;
 }
@@ -1075,6 +1054,11 @@ body {
 .__editor__container__ ul,
 .__editor__container__ .list-paddingleft-2 {
   padding-left: 30px;
+}
+.__editor__container__ ol li,
+.__editor__container__ ul li,
+.__editor__container__ .list-paddingleft-2 li {
+  list-style-type: inherit;
 }
 .__editor__container__ #initContent {
   color: #B3B3B3;

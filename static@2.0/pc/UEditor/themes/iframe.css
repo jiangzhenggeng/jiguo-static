@@ -31,7 +31,7 @@
     display: block;
 }
 .__editor__container__ .title_h3{
-    color: #666666;
+    color: #4d4d4d;
     font-size: 16px;
     line-height: 28px;
     margin: 25px 0;
@@ -56,9 +56,7 @@
 .__editor__container__ ol li ,
 .__editor__container__ ul li ,
 .__editor__container__ .list-paddingleft-2 li{
-    font-size: 16px;
-    color: #333;
-    list-style: initial;
+    list-style-type: inherit;
 }
 
 .__editor__container__ #initContent{
