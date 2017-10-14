@@ -132,7 +132,7 @@ body {
   margin: 15px;
 }
 .Z-m-l-50 {
-  margin-left: 50px!important;
+  margin-left: 50px !important;
 }
 .Z-a-lefr {
   text-align: left;
@@ -1003,7 +1003,7 @@ data-list
   color: #fc6b6b;
 }
 .search-category-list li:hover span {
-  color: #fc6b6b!important;
+  color: #fc6b6b !important;
 }
 .category-list {
   position: absolute;
@@ -1052,4 +1052,32 @@ data-list
 .third-category div .checked {
   color: #fff;
   background-color: #ff0000;
+}
+.Z-sort {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 20px;
+  font-size: 0;
+}
+.Z-sort a {
+  font-size: 14px;
+  display: inline-block;
+  background: #f7f7f7 url("../images/icon-up-down.png") no-repeat 55px center;
+  background-size: 8px auto;
+  padding: 0 30px 0 10px;
+  color: #7f7f7f;
+  border-right: 1px solid #d9d9d9;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.Z-sort a:last-of-type {
+  border-right: none;
+}
+.Z-sort a.Z-sort-up {
+  color: #fff;
+  background: #808080 url("../images/icon-up.png") no-repeat 55px center;
+}
+.Z-sort a.Z-sort-down {
+  color: #fff;
+  background: #808080 url("../images/icon-up.png") no-repeat 55px center;
 }
