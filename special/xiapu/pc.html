@@ -2,25 +2,13 @@
 <html lang="zh-CN">
 <head>
     <script>
-        function IsPC() {
-            var userAgentInfo = navigator.userAgent;
-            var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-            var flag = true;
-            for (var v = 0; v < Agents.length; v++) {
-                if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            return flag;
-        }
-        if (!IsPC()) {
+        if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|webOS|BlackBerry)/i)) {
             window.location = 'mb/';
         }
     </script>
     <meta charset="UTF-8">
     <title>夏普</title>
-    <link rel="stylesheet" href="css/index2.css">
+    <link rel="stylesheet" href="css/index3.css">
 </head>
 <body>
     <div class="nav">
@@ -156,19 +144,27 @@
                         <ul>
                             <li class="on" data-url="http://player.youku.com/embed/XMjg2ODAxMzYyOA==">
                                 <img src="images/video1.jpg" alt="">
-                                <div class="shadow"></div>
+                                <div class="shadow">
+                                    <p class="shadow-text">AQUOS夏普旷视S60</p>
+                                </div>
                             </li>
                             <li data-url="http://player.youku.com/embed/XMjg5OTg1MDkyOA==">
                                 <img src="images/video2.jpg" alt="">
-                                <div class="shadow"></div>
+                                <div class="shadow">
+                                    <p class="shadow-text">iPhone那么薄的电视</p>
+                                </div>
                             </li>
                             <li data-url="http://player.youku.com/embed/XMjg2ODAwODU1Ng==">
                                 <img src="images/video3.jpg" alt="">
-                                <div class="shadow"></div>
+                                <div class="shadow">
+                                    <p class="shadow-text">60英寸超窄边框电视</p>
+                                </div>
                             </li>
                             <li data-url="http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0">
                                 <img src="images/video4.jpg" alt="">
-                                <div class="shadow"></div>
+                                <div class="shadow">
+                                    <p class="shadow-text">极果夏普时尚体验趴</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -186,12 +182,24 @@
             </div>
             <div class="content">
                 <div class="hdhg-list">
-                    <a href="http://www.jiguo.com/event/index/1381.html" target="_blank">
-                        <img src="images/wqhg1.png" alt="">
-                    </a>
-                    <a href="http://www.jiguo.com/event/index/985.html" target="_blank">
-                        <img src="images/wqhg2.png" alt="">
-                    </a>
+                    <div class="hd">
+                        <ul>
+                            <li>
+                                <a href="http://www.jiguo.com/event/index/1381.html" target="_blank">
+                                    <img src="images/wqhg1.jpg" alt="">
+                                    <div class="shadow">夏普50/60吋互联网电视</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.jiguo.com/event/index/985.html" target="_blank">
+                                    <img src="images/wqhg2.jpg" alt="">
+                                    <div class="shadow">AQUOS夏普旷视系列电视</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="prev"></div>
+                    <div class="next"></div>
                 </div>
             </div>
         </div>
@@ -419,7 +427,7 @@
     <script type="text/javascript" src="js/jquery-2.2.3.js"></script>
     <script type="text/javascript" src="js/superSlide.js"></script>
     <script type="text/javascript" src="js/template-native.js"></script>
-    <script type="text/javascript" src="js/index1.js"></script>
+    <script type="text/javascript" src="js/index3.js"></script>
 
     <script type="text/html" id="xinpin-list-tpl">
         <%for(var i in data){%>
