@@ -624,6 +624,7 @@ define(['jquery', 'layer', 'app/common','template','laydate','app/addEvent'], fu
         html_encode:html_encode,
         html_decode:html_decode,
         getLen:getLen,
-        changeLogo:changeLogo
+        changeLogo:changeLogo,
+        testRepeat:testRepeat
     }
 });

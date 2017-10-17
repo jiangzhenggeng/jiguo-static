@@ -565,6 +565,12 @@ Z-uploadify-banner
   position: absolute;
   bottom: 0;
 }
+.play-model-list-wrap {
+  display: none;
+}
+.play-model-list-wrap .model-list-wrap {
+  height: auto;
+}
 .event-tpl-mask {
   position: fixed;
   top: 0;

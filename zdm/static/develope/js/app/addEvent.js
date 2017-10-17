@@ -146,6 +146,7 @@ define(['jquery','layer','app/common','template','app/event','app/createUE'],fun
                     for (var i in modelItemList) {
                         o += "<tr><td>" + modelItemList[i] + "</td><td><input type='text' data-editdiscount name='"+i+"[buying_num]'></td><td class='price'><b></b><input type='hidden' name='" + i + "[price]'></td><td class='cost'><input type='text' data-editcost name='" + i + "[cost_spec]'></td><td><input type='text' data-editoldprice name='" + i + "[old_price]'></td></tr>";
                     }
+                    var specList={} , modelItemHtml='';
                     var playBody = layer.getChildFrame('body', index);
                     var user_group_dom=playBody.find("[name='[user_group][]']");
                     playBody.find("#event-model-list tbody").html(o);
@@ -164,6 +165,10 @@ define(['jquery','layer','app/common','template','app/event','app/createUE'],fun
                             continue;
                         }
 
+                        if(name.indexOf('spec_remarks')>=0){
+                            specList[name]=value;
+                        }
+
                         if(edit=='edit'){
                             if(name=="all_user"&&value==0){
                                 continue;
@@ -172,6 +177,7 @@ define(['jquery','layer','app/common','template','app/event','app/createUE'],fun
 
                         playBody.find("[name='"+name+"']:not('[type=checkbox]')").val(value);
                         playBody.find("[name='"+name+"'][type=checkbox]").prop("checked",true);
+
                     }
                     user_group_dom.each(function () {
                         for(var k in user_group){
@@ -234,7 +240,15 @@ define(['jquery','layer','app/common','template','app/event','app/createUE'],fun
                     //  添加无规格标识
                     if($("[name=no_spec]:checked").val()==1){
                         playBody.find("#event-model-list").attr('data-nospec','1');
+                        playBody.find(".play-model-list-wrap").show();
+                    }else{
+                        playBody.find(".play-model-list-wrap").remove();
                     }
+                    //添加无规格时的型号
+                    for(var i in specList){
+                        modelItemHtml+='<li class="modelitem"><input type="text" value="'+specList[i]+'" name="'+i+'" placeholder="请填写规格名称"><span data-delmodelitem>x</span></li>';
+                    }
+                    playBody.find('[data-addmodelitem]').before(modelItemHtml);
                     hidePrice(playBody);
 
                 }
@@ -311,6 +325,7 @@ define(['jquery','layer','app/common','template','app/event','app/createUE'],fun
 
                 if($("[name=no_spec]:checked").val()==1){
                     playBody.find("#event-model-list").attr('data-nospec','1');
+                    playBody.find(".play-model-list-wrap").show();
                 }
                 hidePrice(playBody);
             }

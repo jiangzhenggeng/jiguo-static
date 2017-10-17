@@ -83,108 +83,91 @@ define([
                 }
                 //获取用户手机号
                 $.post('/api/user/GetUserTel',{},function (rd) {
-                    var id = K.randomId(),
-                        html = $('#event-apply-input-tpl').html(),
-                        meta_id=$(_this).closest('[data-metaid]').attr('data-metaid'),
-                        remark=$(_this).attr('data-remark'),
-                        applydata={
-                            remark: remark,
-                            mobile: rd.result
-                        };
-                    var lId = layer.open({
-                        type: 1,
-                        title: false,
-                        closeBtn: 0,
-                        shadeClose: false,
-                        area:['510px'],
-                        content: '<div id="'+id+'">'+tplEngine.init(html,applydata)+'</div>',
-                        success:function (layero, index) {
-                            setTimeout(function () {
-                                $(layero).find('.apply-input-close').attr('onClick','layer.close(\''+lId+'\')');
-                            });
-                            var Obj = $(layero).find('#apply-event-form-data');
+                    var meta_id=$(_this).closest('[data-metaid]').attr('data-metaid'),
+                        applydata={mobile: rd.result};
+                    //加载型号信息
+                    $.post('/api/event/GetStorageList',{meta_id:meta_id},function (replayData) {
+                        var o='',
+                            id = K.randomId(),
+                            html = $('#event-apply-input-tpl').html(),
+                            remark=$(_this).attr('data-remark');
+                            applydata.remark=remark;
+                            applydata.data=replayData.result;
+                        console.log(applydata);
+                        var lId = layer.open({
+                            type: 1,
+                            title: false,
+                            closeBtn: 0,
+                            shadeClose: false,
+                            area:['510px'],
+                            content: '<div id="'+id+'">'+tplEngine.init(html,applydata)+'</div>',
+                            success:function (layero, index) {
+                                setTimeout(function () {
+                                    $(layero).find('.apply-input-close').attr('onClick','layer.close(\''+lId+'\')');
+                                });
+                                var Obj = $(layero).find('#apply-event-form-data');
 
-                            //加载型号信息
-                            $.post('/api/event/GetStorageList',{meta_id:meta_id},function (replayData) {
-                                var data=replayData.result,
-                                    o='';
-                                if(data.no_spec==1){
-                                    o+='<input name="storage_id" value="'+data.first_storage.id+'" type="hidden">';
-                                    Obj.find('.apply-model-wrap').hide();
-                                }else{
-                                    for(var i in data.storage_list){
-                                        if(data.storage_list[i].all_storage>0){
-                                            o+='<li class="apply-model-btn"><span data-storageid="'+data.storage_list[i].id+'">'+data.storage_list[i].spec_name+'</span></li>';
-                                        }else{
-                                            o+='<li class="apply-model-btn disabled-btn"><span data-storageid="'+data.storage_list[i].id+'">'+data.storage_list[i].spec_name+'</span></li>';
+                                //选择型号
+                                $(layero).find('.apply-model-wrap').on('click','li:not(.disabled-btn)',function () {
+                                    if(!$(this).hasClass('checked')){
+                                        var storageid=$(this).find('span').attr('data-storageid');
+                                        var html='<input name="storage_id" value="'+storageid+'" type="hidden">';
+                                        $(this).addClass('checked').siblings().removeClass('checked');
+                                        $(this).append(html).siblings().find('input').remove();
+                                    }
+                                });
+
+                                $(layero).find('.btn').click(function () {
+                                    var cookie_option = {
+                                        path:'/',
+                                        expires:36000000
+                                    }
+
+                                    if(Obj.find('.apply-model-btn').length>0){
+                                        if(Obj.find('.apply-model-btn.checked').length==0){
+                                            layer.msg('请选择产品型号');
+                                            return;
                                         }
                                     }
-                                }
-                                Obj.find('.apply-model-list').html(o);
-                                if($(layero).find('.apply-model-btn:not(.disabled-btn)').length<=1){
-                                    $(layero).find('.apply-model-btn:not(.disabled-btn)').trigger('click');
-                                }
-                            },'json');
 
-                            //选择型号
-                            $(layero).find('.apply-model-wrap').on('click','li:not(.disabled-btn)',function () {
-                                if(!$(this).hasClass('checked')){
-                                    var storageid=$(this).find('span').attr('data-storageid');
-                                    var html='<input name="storage_id" value="'+storageid+'" type="hidden">';
-                                    $(this).addClass('checked').siblings().removeClass('checked');
-                                    $(this).append(html).siblings().find('input').remove();
-                                }
-                            });
-
-                            $(layero).find('.btn').click(function () {
-                                var cookie_option = {
-                                    path:'/',
-                                    expires:36000000
-                                }
-
-                                if(Obj.find('.apply-model-btn').length>0){
-                                    if(Obj.find('.apply-model-btn.checked').length==0){
-                                        layer.msg('请选择产品型号');
+                                    if(Obj.find('input[name=tel]').val().length!=11){
+                                        layer.msg('手机号码不允许为空');
                                         return;
                                     }
-                                }
-
-                                if(Obj.find('input[name=tel]').val().length!=11){
-                                    layer.msg('手机号码不允许为空');
-                                    return;
-                                }
-                                if(Obj.find('input[name=username]').length && Obj.find('input[name=username]').val().length==''){
-                                    layer.msg('用户名不允许为空');
-                                    return;
-                                }
-                                if(!Obj.find('#agreement').prop('checked')){
-                                    layer.msg('未勾选同意用户协议');
-                                    return;
-                                }
-                                var applyUrlAPI = window.applyUrlAPI?window.applyUrlAPI:'/api/event/Apply';
-                                var applyStatus=Obj.find('input[name=status]');
-                                var formData = Obj.serialize();
-                                if(!applyStatus.is(":checked")){
-                                    formData+="&status=-1";
-                                }
-
-                                $.post( applyUrlAPI ,formData,function (replayData) {
-                                    if(replayData.resultCode==0){
-                                        layer.msg('申请成功',{type: 1},function () {
-                                            layer.closeAll();
-                                            window.location.reload();
-                                        });
-                                    }else{
-                                        layer.msg(replayData.errorMsg);
+                                    if(Obj.find('input[name=username]').length && Obj.find('input[name=username]').val().length==''){
+                                        layer.msg('用户名不允许为空');
+                                        return;
                                     }
-                                },'json');
-                            });
+                                    if(!Obj.find('#agreement').prop('checked')){
+                                        layer.msg('未勾选同意用户协议');
+                                        return;
+                                    }
+                                    var applyUrlAPI = window.applyUrlAPI?window.applyUrlAPI:'/api/event/Apply';
+                                    var applyStatus=Obj.find('input[name=status]');
+                                    var formData = Obj.serialize();
+                                    if(!applyStatus.is(":checked")){
+                                        formData+="&status=-1";
+                                    }
 
-                        }
-                        ,end:function () {
+                                    $.post( applyUrlAPI ,formData,function (replayData) {
+                                        if(replayData.resultCode==0){
+                                            layer.msg('申请成功',{type: 1},function () {
+                                                layer.closeAll();
+                                                window.location.reload();
+                                            });
+                                        }else{
+                                            layer.msg(replayData.errorMsg);
+                                        }
+                                    },'json');
+                                });
 
-                        }
-                    });
+                            }
+                            ,end:function () {
+
+                            }
+                        });
+
+                    },'json');
                 },'json');
 
             });
