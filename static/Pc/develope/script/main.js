@@ -40,7 +40,9 @@ define("main",[
     'app/showScore',
     'app/md5',
     'app/login',
-    'vip'
+    'vip',
+    'showArticle',
+    'showEvent'
 ],function (){
 
 });

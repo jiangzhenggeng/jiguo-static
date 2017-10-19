@@ -11,12 +11,15 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
 
         });
     };
+
     function publish(mid) {
         common.confirm('请确认有充足货源再发布？', '/admin2/work/PublishApply', {mid: mid});
     };
+
     function publishno(mid) {
         common.confirm('确定发布未中签消息吗？', '/admin2/work/PublishFailedMessage', {mid: mid});
     };
+
     function addUser(mid) {
         common.ajax('post', '/admin2/work/GetMetaSpec', {meta_id: mid}, 'json', function (replyData) {
             common.showBox('强制添加', '660px', '600px', template('user-list-tpl', replyData.result), function () {
@@ -25,7 +28,7 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
                 $('body').on('click', '#spec .meta-type', function () {
                     $(this).addClass('on').siblings().removeClass('on');
                 });
-                if (replyData.result.no_spec == 1) {
+                if (replyData.result.no_spec == 1 && replyData.result.display_spec_remarks != 1) {
                     $('#spec').find('span').trigger('click');
                 }
 //                    查用户
@@ -43,6 +46,7 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
             });
         });
     }
+
     function chooseUser() {
         $('body').on('click', '[data-choose-author]', function () {
             if (!$('#spec div').hasClass('on')) {
@@ -51,11 +55,21 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
             } else {
                 var storage_id = $('#spec .on input').val();
             }
+            var display_spec_remarks = $('#spec').attr('data-display-spec-remarks');
             var uid = $(this).next().val().trim();
             var data = {
                 storage_id: storage_id,
                 uid: uid
             };
+            if (display_spec_remarks == 1) {
+                var spec_remarks = $('#spec .on input').val()
+                storage_id = $('#spec [name=storage_id]').val();
+                data = {
+                    storage_id: storage_id,
+                    spec_remarks: spec_remarks,
+                    uid: uid
+                };
+            }
             common.ajax('post', '/admin2/work/EventAddApply', data, 'json', function () {
 
                 layer.closeAll();
@@ -65,6 +79,7 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
             })
         })
     }
+
     function deleteUser(id, dom) {
         layer.confirm('您确定取消吗？', {
             bth: ['确定', '取消'],
@@ -94,6 +109,7 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
             });
         })
     };
+
     //全选反选
     function pass(options) {
         var options = $.extend({
@@ -115,7 +131,7 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
                 $(options.operaBtn).removeAttr(options.operaAttr).attr(options.warningAttr, '');
             }
         });
-        $('body').on('change', options.checkboxes,function () {
+        $('body').on('change', options.checkboxes, function () {
             var that = this;
             if (!$(that).prop('checked')) {
                 i--;
