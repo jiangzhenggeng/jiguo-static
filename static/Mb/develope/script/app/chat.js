@@ -424,7 +424,9 @@ define([
                         _this.noDataObj.show();
                     }
                     if(window.myScroll){
-                        window.myScroll.refresh();
+                        setTimeout(function () {
+													window.myScroll.refresh();
+												},20)
                     }
                 },'json');
             }
@@ -497,13 +499,7 @@ define([
 
             window.myScroll = myScroll;
 
-            myScroll.on('scroll',function(){
-                //scroll事件，可以用来控制上拉和下拉之后显示的模块中，
-                //样式和内容展示的部分的改变。
-            });
-
             box.data('loading',false);
-
 
             var chatHeaderCommonHide = $('.chat-header-common-hide'),
                 chatHeaderCommonHideHeight = chatHeaderCommonHide.height();
@@ -517,21 +513,19 @@ define([
                 body = $('body'),
                 posY = 0;
 
+					myScroll.on("scrollEnd",function(){
+						getRequestData.apply(box,[cacheFn]);
+          })
+
             myScroll.on("scroll",function(){
-
                 posY = this.y;
-
-                if( -(this.maxScrollY - this.y) <= 200 ){
-                    getRequestData.apply(box,[cacheFn]);
-                }
-
-                if( -(this.maxScrollY - this.y) <= 20 ){
-                    myScroll.refresh();
-                }
-                if(isTop) return false;
-
+                // if( -(this.maxScrollY - this.y) <= 20 ){
+                //     myScroll.refresh();
+                // }
+                // if(isTop) return false;
                 top = this.y + chatHeaderCommonHideHeight;
                 if( top<=0 ){
+									myScroll.off("scroll");
                     if(top>=-chatHeaderHeight ){
                         chatHeader.css('top', top);
                     }else{

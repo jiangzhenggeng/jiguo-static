@@ -21,30 +21,30 @@ define(['jquery', 'layer'], function ($, layer) {
 				});
 			});
 
-			var _touchstartTimer_ = null;
-			window.addEventListener('touchstart', function (e) {
-				start = e.touches[0].clientY;
-				_touchstartTimer_ = null;
-			}, false);
-
-			window.addEventListener('touchmove', function (e) {
-				if ( Math.abs(end - start) >15 && !_touchstartTimer_) {
-					appDownloadShow1.stop(false, true).animate({
-						bottom: -60
-					});
-					_touchstartTimer_ = true;
-				}
-			}, false);
-
-			window.addEventListener('touchend', function (e) {
-				setTimeout(function () {
-					if ( Math.abs(end - start) >15 ) {
-						appDownloadShow1.stop(false, true).animate({
-							bottom: _bottom
-						});
-					}
-				}, 500)
-			}, false);
+			// var _touchstartTimer_ = null;
+			// window.addEventListener('touchstart', function (e) {
+			// 	start = e.touches[0].clientY;
+			// 	_touchstartTimer_ = null;
+			// }, false);
+			//
+			// window.addEventListener('touchmove', function (e) {
+			// 	if ( Math.abs(end - start) >15 && !_touchstartTimer_) {
+			// 		appDownloadShow1.stop(false, true).animate({
+			// 			bottom: -60
+			// 		});
+			// 		_touchstartTimer_ = true;
+			// 	}
+			// }, false);
+			//
+			// window.addEventListener('touchend', function (e) {
+			// 	setTimeout(function () {
+			// 		if ( Math.abs(end - start) >15 ) {
+			// 			appDownloadShow1.stop(false, true).animate({
+			// 				bottom: _bottom
+			// 			});
+			// 		}
+			// 	}, 500)
+			// }, false);
 
 			//分享
 			$('[data-article-share]').click(function () {
