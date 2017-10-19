@@ -248,6 +248,18 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
         minPrice=Math.min.apply(null,priceArr);
         $("#showprice").val(minPrice);
     }
+    //备注选项
+    function addmodel() {
+        $('body').on('click','[data-delmodelitem]',function () {
+            $(this).closest('li').remove();
+        })
+        .on('click','[data-addmodelitem]',function () {
+            var name="[spec_remarks]["+event.randomID()+"]";
+            var html='<li class="modelitem"><input type="text" name="'+name+'" placeholder="请填写规格名称"><span data-delmodelitem>x</span></li>';
+            $(this).before(html);
+            $(this).prev().find('input').trigger('focus');
+        })
+    }
 
     function testForm() {
         var flag=false;
@@ -355,6 +367,30 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
             return false;
         }
 
+        if($('#event-model-list').attr('data-nospec')==1&&
+            $('.model-list-wrap').find(".modelitem input").length>0){
+            var modelDataList={};
+            //判断型号是否添加正确
+            $('.model-list-wrap').find(".modelitem input").each(function () {
+                var modelItem=$(this).val();
+                var modelName=$(this).prop('name');
+                if(!modelItem||event.getLen(modelItem)>8){
+                    layer.msg('请填写正确的备注规格');
+                    $(this).trigger('focus');
+                    flag=true;
+                    return false;
+                }
+                modelDataList[modelName]=modelItem;
+            });
+            if(!event.testRepeat(modelDataList)){
+                layer.msg('备注规格不能重复');
+                flag=true;
+            }
+            if(flag){
+                return false;
+            }
+        }
+
         if($("[name=detail]").val()==""){
             layer.msg("请填写活动介绍");
             $("[name=detail]").trigger('focus');
@@ -370,6 +406,7 @@ define(['jquery', 'layer', 'template', 'app/common','app/event'], function ($, l
         initInventory:allInventory,
         batch:batch,
         testForm:testForm,
-        changeTime:changeTime
+        changeTime:changeTime,
+        addmodel:addmodel
     }
 });
