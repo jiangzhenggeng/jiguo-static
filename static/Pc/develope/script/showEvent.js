@@ -123,6 +123,10 @@ define([
                                         $(this).append(html).siblings().find('input').remove();
                                     }
                                 });
+                                //只有一个可选型号
+                                if($(layero).find('.apply-model-btn:not(.disabled-btn)').length<=1){
+                                    $(layero).find('.apply-model-btn:not(.disabled-btn)').trigger('click');
+                                }
 
                                 $(layero).find('.btn').click(function () {
                                     if (Obj.find('.apply-model-btn').length > 0) {
