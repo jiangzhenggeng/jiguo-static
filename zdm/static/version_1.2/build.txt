@@ -43,6 +43,14 @@ css/user.css
 ----------------
 css/user.css
 
+js/lib/cropper/cropper.css
+----------------
+js/lib/cropper/cropper.css
+
+js/lib/cropper/cropper.min.css
+----------------
+js/lib/cropper/cropper.min.css
+
 js/lib/laydate/need/laydate.css
 ----------------
 js/lib/laydate/need/laydate.css

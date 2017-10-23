@@ -21,7 +21,8 @@ require.config({
         'laydate':'lib/laydate/laydate',
         'template':'lib/template-native',
         'layer':'lib/layer/layer',
-        'gif':'lib/gif'
+        'gif':'lib/gif',
+			  'cropper':'lib/cropper/cropper',
         
     },
     shim:{
@@ -34,6 +35,9 @@ require.config({
         'layer':{
             deps:['jquery']
         },
+          'cropper':{
+            deps:['css!lib/cropper/cropper']
+          },
         'ueditor': {
             deps: [
                 // 'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min.js',

@@ -110,6 +110,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', upUrl);
         xhr.send(data);
+			  var cropper = upload.cropper||'';
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
@@ -119,10 +120,10 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                     } else {
                         $('#imgLoading').remove();
                         if (multiple) {
-                            var imgHtml = '<li><img src="' + replyData.result.url + '"><span data-delete>x</span><div class="Z-cover-hover">封面</div><input type="hidden" name="' + input_name + '" value="' + replyData.result.fileid + '"></li>';
+                            var imgHtml = '<li><img src="' + replyData.result.url + '"><span data-delete>x</span><input type="hidden" name="' + input_name + '" value="' + replyData.result.fileid + '">'+cropper+'</li>';
                             ul.append(imgHtml);
                         } else {
-                            var imgHtml = '<li><img src="' + replyData.result.url + '"><span data-delete>x</span><input type="hidden" name="' + input_name + '" value="' + replyData.result.fileid + '"></li>';
+                            var imgHtml = '<li><img src="' + replyData.result.url + '"><span data-delete>x</span><input type="hidden" name="' + input_name + '" value="' + replyData.result.fileid + '">'+cropper+'</li>';
                             ul.html(imgHtml);
                         }
 
@@ -138,6 +139,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', upUrl);
         xhr.send(data);
+			  var cropper = uploadMultiple.cropper||'';
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
@@ -147,7 +149,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                     } else {
                         for(var i =0;i<replyData.result.length;i++){
                             $('#imgLoading').remove();
-                            var imgHtml = '<li><img src="' + replyData.result[i].url + '"><span data-delete>x</span><div class="Z-cover-hover">封面</div><input type="hidden" name="' + input_name + '" value="' + replyData.result[i].fileid + '"></li>';
+                            var imgHtml = '<li><img src="' + replyData.result[i].url + '"><span data-delete>x</span><input type="hidden" name="' + input_name + '" value="' + replyData.result[i].fileid + '">'+cropper+'</li>';
                             ul.append(imgHtml);
 
                         }
@@ -159,12 +161,13 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
     };
     // 单图上传
     function upImage(dom, input_name, multiple) {
+			  var cropper = upload.cropper = upImage.cropper||'';
         $('#' + dom + '').find('input').change(function () {
             var fileList = $(this)[0].files;
             if (fileList.length <= 0) {
                 return;
             }
-            var html = '<li id="imgLoading"><img src="http://cdn.jiguo.com/p1/i/loading-icon.gif" class="img-loading"></li>';
+            var html = '<li id="imgLoading"><img src="http://cdn.jiguo.com/p1/i/loading-icon.gif" class="img-loading">'+cropper+'</li>';
             var ul = $(this).parent().prev();
             if (multiple) {
                 ul.append(html);
@@ -179,6 +182,8 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
     };
     // 多图上传
     function upImageMultiple(dom, input_name) {
+        var cropper = upImageMultiple.cropper||'';
+
         $('#' + dom + '').find('input').change(function () {
             var that = this;
             var ul = $(that).parent().prev();
@@ -188,21 +193,26 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                 return;
             }
             $(fileList).each(function (index) {
-                var html = '<li id="imgLoading"><img src="http://cdn.jiguo.com/p1/i/loading-icon.gif" class="img-loading"></li>';
+                var html = '<li id="imgLoading"><img src="http://cdn.jiguo.com/p1/i/loading-icon.gif" class="img-loading">'+cropper+'</li>';
                     ul.append(html);
 
                 data.append('file'+index, $(this)[0]);
             })
+					  uploadMultiple.cropper = cropper;
             uploadMultiple(data, ul, input_name);
-
         })
     };
     //设置封面
-    function setCover() {
-        $('body').on('click', '.Z-cover-hover', function () {
-            $(this).addClass('Z-block').next().attr('name', 'product[cover]').attr('data-cover', '');
-            $(this).parent().siblings().find('.Z-cover-hover').removeClass('Z-block').next().attr('name', 'product[pic][]').removeAttr('data-cover');
-        })
+    function setCover(selector) {
+        // $('body').on('click', '.Z-cover-hover', function () {
+        //     $(this).addClass('Z-block-red').next().attr('name', 'product[cover]').attr('data-cover', '');
+        //     $(this).parent().siblings().find('.Z-cover-hover').removeClass('Z-block-red').next().attr('name', 'product[pic][]').removeAttr('data-cover');
+        // })
+			$('body').on('click', '.Z-cover-hover', function () {
+			    $(this).closest('ul').find('.Z-cover-hover').removeClass('Z-block-red');
+			    $(this).addClass('Z-block-red');
+			    $(selector).val( $(this).closest('li').find('input[type="hidden"]').val() );
+			})
     };
     return {
         //选择类型

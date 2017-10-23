@@ -984,6 +984,7 @@ data-list
 .Z-image-up {
   display: inline-block;
   vertical-align: top;
+  max-width: 775px;
 }
 
 .Z-image-up {
@@ -991,7 +992,7 @@ data-list
     position: relative;
     display: inline-block;
     width: 150px;
-    height: 150px;
+    max-height: 150px;
     margin-right: 20px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -1016,7 +1017,7 @@ data-list
       text-align: center;
     }
     :hover {
-      background-color: #fc6b6b;
+      //background-color: #fc6b6b;
     }
   }
   .img-loading {
@@ -1027,21 +1028,61 @@ data-list
     position: relative;
     display: inline-block;
     width: 150px;
-    height: 150px;
+    max-height: 150px;
+    min-height: 75px;
     margin-bottom: 20px;
     overflow: hidden;
     vertical-align: top;
     border: 1px dashed #ccc;
     span {
       position: absolute;
-      top: 45px;
-      left: 45px;
+      top: 50%;
+      left: 50%;
       width: 60px;
       height: 60px;
       text-align: center;
       font-size: 36px;
+      transform: translateX(-50%) translateY(-50%);
     }
   }
+
+  //图片裁剪
+  .setting-query-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    .setting-cover,
+    .cropper,
+    .Z-cover-hover{
+      flex: 1;
+      &:hover {
+        background-color: #fc6b6b;
+      }
+    }
+    .Z-block-red{
+      background-color: #fc6b6b;
+    }
+    .Z-cover-hover:after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0px;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1px;
+      height: 100%;
+      top:0;
+    }
+  }
+
 }
 
 .Z-image-up-input {
@@ -1054,18 +1095,18 @@ data-list
 }
 
 .Z-cover-hover {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 30px;
-  width: 100%;
-  background-color: #fc6b6b;
-  line-height: 30px;
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
-  cursor: pointer;
-  display: none;
+  //position: absolute;
+  //bottom: 0;
+  //left: 0;
+  //height: 30px;
+  //width: 100%;
+  //background-color: #fc6b6b;
+  //line-height: 30px;
+  //color: #fff;
+  //font-size: 12px;
+  //text-align: center;
+  //cursor: pointer;
+  //display: none;
 }
 
 //试用灰按钮

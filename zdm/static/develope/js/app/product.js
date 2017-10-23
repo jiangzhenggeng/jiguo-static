@@ -10,7 +10,15 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
         $('#link-price').val(data.result.price);
         var html = '';
         $.each(data.result.pic, function (key, value) {
-            html += '<li><img src="' + value + '"><span data-delete>x</span><div class="Z-cover-hover">封面</div><input type="hidden" name="product[pic][]" value="' + value + '"></li>';
+            html += '<li>' +
+              '<img src="' + value + '">' +
+              '<span data-delete>x</span>' +
+              '<input type="hidden" name="product[pic][]" value="' + value + '">' +
+							'<div class="setting-query-wrap">' +
+              '  <div class="Z-cover-hover" data-id="product-cover">封面</div>' +
+              '  <div class="cropper" data-aspect-ratio="2.0">裁剪</div>' +
+              '</div>' +
+              '</li>';
         });
         $('#link-image').prepend(html);
         $('#link-image .Z-cover-hover:first').trigger('click');

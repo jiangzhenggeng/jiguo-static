@@ -865,3 +865,46 @@ data-list
 	color: #fff;
 	background-color: #ff0000;
 }
+
+/*上传图片*/
+.setting-query-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.setting-query-wrap .setting-cover,
+.setting-query-wrap .cropper,
+.setting-query-wrap .Z-cover-hover {
+	position: relative;
+	flex: 1;
+}
+.setting-query-wrap .setting-cover:hover,
+.setting-query-wrap .cropper:hover,
+.setting-query-wrap .Z-cover-hover:hover {
+	background-color: #fc6b6b;
+}
+.setting-query-wrap .Z-block-red {
+	background-color: #fc6b6b;
+}
+.setting-query-wrap .Z-cover-hover:after{
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0px;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 1px;
+	height: 100%;
+	top:0;
+}
+
+
+

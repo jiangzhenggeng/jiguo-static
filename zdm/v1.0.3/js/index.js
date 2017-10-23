@@ -179,6 +179,15 @@ function settingProductImageCover(selecter,_this){
 }
 
 
+function settingProductImageCover_v2(selecter,_thisParme_){
+	var _this = $(_thisParme_).closest('li');
+	if( !_this.find('input[type=hidden]').val() ) return;
+	$(selecter).val(_this.find('input[type=hidden]').val());
+	_this.closest('ul').find('.Z-block-red').removeClass('Z-block-red');
+	$(_thisParme_).addClass('Z-block-red');
+}
+
+
 
 
 

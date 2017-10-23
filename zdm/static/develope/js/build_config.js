@@ -9,6 +9,7 @@ requirejs.config({
         'jquery': 'lib/jquery.min',
         'layer': 'lib/layer/layer',
         'laydate':'lib/laydate/laydate',
+			  'cropper':'lib/cropper/cropper',
         'template':'lib/template-native',
         'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
         'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
@@ -18,6 +19,9 @@ requirejs.config({
         'layer':{
             deps: ['css!lib/layer/need/layer.css'],
         },
+			'cropper':{
+				deps:['css!lib/cropper/cropper']
+			},
         'ueditor': {
             deps: [
                 'http://www.jiguo.com/protected/extensions/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js',
