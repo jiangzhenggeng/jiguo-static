@@ -11,7 +11,24 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             dataType: dataType || 'JSON',
             success: function (replyData) {
                 if (replyData.success != 'true') {
-                    layer.msg(replyData.errorMsg || '操作失败');
+                    if(replyData.resultCode==-11){
+                        var html = '<p class="tc">图片地址错误，请执行远程抓取</p>\
+                                        <p class="tc"><button type="button" id="button" class="Z-btn Z-w-170">远程图片抓取</button></p>';
+                        var lid = layer.open({
+                            title: '图片地址错误',
+                            scrollbar: false,
+                            content: html,
+                            btn:false,
+                            success: function (layero, index) {
+                                layero.find('#button').click(function () {
+                                    $('#edui119_body').trigger('click');
+                                    layer.close(lid);
+                                });
+                            }
+                        });
+                    }else{
+                        layer.msg(replyData.errorMsg || '操作失败');
+                    }
                 } else {
                     callback(replyData);
                 }

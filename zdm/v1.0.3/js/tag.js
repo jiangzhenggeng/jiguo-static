@@ -42,10 +42,10 @@
                         layer.msg('正在上传logo');
                         return;
                     }
-                    // if( FormObj.find('#hideUploadInputFileVal').val()==''){
-                    //     layer.msg('请上传品牌logo');
-                    //     return;
-                    // }
+                    if( FormObj.find('#hideUploadInputFileVal').val()==''){
+                        layer.msg('请上传品牌logo');
+                        return;
+                    }
 
                     if(FormObj.find('#tag-desc').val()==''){
                         layer.msg('请填写品牌描述');
