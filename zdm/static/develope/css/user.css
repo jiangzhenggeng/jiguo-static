@@ -65,11 +65,8 @@
   text-align: center;
   color: #8D3835;
 }
-.vip_preview .vip_preview_applyInfo {
-  width: 940px;
-  margin: 0 auto;
-}
 .vip_preview .vip_preview_applyInfo .vip_preview_info {
+  padding: 0 65px;
   margin-top: 43px;
 }
 .vip_preview .vip_preview_applyInfo .vip_preview_info .vip_info_title {

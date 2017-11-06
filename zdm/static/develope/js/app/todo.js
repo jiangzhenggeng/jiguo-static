@@ -152,6 +152,117 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
         })
     }
 
+    //  加入黑名单
+    function addBlackList(uid) {
+        var html = template('add-black-list-tpl', {uid: uid});
+        layer.open({
+            type: 1,
+            title: '加入黑名单',
+            btn: ['确定', '取消'],
+            area: ['600px', '480px'],
+            content: html,
+            success: function (layero, index) {
+                //  弹框成功
+                var reason = '', time = '', isOther = false;
+                layero.find('#B-reason .icon').click(function () {
+                    if ($('[name="data[send_type]"]:checked').val() == 5) {
+                        layero.find('.reason-wrapper').show();
+                        reason = layero.find('.reason-wrapper textarea').val();
+                        isOther = true;
+                        getMsg(isOther);
+                    } else {
+                        layero.find('.reason-wrapper').hide();
+                        reason = $(this).parent().text();
+                        isOther = false;
+                        getMsg(isOther);
+                    }
+
+                });
+                layero.find('#B-time .icon').click(function () {
+                    time = $(this).parent().text();
+                    getMsg(isOther);
+                });
+                layero.find('#B-msg .icon').click(function () {
+                    if ($('[name="data[is_send_msg]"]:checked').val() == 1) {
+                        layero.find('.msg-box').show();
+                    } else {
+                        layero.find('.msg-box').hide();
+                    }
+                });
+
+                function getMsg(isOther) {
+                    isOther = isOther;
+                    if (!isOther) {
+                        var msg = 'hi~ 亲爱的果主，面带悲伤的通知您，您被雪藏了，惩罚时间“' + time + '”。为什么？谁让你违反试用规则“' + reason + '”呢！若有不服，请联系极果工作人，欢迎辩解~（迷人微笑.jpg）';
+                    } else {
+                        var msg = 'hi~ 亲爱的果主，面带悲伤的通知您，您被雪藏了。为什么？谁让你违反极果平台规则！若有不服，请联系极果工作人，欢迎辩解~（迷人微笑.jpg）';
+                    }
+                    layero.find('.msg-wrapper').html(msg);
+                    layero.find('[name="data[send_msg]"]').val(msg);
+                }
+            },
+            yes: function (index, layero) {
+                //  点击确认按钮
+                if (!testForm(layero)) return false;
+                var data = layero.find('form').serialize();
+                var load_id = layer.load();
+                $.get('/admin/user/AddBlackList', data, function (replyData) {
+                    layer.close(load_id);
+                    layer.msg(replyData.errorMsg || '操作成功', {time: 1000}, function () {
+                        window.location.reload();
+                    })
+                }, 'json');
+            }
+        })
+    }
+
+    //   表单提交
+    function testForm(layero) {
+        if (layero.find('#B-reason .icon:checked').length <= 0) {
+            layer.msg('请选择加入黑名单理由');
+            return false;
+        }
+        if (layero.find('#B-reason .icon:checked').val() == 5) {
+            if (layero.find('[name="data[other_msg]"]').val() == '') {
+                layer.msg('请填写加入黑名单理由');
+                return false;
+            }
+        }
+        if (layero.find('#B-time .icon:checked').length <= 0) {
+            layer.msg('请选择黑名单时效');
+            return false;
+        }git
+        return true;
+    }
+
+    //  取消黑名单
+    function cancelBlackList(uid) {
+        var html = template('cancel-black-list-tpl', {uid: uid});
+        layer.confirm(html, {
+            title: '取消黑名单',
+            bth: ['确定', '取消'],
+            area: ['600px'],
+            success: function (layero, index) {
+                layero.find('.icon').click(function () {
+                    if ($('[name=is_send_msg]:checked').val() == 1) {
+                        layero.find('.msg-box').show();
+                    } else {
+                        layero.find('.msg-box').hide();
+                    }
+                })
+            }
+        }, function (index, layero) {
+            var data = layero.find('form').serialize();
+            var load_id = layer.load();
+            $.get('/admin/user/CancelBlackList', data, function (replyData) {
+                layer.close(load_id);
+                layer.msg(replyData.result || '操作成功', {time: 1000}, function () {
+                    window.location.reload();
+                })
+            }, 'json');
+        });
+    }
+
     return {
         lookHistory: lookHistory,
         publish: publish,
@@ -159,6 +270,8 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
         addUser: addUser,
         deleteUser: deleteUser,
         changeDeposit: changeDeposit,
-        pass: pass
+        pass: pass,
+        addBlackList: addBlackList,
+        cancelBlackList: cancelBlackList
     }
 });
