@@ -9,8 +9,8 @@ define([
 ],function ($){
 
     return {
-        login:function () {
-            window.location = '/mb/user/login.html?callbackurl='+encodeURIComponent(window.location.href);
+        login:function (url) {
+            window.location = '/mb/user/login.html?callbackurl='+encodeURIComponent(url||window.location.href);
         }
     };
 
