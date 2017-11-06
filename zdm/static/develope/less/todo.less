@@ -311,3 +311,56 @@
     text-align: center;
   }
 }
+
+//黑名单
+#todo-list{
+  .black-list-wrapper {
+    background-color: #F2F2F2;
+    //公布名单
+    .todo-item-avatar{
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: visible;
+      img{
+        border-radius: 50%;
+      }
+      span{
+        left: 0;
+      }
+      &:before{
+        content: "";
+        display: block;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: -7px;
+        left: -7px;
+        background:url('../images/i-black_list.png') no-repeat center center;
+        background-size: 64px auto;
+      }
+    }
+  }
+}
+//报告列表
+.black-list-wrapper {
+  background-color: #F2F2F2;
+  color: #999!important;
+  .Z-green,.Z-red{
+    color: #999;
+  }
+  //  报告审核
+  .Z-list-image {
+    position: relative;
+  }
+  .Z-list-image:before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5) url('../images/i-black_list-white.png') no-repeat center center;
+    background-size: 110px auto;
+  }
+}

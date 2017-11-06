@@ -283,3 +283,50 @@
   width: 120px;
   text-align: center;
 }
+#todo-list .black-list-wrapper {
+  background-color: #F2F2F2;
+}
+#todo-list .black-list-wrapper .todo-item-avatar {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: visible;
+}
+#todo-list .black-list-wrapper .todo-item-avatar img {
+  border-radius: 50%;
+}
+#todo-list .black-list-wrapper .todo-item-avatar span {
+  left: 0;
+}
+#todo-list .black-list-wrapper .todo-item-avatar:before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  background: url('../images/i-black_list.png') no-repeat center center;
+  background-size: 64px auto;
+}
+.black-list-wrapper {
+  background-color: #F2F2F2;
+  color: #999!important;
+}
+.black-list-wrapper .Z-green,
+.black-list-wrapper .Z-red {
+  color: #999;
+}
+.black-list-wrapper .Z-list-image {
+  position: relative;
+}
+.black-list-wrapper .Z-list-image:before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5) url('../images/i-black_list-white.png') no-repeat center center;
+  background-size: 110px auto;
+}

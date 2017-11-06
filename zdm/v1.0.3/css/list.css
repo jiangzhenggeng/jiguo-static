@@ -1,5 +1,5 @@
 
-.Z-row-line{
+.Z-row-line {
     color: #ededed;
     display: inline-block;
     text-align: center;
@@ -7,111 +7,148 @@
     height: 2px;
     position: relative;
 }
-.Z-row-line i{
-	position:absolute;
-	display:block;
-	width:16px;
-	height:2px;
-	background:#ededed;
-	top:50%;
-	margin-top:-1px;
-	left:50%;
-	margin-left:-8px;
+
+.Z-row-line i {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #ededed;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -8px;
 }
 
-.Z-row .Z-row-line{
+.Z-row .Z-row-line {
     width: 25px;
     height: 2px;
-	left: 10px;
+    left: 10px;
 }
 
-.Z-number{
-	font-weight:100;
-	font-size:14px;
-	color:#999999;
+.Z-number {
+    font-weight: 100;
+    font-size: 14px;
+    color: #999999;
 }
 
 /********************
 新增产品大按钮
 ********************/
-.Z-add-produt-large-btn{
+.Z-add-produt-large-btn {
     color: #333;
     border: 1px solid #ededed;
-	background: #f7f7f7;
+    background: #f7f7f7;
     margin-top: 20px;
     text-align: center;
     height: 80px;
     line-height: 80px;
     font-size: 16px;
 }
-.Z-add-produt-large-btn a{
-	display:block;
+
+.Z-add-produt-large-btn a {
+    display: block;
 }
-.Z-add-produt-large-btn i{
-	display:inline-block;
-	padding:5px;
-	margin-right:8px;
+
+.Z-add-produt-large-btn i {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 8px;
     border-bottom: 1px solid #ededed;
     background: #f7f7f7 url(../images/add-parme.png) no-repeat center center;
 }
+
 /********************
 产品列表
 ********************/
-.Z-list-ul li{
+.Z-list-ul li {
     border-bottom: 1px dotted #e7e7e7;
     position: relative;
-    margin: 30px 0;
-    padding-bottom: 30px;
-}
-.Z-list-ul li:after{
-	content:'';
-	display:block;
-	clear:both;
-}
-.Z-list-image{
-	width:128px;
-	height:128px;
-	border:1px solid #ededed;
-	overflow:hidden;
-	margin-right: 25px;
+    padding: 30px 0;
 }
 
-.Z-list-image img{
-	width:100%;
-	height:100%;
+.black-list-wrapper {
+    background-color: #F2F2F2;
 }
 
-.Z-list-title{
-	font-size:16px;
-}
-.Z-time{
-	color:#a0a0a0;
-	font-size:14px;
-}
-.Z-list-brief{
-	color:#a0a0a0;
-	font-size:14px;
-	line-height: 24px;
-}
-.Z-list-brief .Z-list-brief-inner{
-	margin-top:15px;
-	word-break: break-all;
-}
-.Z-left-query{
-	width:50px;
-	position:absolute;
-	top:0;
-	left:-50px;
-}
-.Z-left-query .Z-click-query{
-	margin-bottom:10px;
+.black-list-wrapper .Z-list-title  strong,
+.black-list-wrapper .Z-list-title  strong a,
+.black-list-wrapper .Z-list-title  span,
+.black-list-wrapper .Z-list-brief + .Z-list-subscribe *{
+   color: #a0a0a0 !important;
 }
 
-.Z-left-query .Z-add-product{
-	height:auto;
+.black-list-wrapper .Z-list-image {
+    position: relative;
 }
 
-.Z-left-query .Z-add-product em{
+.black-list-wrapper .Z-list-image:before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5) url('../images/i-black_list.png') no-repeat center center;
+    background-size: 110px auto;
+}
+
+.Z-list-ul li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.Z-list-image {
+    width: 128px;
+    height: 128px;
+    border: 1px solid #ededed;
+    overflow: hidden;
+    margin-right: 25px;
+}
+
+.Z-list-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.Z-list-title {
+    font-size: 16px;
+}
+
+.Z-time {
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.Z-list-brief {
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.Z-list-brief .Z-list-brief-inner {
+    margin-top: 15px;
+    word-break: break-all;
+}
+
+.Z-left-query {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+
+.Z-left-query .Z-click-query {
+    margin-bottom: 10px;
+}
+
+.Z-left-query .Z-add-product {
+    height: auto;
+}
+
+.Z-left-query .Z-add-product em {
     font-style: normal;
     display: block;
     padding: 5px;
@@ -123,55 +160,64 @@
 /********************
 产品列表::标签
 ********************/
-.Z-list-tags{
-	color:#a0a0a0;
-	margin-top:15px;
+.Z-list-tags {
+    color: #a0a0a0;
+    margin-top: 15px;
 }
-.Z-list-tags label{
-	margin-right:20px;
+
+.Z-list-tags label {
+    margin-right: 20px;
 }
+
 /*
 .Z-list-tags + .Z-list-brief .Z-list-brief-inner{
 	margin-top:15px;
 }*/
-.Z-list-subscribe{
-	margin-top: 15px;
+.Z-list-subscribe {
+    margin-top: 15px;
 }
-.Z-list-subscribe p{
-	display:inline-block;
-	margin-right:30px;
+
+.Z-list-subscribe p {
+    display: inline-block;
+    margin-right: 30px;
 }
-.Z-list-subscribe p em{
-	color: #a0a0a0;
+
+.Z-list-subscribe p em {
+    color: #a0a0a0;
 }
-	
+
 /********************
 文章列表定时发布样式
 ********************/
-.xinping{
-	color:#fda428!important;
-}
-.jingxuan{
-	color:#fda428!important;
-}
-.zhekou{
-	color:#00cc00!important;
-}
-.qingdan{
-	color:#00ccff!important;
-}
-.qita{
-	color:#f60!important;
-}
-.dingshifabu{
-	color:#fc6b6b!important;
+.xinping {
+    color: #fda428 !important;
 }
 
-.Z-list-subscribe .blue{
-	color: #369ad1 !important;
+.jingxuan {
+    color: #fda428 !important;
 }
 
-.Z-list-subscribe .blue i{
+.zhekou {
+    color: #00cc00 !important;
+}
+
+.qingdan {
+    color: #00ccff !important;
+}
+
+.qita {
+    color: #f60 !important;
+}
+
+.dingshifabu {
+    color: #fc6b6b !important;
+}
+
+.Z-list-subscribe .blue {
+    color: #369ad1 !important;
+}
+
+.Z-list-subscribe .blue i {
     font-size: 0;
     display: inline-block;
     width: 3px;
@@ -182,114 +228,180 @@
     top: -3px;
 }
 
-.head-type-box{
-	margin:10px;
-}
-.head-type-box .head-type{
-	margin-right: 10px;
+.head-type-box {
+    margin: 10px;
 }
 
-.head-type-box .head-type.on{
-	border-bottom: 1px solid #000;
-	color: #555555;
+.head-type-box .head-type {
+    margin-right: 10px;
 }
 
+.head-type-box .head-type.on {
+    border-bottom: 1px solid #000;
+    color: #555555;
+}
 
 /*话题审核评论样式*/
-.name-blue{
-	color: #006d94;
+.name-blue {
+    color: #006d94;
 }
-.Z-list-left{
-	width: 750px;
+
+.Z-list-left {
+    width: 750px;
 }
-.Z-topic-image{
-	width: 50px;
-	height: 50px;
-	border-radius: 100%;
-	border: 1px solid #ededed;
-	overflow: hidden;
+
+.Z-topic-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #ededed;
+    overflow: hidden;
 }
-.Z-topic-image img{
-	width: 100%;
+
+.Z-topic-image img {
+    width: 100%;
 }
-.Z-topic-desc{
-	overflow: hidden;
-	margin-left: 75px;
+
+.Z-topic-desc {
+    overflow: hidden;
+    margin-left: 75px;
 }
-.Z-list-comment-img li{
-	width: 100px;
-	height: 100px;
-	margin:10px 10px 10px 0;
-	border-bottom: none;
-	padding: 0;
+
+.Z-list-comment-img li {
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px 0;
+    border-bottom: none;
+    padding: 0;
 }
-.Z-list-comment-img li img{
-	width: 100%;
+
+.Z-list-comment-img li img {
+    width: 100%;
 }
-.Z-list-comment-reply li{
-	background-color: #f7f7f7;
-	padding: 12px;
-	margin: 0;
+
+.Z-list-comment-reply li {
+    background-color: #f7f7f7;
+    padding: 12px;
+    margin: 0;
 }
-.Z-reply-more{
-	padding: 10px 0;
-	text-align: center;
-	background-color: #eaeaea;
+
+.Z-reply-more {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #eaeaea;
 }
-.Z-reply-more a{
-	display:block;
+
+.Z-reply-more a {
+    display: block;
 }
-.Z-list-reply-submit textarea{
-	display: block;
-	border: 1px solid #ededed;
-	width: 100%;
-	padding: 10px;
-	margin: 10px 0;
-	font-size: 14px;
-	box-sizing: border-box;
+
+.Z-list-reply-submit textarea {
+    display: block;
+    border: 1px solid #ededed;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    box-sizing: border-box;
 }
-.Z-list-reply-submit button{
-	background-color: #eaeaea;
-	border-radius:25px;
-	color: #fff;
-	padding: 5px 15px;
+
+.Z-list-reply-submit button {
+    background-color: #eaeaea;
+    border-radius: 25px;
+    color: #fff;
+    padding: 5px 15px;
 }
-.Z-list-reply-submit button.red{
-	background: #fc6b6b;
-	color: #fff;
+
+.Z-list-reply-submit button.red {
+    background: #fc6b6b;
+    color: #fff;
 }
-.Z-list-reply-submit .cancle{
-	cursor: pointer;
+
+.Z-list-reply-submit .cancle {
+    cursor: pointer;
 }
-.repaly-query{
-	margin-top: 10px;
+
+.repaly-query {
+    margin-top: 10px;
 }
-.repaly-query span{
-	cursor: pointer;
+
+.repaly-query span {
+    cursor: pointer;
 }
-.icon{
-	position: relative;
-	line-height: 16px;
-	font-size: 14px;
+
+.icon {
+    position: relative;
+    line-height: 16px;
+    font-size: 14px;
 }
-.icon-zan{
-	position: absolute;
-	top:-1px;
-	left: -18px;
-	display: block;
-	width: 16px;
-	height: 16px;
-	background: url("../images/icon-zan.png") no-repeat;
-	background-size: 16px;
+
+.icon-zan {
+    position: absolute;
+    top: -1px;
+    left: -18px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icon-zan.png") no-repeat;
+    background-size: 16px;
 }
+
 .Z-list-target {
-	border-radius: 5px;
-	border: 1px solid #ebebeb;
-	padding: 4px 10px 3px 10px;
-	font-size: 12px;
-	font-weight: 100;
-	color: #999;
-	position: relative;
-	top: -1px;
-	margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    padding: 4px 10px 3px 10px;
+    font-size: 12px;
+    font-weight: 100;
+    color: #999;
+    position: relative;
+    top: -1px;
+    margin: 0 5px;
+}
+
+/*用户管理*/
+.msg-wrapper {
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999999;
+}
+
+.msg-wrapper:before {
+    content: '';
+    position: absolute;
+    top: -32px;
+    left: 232px;
+    width: 0;
+    height: 0;
+    border: 16px solid #ededed;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid transparent;
+}
+
+.msg-wrapper:after {
+    content: '';
+    position: absolute;
+    top: -28px;
+    left: 234px;
+    width: 0;
+    height: 0;
+    border: 14px solid #fff;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid transparent;
+}
+
+.Z-txt {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 14px;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
 }

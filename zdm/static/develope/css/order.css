@@ -21,6 +21,11 @@
 .order-list .blue {
   color: #369ad1 ;
 }
+.order-list .black-list-wrapper,
+.order-list .black-list-wrapper strong,
+.order-list .black-list-wrapper .Z-red {
+  color: #b2b2b2!important;
+}
 .order-item-head {
   line-height: 30px;
   border-bottom: 1px solid #ededed;
