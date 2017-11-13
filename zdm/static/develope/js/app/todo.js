@@ -231,7 +231,7 @@ define(['jquery', 'layer', 'template', 'app/common'], function ($, layer, templa
         if (layero.find('#B-time .icon:checked').length <= 0) {
             layer.msg('请选择黑名单时效');
             return false;
-        }git
+        }
         return true;
     }
 
