@@ -66,7 +66,7 @@
   text-align: center;
 }
 .order-wrapper {
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 .order-info-box ul {
   margin: 10px 0;
@@ -399,4 +399,202 @@
   margin-top: 10px;
   color: #e93838;
   line-height: 22px;
+}
+.coupon__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url(../images/coupons/icon-coupons-order.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+  padding-left: 25px;
+  padding-right: 20px;
+  position: relative;
+}
+.coupon__select:after {
+  position: absolute;
+  content: '';
+  display: block;
+  right: 0;
+  top: 50%;
+  width: 16px;
+  height: 10px;
+  margin-top: -5px;
+  background-image: url(../images/coupons/icon-coupons-item-more.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  -webkit-transform: rotateZ(-90deg);
+  -moz-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+}
+.coupon-select .layui-m-layercont,
+.coupon-select .layui-m-layercont > .coupon-select-wrap {
+  height: 100% !important;
+}
+.coupon-select-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.coupon-select-wrap .coupon-select-header {
+  height: 52px;
+  display: flex;
+}
+.coupon-select-wrap .coupon-select-header .coupon-select-back,
+.coupon-select-wrap .coupon-select-header .coupon-select-close {
+  height: 52px;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coupon-select-wrap .coupon-select-header .coupon-select-title {
+  flex: 1;
+  text-align: center;
+  line-height: 52px;
+}
+.coupon-select-wrap .coupon-select-body {
+  flex: 1;
+}
+.coupon-select-wrap .coupon-select-body ul {
+  margin-bottom: 56px;
+}
+.coupon-select-wrap .coupon-select-not-use {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 20px;
+  background: #FAFAFA;
+  border: 1px solid #E6E6E6;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  margin: 0 12px;
+  color: #333333;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.coupons__card-wrap {
+  width: 9.46666667rem;
+  height: 2.58666667rem;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 0.26666667rem;
+  /*coupons__card-status*/
+}
+.coupons__card-wrap .coupons__card-left {
+  width: 3.01333333rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-left-bg1.png);
+}
+.coupons__card-wrap .coupons__card-money {
+  font-size: 0.69333333rem;
+  line-height: 0.8rem;
+  overflow: hidden;
+  width: 100%;
+}
+.coupons__card-wrap .coupons__card-money .unit {
+  font-size: 0.42666667rem;
+}
+.coupons__card-wrap .coupons__card-type-desc {
+  font-size: 0.37333333rem;
+  max-width: 2.26666667rem;
+  height: 0.42666667rem;
+  overflow: hidden;
+}
+.coupons__card-wrap .coupons__card-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  font-size: 0.32rem;
+  color: #666666;
+  line-height: 0.45333333rem;
+  padding: 0.33333333rem 0.2rem;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-right-bg1.png);
+}
+.coupons__card-wrap .coupons__card-desc {
+  max-height: 0.88rem;
+  overflow: hidden;
+}
+.coupons__card-wrap .coupons__card-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 0.26666667rem;
+  line-height: 0.45333333rem;
+  font-size: 0.32rem;
+  color: #fff;
+  width: 0.74666667rem;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-left-bg1.png);
+  background-position: left top;
+  /*transition: all .3s;*/
+}
+.coupons__card-wrap.red .coupons__card-left,
+.coupons__card-wrap.red .coupons__card-status {
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-left-bg1.png);
+}
+.coupons__card-wrap.gary .coupons__card-left,
+.coupons__card-wrap.gary .coupons__card-status {
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-left-bg2.png);
+}
+.coupons__card-wrap.yellow .coupons__card-left,
+.coupons__card-wrap.yellow .coupons__card-status {
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-left-bg3.png);
+}
+.coupons__card-wrap.select .coupons__card-status {
+  text-indent: -99999px;
+  background-position: center center;
+  background-size: 0.48rem auto;
+  background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-select.png);
+}
+.order-submit-tips {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  line-height: 30px;
+  border-bottom: 1px solid #efefef;
+  font-size: 12px;
+  background: #fff;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 0 12px;
+  color: #808080;
+  vertical-align: middle;
+}
+.order-submit-tips img {
+  height: 16px;
+  vertical-align: middle;
 }
