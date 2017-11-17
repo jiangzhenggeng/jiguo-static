@@ -442,6 +442,35 @@ input[type=text],select{
   label{
     position: relative;
   }
+  //手机号已存在提示
+  .warning-wrapper{
+    padding-left: 10px;
+    font-size: 12px;
+    color: #EB695B;
+    line-height: 20px;
+    margin-bottom: -20px;
+    display: none;
+    .icon-warning{
+      display: inline-block;
+      padding: 8px;
+      background: url("../images/icon-warning.png") no-repeat center center;
+      background-size: 16px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-right: 3px;
+    }
+    .login-in{
+      margin-left: 10px;
+      color: #227CE4;
+    }
+  }
+  .active{
+    -webkit-animation: warning .5s linear;
+    -moz-animation: warning .5s linear;
+    -o-animation: warning .5s linear;
+    animation: warning .5s linear;
+  }
   //验证码
   .right-box{
     position: absolute;
@@ -1046,5 +1075,75 @@ input[type=text],select{
         background-size: 10px auto;
       }
     }
+  }
+}
+
+//动画
+@keyframes warning {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes warning {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes warning {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes warning {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
