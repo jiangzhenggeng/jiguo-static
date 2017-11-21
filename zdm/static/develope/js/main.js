@@ -15,8 +15,7 @@ define('main',[
     'app/showTime',
     'app/todo',
     'app/category',
-    'app/tplEngine',
-    'app/coupon'
+    'app/tplEngine'
 ],function () {
 
 });
