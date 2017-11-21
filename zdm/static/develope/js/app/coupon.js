@@ -65,7 +65,7 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             }
         });
     }
-
+    //生成小程序分享图
     function _init() {
         var tplBox = $('#share-img-box');
         var create = false;
@@ -126,9 +126,15 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             layer.msg('请输入金额');
             return false;
         }
-        if ($('#num').val().length <= 0) {
+        var num = $('#num').val();
+        if (num.length <= 0) {
             layer.msg('请输入券数量');
             return false;
+        }else{
+            if(num%1>0||num<=0){
+                layer.msg('券数量请填写大于 0 的整数');
+                return false;
+            }
         }
         if ($('#start_time').val().length <= 0) {
             layer.msg('请输入有效期开始时间');
@@ -176,11 +182,30 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
     return {
         //提交数据
         submitForm: function () {
+            if(!testForm()) return;
+            var lid = layer.load(3, {time: 20*1000});
             var data = $('#formData').serialize();
-            common.ajax('post', '/admin2/coupon/InsertCouponPackage', data, 'json', function (replayData) {
-                layer.msg(replayData.result, function () {
-                    location.href = '/admin2/coupon/couponpackagelist';
-                });
+            $.ajax({
+                type: 'post',
+                url: '/admin2/coupon/InsertCouponPackage',
+                data: data,
+                dataType: 'json',
+                timeout: 10000,
+                complete: function (xhr,status) {
+                    layer.close(lid);
+                    if(status=='timeout'){
+                        layer.msg('提交超时');
+                    }else{
+                        var replyData = $.parseJSON(xhr.responseText);
+                        if(replyData.success != 'true'){
+                            layer.msg(replyData.errorMsg);
+                        }else{
+                            layer.msg(replyData.result, function () {
+                                location.href = '/admin2/coupon/couponpackagelist';
+                            });
+                        }
+                    }
+                }
             })
         },
         //预览卡片

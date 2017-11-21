@@ -25,8 +25,11 @@
   color: #fff;
 }
 .coupon-card-wrapper .coupon-card-inner .left .money {
-  line-height: 50px;
-  font-size: 36px;
+  line-height: 30px;
+  font-size: 26px;
+}
+.coupon-card-wrapper .coupon-card-inner .left .money .unit {
+  font-size: 16px;
 }
 .coupon-card-wrapper .coupon-card-inner .left .desc {
   line-height: 20px;
@@ -88,12 +91,12 @@
   margin-right: 10px;
 }
 .share-wrapper .share-title {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   max-height: 40px;
   overflow: hidden;
   margin: 5px 10px;
-  font-weight: bold;
+  letter-spacing: .4px;
 }
 .share-wrapper .content {
   padding: 5px 0;

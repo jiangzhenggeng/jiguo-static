@@ -1184,14 +1184,13 @@ select {
   background-image: url("../images/coupon/mark-used.png");
 }
 .immediately-wrap {
-  width: 250px;
-  border: 1px solid #eaeaea;
+  width: 246px;
   box-sizing: border-box;
   margin: 0 16px 16px 0;
   display: inline-block;
   overflow: hidden;
   padding-bottom: 5px;
-  border-bottom: none;
+  background-color: #fbfbfb;
 }
 .immediately-wrap .mark-logo {
   top: auto;
@@ -1199,48 +1198,90 @@ select {
   bottom: -8px;
 }
 .immediately-wrap .immediately-header {
-  width: 250px;
-  position: relative;
-  left: -1px;
-  top: -1px;
+  width: 246px;
+  color: #fff;
+  background-image: url(../images/coupon/coupon-header-bg.png);
+  background-size: 246px 110px;
+  background-color: #fbfbfb;
 }
 .immediately-wrap .immediately-header.over {
   background-image: url(../images/coupon/over-texture.png);
-  background-color: #b7b7b7;
+  background-size: 246px 110px;
 }
-.immediately-wrap .immediately-header.over .c1 {
-  color: #4A4A4A;
+.immediately-wrap .immediately-header .t2 {
+  font-size: 16px;
+  height: 20px;
+  overflow: hidden;
+  line-height: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
-.immediately-wrap .immediately-header.over + .immediately-line {
-  border-color: #b7b7b7;
+.immediately-wrap .immediately-header .c2 {
+  font-size: 20px;
+  font-weight: bold;
 }
-.immediately-wrap .immediately-line {
-  top: -1px;
-  position: relative;
-}
-.immediately-wrap .btn {
-  font-size: 12px !important;
-  width: 100px;
-  height: 28px;
-  line-height: 28px;
+.immediately-wrap .immediately-header .c3 {
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 5px;
 }
 .immediately-wrap .immediately-body {
-  height: 215px;
+  padding: 35px 15px 0;
+  height: 231px;
+  box-sizing: border-box;
+  color: #666;
 }
 .immediately-wrap .immediately-body .immediately-desc {
-  padding: 0;
-  height: 80px;
+  padding: 0 10px;
+  height: 40px;
   overflow: hidden;
   text-align: left;
-}
-.immediately-wrap .immediately-body:after {
-  background-image: url(../images/coupon/mark-shape-bottom.png);
-  background-size: 250px auto;
-  width: 250px;
-  left: -1px;
+  font-size: 14px;
 }
 .immediately-wrap .immediately-body .immediately-quanhao .query {
   padding: 10px 0;
+  min-height: 66px;
+}
+.immediately-wrap .immediately-body .immediately-quanhao .query .btn {
+  font-size: 14px;
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.immediately-wrap .immediately-body:after {
+  display: none;
+}
+.immediately-wrap.mall-coupon-wrapper .immediately-body {
+  height: 288px;
+  box-sizing: border-box;
+}
+.immediately-wrap.mall-coupon-wrapper .immediately-body .immediately-desc {
+  height: 80px;
+}
+.coupon-rule-box {
+  padding: 12px 20px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+.coupon-rule-box .coupon-rule-header {
+  line-height: 24px;
+}
+.coupon-rule-box .coupon-rule-header h3 {
+  font-size: 18px;
+}
+.coupon-rule-box .coupon-rule-wrap {
+  height: 490px;
+  overflow-y: auto;
+  padding-right: 20px;
+  width: 100%;
 }
 #systems-list li {
   margin: 0 0 15px 0;
