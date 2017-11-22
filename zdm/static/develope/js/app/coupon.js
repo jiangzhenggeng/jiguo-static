@@ -25,14 +25,15 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             w = wrap.offsetWidth,
             h = wrap.offsetHeight;
         var canvas = document.createElement("canvas");
-        canvas.width = w;
-        canvas.height = h;
+        canvas.width = w * 2;
+        canvas.height = h * 2;
         canvas.style.width = w + "px";
         canvas.style.height = h + "px";
         var context = canvas.getContext("2d");
-        var cenX = wrap.getBoundingClientRect().left;
-        var cenY = wrap.getBoundingClientRect().top;
+        var cenX = wrap.getBoundingClientRect().left * 2;
+        var cenY = wrap.getBoundingClientRect().top * 2;
         context.translate(-cenX, -cenY);
+        context.scale(2, 2);
         html2canvas(wrap, {
             canvas: canvas,
             onrendered: function (canvas) {
@@ -65,6 +66,7 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             }
         });
     }
+
     //生成小程序分享图
     function _init() {
         var tplBox = $('#share-img-box');
@@ -130,8 +132,8 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
         if (num.length <= 0) {
             layer.msg('请输入券数量');
             return false;
-        }else{
-            if(num%1>0||num<=0){
+        } else {
+            if (num % 1 > 0 || num <= 0) {
                 layer.msg('券数量请填写大于 0 的整数');
                 return false;
             }
@@ -182,8 +184,8 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
     return {
         //提交数据
         submitForm: function () {
-            if(!testForm()) return;
-            var lid = layer.load(3, {time: 20*1000});
+            if (!testForm()) return;
+            var lid = layer.load(3, {time: 20 * 1000});
             var data = $('#formData').serialize();
             $.ajax({
                 type: 'post',
@@ -191,15 +193,15 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
                 data: data,
                 dataType: 'json',
                 timeout: 10000,
-                complete: function (xhr,status) {
+                complete: function (xhr, status) {
                     layer.close(lid);
-                    if(status=='timeout'){
+                    if (status == 'timeout') {
                         layer.msg('提交超时');
-                    }else{
+                    } else {
                         var replyData = $.parseJSON(xhr.responseText);
-                        if(replyData.success != 'true'){
+                        if (replyData.success != 'true') {
                             layer.msg(replyData.errorMsg);
-                        }else{
+                        } else {
                             layer.msg(replyData.result, function () {
                                 location.href = '/admin2/coupon/couponpackagelist';
                             });
