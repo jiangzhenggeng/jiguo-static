@@ -524,7 +524,8 @@
 .coupons__card-wrap .coupons__card-type-desc {
   font-size: 0.37333333rem;
   max-width: 2.26666667rem;
-  height: 0.42666667rem;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
   overflow: hidden;
 }
 .coupons__card-wrap .coupons__card-right {
@@ -561,6 +562,9 @@
   background-image: url(http://cdn.jiguo.com/static/WeiXin/images/coupons/icon-coupons-left-bg1.png);
   background-position: left top;
   /*transition: all .3s;*/
+}
+.coupons__card-wrap .coupons__card-status-block {
+  width: 0.74666667rem;
 }
 .coupons__card-wrap.red .coupons__card-left,
 .coupons__card-wrap.red .coupons__card-status {

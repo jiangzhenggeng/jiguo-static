@@ -43,6 +43,7 @@ define(['jquery','app/unitTool'], function ($,tool) {
         $.get(url,function (replyData) {
             window.isPaying=false;
             if(replyData.status==0){
+							  tool.msg('正在支付...',9999);
                 window.location = replyData.url;
             }else{
                 tool.msg(replyData.message);
