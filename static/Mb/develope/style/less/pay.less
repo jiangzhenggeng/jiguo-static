@@ -93,12 +93,17 @@
     cursor: pointer;
     text-align: center;
     &.on {
+      border-color: transparent !important;
       background-color: #fe5341;
       color: #fff;
     }
     &.no {
       color: #ccc;
       border: 1px dotted #ccc;
+    }
+    &.on.no {
+      border-color: transparent;
+      color: #fff;
     }
   }
   .item-row {

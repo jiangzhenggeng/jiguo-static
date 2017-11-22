@@ -1,7 +1,7 @@
 /**
  * Created by wuhongshan on 2017/5/4.
  */
-define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown', 'app/videoAdapt', 'app/lazyload','app/function','lib/cookie'], function ($, index, login, layer, tplEngine, countdown, videoAdapt,lazyload,fc) {
+define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown', 'app/videoAdapt', 'app/lazyload','app/function','cookie'], function ($, index, login, layer, tplEngine, countdown, videoAdapt,lazyload,fc) {
 
 	function init(){
 		var eventid=$('#eventid').val()||/(\d+)/.exec(window.location)[0];
