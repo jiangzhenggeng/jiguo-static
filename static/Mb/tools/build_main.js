@@ -1,7 +1,7 @@
 ({
     //appDir:'../develope',
     baseUrl: '../develope/script',
-    out:'../compression_3.5/script/main.js',
+    out:'../compression_3.6/script/main.js',
     name:'main',
     //optimize: "none",
     optimizeCss:'standard',
