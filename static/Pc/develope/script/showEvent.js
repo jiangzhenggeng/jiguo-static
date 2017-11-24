@@ -105,6 +105,7 @@ define([
                             content: '<div id="' + id + '">' + tplEngine.init(html, applydata) + '</div>',
                             success: function (layero, index) {
                                 var Obj = $(layero).find('#apply-event-form-data');
+                                var subFlag = false;
                                 flag = false;
                                 setTimeout(function () {
                                     $(layero).find('.apply-input-close').attr('onClick', 'layer.close(\'' + lId + '\')');
@@ -124,7 +125,7 @@ define([
                                     }
                                 });
                                 //只有一个可选型号
-                                if($(layero).find('.apply-model-btn:not(.disabled-btn)').length<=1){
+                                if ($(layero).find('.apply-model-btn:not(.disabled-btn)').length <= 1) {
                                     $(layero).find('.apply-model-btn:not(.disabled-btn)').trigger('click');
                                 }
 
@@ -135,11 +136,15 @@ define([
                                             return;
                                         }
                                     }
+                                    if (Obj.find('[name=comment]').val() == '') {
+                                        layer.msg('申请理由不允许为空');
+                                        return;
+                                    }
                                     if (Obj.find('input[name=tel]').val().length != 11) {
                                         layer.msg('手机号码不允许为空');
                                         return;
                                     }
-                                    if (Obj.find('input[name=username]').length && Obj.find('input[name=username]').val().length == '') {
+                                    if (Obj.find('input[name=username]').length && Obj.find('input[name=username]').val() == '') {
                                         layer.msg('用户名不允许为空');
                                         return;
                                     }
@@ -147,13 +152,16 @@ define([
                                         layer.msg('未勾选同意用户协议');
                                         return;
                                     }
-                                    var applyUrlAPI = window.applyUrlAPI?window.applyUrlAPI:'/api/event/Apply';
-                                    var applyStatus=Obj.find('input[name=status]');
+                                    if (subFlag) return;
+                                    subFlag = true;
+                                    var applyUrlAPI = window.applyUrlAPI ? window.applyUrlAPI : '/api/event/Apply';
+                                    var applyStatus = Obj.find('input[name=status]');
                                     var formData = Obj.serialize();
-                                    if(!applyStatus.is(":checked")){
-                                        formData+="&status=-1";
+                                    if (!applyStatus.is(":checked")) {
+                                        formData += "&status=-1";
                                     }
                                     $.post(applyUrlAPI, formData, function (replayData) {
+                                        subFlag = false;
                                         if (replayData.resultCode == 0) {
                                             layer.msg('申请成功', {type: 1}, function () {
                                                 layer.closeAll();
