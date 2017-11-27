@@ -509,9 +509,6 @@ Z-uploadify-banner
 .Z-image-up-box#banner {
   height: 94px;
 }
-.Z-image-up-box#banner span {
-  top: 17px;
-}
 .err-tips {
   right: 10px;
   bottom: 7px;
