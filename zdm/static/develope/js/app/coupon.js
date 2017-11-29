@@ -124,7 +124,7 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             layer.msg('请输入名称');
             return false;
         }
-        if ($('#price').val().length <= 0) {
+        if ($('#price').val().length <= 0 || isNaN($('#price').val())) {
             layer.msg('请输入金额');
             return false;
         }
@@ -133,7 +133,7 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             layer.msg('请输入券数量');
             return false;
         } else {
-            if (num % 1 > 0 || num <= 0) {
+            if (num % 1 > 0 || num <= 0 || isNaN(num)) {
                 layer.msg('券数量请填写大于 0 的整数');
                 return false;
             }
@@ -170,9 +170,27 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             layer.msg('请生成小程序分享图');
             return false;
         }
+        if (!testMoney()) return false;
         return true;
     }
 
+    //检测可用金额
+    function testMoney() {
+        var num = $('#num').val(),
+            event = $('#event').val(),
+            price = $('#price').val(),
+            sumMoney = price * num,
+            allMoney = $('[data-allmoney]').data('allmoney'),
+            limiteventmoney = $('[data-limiteventmoney]').data('limiteventmoney');
+        if ((event != '' && sumMoney > limiteventmoney) || (event == '' && sumMoney > allMoney)) {
+            $('html,body').animate({scrollTop: 0},160);
+            layer.msg('超出可用余额');
+            return false;
+        }
+        return true;
+    }
+
+    //格式化时间
     function formatTime(time) {
         var mytime = new Date(time),
             y = mytime.getFullYear(),
