@@ -605,6 +605,10 @@ define(['jquery', 'layer', 'app/common','template','laydate','app/addEvent'], fu
             layer.msg('玩法中有待修改的规格参数');
             return false;
         }
+        if(formSelecter.find('[name=wxcode_share_pic]').length<=0){
+            layer.msg('请生成小程序分享图');
+            return false;
+        }
         return true;
     }
 

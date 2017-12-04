@@ -142,7 +142,8 @@
   overflow: hidden;
 }
 .share-text-desc {
-  height: 23px;
+  height: 36px;
+  line-height: 36px;
   overflow: hidden;
 }
 .share-img-wrapper {

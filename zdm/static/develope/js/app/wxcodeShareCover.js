@@ -59,9 +59,8 @@ define([
                 var blob = dataURItoBlob(imageData);
                 fd.append('file', blob,filename);
                 common.upload(fd,$('#Z-image-up-wxcode_share_pic'),'wxcode_share_pic',false,function () {
-
+                    (callback||function () {})();
                 });
-                (callback||function () {})();
             }
         });
     }
@@ -73,7 +72,7 @@ define([
         },0);
     }
 
-    function _init() {
+    function _init(callback) {
         var fengmianObj = $('#Z-image-up-fengmian'),
             cacheFn = tplEngine.init( $('#wxcode-share-inner-tpl').html() ),
             tplBox = $('#wxcode-share-inner'),
@@ -181,6 +180,7 @@ define([
                 _init2(function () {
                   layer.close(tips);
                   create = false;
+                  (callback||function () {})();
                 });
               });
             }
@@ -194,8 +194,13 @@ define([
           }
         });
     }
+    function createSharePic(callback) {
+        _init(callback);
+        $('[data-create-wxcode-share-pic]').trigger('click');
+    }
 
     return{
         init:_init,
+        create:createSharePic
     }
 });
