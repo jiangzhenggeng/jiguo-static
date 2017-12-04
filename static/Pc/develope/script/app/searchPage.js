@@ -133,15 +133,15 @@ define([
                                 }
                             }
                         }else{
+                            if(boxArray[i].warpBox.find('li').length<=0){
                                 boxArray[i].warpBox.hide();
-
+                            }
                         }
                         boxArray[i].warpBox.attr('data-number', unitTool.getLength(replatDate.result[listArray[i]] ) );
                     }
                 }else {
                     layer.msg(replatDate.message || '系统错误');
                 }
-
                 if (hasData) {
                     noData.show();
                 } else {
