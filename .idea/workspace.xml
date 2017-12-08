@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8482b309-1be8-4099-8eeb-288983edd13f" name="Default" comment="" />
+    <list default="true" id="4a5a8c7e-f241-4f36-8f8a-c7ccf8c2491b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,24 +12,181 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="_rest.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/Pc/develope/style/less/_rest.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getProduct</find>
+      <find>e0563b6p5ta</find>
+      <find>share-t2</find>
+      <find>.share-t2 .n2</find>
+      <find>.share-t2</find>
+      <find>item-view</find>
+      <find>table-view</find>
+      <find>coupon</find>
+      <find>icon-message</find>
+      <find>goAnchor</find>
+      <find>data-login</find>
+      <find>removeCookie</find>
+      <find>coupons/icon-coupons-item-mor</find>
+      <find>layer</find>
+      <find>coupon-select-header</find>
+      <find>.coupons__card-wrap.</find>
+      <find>mall-logo-wrap</find>
+      <find>layer.open</find>
+      <find>alert</find>
+      <find>skin</find>
+      <find>coupons__card-money</find>
+      <find>coupons__card-status</find>
+      <find>coupons__card-type-desc</find>
+      <find>aliPay</find>
+      <find>order-info-box</find>
+      <find>app/event</find>
+      <find>ib/cook</find>
+      <find>3.5</find>
+      <find>UEDITOR_CONFIG</find>
+      <find>::</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>2018</replace>
+      <replace>&lt;?php echo $_static_path;?&gt;</replace>
+      <replace>src=&quot;&lt;?php echo $_static_path;?&gt;/login/</replace>
+      <replace>e.detail</replace>
+      <replace>(data</replace>
+      <replace>croppers</replace>
+      <replace>&amp;.</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/zdm</dir>
+      <dir>$PROJECT_DIR$/zdx/park/2018</dir>
+      <dir>$PROJECT_DIR$/static/Pc/develope/script/app</dir>
+      <dir>$PROJECT_DIR$/static/Pc/develope</dir>
+      <dir>$PROJECT_DIR$/zdm/static</dir>
+      <dir>$PROJECT_DIR$/zdm/static/develope/js</dir>
+      <dir>$PROJECT_DIR$/zdm/static/develope/js/app</dir>
+      <dir>$PROJECT_DIR$/zdm/v1.0.3/js</dir>
+      <dir>$PROJECT_DIR$/static/Mb/develope/script</dir>
+      <dir>$PROJECT_DIR$/static/Mb/develope/style/less</dir>
+      <dir>$PROJECT_DIR$/static/Mb/develope/script/app</dir>
+      <dir>$PROJECT_DIR$/static@2.0/v1.0.0/js</dir>
+      <dir>$PROJECT_DIR$/static/Pc/develope/style/less</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/cdn/special/xiapu/pc.html" />
+        <option value="$PROJECT_DIR$/static/Pc/develope/script/build_config.js" />
+        <option value="$PROJECT_DIR$/static/Pc/tools/build.js" />
+        <option value="$PROJECT_DIR$/static/Pc/tools/build_main.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/style/less/_sidemenu.less" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/cdn/zdx/park/js/index.js" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/i1.php" />
+        <option value="$PROJECT_DIR$/zdx/park/js/index.js" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/2017/index.php" />
+        <option value="$PROJECT_DIR$/zdx/park/2017/js/index.js" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/2017/login/js/base.js" />
+        <option value="$PROJECT_DIR$/zdx/park/2018/js/index.js" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/2018/login.php" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/2018/index.php" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/2017/login/index.php" />
+        <option value="$PROJECT_DIR$/zdx/park/2018/login/css/index.css" />
+        <option value="$PROJECT_DIR$/zdx/park/2018/login/js/base.js" />
+        <option value="&lt;9a0d08b3-8c14-4de4-b343-32627f4018c3&gt;/special/park/index.php" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/iscroll.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/chat.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/openApp.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/app/cropperImage.sc.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/config.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/build_config.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/less/base.less" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/app/common.js" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/js/config.js" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/js/croppic/croppic.js" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/css/index.css" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/css/article.css" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/js/index.js" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/css/common.css" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/less/common.less" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/app/cropperImage.js" />
+        <option value="$PROJECT_DIR$/zdm/v1.0.3/js/common.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/app/product.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/less/event.less" />
+        <option value="$PROJECT_DIR$/zdm/static/version_1.2/css/event.css" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/messageIO.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/style/less/_mixins.less" />
+        <option value="$PROJECT_DIR$/static/Mb/compression_3.5/script/main.js" />
+        <option value="$PROJECT_DIR$/static/Mb/compression_3.5/script/app/event.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/login.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/unitTool.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/pay.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/style/less/pay.less" />
+        <option value="$PROJECT_DIR$/static/Mb/tools/build.js" />
+        <option value="$PROJECT_DIR$/static/Mb/tools/build_main.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/main.js" />
+        <option value="$PROJECT_DIR$/static/Mb/develope/script/app/event.js" />
+        <option value="$PROJECT_DIR$/zdm/static/develope/js/app/todo.js" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1276" />
     <option name="height" value="777" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -43,7 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -56,16 +214,32 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/zdx/park/2017" />
+      <recent name="$PROJECT_DIR$/static@2.0/permanent/jquery" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/WeiXin/images/center" />
+      <recent name="$PROJECT_DIR$/static/Mb/develope/style/images/coupons" />
+      <recent name="$PROJECT_DIR$/static/WeiXin/images/bind" />
+      <recent name="$PROJECT_DIR$/static/Mb/develope/style/images" />
+      <recent name="$PROJECT_DIR$/static/Mb/compression_3.5/style/images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -82,41 +256,133 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8482b309-1be8-4099-8eeb-288983edd13f" name="Default" comment="" />
-      <created>1511429464368</created>
+      <changelist id="4a5a8c7e-f241-4f36-8f8a-c7ccf8c2491b" name="Default" comment="" />
+      <created>1504794966258</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1511429464368</updated>
-      <workItem from="1511429466158" duration="1980000" />
-      <workItem from="1511612776256" duration="18000" />
-      <workItem from="1511752809481" duration="1222000" />
+      <updated>1504794966258</updated>
+      <workItem from="1504794970016" duration="138000" />
+      <workItem from="1504960296329" duration="150000" />
+      <workItem from="1505127026440" duration="625000" />
+      <workItem from="1505211288361" duration="26000" />
+      <workItem from="1505211327678" duration="653000" />
+      <workItem from="1505218484117" duration="48000" />
+      <workItem from="1505286764261" duration="100000" />
+      <workItem from="1505298093420" duration="83000" />
+      <workItem from="1505375124084" duration="10000" />
+      <workItem from="1505467498205" duration="30000" />
+      <workItem from="1505478492442" duration="2000" />
+      <workItem from="1505716277217" duration="22969000" />
+      <workItem from="1505815219588" duration="21269000" />
+      <workItem from="1506135943257" duration="598000" />
+      <workItem from="1506343854452" duration="6714000" />
+      <workItem from="1506416729213" duration="817000" />
+      <workItem from="1506428960799" duration="587000" />
+      <workItem from="1506434381886" duration="1310000" />
+      <workItem from="1506483073793" duration="180000" />
+      <workItem from="1506498890383" duration="16764000" />
+      <workItem from="1506669403060" duration="1419000" />
+      <workItem from="1506736563056" duration="657000" />
+      <workItem from="1507557020458" duration="203000" />
+      <workItem from="1507601440928" duration="36000" />
+      <workItem from="1507630548506" duration="608000" />
+      <workItem from="1507632426505" duration="104000" />
+      <workItem from="1507632544144" duration="48000" />
+      <workItem from="1507632637256" duration="3962000" />
+      <workItem from="1507642485699" duration="457000" />
+      <workItem from="1507706665451" duration="8468000" />
+      <workItem from="1507781125310" duration="1365000" />
+      <workItem from="1507805340939" duration="525000" />
+      <workItem from="1507879547348" duration="4738000" />
+      <workItem from="1507951268036" duration="546000" />
+      <workItem from="1507954099703" duration="1277000" />
+      <workItem from="1507964798298" duration="2766000" />
+      <workItem from="1507969827243" duration="708000" />
+      <workItem from="1507979068909" duration="3403000" />
+      <workItem from="1507987665761" duration="14000" />
+      <workItem from="1507988284673" duration="1073000" />
+      <workItem from="1508134161620" duration="2700000" />
+      <workItem from="1508150065484" duration="6554000" />
+      <workItem from="1508294303019" duration="1451000" />
+      <workItem from="1508386896461" duration="4750000" />
+      <workItem from="1508411258562" duration="753000" />
+      <workItem from="1508470821113" duration="641000" />
+      <workItem from="1508484939370" duration="20476000" />
+      <workItem from="1508724210109" duration="11297000" />
+      <workItem from="1508750322603" duration="3466000" />
+      <workItem from="1508759199397" duration="3276000" />
+      <workItem from="1508819270150" duration="3468000" />
+      <workItem from="1508848345282" duration="592000" />
+      <workItem from="1509006788693" duration="120000" />
+      <workItem from="1509007789431" duration="3931000" />
+      <workItem from="1509035052256" duration="2504000" />
+      <workItem from="1509079972124" duration="2853000" />
+      <workItem from="1509099961857" duration="3980000" />
+      <workItem from="1509334425743" duration="232000" />
+      <workItem from="1509365863669" duration="2041000" />
+      <workItem from="1509379894999" duration="893000" />
+      <workItem from="1509606813146" duration="103000" />
+      <workItem from="1509608859770" duration="68000" />
+      <workItem from="1509623849693" duration="613000" />
+      <workItem from="1509626131352" duration="639000" />
+      <workItem from="1509690872351" duration="50000" />
+      <workItem from="1509692324887" duration="36000" />
+      <workItem from="1509698980227" duration="214000" />
+      <workItem from="1509700391938" duration="1878000" />
+      <workItem from="1509706165457" duration="356000" />
+      <workItem from="1509709371844" duration="395000" />
+      <workItem from="1509710596842" duration="619000" />
+      <workItem from="1509954382818" duration="3653000" />
+      <workItem from="1509961180156" duration="208000" />
+      <workItem from="1509966748996" duration="881000" />
+      <workItem from="1510024362873" duration="1267000" />
+      <workItem from="1510053524272" duration="3315000" />
+      <workItem from="1510112934602" duration="5414000" />
+      <workItem from="1510143854596" duration="2308000" />
+      <workItem from="1510317158344" duration="611000" />
+      <workItem from="1510558669905" duration="13000" />
+      <workItem from="1510567477627" duration="11462000" />
+      <workItem from="1510727998037" duration="3088000" />
+      <workItem from="1510815985198" duration="6723000" />
+      <workItem from="1511249814724" duration="90000" />
+      <workItem from="1511256661687" duration="2033000" />
+      <workItem from="1511342698199" duration="2509000" />
+      <workItem from="1511348967486" duration="7723000" />
+      <workItem from="1512544696681" duration="40000" />
+      <workItem from="1512545278683" duration="223000" />
+      <workItem from="1512561463352" duration="21000" />
+      <workItem from="1512561818053" duration="91000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3381000" />
+    <option name="totallyTimeSpent" value="238648000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1276" height="777" extended-state="0" />
+    <frame x="4" y="23" width="1276" height="777" extended-state="0" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3006483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17098865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17341977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29618767" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53958946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26099706" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26099706" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -406,19 +672,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/Pc/develope/style/less/_layout.less">
+    <entry file="file://$PROJECT_DIR$/static@2.0/v1.0.0/js/index.1a564cf235e0e18ab67d.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="183">
+          <caret line="0" column="650" lean-forward="false" selection-start-line="0" selection-start-column="650" selection-end-line="0" selection-end-column="650" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/Pc/develope/style/less/_rest.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        <state relative-caret-position="160">
+          <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
