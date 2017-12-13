@@ -80,7 +80,12 @@ embed, object {
 	display: block;
 	outline: 0
 }
-input[type="text"], input[type="password"], input[type="button"], input[type="submit"], button, textarea {
+input[type="text"]:not(.el-input__inner),
+input[type="password"]:not(.el-input__inner),
+input[type="button"]:not(.el-input__inner),
+input[type="submit"]:not(.el-input__inner),
+button,
+textarea {
 	-webkit-appearance: none;
 	border: 0;
 	outline: none;
@@ -823,7 +828,7 @@ data-list
 }
 .category-list{
 	position: absolute;
-	z-index: 2;
+	z-index: 11;
 	width: 600px;
 	display: none;
 }
