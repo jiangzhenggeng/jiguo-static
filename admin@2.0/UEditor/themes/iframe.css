@@ -20,13 +20,22 @@
 }
 .__editor__container__ iframe{
   display: block;
-  margin: auto;
+  margin: auto !important;
   border: none;
   overflow: hidden;
 }
-.__editor__container__ iframe[data-cid]:not([height]) {
-  width: 360px;
-  height: 161px;
+/*产品卡片*/
+.__editor__container__ iframe[data-cid] {
+  width: 440px !important;
+  height: 192px !important;
+}
+/*零临时卡片*/
+.__editor__container__ iframe[data-link] {
+  width: 440px !important;
+  /*链接*/
+  min-height: 130px !important;
+  /*秒杀*/
+  max-height: 360px !important;
 }
 
 .__editor__container__ .editor__reinstate-wrap {

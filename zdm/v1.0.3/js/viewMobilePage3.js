@@ -1,3 +1,5 @@
+
+
 function viewMobilePage(){
 	var randomIDView = randomID() , randomIDViewDomObj =null;
 	
@@ -7,7 +9,7 @@ function viewMobilePage(){
 		<style>.viewFt{font-size: 12px !important;line-height: 12px!important;top: 8px !important;position: relative;}\
 		.view-yuelan ::-webkit-scrollbar{width:0px;height:0px;margin-right:0px;}\
 		</style>\
-		<div class="Z-dialog view-yuelan" id="'+randomIDView+'" style="z-index:1;display:none;">\
+		<div class="Z-dialog view-yuelan" id="'+randomIDView+'" style="z-index:11;display:none;">\
 			<div class="Z-smark"></div>\
 			<div class="Z-vitrual-mobile iphone5">\
 				<div class="phone-type">\
@@ -92,7 +94,7 @@ function viewMobilePage(){
 			var meta = '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">';
 			var script = '<script src="'+cdnPath+'js/iframe.auto.js"></script>';
 			
-			wrapper.innerHTML = meta+css+htmlHeader+'<div class="main-box">'+UE.getEditor('Z-desciption').getAllHtml().toString().replace(/(width\s*\:\s*\d{1,10}\s*(px|%))|(height\s*\:\s*\d{1,10}\s*(px|%))/ig,'width:100%')+'</div>'+script;
+			wrapper.innerHTML = meta+css+htmlHeader+'<div class="main-box">'+window.ueditorContentBox.getAllHtml().toString().replace(/(width\s*\:\s*\d{1,10}\s*(px|%))|(height\s*\:\s*\d{1,10}\s*(px|%))/ig,'width:100%')+'</div>'+script;
 			btnIframeBody.appendChild(wrapper);
 		});
 		
