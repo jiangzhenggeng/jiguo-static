@@ -1,7 +1,7 @@
 /**
  * Created by wuhongshan on 2017/5/4.
  */
-define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown', 'app/videoAdapt', 'app/lazyload','app/function','cookie'], function ($, index, login, layer, tplEngine, countdown, videoAdapt,lazyload,fc) {
+define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown', 'app/videoAdapt', 'app/lazyload','app/function','cookie'], function (downLoadErweima,$, index, login, layer, tplEngine, countdown, videoAdapt,lazyload,fc) {
 
 	function init(){
 		var eventid=$('#eventid').val()||/(\d+)/.exec(window.location)[0];
@@ -31,6 +31,20 @@ define(['jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown
 					if($('#'+hash+'').length>0){
 						top=$('#'+hash+'').offset().top-55;
 						$("html,body").animate({scrollTop: top}, 300);
+					}
+
+					//显示二维码
+					var showErweima = true
+					for(var k in replyData.result){
+						if(replyData.result[k].meta_type==1 || replyData.result[k].buying_num<=0 ){
+							showErweima = false
+						}
+					}
+					if(showErweima){
+						downLoadErweima.loadErweima({
+							title: '已售罄，下次记得早点来哦！',
+							content: (downLoadErweima.isWeixin() ? '长安识别二维码' : '微信扫码') + '关注极果试用服务号，了解最新折扣试用信息，更快人一步！',
+						})
 					}
 				}else{
 					$('#meta-list').append('暂无数据')

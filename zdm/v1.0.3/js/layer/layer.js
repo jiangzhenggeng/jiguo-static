@@ -70,7 +70,7 @@ var layer = {
     ;(function poll() {
       ;(iscss ? parseInt($('#'+id).css('width')) === 1989 : layer[readyMethod||id]) ? function(){
         fn && fn();
-        console.log('l');
+        //console.log('l');
         try { iscss || head.removeChild(node); } catch(e){};
       }() : setTimeout(poll, 100);
     }());
