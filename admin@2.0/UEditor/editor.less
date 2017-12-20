@@ -23,6 +23,7 @@ html.editor-full-screen {
       position: relative;
       z-index: 2;
       margin: auto;
+      background: #fff;
     }
 
     .edui-editor-toolbarboxouter,
@@ -445,6 +446,25 @@ html.editor-full-screen {
       font-size: 10pt;
       word-wrap: break-word;
       word-break: normal;
+    }
+  }
+
+  .pullout__fullscreen-tips {
+    position: absolute;
+    transition: bottom .3s;
+    bottom: 30px;
+    width: 235px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #a3a3a3;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    left: 50%;
+    margin-left: -117.5px;
+    z-index: 1;
+    &.show{
+      bottom: -30px;
     }
   }
 
