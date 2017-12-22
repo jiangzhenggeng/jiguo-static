@@ -912,12 +912,12 @@
   width: 0%;
   height: 10px;
   border-radius: 2px;
-  background: -webkit-linear-gradient(left, #f98e5e, #f7561c);
-  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f98e5e, endcolorstr=#f7561c, gradientType=1);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f98e5e, endcolorstr=#f7561c, gradientType=1);
+  background: -webkit-linear-gradient(left, #F98E5E, #F7561C);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
   background: #F98E5E;
-  background: -moz-linear-gradient(left, #f98e5e, #f7561c);
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(#f98e5e), to(#f7561c));
+  background: -moz-linear-gradient(left, #F98E5E, #F7561C);
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#F98E5E), to(#F7561C));
 }
 iframe {
   overflow: hidden;
@@ -1115,12 +1115,12 @@ iframe[src*="zdm.jiguo.com"] {
   width: 0%;
   height: 13px;
   border-radius: 4px;
-  background: -webkit-linear-gradient(left, #f98e5e, #f7561c);
-  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f98e5e, endcolorstr=#f7561c, gradientType=1);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f98e5e, endcolorstr=#f7561c, gradientType=1);
+  background: -webkit-linear-gradient(left, #F98E5E, #F7561C);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F98E5E, endcolorstr=#F7561C, gradientType=1);
   background: #F98E5E;
-  background: -moz-linear-gradient(left, #f98e5e, #f7561c);
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(#f98e5e), to(#f7561c));
+  background: -moz-linear-gradient(left, #F98E5E, #F7561C);
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#F98E5E), to(#F7561C));
 }
 .orange {
   color: #F5603A;
@@ -1226,6 +1226,7 @@ iframe[src*="zdm.jiguo.com"] {
   border-radius: 5px;
   padding-bottom: 21px;
   overflow: hidden;
+  padding: 0;
 }
 .inner_card_wrap .inner_card_text .btn-select-buy-more-link li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1233,6 +1234,7 @@ iframe[src*="zdm.jiguo.com"] {
   line-height: 16px;
   font-size: 12px;
   padding: 5px 0;
+  list-style: none;
 }
 .inner_card_wrap .inner_card_text .btn-select-buy-more-link li:hover {
   background-color: #df3a1f;
@@ -1289,7 +1291,7 @@ iframe[src*="zdm.jiguo.com"] {
 }
 .coupon-wrap .coupon-inner {
   height: 100%;
-  box-shadow: 1px 0px 1px 0 #e6e6e6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 1px 0 #E6E6E6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -1634,6 +1636,11 @@ iframe[src*="zdm.jiguo.com"] {
   font-size: 16px;
   color: #666666;
   line-height: 28px;
+}
+.__editor__container__ a[href],
+.__editor__container__ a[href] * {
+  color: #4A90E2 !important;
+  text-decoration: underline !important;
 }
 .__editor__container__ img {
   display: block;
