@@ -13,14 +13,24 @@ define(['require', 'jquery', 'layer', 'app/tplEngine'], function (require, $, la
 		'        </div>\n' +
 		'    </div>';
 
-	function saveAs(url) {
-		var $a = document.createElement('a');
-		$a.setAttribute("href", url);
-		$a.setAttribute("download", "");
+	function saveAs(Url) {
+		var blob = new Blob([''], {type: 'application/octet-stream'});
+		var url = URL.createObjectURL(blob);
+		var a = document.createElement('a');
+		a.href = Url;
+		a.download = Url.replace(/(.*\/)*([^.]+.*)/ig, "$2").split("?")[0];
+		var e = document.createEvent('MouseEvents');
+		e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+		a.dispatchEvent(e);
+		URL.revokeObjectURL(url);
+	}
 
-		var evObj = document.createEvent('MouseEvents');
-		evObj.initMouseEvent( 'click', true, true, window, 0, 0, 0, 0, 0, false, false, true, false, 0, null);
-		$a.dispatchEvent(evObj);
+	function isIos() {
+		var ua = navigator.userAgent.toLowerCase();
+		if(/iphone|ipad|ipod/.test(ua)){
+			return true
+		}
+		return false
 	}
 
 	function isWeixin() {
@@ -48,7 +58,7 @@ define(['require', 'jquery', 'layer', 'app/tplEngine'], function (require, $, la
 				})
 			}
 		}
-		if (!isWeixin()) {
+		if (!isWeixin() && !isIos() ) {
 			layerOptions.btn = '保存二维码至手机'
 			layerOptions.yes = function () {
 				saveAs(erweimaUrl);
@@ -60,7 +70,8 @@ define(['require', 'jquery', 'layer', 'app/tplEngine'], function (require, $, la
 	return {
 		saveAs: saveAs,
 		loadErweima: _downLoadErweima,
-		isWeixin: isWeixin
+		isWeixin: isWeixin,
+		isIos:isIos
 	}
 })
 
