@@ -163,10 +163,16 @@ define([
                                     $.post(applyUrlAPI, formData, function (replayData) {
                                         subFlag = false;
                                         if (replayData.resultCode == 0) {
-                                            layer.msg('申请成功', {type: 1}, function () {
-                                                layer.closeAll();
-                                                window.location.reload();
-                                            });
+                                            var opt = {
+                                                title: '申请成功!',
+                                                desc: '扫码关注极果试用服务号，我们将在试用名单审核公布后，第一时间给您的微信下发通知！',
+                                                callback: function () {
+                                                    layer.closeAll();
+                                                    window.location.reload();
+                                                }
+                                            };
+                                            layer.close(lId);
+                                            common.layerWx(opt);
                                         } else {
                                             layer.msg(replayData.errorMsg);
                                         }

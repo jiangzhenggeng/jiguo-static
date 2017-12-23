@@ -3539,3 +3539,39 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   border: none;
   outline: none;
 }
+.wx-qrcode-attention-box {
+  width: 400px;
+  position: relative;
+  text-align: center;
+}
+.wx-qrcode-attention-box .layer-close-icon {
+  float: right;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 15px;
+  right: 15px;
+  background-position: -55px -55px;
+  cursor: pointer;
+}
+.wx-qrcode-attention-box .layer-close-icon:hover {
+  background-position: -87px -55px;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap {
+  padding-top: 45px;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-desc {
+  padding: 0 50px;
+  margin-top: 15px;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-img {
+  margin-top: 40px;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-img img {
+  width: 193px;
+  height: 193px;
+}
