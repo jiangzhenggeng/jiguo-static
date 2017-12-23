@@ -13,16 +13,14 @@ define(['require', 'jquery', 'layer', 'app/tplEngine'], function (require, $, la
 		'        </div>\n' +
 		'    </div>';
 
-	function saveAs(Url) {
-		var blob = new Blob([''], {type: 'application/octet-stream'});
-		var url = URL.createObjectURL(blob);
-		var a = document.createElement('a');
-		a.href = Url;
-		a.download = Url.replace(/(.*\/)*([^.]+.*)/ig, "$2").split("?")[0];
-		var e = document.createEvent('MouseEvents');
-		e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-		a.dispatchEvent(e);
-		URL.revokeObjectURL(url);
+	function saveAs(url) {
+		var $a = document.createElement('a');
+		$a.setAttribute("href", url);
+		$a.setAttribute("download", "");
+
+		var evObj = document.createEvent('MouseEvents');
+		evObj.initMouseEvent( 'click', true, true, window, 0, 0, 0, 0, 0, false, false, true, false, 0, null);
+		$a.dispatchEvent(evObj);
 	}
 
 	function isWeixin() {

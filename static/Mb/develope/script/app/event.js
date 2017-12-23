@@ -1,8 +1,17 @@
 /**
- * Created by wuhongshan on 2017/5/4.
+ * Created by jiangzg on 2017/5/4.
  */
 define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown', 'app/videoAdapt', 'app/lazyload','app/function','cookie'], function (downLoadErweima,$, index, login, layer, tplEngine, countdown, videoAdapt,lazyload,fc) {
 
+
+	var publiclistNum = -1
+
+	function showErweimaFn() {
+		downLoadErweima.loadErweima({
+			title: '已售罄，下次记得早点来哦！',
+			content: (downLoadErweima.isWeixin() ? '长安识别二维码' : '微信扫码') + '关注极果试用服务号，了解最新折扣试用信息，更快人一步！',
+		})
+	}
 	function init(){
 		var eventid=$('#eventid').val()||/(\d+)/.exec(window.location)[0];
 		//公布名单
@@ -12,7 +21,9 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 				if(replyData.success == 'true'){
 					$('#public-list').append(tpl({data:replyData.result.meta_list}));
 					timeDown($('#public-list').find('[data-down-time]'));
+					publiclistNum = replyData.result.num
 				}else{
+					publiclistNum = 0
 					$('#public-list').append('暂无数据')
 				}
 			},'json')
@@ -36,16 +47,25 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 					//显示二维码
 					var showErweima = true
 					for(var k in replyData.result){
-						if(replyData.result[k].meta_type==1 || replyData.result[k].buying_num<=0 ){
+						//免费试用
+						if( replyData.result[k].meta_type==1 || replyData.result[k].buying_num>0 ){
 							showErweima = false
+							break
 						}
 					}
-					if(showErweima){
-						downLoadErweima.loadErweima({
-							title: '已售罄，下次记得早点来哦！',
-							content: (downLoadErweima.isWeixin() ? '长安识别二维码' : '微信扫码') + '关注极果试用服务号，了解最新折扣试用信息，更快人一步！',
-						})
+					//轮询等待公布名单借口调用成功结果
+					// showPublishList
+					function run() {
+						if(publiclistNum==-1){
+							setTimeout(run,500)
+						}else{
+							if(publiclistNum<=0 && showErweima){
+								showErweimaFn()
+							}
+						}
 					}
+					run()
+
 				}else{
 					$('#meta-list').append('暂无数据')
 				}

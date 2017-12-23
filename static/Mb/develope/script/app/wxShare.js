@@ -1,5 +1,5 @@
 /**
- * Created by wuhongshan on 2017/6/29.
+ * Created by jiangzg on 2017/6/29.
  */
 define(['http://res.wx.qq.com/open/js/jweixin-1.0.0.js','jquery'], function (wx,$) {
 

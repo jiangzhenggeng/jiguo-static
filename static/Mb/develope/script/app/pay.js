@@ -1,5 +1,5 @@
 /**
- * Created by wuhongshan on 2017/5/8.
+ * Created by jiangzg on 2017/5/8.
  */
 define(['jquery','app/unitTool'], function ($,tool) {
     function weixinPay(url,data,orderid) {

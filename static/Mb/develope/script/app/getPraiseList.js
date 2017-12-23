@@ -1,5 +1,5 @@
 /**
- * Created by wuhongshan on 2017/2/15.
+ * Created by jiangzg on 2017/2/15.
  */
 define(['jquery','app/tplEngine'],function ($,tplEngine) {
     return {
