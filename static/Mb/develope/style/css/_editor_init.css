@@ -12,6 +12,7 @@
 .__editor__container__ a[href] * {
   color: #4A90E2 !important;
   text-decoration: underline !important;
+  font-weight: normal !important;
 }
 .__editor__container__ img {
   display: block;
