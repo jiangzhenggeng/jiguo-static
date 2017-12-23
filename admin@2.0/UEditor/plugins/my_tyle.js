@@ -130,6 +130,14 @@ UE.plugins['my_style'] = function () {
         return 1
       }
       if (range.collapsed) {
+        // 这里有个bug先不解决
+        // if(
+        //   range.startContainer == range.endContainer &&
+        //   range.startContainer.nextSibling &&
+					// range.startContainer.nextSibling.tagName == 'A'
+        // ){
+					// return 1
+        // }
         return -1
       }
 

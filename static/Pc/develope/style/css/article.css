@@ -1226,6 +1226,7 @@ iframe[src*="zdm.jiguo.com"] {
   border-radius: 5px;
   padding-bottom: 21px;
   overflow: hidden;
+  padding: 0;
 }
 .inner_card_wrap .inner_card_text .btn-select-buy-more-link li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1233,6 +1234,7 @@ iframe[src*="zdm.jiguo.com"] {
   line-height: 16px;
   font-size: 12px;
   padding: 5px 0;
+  list-style: none;
 }
 .inner_card_wrap .inner_card_text .btn-select-buy-more-link li:hover {
   background-color: #df3a1f;
@@ -1635,9 +1637,20 @@ iframe[src*="zdm.jiguo.com"] {
   color: #666666;
   line-height: 28px;
 }
+.__editor__container__ a[href].editor-link-a-href,
+.__editor__container__ a[href].editor-link-a-href * {
+  color: #4A90E2 !important;
+  text-decoration: underline !important;
+  font-weight: normal !important;
+}
+.__editor__container__ p {
+  display: block;
+  min-height: 28px;
+  margin: 5px 0;
+}
 .__editor__container__ img {
   display: block;
-  margin: 5px auto;
+  margin: auto;
 }
 .__editor__container__ .editor__reinstate-wrap {
   background: rgba(0, 0, 0, 0.9);
