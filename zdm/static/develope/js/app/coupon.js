@@ -192,6 +192,10 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
 
     //格式化时间
     function formatTime(time) {
+        //兼容safari时间格式
+        if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome")==-1) {
+            time=time.replace(/-/g, "/");
+        }
         var mytime = new Date(time),
             y = mytime.getFullYear(),
             m = mytime.getMonth() + 1,

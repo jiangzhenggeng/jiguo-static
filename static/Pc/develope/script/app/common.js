@@ -275,6 +275,24 @@ define([
                     }
                 },'json');
             });
+        },
+        //微信关注弹窗
+        layerWx: function (opt) {
+            var htmlTpl = tplEngine.init($('#wx-qrcode-attention-tpl').html(),opt);
+            var lid = layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                area: ['400px','400px'],
+                shadeClose: false,
+                content: '<div id="' + K.randomId() + '">' + htmlTpl + '</div>',
+                success: function (layero,index) {
+                    layero.on('click','.layer-close-icon',function () {
+                        layer.close(lid);
+                        opt.callback && opt.callback();
+                    })
+                }
+            });
         }
     };
 

@@ -17,7 +17,7 @@ Thumbs.db
 composer.phar
 
 # Mac DS_Store Files
-.DS_Store
+*/.DS_Store
 
 # phpunit itself is not needed
 phpunit.phar
@@ -31,5 +31,4 @@ framework/*
 git.sh
 .gitignore
 static/Pc/compression_3.0
-zdx/*
 .gitignore

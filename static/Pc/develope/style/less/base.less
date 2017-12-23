@@ -1263,3 +1263,40 @@ ul.event-show-card-warp{
     }
   }
 }
+// 引导关注微信服务号弹窗
+.wx-qrcode-attention-box{
+  width: 400px;
+  position: relative;
+  text-align: center;
+  .layer-close-icon{
+    float: right;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 15px;
+    right: 15px;
+    background-position: -55px -55px;
+    cursor: pointer;
+    &:hover {
+      background-position: -87px -55px;
+    }
+  }
+  .wx-qrcode-attention-wrap{
+    padding-top: 45px;
+    h3{
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .wx-qrcode-desc{
+      padding: 0 50px;
+      margin-top: 15px;
+    }
+    .wx-qrcode-img{
+      margin-top: 40px;
+      img{
+        width: 193px;
+        height: 193px;
+      }
+    }
+  }
+}
