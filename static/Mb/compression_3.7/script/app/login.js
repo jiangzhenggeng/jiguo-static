@@ -1,0 +1,1 @@
+define(["jquery"],function(a){return{login:function(a){window.location="/mb/user/login.html?callbackurl="+encodeURIComponent(a||window.location.href)}}})
