@@ -17,8 +17,8 @@
         'layer': 'lib/layer/layer',
         'laydate': 'lib/laydate/laydate',
         'template':'lib/template-native',
-        'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
-        'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
-        'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min'
+        // 'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
+        // 'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
+        // 'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min'
     }
 })

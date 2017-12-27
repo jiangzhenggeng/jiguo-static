@@ -883,10 +883,11 @@ window.utils = UE.utils = {
                         doReady(doc)
                     });
                 } else {
-                    doc.addEventListener("DOMContentLoaded", function () {
-                        doc.removeEventListener("DOMContentLoaded", arguments.callee, false);
-                        doReady(doc);
-                    }, false);
+                    var fnb = function () {
+											doc.removeEventListener("DOMContentLoaded", fnb, false);
+											doReady(doc);
+										}
+                    doc.addEventListener("DOMContentLoaded",fnb , false);
                     win.addEventListener('load', function () {
                         doReady(doc)
                     }, false);

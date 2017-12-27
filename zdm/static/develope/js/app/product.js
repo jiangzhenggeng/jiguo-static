@@ -1,7 +1,7 @@
 /**
  * Created by wuhongshan on 2017/4/10.
  */
-define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function ($, layer, common, template, UE) {
+define(['jquery', 'layer', 'app/common', 'template'], function ($, layer, common, template) {
 //产品信息赋值
     function writeProduct(data) {
         if (window.writed) return false;
@@ -22,7 +22,8 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/createUE'], function (
         });
         $('#link-image').prepend(html);
         $('#link-image .Z-cover-hover:first').trigger('click');
-        UE.setContent('Z-desciption',data.result.detail);
+			window.ueditorContentBox &&
+			window.ueditorContentBox.setContent(data.result.detail);
     };
 //抓取按钮
     function getProduct(url, dom) {

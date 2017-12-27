@@ -2,7 +2,7 @@
  * Created by jiguo on 17/5/11.
  */
 
-define(['jquery', 'layer', 'app/common', 'template', 'app/event', 'app/createUE'], function ($, layer, common, template, event, createUE) {
+define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, layer, common, template, event) {
 
 //      是否添加规格
     $("[name=no_spec]").on('click', function () {

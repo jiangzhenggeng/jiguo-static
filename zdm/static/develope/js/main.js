@@ -9,7 +9,6 @@ define('main',[
     'app/common',
     'app/product',
     'app/event',
-    'app/createUE',
     'app/play',
     'app/addEvent',
     'app/showTime',

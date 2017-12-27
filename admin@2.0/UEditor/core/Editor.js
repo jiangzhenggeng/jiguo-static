@@ -1475,7 +1475,8 @@
     getLang: function (path) {
       var lang = UE.I18N[this.options.lang];
       if (!lang) {
-        throw Error("not import language file");
+        console.log(UE.I18N)
+        throw Error("not import language file"+this.options.lang);
       }
       path = (path || "").split(".");
       for (var i = 0, ci; ci = path[i++];) {
