@@ -1,6 +1,6 @@
 ({
     baseUrl: '../develope/js',
-    out:'../version_1.3/js/main.js',
+    out:'../version_1.4/js/main.js',
     name:'main',
     optimizeCss:'standard',
     fileExclusionRegExp:'\.(less|html|php|psd|PSD|DS_Store)$',

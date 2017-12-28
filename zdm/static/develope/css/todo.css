@@ -204,7 +204,6 @@
 .report-star-box .star-wrap {
   zoom: 1;
   padding: 2px 0;
-  z-index: 999;
   line-height: 1.2em;
   width: 320px;
   border-right: 1px solid #ccc;

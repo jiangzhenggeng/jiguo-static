@@ -1,6 +1,6 @@
 requirejs.config({
 
-    baseUrl: 'http://cdn.jiguo.com/zdm/static/version_1.3/js/',
+    baseUrl: 'http://cdn.jiguo.com/zdm/static/version_1.4/js/',
 
     waitSeconds: 0,
 
