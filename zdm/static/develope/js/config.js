@@ -22,8 +22,8 @@ require.config({
         'template':'lib/template-native',
         'layer':'lib/layer/layer',
         'gif':'lib/gif',
-			  'cropper':'lib/cropper/cropper',
-        
+        'cropper':'lib/cropper/cropper',
+        'echarts':'lib/echarts.common.min'
     },
     shim:{
         // 'jquery':{

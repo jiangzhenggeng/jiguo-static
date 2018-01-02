@@ -152,7 +152,7 @@ define([
 
             } else{
               //非app专享
-              if( payObj.find('input[name*="[pc]"]').val()==1 && payObj.find('input[name*="[h5]"]').val()==1 ) {
+              // if( payObj.find('input[name*="[pc]"]').val()==1 && payObj.find('input[name*="[h5]"]').val()==1 ) {
                 btn_text = '立即试用';
                 var oTb = payObj.find('.Z-card-list-box').first(),
                     discount = String(oTb.find('input[name*="discount"]').val() || '').replace(/\.0+$/, '');
@@ -160,7 +160,7 @@ define([
                 right_top = '限' + oTb.find('[data-all-number]').attr('data-all-number') + oTb.find('input[name*="quantifier"]').val();
                 left_bottom = '￥' + oTb.find('.yan-number.Z-red').html();
                 right_bottom = '原价 ' + oTb.find('.card-number .Z-gray').html();
-              }
+              // }
             }
 
             if(!btn_text||!left_top||!left_bottom||!right_top||!right_bottom){

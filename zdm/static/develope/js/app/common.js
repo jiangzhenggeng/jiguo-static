@@ -32,6 +32,9 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                 } else {
                     callback(replyData);
                 }
+            },
+            error: function () {
+                layer.msg('操作失败');
             }
         })
     };
