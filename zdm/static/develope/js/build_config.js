@@ -1,6 +1,6 @@
 requirejs.config({
 
-    baseUrl: 'http://cdn.jiguo.com/zdm/static/version_1.4/js/',
+    baseUrl: 'http://cdn.jiguo.com/zdm/static/version_1.42/js/',
 
     waitSeconds: 0,
 
@@ -11,9 +11,9 @@ requirejs.config({
         'laydate':'lib/laydate/laydate',
 			  'cropper':'lib/cropper/cropper',
         'template':'lib/template-native',
-        // 'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
-        // 'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
-        // 'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min',
+        'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
+        'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
+        'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min',
     },
     shim: {
         'layer':{
@@ -22,11 +22,11 @@ requirejs.config({
 			'cropper':{
 				deps:['css!lib/cropper/cropper']
 			},
-        // 'ueditor': {
-        //     deps: [
-        //         'http://www.jiguo.com/protected/extensions/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js',
-        //         'http://www.jiguo.com/protected/extensions/ueditor/ueditor.config.js'
-        //     ],
-        // }
+        'ueditor': {
+            deps: [
+                'http://www.jiguo.com/protected/extensions/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js',
+                'http://www.jiguo.com/protected/extensions/ueditor/ueditor.config.js'
+            ],
+        }
     }
 });

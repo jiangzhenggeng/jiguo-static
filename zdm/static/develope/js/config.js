@@ -15,8 +15,8 @@ require.config({
     baseUrl: jsPath.substring(0, jsPath.lastIndexOf("/") + 1),
     paths: {
         // 'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
-        //'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
-        //'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min',
+        'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
+        'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min',
         'jquery':'lib/jquery.min',
         'laydate':'lib/laydate/laydate',
         'template':'lib/template-native',
@@ -38,17 +38,17 @@ require.config({
           'cropper':{
             deps:['css!lib/cropper/cropper']
           },
-        // 'ueditor': {
-        //     deps: [
-        //         // 'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min.js',
-        //         'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config.js'
-				//
-        //     ],
-        //     exports: 'UE',
-        //     init: function (ZeroClipboard) {
-        //         //导出到全局变量，供ueditor使用
-        //         window.ZeroClipboard = ZeroClipboard;
-        //     }
-        // }
+        'ueditor': {
+            deps: [
+                // 'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min.js',
+                'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config.js'
+
+            ],
+            exports: 'UE',
+            init: function (ZeroClipboard) {
+                //导出到全局变量，供ueditor使用
+                window.ZeroClipboard = ZeroClipboard;
+            }
+        }
     }
 });
