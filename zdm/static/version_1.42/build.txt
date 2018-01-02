@@ -51,6 +51,10 @@ css/user.css
 ----------------
 css/user.css
 
+css/xcxSpread.css
+----------------
+css/xcxSpread.css
+
 js/lib/cropper/cropper.css
 ----------------
 js/lib/cropper/cropper.css
