@@ -160,26 +160,30 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                         if (name == '[user_group][]') {
                             user_group.push(value);
                         }
-
+                        //跳过用户群组赋值
                         if (name.indexOf('user_group') >= 0) {
                             continue;
                         }
-
+                        //编辑玩法时跳过用户群组赋值
+                        if (edit == 'edit' && name == "all_user" && value == 0) {
+                            continue;
+                        }
+                        //免费玩法的备注选项
                         if (name.indexOf('spec_remarks') >= 0) {
                             specList[name] = value;
                         }
-
-                        if (edit == 'edit') {
-                            if (name == "all_user" && value == 0) {
-                                continue;
-                            }
+                        //预约按钮赋值
+                        if (name.indexOf('is_reserve') >= 0) {
+                            playBody.find("#is_reserve").prop("checked", (value>0));
+                            continue;
                         }
 
                         playBody.find("[name='" + name + "']:not('[type=checkbox]'):not('[type=radio]')").val(value);
                         playBody.find("[name='" + name + "'][type=checkbox]").prop("checked", true);
+                        //折扣玩法是否可用券赋值
                         var iscoupon = playBody.find("[name='" + name + "'][type=radio]");
-                        iscoupon.each(function (item,index) {
-                            if($(this).val()==value){
+                        iscoupon.each(function (item, index) {
+                            if ($(this).val() == value) {
                                 $(this).prop("checked", true);
                             }
                         });
@@ -205,9 +209,9 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                             }
                         }
                     }
-
-                    //  初始化折扣价
+                    //折扣玩法
                     if (playType == 2) {
+                        //  初始化折扣价
                         playBody.find("[data-editoldprice]").each(function (v, el) {
                             var price, cost_spec;
                             var discount = playBody.find("#discount").val();
@@ -220,6 +224,18 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                             // cost_spec=((old_price*100)*(cost_dis*100)/100000).toFixed(2);
                             // $(el).closest('tr').find('.cost').find("input").val(cost_spec);
                         });
+                        //  初始化预约设置
+                        var is_reserve = playBody.find("#is_reserve").is(':checked');
+                        var reserve_time = playBody.find("[name=reserve_time]").val();
+                        if (is_reserve) {
+                            playBody.find("#reserve_time").show();
+                            playBody.find("#reserve_time li").each(function () {
+                                var dataValue = $(this).data('value');
+                                if (reserve_time == dataValue) {
+                                    common.setVal($(this));
+                                }
+                            })
+                        }
                     }
 
                     //  初始化总库存

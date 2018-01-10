@@ -669,7 +669,7 @@ Z-uploadify-banner
   border-bottom: 1px solid #000;
   color: #555555;
 }
-#Z-image-up-wxcode_share_pic li:first-child {
+#Z-image-up-wxcode_share_pic li {
   width: 188px !important;
 }
 .wxcode-share-wrap {
