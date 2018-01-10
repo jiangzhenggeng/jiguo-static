@@ -209,7 +209,7 @@
   color: #fe584d;
 }
 .green{
-  color: #83a900;
+  color: #07B25F;
 }
 .gray{
   color: #b2b2b2;
@@ -449,7 +449,15 @@ p.open-btn {
       background: #80c269 - 18% !important;
     }
   }
-
+  //白底绿字
+  &.c-green{
+    background: none;
+    color: #07B25F;
+    cursor: default;
+    &:hover{
+      background: none;
+    }
+  }
   &:hover{
     background: #fe584d - 18%;
   }
@@ -1266,16 +1274,16 @@ ul.event-show-card-warp{
 }
 // 引导关注微信服务号弹窗
 .wx-qrcode-attention-box{
-  width: 400px;
   position: relative;
   text-align: center;
+  padding-bottom: 30px;
   .layer-close-icon{
     float: right;
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 15px;
-    right: 15px;
+    top: 6px;
+    right: 6px;
     background-position: -55px -55px;
     cursor: pointer;
     &:hover {
@@ -1283,20 +1291,31 @@ ul.event-show-card-warp{
     }
   }
   .wx-qrcode-attention-wrap{
-    padding-top: 45px;
+    padding-top: 25px;
     h3{
       font-size: 20px;
       font-weight: normal;
     }
-    .wx-qrcode-desc{
-      padding: 0 50px;
-      margin-top: 15px;
-    }
     .wx-qrcode-img{
-      margin-top: 40px;
+      margin-top: 20px;
+      position: relative;
       img{
-        width: 193px;
-        height: 193px;
+        width: 145px;
+        height: 145px;
+      }
+      .icon-event-logo{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        margin: -20px 0 0 -20px;
+        img{
+          width: 100%;
+          height: 100%;
+          border: 2px solid #fff;
+          border-radius: 5px;
+        }
       }
     }
   }

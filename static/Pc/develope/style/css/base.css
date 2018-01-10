@@ -1876,7 +1876,7 @@ body {
   color: #fe584d;
 }
 .green {
-  color: #83a900;
+  color: #07B25F;
 }
 .gray {
   color: #b2b2b2;
@@ -2095,6 +2095,14 @@ p.open-btn {
 }
 .btn.green:hover {
   background: #6eb057 !important;
+}
+.btn.c-green {
+  background: none;
+  color: #07B25F;
+  cursor: default;
+}
+.btn.c-green:hover {
+  background: none;
 }
 .btn:hover {
   background: #ec463b;
@@ -3541,17 +3549,17 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   outline: none;
 }
 .wx-qrcode-attention-box {
-  width: 400px;
   position: relative;
   text-align: center;
+  padding-bottom: 30px;
 }
 .wx-qrcode-attention-box .layer-close-icon {
   float: right;
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 15px;
-  right: 15px;
+  top: 6px;
+  right: 6px;
   background-position: -55px -55px;
   cursor: pointer;
 }
@@ -3559,20 +3567,31 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
   background-position: -87px -55px;
 }
 .wx-qrcode-attention-box .wx-qrcode-attention-wrap {
-  padding-top: 45px;
+  padding-top: 25px;
 }
 .wx-qrcode-attention-box .wx-qrcode-attention-wrap h3 {
   font-size: 20px;
   font-weight: normal;
 }
-.wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-desc {
-  padding: 0 50px;
-  margin-top: 15px;
-}
 .wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-img {
-  margin-top: 40px;
+  margin-top: 20px;
+  position: relative;
 }
 .wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-img img {
-  width: 193px;
-  height: 193px;
+  width: 145px;
+  height: 145px;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-img .icon-event-logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+}
+.wx-qrcode-attention-box .wx-qrcode-attention-wrap .wx-qrcode-img .icon-event-logo img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }

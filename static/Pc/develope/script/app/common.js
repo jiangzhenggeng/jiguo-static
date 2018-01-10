@@ -15,46 +15,46 @@ define([
     'app/tplEngine',
     'app/scrollStatus',
     'app/viewport'
-],function (require,$,global,search,layer,tplEngine,scrollStatus,viewport){
+], function (require, $, global, search, layer, tplEngine, scrollStatus, viewport) {
 
     //快速回到顶部
     $(function () {
-        if(window.speedTop) return;
+        if (window.speedTop) return;
         window.speedTop = true;
 
         //ipad适配
         viewport.init();
 
-        var html = '<div class="quick-speed-top">'+
-                        '<a href="javascript:;">'+
-                            '<div class="query-speed-box query-tel">'+
-                                '<i class="query-tel-icon"></i>'+
-                                '<div class="query-content query-tel-content">'+
-                                    '<p class="ft-16 query-tel-txt">400-001-9217</p>'+
-                                    '<p class="ft-12 query-tel-time">周一到周五 10:00-19:00</p>'+
-                                '</div>'+
-                            '</div>'+
-                        '</a>'+
-                        '<a href="javascript:;">'+
-                            '<div class="query-speed-box query-wx">'+
-                                '<i class="query-wx-icon"></i>'+
-                                '<div class="query-content query-wx-content">'+
-                                    '<div class="query-wx-erweima"></div>'+
-                                    '<p class="ft-12 query-wx-txt">极果平平微信：jiguopp</p>'+
-                                '</div>'+
-                            '</div>'+
-                        '</a>'+
-                        '<a href="/feedback/isfeedback" target="_blank">'+
-                            '<div class="query-speed-box">'+
-                                '<i class="query-feedback-icon"></i>'+
-                            '</div>'+
-                        '</a>'+
-                        '<a href="javascript:;" data-quick-speed-top>'+
-                            '<div class="query-speed-box query-top">'+
-                                '<i class="query-top-icon"></i>'+
-                            '</div>'+
-                        '</a>'+
-                    '</div>';
+        var html = '<div class="quick-speed-top">' +
+            '<a href="javascript:;">' +
+            '<div class="query-speed-box query-tel">' +
+            '<i class="query-tel-icon"></i>' +
+            '<div class="query-content query-tel-content">' +
+            '<p class="ft-16 query-tel-txt">400-001-9217</p>' +
+            '<p class="ft-12 query-tel-time">周一到周五 10:00-19:00</p>' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '<a href="javascript:;">' +
+            '<div class="query-speed-box query-wx">' +
+            '<i class="query-wx-icon"></i>' +
+            '<div class="query-content query-wx-content">' +
+            '<div class="query-wx-erweima"></div>' +
+            '<p class="ft-12 query-wx-txt">极果平平微信：jiguopp</p>' +
+            '</div>' +
+            '</div>' +
+            '</a>' +
+            '<a href="/feedback/isfeedback" target="_blank">' +
+            '<div class="query-speed-box">' +
+            '<i class="query-feedback-icon"></i>' +
+            '</div>' +
+            '</a>' +
+            '<a href="javascript:;" data-quick-speed-top>' +
+            '<div class="query-speed-box query-top">' +
+            '<i class="query-top-icon"></i>' +
+            '</div>' +
+            '</a>' +
+            '</div>';
 
         $('body').append(html);
         var speedBox = $('.quick-speed-top'),
@@ -62,23 +62,23 @@ define([
             WIN_H = $(window).height(),
             WIN_W = $(window).width(),
             footerH = footerBox.outerHeight();
-        var WIN_scrollTop = 0 , footerOffTop = 0,fix =40 ,bottom = fix;
+        var WIN_scrollTop = 0, footerOffTop = 0, fix = 40, bottom = fix;
         var WIN_BAN = ( WIN_W - 1080 ) / 2, letPos = WIN_W - WIN_BAN + 50;
 
-        if(WIN_W<=1080)letPos = 1080 + 50;
+        if (WIN_W <= 1080) letPos = 1080 + 50;
 
         var resizeFn = function (display) {
             WIN_H = $(window).height();
             WIN_W = $(window).width();
-            WIN_scrollTop = 0 , footerOffTop = 0,fix =40 ,bottom = fix;
+            WIN_scrollTop = 0 , footerOffTop = 0, fix = 40 , bottom = fix;
             WIN_BAN = ( WIN_W - 1080 ) / 2, letPos = WIN_W - WIN_BAN + 50;
-            if(WIN_W<=1080)letPos = 1080 + 50;
+            if (WIN_W <= 1080) letPos = 1080 + 50;
             var display = {
-                bottom:bottom,
-                top:'auto',
+                bottom: bottom,
+                top: 'auto',
                 left: letPos
             }
-            if(!display){
+            if (!display) {
                 display.display = 'none';
             }
             speedBox.css(display);
@@ -91,24 +91,24 @@ define([
 
         speedBox.find('[data-quick-speed-top]').click(function () {
             $('body,html').animate({
-                scrollTop:0
-            },600);
+                scrollTop: 0
+            }, 600);
         });
         $(window).scroll(function () {
             WIN_scrollTop = $(window).scrollTop();
             footerOffTop = footerBox.offset().top;
-            if(WIN_scrollTop>500){
+            if (WIN_scrollTop > 500) {
                 speedBox.show(160);
-            }else{
+            } else {
                 speedBox.hide(160);
                 return;
             }
-            if(WIN_H + WIN_scrollTop > footerOffTop){
+            if (WIN_H + WIN_scrollTop > footerOffTop) {
                 bottom = WIN_H + WIN_scrollTop - footerOffTop;
                 speedBox.css({
-                    bottom: bottom>fix?bottom:fix
+                    bottom: bottom > fix ? bottom : fix
                 })
-            }else{
+            } else {
                 speedBox.css({
                     bottom: fix
                 })
@@ -117,14 +117,14 @@ define([
 
 
         //点击跳转,需要检查是否登录的动作
-        $('body').on('click','[href][data-query-cheack-login]',function (e) {
-            if(!window.URL['login']){
+        $('body').on('click', '[href][data-query-cheack-login]', function (e) {
+            if (!window.URL['login']) {
                 e.preventDefault();
                 _login();
             }
         });
         //全局头部未登录绑定弹窗登录事件
-        $('body').on('click','#open-login-window',_login);
+        $('body').on('click', '#open-login-window', _login);
 
     });
 
@@ -132,14 +132,14 @@ define([
     function _login() {
         var html = '',
             back_url = window.URL['backUrl'];
-        $.post('/api/user/GetUrl',{back_url:back_url},function (rd,status) {
-            if(status=='success'){
-                html = tplEngine.init($('#login-input-tpl').html(),{data:rd.result});
+        $.post('/api/user/GetUrl', {back_url: back_url}, function (rd, status) {
+            if (status == 'success') {
+                html = tplEngine.init($('#login-input-tpl').html(), {data: rd.result});
                 loginBox(html);
-            }else{
-              layer.msg(rd.errorMsg);
+            } else {
+                layer.msg(rd.errorMsg);
             }
-        },'json');
+        }, 'json');
     }
 
     function loginBox(html) {
@@ -150,80 +150,83 @@ define([
                 title: false,
                 closeBtn: 0,
                 shadeClose: true,
-                area:['715px','325px'],
-                content: '<div id="'+id+'">'+html+'</div>',
-                success:function (layero, index) {
+                area: ['715px', '325px'],
+                content: '<div id="' + id + '">' + html + '</div>',
+                success: function (layero, index) {
 
                     setTimeout(function () {
-                        $(layero).find('.apply-input-close').attr('onClick','layer.close(\''+lId+'\')');
+                        $(layero).find('.apply-input-close').attr('onClick', 'layer.close(\'' + lId + '\')');
                     });
 
-                    var layero = $('#'+id);
-                    layero.parent().parent().css('background-color','transparent');
+                    var layero = $('#' + id);
+                    layero.parent().parent().css('background-color', 'transparent');
                     layero.find('input[data-login-username]').focus();
 
                     function __submit_fun__(e) {
-                        if(e.type=='keypress'){
-                            if(e.keyCode!=13) return;
+                        if (e.type == 'keypress') {
+                            if (e.keyCode != 13) return;
                         }
                         var username = layero.find('input[data-login-username]').val().trim(),
                             password = layero.find('input[data-login-password]').val(),
                             autologin = layero.find('input[data-login-auto]').val();
-                        if(username.length<=0 || username.length>32){
-                            layer.tips('请正确填写手机号',layero.find('input[data-login-username]'));
+                        if (username.length <= 0 || username.length > 32) {
+                            layer.tips('请正确填写手机号', layero.find('input[data-login-username]'));
                             return;
                         }
-                        if(password.length<=0 || password.length>32){
-                            layer.tips('请正确填写密码',layero.find('input[data-login-password]'));
+                        if (password.length <= 0 || password.length > 32) {
+                            layer.tips('请正确填写密码', layero.find('input[data-login-password]'));
                             return;
                         }
-                        $.get('/api/user/login',{
-                            tel:username,
-                            passwd:password,
-                            autologin:autologin
-                        },function (repaltData) {
-                            if(repaltData.resultCode==0){
+                        $.get('/api/user/login', {
+                            tel: username,
+                            passwd: password,
+                            autologin: autologin
+                        }, function (repaltData) {
+                            if (repaltData.resultCode == 0) {
                                 window.__is_login_online__ = true;
                                 window.location.reload();
                                 clearInterval(window.ajax_status);
                                 window.layer_close = false;
                                 return;
-                            }else if(repaltData.resultCode==-1){
+                            } else if (repaltData.resultCode == -1) {
                                 layer.msg(repaltData.errorMsg);
                                 layero.find('input[data-login-username]').focus();
-                            }else if(repaltData.resultCode==-2){
+                            } else if (repaltData.resultCode == -2) {
                                 layer.msg(repaltData.errorMsg);
                                 layero.find('input[data-login-password]').focus();
-                            }else{
+                            } else {
                                 layer.msg('系统错误');
                             }
-                        },'json');
+                        }, 'json');
                     }
-                    layero.find('#window-login-submit').bind('click',__submit_fun__);
-                    layero.find('input').bind('keypress',__submit_fun__);
+
+                    layero.find('#window-login-submit').bind('click', __submit_fun__);
+                    layero.find('input').bind('keypress', __submit_fun__);
+
                     //监听二维码扫描结果
                     function userIsLogin_ajaxhandle() {
 
-                        if(window.layer_close){
+                        if (window.layer_close) {
                             clearInterval(window.ajax_status);
                             window.layer_close = false;
                         }
-                        if( window.__is_login_online__ ){
+                        if (window.__is_login_online__) {
                             return;
                         }
 
-                        $.get("/ajax/code", function(data){
-                            data=data.trim().replace(/\s+/g,'');
-                            if(data==1){
+                        $.get("/ajax/code", function (data) {
+                            data = data.trim().replace(/\s+/g, '');
+                            if (data == 1) {
                                 clearInterval(window.ajax_status);
                                 window.layer_close = false;
                                 location.reload();
                             }
                         });
                     }
-                    window.ajax_status = setInterval(userIsLogin_ajaxhandle,1000);
+
+                    window.ajax_status = setInterval(userIsLogin_ajaxhandle, 1000);
                 }
-                ,end:function () {
+                , end: function () {
                     window.layer_close = true;
                 }
             });
@@ -232,8 +235,8 @@ define([
 
     $(function () {
         //通用登录属性绑定
-        $('body').on('click','[data-has-login]',function (e) {
-            if( !window.URL['login'] ){
+        $('body').on('click', '[data-has-login]', function (e) {
+            if (!window.URL['login']) {
                 e.preventDefault();
                 _login();
                 return false;
@@ -242,52 +245,53 @@ define([
     });
 
     return {
-        login:_login,
+        login: _login,
         //点击收藏五角星
-        collect: function (selecter,usercenter) {
+        collect: function (selecter, usercenter) {
             var self = this;
-            $( selecter || '#homeAjaxLoad').on('click','.five-pointed-star',function (e) {
+            $(selecter || '#homeAjaxLoad').on('click', '.five-pointed-star', function (e) {
 
                 e.preventDefault();
                 var _this = $(this);
-                if(!window.URL['login']){
+                if (!window.URL['login']) {
                     _login();
                     return;
                 }
                 $.get('/api/praise/praise', {
-                    type:$(this).attr('data-type'),
-                    id_value:$(this).attr('data-id_value'),
-                    status:$(this).attr('data-status')
-                } ,function(repalyData){
-                    if(repalyData.resultCode==-100){
+                    type: $(this).attr('data-type'),
+                    id_value: $(this).attr('data-id_value'),
+                    status: $(this).attr('data-status')
+                }, function (repalyData) {
+                    if (repalyData.resultCode == -100) {
                         _login();
-                    }else if(repalyData.result.zan==1) {
+                    } else if (repalyData.result.zan == 1) {
                         _this.addClass('like');
-                    }else if(repalyData.result.zan==-1) {
+                    } else if (repalyData.result.zan == -1) {
                         _this.removeClass('like');
-                        if(usercenter){
+                        if (usercenter) {
                             _this.parent().parent().parent().fadeOut(500);
                         }
-                    } else{
+                    } else {
                         layer.ready(function () {
                             layer.msg('网络错误');
                         });
                     }
-                },'json');
+                }, 'json');
             });
         },
         //微信关注弹窗
         layerWx: function (opt) {
-            var htmlTpl = tplEngine.init($('#wx-qrcode-attention-tpl').html(),opt);
+            opt.qrcode = opt.qrcode || null;
+            var htmlTpl = tplEngine.init($('#wx-qrcode-attention-tpl').html(), opt);
             var lid = layer.open({
                 type: 1,
                 title: false,
                 closeBtn: 0,
-                area: ['400px','400px'],
+                area: ['300px'],
                 shadeClose: false,
                 content: '<div id="' + K.randomId() + '">' + htmlTpl + '</div>',
-                success: function (layero,index) {
-                    layero.on('click','.layer-close-icon',function () {
+                success: function (layero, index) {
+                    layero.on('click', '.layer-close-icon', function () {
                         layer.close(lid);
                         opt.callback && opt.callback();
                     })

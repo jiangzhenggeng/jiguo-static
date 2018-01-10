@@ -165,7 +165,7 @@ define([
                                         if (replayData.resultCode == 0) {
                                             var opt = {
                                                 title: '申请成功!',
-                                                desc: '扫码关注极果试用服务号，我们将在试用名单审核公布后，第一时间给您的微信下发通知！',
+                                                desc: '扫码关注极果试用服务号，我们将在试用名单审<br>核公布后，第一时间给您的微信下发通知！',
                                                 callback: function () {
                                                     layer.closeAll();
                                                     window.location.reload();
@@ -205,19 +205,41 @@ define([
                     if (countdownObj.length) {
                         countdownObj.each(function () {
                             if ($(this).attr('data-unq')) {
+                                //开抢倒计时
                                 if ($(this).attr('data-countdown') > 0) {
                                     var h = $('#' + $(this).attr('data-unq'));
-                                    h.addClass('gray').attr('_href', h.attr('href')).attr('href', 'javascript:;').attr('target', '_self');
+                                    var is_reserve = (h.attr('data-reserve') !== undefined);//可以预约
+                                    var reserved = h.hasClass('c-green');//已预约
+                                    var appVip = (h.attr('data-appvip') !== undefined);//app专享且可预约
+                                    if (!is_reserve && !reserved) {
+                                        h.addClass('gray');
+                                    }
+                                    h.attr('_href', h.attr('href')).attr('href', 'javascript:;').attr('target', '_self');
                                 }
                                 countdown.run({
                                     intDiff: $(this).attr('data-countdown'),
                                     dom: $(this),
                                     callback: function () {
-                                        var h = $('#' + $(this).attr('data-unq'));
-                                        h.removeClass('gray').addClass('red').attr('href', h.attr('_href')).attr('target', '_blank').html('立即试用');
+                                        //倒计时结束开放购买
+                                        if (appVip) {
+                                            //app专享的放出二维码
+                                            var parent_wrap = h.parent();
+                                            parent_wrap.hide();
+                                            parent_wrap.next().show();
+                                        } else {
+                                            //非app专享的直接放出购买地址
+                                            if (!is_reserve && !reserved) {
+                                                h.removeClass('gray').addClass('red');
+                                            } else if (reserved) {
+                                                h.removeClass('c-green').addClass('red');
+                                            }
+                                            h.attr('href', h.attr('_href')).attr('target', '_blank').html('立即试用');
+                                        }
+
                                     }
                                 });
                             } else {
+                                //支付倒计时
                                 countdown.run({
                                     intDiff: $(this).attr('data-countdown'),
                                     dom: $(this),
@@ -319,6 +341,7 @@ define([
                 }
             });
         }
+        //试用细则弹窗
         , getEventIntro: function () {
             $('body').on('click', '[data-metaintro]', function () {
                 var metaId = $(this).closest('[data-metaid]').attr('data-metaid');
@@ -352,6 +375,7 @@ define([
                 })
             })
         }
+        //弹出等级不服toast
         , alertTips: function () {
             $('body').on('click', '[data-alert]', function () {
                 if (!window.URL['login']) {
@@ -370,5 +394,54 @@ define([
 
             });
         }
+        //折扣预约
+        , reserve: function () {
+            $('body').on('click', '[data-reserve]', function () {
+                if (!window.URL['login']) {
+                    return;
+                }
+                var mid = $(this).closest('[data-metaid]').attr('data-metaid');
+                $.get('/api/event/EventReserve?platform=pc', {mid: mid}, function (replayData) {
+                    //已关注服务号，预约成功
+                    if (replayData.resultCode == 0) {
+                        var htmlOkTpl = tplEngine.init($('#event-reserve-success-tpl').html(), {});
+                        layer.open({
+                            type: 1,
+                            title: false,
+                            closeBtn: 0,
+                            area: ['300px'],
+                            shadeClose: false,
+                            content: '<div id="' + K.randomId() + '">' + htmlOkTpl + '</div>',
+                            success: function (layero, index) {
+                                layero.on('click', '.layer-msg-close-wrap', function () {
+                                    layer.close(index);
+                                    location.reload();
+                                })
+                            }
+                        });
+                    } else if (replayData.resultCode == -100) {
+                        //未关注服务号，引导关注服务号
+                        $.get('/api/event/GetReserveQrcode?platform=pc', {mid: mid}, function (rd) {
+                            if (rd.resultCode == 0) {
+                                var opt = {
+                                    title: '',
+                                    qrcode: rd.result,
+                                    desc: '<font class="gray">微信扫码关注 <font class="c00">【极果试用】</font><br>服务号完成预约</font>',
+                                    callback: function () {
+                                        layer.closeAll();
+                                    }
+                                };
+                                common.layerWx(opt);
+                            } else {
+                                layer.msg(rd.errorMsg);
+                            }
+                        }, 'json');
+                    } else {
+                        layer.msg(replayData.errorMsg);
+                    }
+                }, 'json');
+            });
+        }
+
     };
 });

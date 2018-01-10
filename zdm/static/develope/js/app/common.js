@@ -146,6 +146,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                         layer.msg(replyData.errorMsg);
                     } else {
                         $('#imgLoading').remove();
+                        //兼容老后台图片地址
                         if (compatible) {
                             replyData.result.fileid = replyData.result.url
                         }
@@ -255,6 +256,8 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
     return {
         //选择类型
         chooseType: chooseType,
+        //选择类型后赋值
+        setVal:_setVal,
         // 时间初始化
         layerTime: layerTime,
         // 删除、下线、上线文章试用流的数据
@@ -271,7 +274,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         removeImage: removeImage,
         //设置封面
         setCover: setCover,
+        //选择图片后上传
         upload: upload
-
     }
 })
