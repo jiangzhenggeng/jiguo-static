@@ -49,7 +49,7 @@ define(['require','jquery','layer'],function (require,$,layer){
             return Length;
         },
         msg:function (msg,time) {
-            layer.open({
+            return layer.open({
                 skin: 'msg',
                 time: time || 2,
                 content: msg,

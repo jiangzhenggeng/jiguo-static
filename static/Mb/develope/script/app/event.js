@@ -1,7 +1,17 @@
 /**
  * Created by jiangzg on 2017/5/4.
  */
-define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplEngine', 'app/countdown', 'app/videoAdapt', 'app/lazyload','app/function','cookie'], function (downLoadErweima,$, index, login, layer, tplEngine, countdown, videoAdapt,lazyload,fc) {
+define([
+	'app/downLoadErweima','jquery', 'index',
+	'app/login', 'layer', 'app/tplEngine',
+	'app/countdown', 'app/videoAdapt', 'app/lazyload',
+	'app/function','cookie'
+], function (
+	downLoadErweima,$, index,
+	login, layer, tplEngine,
+	countdown, videoAdapt,
+	lazyload,fc
+) {
 
 
 	var publiclistNum = -1
@@ -17,7 +27,7 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 		//公布名单
 		function showPublishList() {
 			var tpl=tplEngine.init($('#public-list-tpl').html());
-			$.get('/api/event/publiclist/'+eventid+'',function (replyData) {
+			$.get('/api/event/publiclist/'+eventid+'.html',function (replyData) {
 				if(replyData.success == 'true'){
 					$('#public-list').append(tpl({data:replyData.result.meta_list}));
 					timeDown($('#public-list').find('[data-down-time]'));
@@ -31,7 +41,7 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 		//玩法
 		function showMetaList() {
 			var tpl=tplEngine.init($('#meta-list-tpl').html());
-			$.get('/api/event/eventtypelist/'+eventid+'',function (replyData) {
+			$.get('/api/event/eventtypelist/'+eventid+'.html',function (replyData) {
 				if(replyData.success == 'true'){
 					$('#meta-list').append(tpl({data:replyData.result}));
 					$('[data-goApp]').removeAttr('data-login');
@@ -78,7 +88,7 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 			var tplWrapperCache = tplEngine.init($('#apply-report-wrapper-tpl').html());
 			var tplFunCache = tplEngine.init($('#apply-report-list-tpl').html());
 			function showReport() {
-				$.get('/api/event/Getarticle', {
+				$.get('/api/event/Getarticle.html', {
 					id: eventid,
 					limit: limit,
 					size: 3
@@ -142,6 +152,13 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 			dom.each(function () {
 				var time = parseInt($(this).text())+Date.parse(new Date()) / 1000;
 				var $this = $(this);
+
+				//测试=======start
+				// if($this.data('reserve_time')){
+				// 	time = new Date().getTime()/1000 + 15
+				// }
+				//测试=======end
+
 				countdown.timeDown({
 					dom: $this,
 					intDiff: time,
@@ -150,8 +167,51 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 						var btn=parent.siblings('.meta-btn').find('a');
 						var href=btn.data('href')||'';
 						var btn_text = btn.attr('data-bun-text') || '立即申请';
-						btn.removeClass('gray').addClass('red').attr('href',href).text(btn_text);
+						btn.removeClass('gray')
+							.addClass('red')
+							.removeAttr('style')
+							.text(btn_text);
+
+						if(href){
+							btn.attr('href',href)
+						}
 						parent.remove();
+					},
+					runing:function (op) {
+						var reserve_time = $this.data('reserve_time')
+
+						//测试=======start
+						// if(reserve_time){
+						// 	reserve_time = 10
+						// }
+						//测试=======end
+
+						var time_left = $this.data('time_left')
+						if(reserve_time && time_left ){
+							if(reserve_time>op.time){
+								var parent=$this.parent();
+								var btn=parent.siblings('.meta-btn').find('a');
+								var btn_text = btn.attr('data-bun-text') || '即将开始';
+								var href = btn.data('href')||btn.attr('href')||'javascript:;'
+
+								btn.removeAttr('data-reserve')
+
+								//跳转app链接
+								if(typeof btn.attr("data-goapp")!="undefined"){
+									btn.removeClass('gray').addClass('red')
+										.removeAttr('style')
+										.attr('href',href)
+										.text(btn_text);
+								}else{
+									btn.removeClass('red')
+										.addClass('gray')
+										.removeAttr('style')
+										.attr('href','javascript:;')
+										.text(btn_text);
+								}
+								btn.data('href',href)
+							}
+						}
 					}
 				})
 			});
@@ -272,6 +332,64 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 			fc.buy();
 		});
 
+		//预约
+		$('body').on('click', '[data-reserve]', function (e) {
+			e.preventDefault();
+			if(!window.URL['login']){
+				login.login();
+				return false;
+			}
+			var mid = $(this).data('mid');
+			var self = $(this)
+			var layerid = layer.open({
+				skin: 'msg',
+				time: 999999,
+				content: '预约中',
+			});
+			$.get('/api/event/EventReserve',{
+				mid:mid
+			},function (repalyData) {
+				//预约成功
+				if(repalyData.resultCode==0){
+					self.html('<span style="color:#07B25F;font-size:14px">预约成功</span>')
+					self.css({
+						'border-color':'transparent'
+					})
+					return;
+				}
+				//未关注，预约失败
+				else if(repalyData.resultCode==-100){
+
+					downLoadErweima.loadErweima({
+						title: '<span style="    color: #999;\n' +
+						'    font-size: 12px;\n' +
+						'    line-height: 18px;\n' +
+						'    display: block;\n' +
+						'    padding-bottom: 5px;">微信扫码关注<span style="color:#333">【极果试用】</span><br>服务号完成预约</span>',
+						image: repalyData.result.url,
+					})
+				}
+				//未登录
+				else if(repalyData.resultCode==99){
+					login.login();
+				}else{
+					layer.open({
+						skin: 'msg',
+						time: 2,
+						content: repalyData.errorMsg || '预约失败',
+					});
+				}
+			},'json').fail(function () {
+				layer.open({
+					skin: 'msg',
+					time: 2,
+					content: '预约失败',
+				});
+			}).always(function () {
+				layer.close(layerid)
+			});
+		});
+
 		window.onload=function(){
 			//            锚点
 			$('#goAnchor').on('click',function (e) {
@@ -293,6 +411,7 @@ define(['app/downLoadErweima','jquery', 'index', 'app/login', 'layer', 'app/tplE
 
 		}
 	}
+
 	return  {
 		init:init
 	}

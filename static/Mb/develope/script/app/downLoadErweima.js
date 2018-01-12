@@ -2,17 +2,6 @@ define(['require', 'jquery', 'layer', 'app/tplEngine'], function (require, $, la
 	var close_64 = require.toUrl('../../style/ext_img/close_64.svg')
 	var erweimaUrl = require.toUrl('../../style/ext_img/qrcode_for_gh_f6020f09743b_430.jpg')
 
-	var _tpl = '<div class="attention-wrap">\n' +
-		'        <div class="close" data-attention><img src="' + close_64 + '"/></div>\n' +
-		'        <div class="ft16 mb10"><%= title %></div>\n' +
-		'        <div>\n' +
-		'            <div class="ft12"><%= content %></div>\n' +
-		'            <div class="attention-erweima">\n' +
-		'                <img src="' + erweimaUrl + '"/>\n' +
-		'            </div>\n' +
-		'        </div>\n' +
-		'    </div>';
-
 	function saveAs(Url) {
 		var blob = new Blob([''], {type: 'application/octet-stream'});
 		var url = URL.createObjectURL(blob);
@@ -44,6 +33,19 @@ define(['require', 'jquery', 'layer', 'app/tplEngine'], function (require, $, la
 
 	function _downLoadErweima(option) {
 		option.close = option.close || function (){}
+		erweimaUrl = option.image || erweimaUrl
+
+		var _tpl = '<div class="attention-wrap">\n' +
+			'        <div class="close" data-attention><img src="' + close_64 + '"/></div>\n' +
+			'        <div class="ft16 mb10"><%= title %></div>\n' +
+			'        <div>\n' +
+			'            <div class="ft12"><%= content %></div>\n' +
+			'            <div class="attention-erweima">\n' +
+			'                <img style="display: block;margin: auto;width: 85%;" src="' + erweimaUrl + '"/>\n' +
+			'            </div>\n' +
+			'        </div>\n' +
+			'    </div>';
+
 		var layerOptions = {
 			content: tplEngine.init(_tpl, {
 				title: option.title,

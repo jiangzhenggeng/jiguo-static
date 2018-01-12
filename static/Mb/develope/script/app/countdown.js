@@ -17,7 +17,10 @@ define(['require', 'jquery'], function (require, $) {
 
             },
             //倒计时框
-            dom: null
+            dom: null,
+            runing:function () {
+
+						}
         }, options);
 
         this.options.dom = $(this.options.dom);
@@ -58,6 +61,7 @@ define(['require', 'jquery'], function (require, $) {
                 _this.run();
             }, 1000);
         };
+
         _t.prototype.timeDown = function () {
                 day = 0,
                 hour = 0,
@@ -84,6 +88,10 @@ define(['require', 'jquery'], function (require, $) {
                 options.callback();
                 return;
             }
+					  options.runing({
+							time:options.time
+            });
+
             var _this = this;
             var displayTime = setTimeout(function () {
                 _this.timeDown();
