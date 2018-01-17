@@ -215,7 +215,7 @@ define([
                             btn_text: '立即预约',
                             left_top: left_top,
                             left_bottom: left_bottom,
-                            right_top: right_top,
+                            right_top: '',
                             right_bottom: right_bottom
                         });
                         tplBox.html(html);
@@ -230,7 +230,7 @@ define([
             }
         };
 
-        $('body').off('click').on('click', '[data-create-wxcode-share-pic]', function () {
+        $('body').off('click.a').on('click.a', '[data-create-wxcode-share-pic]', function () {
             if (!$('#Z-image-up-fengmian').find('img').val()) {
                 throttle(throttleFn, this);
             } else {

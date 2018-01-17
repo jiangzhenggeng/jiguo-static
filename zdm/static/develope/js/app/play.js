@@ -269,6 +269,8 @@ define(['jquery', 'layer', 'template', 'app/common', 'app/event'], function ($, 
     //开启预约
     function isReserve() {
         $('#is_reserve').click(function () {
+            //手动使checkbox失效
+            if ($(this).prop('readonly')) return false;
             if ($(this).is(':checked')) {
                 $('#reserve_time').show();
             } else {
@@ -314,6 +316,15 @@ define(['jquery', 'layer', 'template', 'app/common', 'app/event'], function ($, 
             layer.msg("请选择报名截止时间");
             $("[name=endtime]").trigger('focus');
             return;
+        }
+
+        if ($("#is_reserve").is(':checked')) {
+            var reserve_push_title = $("#reserve_push_title").val();
+            if (event.getLen(reserve_push_title) > 7.5 || reserve_push_title == '') {
+                layer.msg("推送标题不能为空且不能超过7.5个字符");
+                $("#reserve_push_title").trigger('focus');
+                return;
+            }
         }
 
         if ($('#type').val() == 2 && $('#discount').val() == '') {

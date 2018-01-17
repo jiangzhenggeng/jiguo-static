@@ -218,6 +218,7 @@ define([
                                 }
                                 countdown.run({
                                     intDiff: $(this).attr('data-countdown'),
+                                    overTime: $(this).attr('data-reservetime'),
                                     dom: $(this),
                                     callback: function () {
                                         //倒计时结束开放购买
@@ -236,6 +237,9 @@ define([
                                             h.attr('href', h.attr('_href')).attr('target', '_blank').html('立即试用');
                                         }
 
+                                    },
+                                    overCallBack: function () {
+                                        location.reload();
                                     }
                                 });
                             } else {
@@ -396,10 +400,13 @@ define([
         }
         //折扣预约
         , reserve: function () {
+            var flag = false;
             $('body').on('click', '[data-reserve]', function () {
                 if (!window.URL['login']) {
                     return;
                 }
+                if(flag) return;
+                flag = true;
                 var mid = $(this).closest('[data-metaid]').attr('data-metaid');
                 $.get('/api/event/EventReserve?platform=pc', {mid: mid}, function (replayData) {
                     //已关注服务号，预约成功
@@ -413,6 +420,7 @@ define([
                             shadeClose: false,
                             content: '<div id="' + K.randomId() + '">' + htmlOkTpl + '</div>',
                             success: function (layero, index) {
+                                flag = false;
                                 layero.on('click', '.layer-msg-close-wrap', function () {
                                     layer.close(index);
                                     location.reload();
@@ -422,6 +430,7 @@ define([
                     } else if (replayData.resultCode == -100) {
                         //未关注服务号，引导关注服务号
                         $.get('/api/event/GetReserveQrcode?platform=pc', {mid: mid}, function (rd) {
+                            flag = false;
                             if (rd.resultCode == 0) {
                                 var opt = {
                                     title: '',
@@ -429,6 +438,7 @@ define([
                                     desc: '<font class="gray">微信扫码关注 <font class="c00">【极果试用】</font><br>服务号完成预约</font>',
                                     callback: function () {
                                         layer.closeAll();
+                                        location.reload();
                                     }
                                 };
                                 common.layerWx(opt);

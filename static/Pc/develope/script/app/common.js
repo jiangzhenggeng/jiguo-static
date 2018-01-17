@@ -287,7 +287,7 @@ define([
                 type: 1,
                 title: false,
                 closeBtn: 0,
-                area: ['300px'],
+                area: ['330px'],
                 shadeClose: false,
                 content: '<div id="' + K.randomId() + '">' + htmlTpl + '</div>',
                 success: function (layero, index) {
