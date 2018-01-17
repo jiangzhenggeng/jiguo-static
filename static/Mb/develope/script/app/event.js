@@ -159,6 +159,12 @@ define([
 				// }
 				//测试=======end
 
+				var parent=$this.parent();
+				var btn=parent.siblings('.meta-btn').find('a');
+				btn.data('href',btn.data('href')||btn.attr('href'));
+
+				btn.attr('href','javascript:;')
+
 				countdown.timeDown({
 					dom: $this,
 					intDiff: time,
