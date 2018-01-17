@@ -174,10 +174,13 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                         }
                         //预约按钮赋值
                         if (name.indexOf('is_reserve') >= 0) {
-                            playBody.find("#is_reserve").prop("checked", (value>0));
+                            playBody.find("#is_reserve").prop("checked", (value > 0));
                             continue;
                         }
-
+                        //空值不赋值(显示默认值)
+                        if (!value) {
+                            continue;
+                        }
                         playBody.find("[name='" + name + "']:not('[type=checkbox]'):not('[type=radio]')").val(value);
                         playBody.find("[name='" + name + "'][type=checkbox]").prop("checked", true);
                         //折扣玩法是否可用券赋值
@@ -200,13 +203,18 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                         if (playBody.find('#platform [type=checkbox]:checked').length >= 4) {
                             playBody.find('[name=all_platform]').prop("checked", true);
                         }
-
                         // 有订单时限制修改型号信息
                         if (!isDisabled()) {
                             if ($("[name=no_spec]:checked").val() != 1) {
                                 playBody.find('.Z-model-box input').attr('readonly', 'readonly').addClass('Z-gray');
                                 playBody.find('#batch').addClass('Z-gray-btn');
                             }
+                        }
+                        // 活动上线后不能修改预约信息
+                        if (isStart()) {
+                            playBody.find('#is_reserve').attr('readonly', 'readonly');
+                            playBody.find('[name=reserve_time]').closest('[data-z-select]').removeAttr('data-z-select').addClass('Z-gray');
+                            playBody.find('#reserve_push_title').attr('readonly', 'readonly').addClass('Z-gray');
                         }
                     }
                     //折扣玩法
@@ -283,6 +291,14 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
             return false;
         }
         return true;
+    }
+
+//       判断活动是否上线
+    function isStart() {
+        if ($('#formDataAjaxSend').attr('data-isstart') === '1') {
+            return true;
+        }
+        return false;
     }
 
 //        判断是否有型号信息

@@ -21,9 +21,10 @@ require.config({
         'laydate':'lib/laydate/laydate',
         'template':'lib/template-native',
         'layer':'lib/layer/layer',
-        'gif':'lib/gif',
         'cropper':'lib/cropper/cropper',
-        'echarts':'lib/echarts.common.min'
+        'echarts':'lib/echarts.common.min',
+        'gifshot':'lib/gifshot.min',
+
     },
     shim:{
         // 'jquery':{
@@ -49,6 +50,6 @@ require.config({
                 //导出到全局变量，供ueditor使用
                 window.ZeroClipboard = ZeroClipboard;
             }
-        }
+        },
     }
 });
