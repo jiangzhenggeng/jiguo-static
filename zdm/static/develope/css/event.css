@@ -676,6 +676,7 @@ Z-uploadify-banner
   position: fixed;
   left: -99999px;
   top: 0;
+  font-family: "Microsoft YaHei", "微软雅黑";
 }
 .wxcode-share-inner {
   width: 750px;
