@@ -67,10 +67,10 @@ define(['require', 'jquery'], function (require, $) {
                 }
                 return;
             }
-            var _this = this;
-            setTimeout(function () {
-                _this.run();
-            }, 1000);
+            // var _this = this;
+            // setTimeout(function () {
+            //     _this.run();
+            // }, 1000);
         }
     }
 
@@ -78,6 +78,9 @@ define(['require', 'jquery'], function (require, $) {
         run: function (options) {
             var o = new _t(options);
             o.run();
+            setInterval(function () {
+                o.run();
+            },1000);
         }
     }
 });
