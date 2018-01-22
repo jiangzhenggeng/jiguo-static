@@ -2,6 +2,7 @@
 define([
 	'jquery',
 	'http://cdn.jiguo.com/static/search-animate/fireworks/jquery.fireworks.js',
+	'css!http://cdn.jiguo.com/static/search-animate/fireworks/fireworks.css',
 	'css!http://cdn.jiguo.com/static/search-animate/snow/style.css',
 	'http://cdn.jiguo.com/static/search-animate/snow/index.js'
 ], function ($) {
@@ -10,9 +11,6 @@ define([
 	var body = $('body')
 
 	submitBtn.click(function (e) {
-		if (keywordInput.length) {
-
-		}
 		var keywordInputVal = ''
 		keywordInput.each(function () {
 			if (!keywordInputVal) {
@@ -83,18 +81,18 @@ define([
 			}, 5200)
 		}
 
-		if (cmd.indexOf('全屏') > -1) {
+		if (cmd.indexOf('关闭全屏') > -1) {
 			var element = document.documentElement
-			if (element.requestFullscreen) {
-				element.requestFullscreen();
-			} else if (element.mozRequestFullScreen) {
-				element.mozRequestFullScreen();
-			} else if (element.msRequestFullscreen) {
-				element.msRequestFullscreen();
-			} else if (element.webkitRequestFullscreen) {
-				element.webkitRequestFullScreen();
+			if (element.exitFullscreen) {
+				element.exitFullscreen();
+			} else if (element.msExitFullscreen) {
+				element.msExitFullscreen();
+			} else if (element.mozCancelFullScreen) {
+				element.mozCancelFullScreen();
+			} else if (element.webkitCancelFullScreen) {
+				element.webkitCancelFullScreen();
 			}
-		} else if (cmd.indexOf('关闭全屏') > -1) {
+		} else if (cmd.indexOf('全屏') > -1) {
 			var element = document.documentElement
 			if (element.requestFullscreen) {
 				element.requestFullscreen();
@@ -107,5 +105,18 @@ define([
 			}
 		}
 
+		if (cmd.indexOf('烟花') > -1) {
+			var fireworks = $('#fireworks-htmleaf-container')
+			if(!fireworks.length){
+				body.append('<div id="fireworks-htmleaf-container"></div>')
+				fireworks = $('#fireworks-htmleaf-container')
+			}
+			fireworks.fireworks({
+				sound: false,
+				opacity: 0.9,
+				width: '100%',
+				height: '100%'
+			});
+		}
 	}
 })
