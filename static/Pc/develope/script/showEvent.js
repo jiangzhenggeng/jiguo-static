@@ -207,6 +207,7 @@ define([
                             if ($(this).attr('data-unq')) {
                                 //开抢倒计时
                                 if ($(this).attr('data-countdown') > 0) {
+                                    var tBox = $(this).closest('.card-time');
                                     var h = $('#' + $(this).attr('data-unq'));
                                     var is_reserve = (h.attr('data-reserve') !== undefined);//可以预约
                                     var reserved = h.hasClass('c-green');//已预约
@@ -236,7 +237,7 @@ define([
                                             }
                                             h.attr('href', h.attr('_href')).attr('target', '_blank').html('立即试用');
                                         }
-
+                                        tBox.remove();
                                     },
                                     overCallBack: function () {
                                         location.reload();

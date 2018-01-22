@@ -65,6 +65,7 @@ define(['require', 'jquery'], function (require, $) {
                 } else {
                     options.callback.call(options.dom);
                 }
+                this.timer && clearInterval(this.timer);
                 return;
             }
             // var _this = this;
@@ -77,10 +78,9 @@ define(['require', 'jquery'], function (require, $) {
     return {
         run: function (options) {
             var o = new _t(options);
-            o.run();
-            setInterval(function () {
+            o.timer = setInterval(function () {
                 o.run();
-            },1000);
+            }, 1000);
         }
     }
 });
