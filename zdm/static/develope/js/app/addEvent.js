@@ -130,8 +130,10 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                 title = "免费试用玩法设置";
             } else {
                 title = "折扣试用玩法设置";
+                //是否可修改玩法开始时间
+                var isEditReserve = $(this).closest('.Z-card-list-box').find('input[name*="is_edit_reserve"]').val();
+                url += ('&isEditReserve='+isEditReserve);
             }
-
             layer.open({
                 title: title,
                 type: 2,
@@ -215,6 +217,14 @@ define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, 
                             playBody.find('#is_reserve').attr('readonly', 'readonly');
                             playBody.find('[name=reserve_time]').closest('[data-z-select]').removeAttr('data-z-select').addClass('Z-gray');
                             playBody.find('#reserve_push_title').attr('readonly', 'readonly').addClass('Z-gray');
+                        }
+                        //已有预约人数的不能修改玩法时间
+                        if(isEditReserve==0){
+                            playBody.find('#start').attr('readonly', 'readonly').addClass('Z-gray');
+                            playBody.find('#applyday').attr('readonly', 'readonly').addClass('Z-gray');
+                            playBody.find('#deadline').attr('readonly', 'readonly').addClass('Z-gray');
+                            playBody.find('#eventday').attr('readonly', 'readonly').addClass('Z-gray');
+                            playBody.find('#end').attr('readonly', 'readonly').addClass('Z-gray');
                         }
                     }
                     //折扣玩法

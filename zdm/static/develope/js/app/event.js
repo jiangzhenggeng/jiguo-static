@@ -568,6 +568,32 @@ define(['jquery', 'layer', 'app/common', 'template', 'laydate', 'app/addEvent'],
         return flag;
     }
 
+    //检测可预约折扣玩法距开始是否超过七天
+    function testReserveTime(formSelecter) {
+        var data = {};
+        data.flag = true;
+        var onlineTime = $(formSelecter).find('#online_time').val();
+        if (onlineTime != '') {
+            $('.Z-card-list-box').each(function () {
+                var is_reserve = $(this).find('input[name*="is_reserve"]').val();
+                var startTime = $(this).find('input[name*="starttime"]').val();
+                if (is_reserve == 1) {
+                    var o = new Date(onlineTime),
+                        s = new Date(startTime),
+                        sevenTime = 7 * 24 * 60 * 60 * 1000,
+                        delTime = s - o,
+                        playName = $(this).find('input[name*="buying_name"]').val();
+                    if (delTime > sevenTime) {
+                        data.flag = false;
+                        data.playName = playName;
+                        return false;
+                    }
+                }
+            });
+        }
+        return data;
+    }
+
     /**
      * 表单验证
      */
@@ -632,11 +658,16 @@ define(['jquery', 'layer', 'app/common', 'template', 'laydate', 'app/addEvent'],
             layer.msg('请生成小程序分享图');
             return false;
         }
-        if (!testReserve() && formSelecter.find('[name=wxcode_share_pic_before]').length <= 0){
+        if (!testReserve() && formSelecter.find('[name=wxcode_share_pic_before]').length <= 0) {
             layer.msg('请生成小程序预约图');
             return false;
         }
-            return true;
+        if (!testReserveTime(formSelecter).flag) {
+            var playName = testReserveTime(formSelecter).playName;
+            layer.msg(playName + ' 玩法预约时间超过7天');
+            return false;
+        }
+        return true;
     }
 
     return {
