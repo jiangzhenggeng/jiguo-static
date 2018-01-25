@@ -22,7 +22,7 @@ define(['jquery','app/common','app/countdown'],function ($,common,countdown){
         //点击获取验证码
         $('.getcode').click(function () {
             var tel = $('[data-tel]').val();
-            if(!/^1[34578][0-9]{9}$/.test(tel)){
+            if(!/^1[2-9][0-9]{9}$/.test(tel)){
                 layer.tips('请正确填写手机号码',$('[data-tel]'));
                 $('[data-tel]').focus();
                 return;
@@ -77,7 +77,7 @@ define(['jquery','app/common','app/countdown'],function ($,common,countdown){
             var img_code = K.trim($('[data-img-code]').val());
             var phone_code = K.trim($('[data-phone-code]').val());
 
-            if(!/^1[34578][0-9]{9}$/.test(tel)){
+            if(!/^1[2-9][0-9]{9}$/.test(tel)){
                 layer.tips('请正确填写手机号码',$('[data-tel]'));
                 return;
             }
