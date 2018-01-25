@@ -125,12 +125,22 @@ define([
                 freeObj.find('input[type=hidden]').length > 5 &&
                 payObj.find('input[type=hidden]').length <= 0
             ) {
-
+                var oldPrice = freeObj.find('input[name*="buying_price"]').val(),
+                    allNum = freeObj.find('[data-all-number]').attr('data-all-number');
                 btn_text = '立即申请';
                 left_top = freeObj.find('input[name*="buying_name"]').val();
-                right_top = '限' + freeObj.find('[data-all-number]').attr('data-all-number') + freeObj.find('input[name*="quantifier"]').val();
+                if (allNum) {
+                    right_top = '限' + freeObj.find('[data-all-number]').attr('data-all-number') + freeObj.find('input[name*="quantifier"]').val();
+                } else {
+                    right_top = '数量待定';
+                }
                 left_bottom = '免费';
-                right_bottom = '原价 ￥' + freeObj.find('input[name*="buying_price"]').val();
+                if (oldPrice && oldPrice != 0) {
+                    right_bottom = '原价 ￥' + oldPrice;
+                }else{
+                    right_bottom = '<font style="font-size: 0;">&nbsp;</font>'
+                }
+
                 //专享
                 if (
                     freeObj.find('input[name*="all_user"]').val() == 1 ||
