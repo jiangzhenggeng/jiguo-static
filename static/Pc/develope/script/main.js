@@ -42,7 +42,7 @@ define("main",[
     'app/login',
     'vip',
     'showArticle',
-    'showEvent'
+    'showEvent',
 ],function (){
 
 });
