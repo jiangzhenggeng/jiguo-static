@@ -914,5 +914,48 @@ data-list
 	top:0;
 }
 
+/*帮助tips样式*/
+.help-tips {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	position: relative;
+}
+.help-tips:hover .tips-content {
+	display: block;
+}
+.help-tips .icon-tips {
+	width: 18px;
+	height: 18px;
+	background: url("../images/i-help.png") no-repeat center center;
+	background-size: 18px auto;
+	cursor: pointer;
+}
+.help-tips .tips-content {
+	width: 144px;
+	line-height: 19px;
+	padding: 0 10px;
+	background: #ededed;
+	position: absolute;
+	top: -10px;
+	left: 30px;
+	color: #999;
+	text-align: left;
+	border-radius: 5px;
+	font-size: 12px;
+	display: none;
+	z-index: 2;
+	font-weight: normal;
+}
+.help-tips .tips-content:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border: 8px solid transparent;
+	border-right-color: #ededed;
+	top: 10px;
+	left: -16px;
+}
+
 
 
