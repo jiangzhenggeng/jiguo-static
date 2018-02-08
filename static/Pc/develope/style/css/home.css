@@ -1139,8 +1139,13 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: 5px;
   vertical-align: middle;
+}
+.top-wrap .top-list .vip-list li .title .rank {
+  font-size: 12px;
+  font-weight: normal;
+  color: #CC8129;
 }
 .top-wrap .top-list .vip-list li .desc {
   margin-left: 60px;
