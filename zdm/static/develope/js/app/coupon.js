@@ -1,5 +1,10 @@
 define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2canvas'], function ($, common, template, tplEngine, layer) {
 
+    //    随机id
+    function randomID() {
+        return 'random_id_' + Math.random().toString().replace('.', '');
+    }
+
     function dataURItoBlob(dataURI) {
         var byteString = atob(dataURI.split(',')[1]);
         var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
@@ -120,24 +125,33 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
 
     //表单检测
     function testForm() {
+        var priceType = $('#price-type').find('input:checked').val();
         if ($('#name').val().length <= 0) {
             layer.msg('请输入名称');
             return false;
         }
-        if ($('#price').val().length <= 0 || isNaN($('#price').val())) {
-            layer.msg('请输入金额');
-            return false;
-        }
-        var num = $('#num').val();
-        if (num.length <= 0) {
-            layer.msg('请输入券数量');
-            return false;
-        } else {
-            if (num % 1 > 0 || num <= 0 || isNaN(num)) {
-                layer.msg('券数量请填写大于 0 的整数');
+        if (priceType==0){
+            if ($('#price').val().length <= 0 || isNaN($('#price').val())) {
+                layer.msg('请输入金额');
+                return false;
+            }
+            var num = $('#num').val();
+            if (num.length <= 0) {
+                layer.msg('请输入券数量');
+                return false;
+            } else {
+                if (num % 1 > 0 || num <= 0 || isNaN(num)) {
+                    layer.msg('券数量请填写大于 0 的整数');
+                    return false;
+                }
+            }
+        }else{
+            if($('#all-random-price').val()<=0){
+                layer.msg('请添加至少一个随机金额');
                 return false;
             }
         }
+
         if ($('#start_time').val().length <= 0) {
             layer.msg('请输入有效期开始时间');
             return false;
@@ -181,11 +195,22 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
             price = $('#price').val(),
             sumMoney = price * num,
             allMoney = $('[data-allmoney]').data('allmoney'),
-            limiteventmoney = $('[data-limiteventmoney]').data('limiteventmoney');
-        if ((event != '' && sumMoney > limiteventmoney) || (event == '' && sumMoney > allMoney)) {
-            $('html,body').animate({scrollTop: 0},160);
-            layer.msg('超出可用余额');
-            return false;
+            limiteventmoney = $('[data-limiteventmoney]').data('limiteventmoney'),
+            allRandomPrice = $('#all-random-price').val(),
+            priceType = $('#price-type').find('input:checked').val();
+
+        if(priceType ==0){
+            if ((event != '' && sumMoney > limiteventmoney) || (event == '' && sumMoney > allMoney)) {
+                $('html,body').animate({scrollTop: 0}, 160);
+                layer.msg('超出可用余额');
+                return false;
+            }
+        }else{
+            if ((event != '' && allRandomPrice > limiteventmoney) || (event == '' && allRandomPrice > allMoney)) {
+                $('html,body').animate({scrollTop: 0}, 160);
+                layer.msg('超出可用余额');
+                return false;
+            }
         }
         return true;
     }
@@ -193,14 +218,62 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
     //格式化时间
     function formatTime(time) {
         //兼容safari时间格式
-        if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome")==-1) {
-            time=time.replace(/-/g, "/");
+        if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") == -1) {
+            time = time.replace(/-/g, "/");
         }
         var mytime = new Date(time),
             y = mytime.getFullYear(),
             m = mytime.getMonth() + 1,
             d = mytime.getDate();
         return (y + '.' + m + '.' + d);
+    }
+
+    //添加随机金额
+    function addPriceList() {
+        var price = $('#ran-price').val(),
+            num = $('#ran-num').val(),
+            count_price = (price * num).toFixed(2),
+            data = {
+                price: price,
+                num: num,
+                count_price: count_price,
+                randomID: randomID()
+            };
+        if (isNaN(price) || price == '' || isNaN(num) || num == '' || num % 1 > 0) {
+            layer.msg('请填写正确的金额和数量');
+            return;
+        }
+        var html = template('price-list-tpl', data);
+        $('#ran-num').val('');
+        $('#ran-price').val('').focus();
+        $('#random-price-list').find('li.on').removeClass('on');
+        $('#random-price-list').append(html);
+        allRandomPrice();
+        randomPriceListSort();
+    }
+
+    //随机金额排序
+    function randomPriceListSort() {
+        var rPriceList = $('#random-price-list li');
+        rPriceList.sort(function (a, b) {
+            var aPrice = $(a).find('[name*=price]').val(),
+                bPrice = $(b).find('[name*=price]').val();
+            return aPrice - bPrice;
+        });
+        $('#random-price-list').html(rPriceList);
+    }
+
+    //合计金额
+    function allRandomPrice() {
+        var allPrice = 0,
+            rPriceList = $('#random-price-list li');
+        rPriceList.each(function () {
+            var count_price = $(this).find('input[name*=count_price]').val();
+            allPrice += parseFloat(count_price);
+        });
+        allPrice = allPrice.toFixed(2);
+        $('#all-price').html(allPrice);
+        $('#all-random-price').val(allPrice);
     }
 
     return {
@@ -250,6 +323,11 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
                     startTime: startTime,
                     endTime: endTime
                 };
+            //随机金额时预览金额显示为xx
+            var priceType = $('#price-type').find('input:checked').val();
+            if (priceType == 1) {
+                data.price = 'xx';
+            }
             var html = template('preview-card-tpl', data);
             $('.coupon-card-wrapper').html(html);
         },
@@ -276,6 +354,40 @@ define(['jquery', 'app/common', 'template', 'app/tplEngine', 'layer', 'lib/html2
         createShareImg: function () {
             $('body').on('click', '[data-create-wxcode-share-pic]', function () {
                 _init();
+            });
+        },
+        //选择金额类型
+        choosePriceType: function () {
+            $('body').on('click', '#price-type .radiobox', function () {
+                var val = $(this).find('input').val();
+                if (val == 0) {
+                    $('.random-price').hide();
+                    $('.fixed-price').show();
+                } else {
+                    $('.random-price').show();
+                    $('.fixed-price').hide();
+                }
+            });
+        },
+        //填写随机金额
+        addRandomPrice: function () {
+            $('body').on('click', '#add-random-price', function () {
+                addPriceList();
+            });
+            $('#ran-num').keypress(function (e) {
+                if (e.keyCode == 13) {
+                    addPriceList();
+                }
+            });
+            $('#random-price-list').on('mouseenter', function () {
+                $(this).find('li.on').removeClass('on');
+            });
+        },
+        //删除随机金额
+        delRandomPrice: function () {
+            $('body').on('click', '.del', function () {
+                $(this).closest('li').remove();
+                allRandomPrice();
             });
         }
     }
