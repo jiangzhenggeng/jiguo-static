@@ -117,6 +117,7 @@
   width: 280px;
   height: 224px;
   position: relative;
+  font-family: "华文黑体", "华文细黑";
 }
 .share-bg {
   height: 224px;
@@ -206,4 +207,39 @@
   border-bottom-color: transparent;
   bottom: -20px;
   top: auto;
+}
+.price-list-wrap {
+  width: 390px;
+  display: inline-block;
+}
+.price-list-wrap .price-list {
+  border: 1px solid #ededed;
+  height: 200px;
+  overflow-y: auto;
+}
+.price-list-wrap .price-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.price-list-wrap .price-list li.on {
+  background-color: #FDE693;
+}
+.price-list-wrap .price-list li span {
+  flex: 2;
+  text-align: right;
+}
+.price-list-wrap .price-list li span:first-of-type {
+  flex: 1;
+  text-align: left;
+}
+.price-list-wrap .price-list li span:nth-of-type(2) {
+  flex: 1;
+}
+.price-list-wrap .price-list li:hover {
+  background-color: #FDE693;
+}
+.price-list-wrap .price-list li.no-hover:hover {
+  background-color: transparent;
 }
