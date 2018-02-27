@@ -662,7 +662,8 @@ define(['jquery', 'layer', 'app/common', 'template', 'laydate', 'app/addEvent'],
             layer.msg('请生成小程序预约图');
             return false;
         }
-        if (!testReserveTime(formSelecter).flag) {
+        var isreservecheck = formSelecter.data('isreservecheck');
+        if (isreservecheck==1 && !testReserveTime(formSelecter).flag) {
             var playName = testReserveTime(formSelecter).playName;
             layer.msg(playName + ' 玩法预约时间超过7天');
             return false;
