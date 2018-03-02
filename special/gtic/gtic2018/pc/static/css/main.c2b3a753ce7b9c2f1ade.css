@@ -107,8 +107,14 @@ header menu li {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
+header menu li a {
+  color: #fff;
+}
 header menu li.on {
   border-bottom-color: #40E4A3;
+}
+header.main {
+  min-width: 1180px;
 }
 .register {
   width: 107px;
