@@ -462,33 +462,48 @@
 .add-address-box-wrap{
   display: block;
   position: relative;
-  padding: 10 * 1px 0;
-  line-height: 22px;
-  &:after{
-    position: absolute;
-    display: block;
-    content: '';
-    right: 0;
-    top:50%;
-    transform: translateY(-50%) rotateZ(-90deg);
-    bottom: 0px;
-    width: 10px;
-    height: 10px;
 
-    background-size: 10px auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url(../images/coupons/icon-coupons-item-more.png);
+  .add-address-title{
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
   }
+  .add-address-desc{
+    color: #666;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-right: 45px;
+  }
+  .add-address-box-icon{
+    position: relative;
+    &:after{
+      position: absolute;
+      display: block;
+      content: '';
+      right: 0;
+      top:50%;
+      transform: translateY(-50%) rotateZ(-90deg);
+      bottom: 0px;
+      width: 10px;
+      height: 10px;
+
+      background-size: 10px auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../images/coupons/icon-coupons-item-more.png);
+    }
+  }
+
+
   .show-address-box{
     position: relative;
-    padding-right: 45px;
     .add-address-change-btn{
       position: absolute;
       right: 15 * 1px;
       top: 50%;
       transform: translateY(-50%);
-      height: 20px;
+      height: 15px;
       .image{
         display: block;
         height: 100%;

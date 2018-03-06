@@ -408,10 +408,23 @@
 .add-address-box-wrap {
   display: block;
   position: relative;
-  padding: 10px 0;
-  line-height: 22px;
 }
-.add-address-box-wrap:after {
+.add-address-box-wrap .add-address-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+.add-address-box-wrap .add-address-desc {
+  color: #666;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-right: 45px;
+}
+.add-address-box-wrap .add-address-box-icon {
+  position: relative;
+}
+.add-address-box-wrap .add-address-box-icon:after {
   position: absolute;
   display: block;
   content: '';
@@ -428,14 +441,13 @@
 }
 .add-address-box-wrap .show-address-box {
   position: relative;
-  padding-right: 45px;
 }
 .add-address-box-wrap .show-address-box .add-address-change-btn {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
-  height: 20px;
+  height: 15px;
 }
 .add-address-box-wrap .show-address-box .add-address-change-btn .image {
   display: block;
