@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: content-box !important;
 }
 table {
   border-collapse: collapse;
@@ -933,5 +934,5 @@ a.tdl:hover {
   font-size: 30px !important;
 }
 .bz {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
