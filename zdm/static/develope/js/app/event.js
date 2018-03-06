@@ -638,10 +638,10 @@ define(['jquery', 'layer', 'app/common', 'template', 'laydate', 'app/addEvent'],
             layer.msg('请关联产品');
             return false;
         }
-        if (formSelecter.find('#brief').html() == '') {
-            layer.msg('请填写产品介绍');
-            return false;
-        }
+        // if (formSelecter.find('#brief').html() == '') {
+        //     layer.msg('请填写产品介绍');
+        //     return false;
+        // }
         if (formSelecter.find('#E-keywords').val() == '') {
             layer.msg('请填写关键词');
             return false;

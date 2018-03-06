@@ -21,7 +21,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                             btn: false,
                             success: function (layero, index) {
                                 layero.find('#button').click(function () {
-                                    $('#edui119_body').trigger('click');
+                                    $('#edui26_body').trigger('click');
                                     layer.close(lid);
                                 });
                             }

@@ -1,6 +1,6 @@
 ({
     baseUrl: '../develope/js',
-    out:'../version_1.5/js/main.js',
+    out:'../version_1.6/js/main.js',
     name:'main',
     optimizeCss:'standard',
     fileExclusionRegExp:'\.(less|html|php|psd|PSD|DS_Store)$',
@@ -10,9 +10,6 @@
         'layer': 'lib/layer/layer',
         'laydate': 'lib/laydate/laydate',
         'template':'lib/template-native',
-        'ueconfig':'http://zdm.jiguo.com/protected/extensions/editor/ueditor.config',
-        'ueditor':'http://zdm.jiguo.com/protected/extensions/editor/ueditor',
-        'zeroclipboard':'http://zdm.jiguo.com/protected/extensions/editor/third-party/zeroclipboard/ZeroClipboard.min',
     },
     shim: {
         'laydate': {
@@ -20,12 +17,6 @@
         },
         'layer': {
             deps: ['jquery']
-        },
-        'ueditor': {
-            deps: [
-                'http://www.jiguo.com/protected/extensions/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js',
-                'http://www.jiguo.com/protected/extensions/ueditor/ueditor.config.js'
-            ]
         }
     }
 })

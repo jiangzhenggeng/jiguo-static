@@ -188,7 +188,7 @@
   height: 100%;
   padding: 10px;
   background: transparent;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 .meta-type {
   margin-bottom: 10px;
