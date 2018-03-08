@@ -9,7 +9,7 @@ define(['jquery','layer','app/tplEngine'],function ($,layer,tplEngine) {
                 type: 1,
                 anim: 'up',
                 shade: 'background-color: rgba(0,0,0,.3)',
-                style: 'position:fixed; bottom:0;left:0; width: 100%;',
+                style: 'position:fixed; bottom:0;left:0; width: 100%!important;',
                 content: cacheFn({}),
                 success: function (l, i) {
                     $('body').on('click', '.share-query', function () {
@@ -24,7 +24,7 @@ define(['jquery','layer','app/tplEngine'],function ($,layer,tplEngine) {
                 type: 1,
                 anim: 'up',
                 shade: 'background-color: rgba(0,0,0,.3)',
-                style: 'position:fixed; bottom:0;left:0; width: 100%;',
+                style: 'position:fixed; bottom:0;left:0; width: 100%!important;',
                 content: cacheFn({}),
                 success: function (l, i) {
                     $('body').on('click', '.share-query', function () {

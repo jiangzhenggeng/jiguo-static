@@ -54,7 +54,7 @@ define(['jquery', 'layer'], function ($, layer) {
 						type: 1,
 						anim: 'up',
 						shade: 'background-color: rgba(0,0,0,.3)',
-						style: 'position:fixed; bottom:0;left:0; width: 100%;',
+						style: 'position:fixed; bottom:0;left:0; width: 100%; width: 100%!important;',
 						content: shareTpl.html(),
 						success: function (l, i) {
 							setTimeout(function () {

@@ -459,6 +459,82 @@
   line-height: 22px;
 }
 
+.add-address-box-wrap{
+  display: block;
+  position: relative;
+
+  .add-address-title{
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .add-address-desc{
+    color: #666;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-right: 45px;
+  }
+  .add-address-box-icon{
+    position: relative;
+    &:after{
+      position: absolute;
+      display: block;
+      content: '';
+      right: 0;
+      top:50%;
+      transform: translateY(-50%) rotateZ(-90deg);
+      bottom: 0px;
+      width: 10px;
+      height: 10px;
+
+      background-size: 10px auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../images/coupons/icon-coupons-item-more.png);
+    }
+  }
+
+
+  .show-address-box{
+    position: relative;
+    .add-address-change-btn{
+      position: absolute;
+      right: 15 * 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 15px;
+      .image{
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+
+  .add-address-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .add-address-image {
+      width: 19 * 1px;
+      height: 19 * 1px;
+      .image {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .add-address-text {
+      margin-left: 10 * 1px;
+    }
+  }
+}
+.order-add-address-btn-wrap-tpl{
+  *{
+    box-sizing: border-box;
+  }
+}
 //优惠券
 .coupon__select {
   display: -webkit-box;
@@ -508,6 +584,16 @@
   .layui-m-layercont > .coupon-select-wrap {
     height: 100% !important;
   }
+}
+.address-wrap-btn{
+  margin: 12px;
+  background: #fe5341;
+  color: #fff;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .coupon-select-wrap {

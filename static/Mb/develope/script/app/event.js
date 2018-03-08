@@ -150,6 +150,9 @@ define([
 		//倒计时
 		function timeDown(dom) {
 			dom.each(function () {
+				if( parseInt($(this).text())<=0 ){
+					return
+				}
 				var time = parseInt($(this).text())+Date.parse(new Date()) / 1000;
 				var $this = $(this);
 
@@ -158,6 +161,12 @@ define([
 				// 	time = new Date().getTime()/1000 + 15
 				// }
 				//测试=======end
+
+				var parent=$this.parent();
+				var btn=parent.siblings('.meta-btn').find('a');
+				btn.data('href',btn.data('href')||btn.attr('href'));
+
+				btn.attr('href',btn.attr('href')||'javascript:;')
 
 				countdown.timeDown({
 					dom: $this,
