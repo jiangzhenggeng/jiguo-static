@@ -28,7 +28,7 @@ define(['jquery','layer','self/common','template','self/creatUE'],function ($,la
         }
         if(l > 19){
             layer.msg('字数限制为19字,现输入'+l+'字');
-            title.focus();
+            layero.find('.grab-layerTitle input').focus();
             return false;
         }
         return true;
@@ -77,6 +77,13 @@ define(['jquery','layer','self/common','template','self/creatUE'],function ($,la
                 })
                 UE.init('Z-grab-textContentID-'+i+'');
                 common.testTitle(layero.find('.grab-layerTitle input')[0],19);
+                layero.find('#morning').click(function () {
+                   if($(this).is(':checked')){
+                       layero.find('.Z-grab-classify').show();
+                   }else{
+                       layero.find('.Z-grab-classify').hide();
+                   }
+                });
                 if(layero.find('.Z-grab-contentEdit input[name=id]').val()) {
                     var classId = layero.find('.Z-grab-classify').data('classid');
                     // console.log(classId);
@@ -92,7 +99,7 @@ define(['jquery','layer','self/common','template','self/creatUE'],function ($,la
                     // var URL = layero.find('.Z-grab-linkage').val();
                     // var content = layero.find('.Z-grab-textContent').val();
                     var data=layero.find('.Z-grab-contentEdit').serialize();
-                    common.ajax('post','http://wx.zhidx.com/zhidx/content/add',data,'json',function () {
+                    common.ajax('post','http://wx.zhidx.com/zhidx/content/AddNews',data,'json',function () {
                         layer.msg('操作成功',function () {
                            layer.closeAll();
                            window.location.reload();
@@ -105,7 +112,8 @@ define(['jquery','layer','self/common','template','self/creatUE'],function ($,la
 
     return {
         newsListClick: newsListClick,
-        GetIsRead : GetIsRead
+        GetIsRead : GetIsRead,
+        test:test
     };
 
 })
