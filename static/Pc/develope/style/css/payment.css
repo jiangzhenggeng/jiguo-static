@@ -124,9 +124,16 @@ body {
   margin-right: 15px;
   display: inline-block;
   position: relative;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  height: 40px;
+  border-radius: 8px;
 }
 .payment-form-addr select {
   width: 100%;
+  background: transparent;
+  border: none;
+  z-index: 2;
 }
 .payment-form-cell-name {
   font-size: 14px;
