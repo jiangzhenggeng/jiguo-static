@@ -53,7 +53,7 @@ define(['jquery','layer','self/common','template','self/creatUE'],function ($,la
                   var articleTitle=$(this).find('span.articleTitle').text();
                   var mediaSource=$(this).find('span.mediaSource').text();
                   var URL=$(this).find('span.URL').text();
-                  var content=$(this).find('span.content').html();
+                  var content=$(this).find('span.content').data('content');
             if(listId) {
                     var templateData = {
                         tpl: i,
