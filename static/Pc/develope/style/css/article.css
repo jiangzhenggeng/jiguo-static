@@ -1665,6 +1665,7 @@ iframe[src*="zdm.jiguo.com"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: none !important;
 }
 .__editor__container__ hr {
   background-color: #E6E6E6;
