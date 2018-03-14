@@ -9,6 +9,15 @@ define(['jquery', 'app/unitTool'], function ($, tool) {
 			if (replyData.status == 0) {
 				if(replyData.url){
 					window.location = replyData.url;
+				} else if(replyData.status == -7) {
+					var addressId = layer.open({
+						content: '还没有收件人信息，现在去填写？',
+						btn: ['<span style="color: #fe5341;font-weight: bold">去填写</span>', '暂不填写'],
+						yes: function () {
+							layer.closeAll(addressId)
+							$('#order-add-address-btn-wrap').trigger('click')
+						}
+					});
 				}else{
 					__pay(payData,orderid);
 				}
@@ -49,6 +58,15 @@ define(['jquery', 'app/unitTool'], function ($, tool) {
 			if (replyData.status == 0) {
 				tool.msg('正在支付...', 9999);
 				window.location = replyData.url;
+			} else if(replyData.status == -7) {
+				var addressId = layer.open({
+					content: '还没有收件人信息，现在去填写？',
+					btn: ['<span style="color: #fe5341;font-weight: bold">去填写</span>', '暂不填写'],
+					yes: function () {
+						layer.closeAll(addressId)
+						$('#order-add-address-btn-wrap').trigger('click')
+					}
+				});
 			} else {
 				tool.msg(replyData.message);
 			}
