@@ -81,7 +81,7 @@ define(['jquery','layer','app/tplEngine','app/provinceArea'], function ($,layer,
                 title: option.title,
                 closeBtn: 1,
                 shadeClose: true,
-                area:['500px','420px'],
+                area:['500px','380px'],
                 content: html,
                 success:function (layero, index) {
                     var addrFormData = $('#addrFormData');
@@ -100,10 +100,6 @@ define(['jquery','layer','app/tplEngine','app/provinceArea'], function ($,layer,
                         }
                         if( $(layero).find('#address').val()=='' ){
                             layer.msg('请填写详细地址');
-                            return ;
-                        }
-                        if( $(layero).find('#posts').val()=='' ){
-                            layer.msg('请填写邮编');
                             return ;
                         }
                         var sendFormData = addrFormData.serialize();
