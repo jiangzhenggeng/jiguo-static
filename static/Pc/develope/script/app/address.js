@@ -90,8 +90,8 @@ define(['jquery','layer','app/tplEngine','app/provinceArea'], function ($,layer,
                             layer.msg('请填写姓名');
                             return ;
                         }
-                        if( $(layero).find('#tel').val()=='' ){
-                            layer.msg('请填写电话');
+                        if( !/^1[2-9][0-9]{9}$/.test($(layero).find('#tel').val())){
+                            layer.msg('请填写正确的手机号');
                             return ;
                         }
                         if( $(layero).find('#city').val()=='' ){
