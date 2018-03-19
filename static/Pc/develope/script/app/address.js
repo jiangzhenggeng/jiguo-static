@@ -81,7 +81,7 @@ define(['jquery','layer','app/tplEngine','app/provinceArea'], function ($,layer,
                 title: option.title,
                 closeBtn: 1,
                 shadeClose: true,
-                area:['500px','420px'],
+                area:['500px','380px'],
                 content: html,
                 success:function (layero, index) {
                     var addrFormData = $('#addrFormData');
@@ -90,8 +90,8 @@ define(['jquery','layer','app/tplEngine','app/provinceArea'], function ($,layer,
                             layer.msg('请填写姓名');
                             return ;
                         }
-                        if( $(layero).find('#tel').val()=='' ){
-                            layer.msg('请填写电话');
+                        if( !/^1[2-9][0-9]{9}$/.test($(layero).find('#tel').val())){
+                            layer.msg('请填写正确的手机号');
                             return ;
                         }
                         if( $(layero).find('#city').val()=='' ){
@@ -100,10 +100,6 @@ define(['jquery','layer','app/tplEngine','app/provinceArea'], function ($,layer,
                         }
                         if( $(layero).find('#address').val()=='' ){
                             layer.msg('请填写详细地址');
-                            return ;
-                        }
-                        if( $(layero).find('#posts').val()=='' ){
-                            layer.msg('请填写邮编');
                             return ;
                         }
                         var sendFormData = addrFormData.serialize();
