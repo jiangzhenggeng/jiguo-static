@@ -1,0 +1,132 @@
+.Z-row-bbd{
+    border-bottom: 1px dashed #f0f0f0;
+}
+.Z-row-left{
+    float: left;
+    line-height: 40px;
+}
+.Z-row-content{
+    margin-left: 70px;
+}
+.Z-row-item{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.Z-row .Z-name{
+    vertical-align: middle;
+}
+.Z-select-selected{
+    padding-right: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.Z-list-desc{
+    margin-left: 0;
+}
+.Z-list-subscribe .v-line{
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: #999;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.designation {
+    background-color: #ff9991;
+    color: #d42f3f;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 3px 5px 2px 5px;
+    vertical-align: baseline;
+    line-height: normal;
+    font-weight: 100;
+}
+.designation.tys {
+    background-color: #ffef83;
+    color: #cc8100;
+}
+.designation.player {
+    background-color: #92e2ff;
+    color: #0085d2;
+}
+.designation.sxtys {
+    background-color: #ff9991;
+    color: #d42f3f;
+}
+.designation.sptys {
+    background-color: #D1B3FF;
+    color: #784F9C;
+}
+.designation.jxtys {
+    background-color: #50E3C2;
+    color: #015643;
+}
+.no-tags{
+    color: #999999;
+    font-size: 12px;
+}
+.Z-sort {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+    font-size: 0;
+    line-height: 40px;
+    margin-top: 10px;
+}
+.Z-sort a {
+    font-size: 14px;
+    display: inline-block;
+    background: #f7f7f7 url("../images/icon-up-down.png") no-repeat 77px center;
+    background-size: 8px auto;
+    padding: 0 30px 0 10px;
+    color: #7f7f7f;
+    border-right: 1px solid #d9d9d9;
+    line-height: 40px;
+    vertical-align: middle;
+}
+.Z-sort a:last-of-type {
+    border-right: none;
+}
+.Z-sort a.Z-sort-up {
+    color: #fff;
+    background: #808080 url("../images/icon-up.png") no-repeat 77px center;
+    background-size: 8px auto;
+}
+.Z-sort a.Z-sort-down {
+    color: #fff;
+    background: #808080 url("../images/icon-down.png") no-repeat 77px center;
+    background-size: 8px auto;
+}
+/*表格*/
+.Z-table{
+    width: 100%;
+    text-align: center;
+}
+.Z-table thead tr{
+    background-color: #f0f0f0;
+    border-bottom: none;
+}
+.Z-table tr{
+    line-height: 30px;
+    border-bottom: 1px dashed #f0f0f0;
+}
+.Z-table tr td:nth-of-type(3){
+    width: 300px;
+    padding: 0 30px;
+    text-align: left;
+}
+[data-multiple] li{
+    font-family: Muiicons;
+    position: relative;
+}
+[data-multiple] li:before{
+    content: '\e413';
+    position: absolute;
+    left: 5px;
+}
+[data-multiple] li[data-selected]:before{
+    content: '\e443';
+    color: #ed4f37 !important;
+}
