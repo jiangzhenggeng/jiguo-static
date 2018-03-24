@@ -92,7 +92,8 @@ define([
                         var o = '',
                             id = K.randomId(),
                             html = $('#event-apply-input-tpl').html(),
-                            remark = $(_this).attr('data-remark');
+                            remark = $(_this).attr('data-remark'),
+                            is_remarks = $(_this).attr('data-is_remarks');
                         applydata.remark = remark;
                         applydata.data = replayData.result;
 
@@ -137,15 +138,19 @@ define([
                                         }
                                     }
                                     if (Obj.find('[name=comment]').val() == '') {
-                                        layer.msg('申请理由不允许为空');
+                                        layer.msg('请填写申请理由');
                                         return;
                                     }
                                     if (Obj.find('input[name=tel]').val().length != 11) {
-                                        layer.msg('手机号码不允许为空');
+                                        layer.msg('请填写正确的手机号码');
+                                        return;
+                                    }
+                                    if((is_remarks==1) && (Obj.find('[name=remark]').val() == '')){
+                                        layer.msg('请填写备注信息');
                                         return;
                                     }
                                     if (Obj.find('input[name=username]').length && Obj.find('input[name=username]').val() == '') {
-                                        layer.msg('用户名不允许为空');
+                                        layer.msg('请填写用户名');
                                         return;
                                     }
                                     if (!Obj.find('#agreement').prop('checked')) {
