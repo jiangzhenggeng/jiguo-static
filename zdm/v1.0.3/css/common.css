@@ -141,6 +141,10 @@ body {
 	min-width: 130px !important;
 	width:130px !important;
 }
+.Z-w-140{
+	min-width: 140px !important;
+	width:140px !important;
+}
 .Z-w-150{
 	min-width: 150px !important;
 	width:150px !important;
@@ -366,6 +370,10 @@ body {
 .Z-menu li.youpin > a{
 	background-size: 18px auto;
 	background-image:url(../images/i-youpin.png);
+}
+.Z-menu li.vip > a{
+	background-size: 18px auto;
+	background-image:url(../images/i-vip.png);
 }
 .Z-menu li dl{
 	display: none;
