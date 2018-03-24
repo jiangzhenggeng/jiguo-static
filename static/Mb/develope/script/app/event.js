@@ -255,6 +255,14 @@ define([
 		videoAdapt.init({
 			width: width
 		});
+
+		//跳到第一个可预约的试用
+		$('body').on('click', '[appointment-immediately]', function () {
+			var offset = $('#meta-list').find('[data-goto-reserve]').first().closest('.meta-item').offset()
+			if(offset && offset.top){
+				$(window).scrollTop(offset.top - 62)
+			}
+		})
 //            判断登录
 		$('body').on('click', '[data-login]', function () {
 			if($(this).attr('href')=='javascript:;'){
