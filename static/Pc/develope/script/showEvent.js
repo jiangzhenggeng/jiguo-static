@@ -149,6 +149,10 @@ define([
                                         layer.msg('请填写备注信息');
                                         return;
                                     }
+                                    if(Obj.find('[name=remark]').val().length>30){
+                                        layer.msg('备注信息不能超过30个字');
+                                        return;
+                                    }
                                     if (Obj.find('input[name=username]').length && Obj.find('input[name=username]').val() == '') {
                                         layer.msg('请填写用户名');
                                         return;
