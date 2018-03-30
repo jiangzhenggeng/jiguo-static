@@ -1,7 +1,5 @@
 .pointer {
   cursor: pointer;
-  display: flex;
-  align-items: center;
 }
 .share-bottom-wrap-box {
   position: fixed;

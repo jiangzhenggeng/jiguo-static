@@ -431,7 +431,7 @@ body {
 }
 .coupon-wrap .coupon-inner {
   height: 100%;
-  box-shadow: 1px 0px 1px 0 #E6E6E6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 1px 0 #e6e6e6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -905,8 +905,8 @@ body {
   position: absolute;
   width: 0%;
   height: 100%;
-  background-image: -webkit-linear-gradient(-90deg, #F7561C 0%, #FA9161 100%);
-  background-image: linear-gradient(-90deg, #F7561C 0%, #FA9161 100%);
+  background-image: -webkit-linear-gradient(-90deg, #f7561c 0%, #fa9161 100%);
+  background-image: linear-gradient(-90deg, #f7561c 0%, #fa9161 100%);
   border-radius: 2px;
   -moz-transition: width 1.2s;
   -webkit-transition: width 1.2s;
