@@ -732,12 +732,6 @@ body {
 .tr {
   text-align: right;
 }
-.pos-abs {
-  position: absolute;
-}
-.pos-rel {
-  position: relative;
-}
 .linh20 {
   line-height: 20px;
 }
@@ -2008,6 +2002,27 @@ body {
 .hover-red:hover * {
   color: #fe584d !important;
 }
+input[type=checkbox] {
+  position: relative;
+  bottom: 2px;
+}
+input[type=checkbox]:before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  background: url("../images/icon-nochecked.png") no-repeat center center;
+  background-size: 13px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+input[type=checkbox]:checked:before {
+  background: url("../images/icon-checked.png") no-repeat center center;
+  background-size: 13px auto;
+}
 p.open-btn {
   color: #4f81bd;
   font-size: 14px;
@@ -2202,6 +2217,32 @@ p.open-btn {
 .tag.ev-zhekou {
   background-color: #55468c;
 }
+.e-tag {
+  height: 18px;
+  line-height: 20px;
+  padding: 0 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  border-radius: 18px;
+  font-size: 12px;
+  border: 1px solid #55468C;
+}
+.e-tag.e-zhekou {
+  color: #55468C;
+  border-color: #55468C;
+}
+.e-tag.e-free {
+  color: #FE6541;
+  border-color: #FE6541;
+}
+.e-tag.e-common {
+  color: #F5A821;
+  border-color: #F5A821;
+}
+.e-tag:last-of-type {
+  margin-right: 0;
+}
 ul.event-show-card-warp {
   width: 105%;
 }
@@ -2226,14 +2267,14 @@ ul.event-show-card-warp .img-box img {
 }
 ul.event-show-card-warp .desc-box {
   border-top: none;
-  height: 100px;
+  height: 130px;
   padding: 0;
 }
 ul.event-show-card-warp .desc-box .hover-box {
   position: absolute;
   bottom: 0;
-  padding: 15px;
-  width: 216px;
+  padding: 12px 12px 15px;
+  width: 222px;
   background: #fff;
   left: 0;
   height: auto;
@@ -2244,10 +2285,18 @@ ul.event-show-card-warp .desc-box .hover-box {
 }
 ul.event-show-card-warp .desc-box .hover-box .e-title {
   color: #4c4c4c;
-  height: 40px;
-  margin-bottom: 10px;
+  height: 20px;
+  margin-bottom: 14px;
   line-height: 20px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ul.event-show-card-warp .desc-box .hover-box .e-tag-list {
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 26px;
+  font-size: 0;
 }
 ul.event-show-card-warp .desc-box .hover-box .e-number {
   line-height: 20px;

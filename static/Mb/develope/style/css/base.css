@@ -1769,6 +1769,98 @@ a {
   width: 15px;
   height: 100%;
 }
+.mian-stream .event .stream-box {
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+}
+.mian-stream .event .home-item-desc {
+  padding: 18px 15px;
+  font-size: 14px;
+  color: #333333;
+}
+.mian-stream .event .home-item-desc .home-item-title {
+  line-height: 22px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.mian-stream .event .home-item-desc .home-item-type {
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  max-height: 40px;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mian-stream .event .home-item-desc .home-item-status {
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+  justify-content: space-between;
+}
+.mian-stream .event .home-item-desc .home-d1 {
+  margin-right: 10px;
+}
+.mian-stream .event .home-item-desc .home-d1.gray {
+  color: #999;
+}
+.mian-stream .event .home-item-desc .home-g1 {
+  color: #999;
+}
+.mian-stream .event .home-item-desc .home-f2 {
+  color: #999;
+  font-size: 12px;
+}
+.mian-stream .event .home-item-desc .home-f1 {
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+}
+.mian-stream .event .home-item-desc .home-i1 {
+  width: 23px;
+  height: 23px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  margin-left: -5px;
+  background-color: #ffffff;
+}
+.mian-stream .event .home-item-desc .event-subscribe-wrap {
+  display: flex;
+  align-items: center;
+}
+.mian-stream .event .home-item-desc .event-subscribe-wrap .subscribe-btn {
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  background: #F66039;
+  border-radius: 2px;
+  width: 73px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  cursor: pointer;
+}
 .designation {
   background-color: #ff9991;
   color: #d42f3f;

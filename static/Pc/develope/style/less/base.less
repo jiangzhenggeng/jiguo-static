@@ -150,12 +150,6 @@
 .tr{
   text-align: right;
 }
-.pos-abs{
-  position: absolute;
-}
-.pos-rel{
-  position: relative;
-}
 .linh20{
   line-height: 20px;
 }
@@ -342,6 +336,31 @@
 .hover-red:hover{
   &,*{
     color: #fe584d !important;
+  }
+}
+
+//checkbox样式重置
+input[type=checkbox]{
+  position: relative;
+  bottom: 2px;
+  &:before{
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url("../images/icon-nochecked.png") no-repeat center center;
+    background-size: 13px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  &:checked{
+    &:before{
+      background: url("../images/icon-checked.png") no-repeat center center;
+      background-size: 13px auto;
+    }
   }
 }
 
@@ -572,6 +591,33 @@ p.open-btn {
   //  background-color: #ffc107;
   //}
 }
+//活动新标签
+.e-tag{
+  height: 18px;
+  line-height: 20px;
+  padding: 0 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  border-radius: 18px;
+  font-size: 12px;
+  border: 1px solid #55468C;
+  &.e-zhekou{
+    color: #55468C;
+    border-color: #55468C;
+  }
+  &.e-free{
+    color: #FE6541;
+    border-color: #FE6541;
+  }
+  &.e-common{
+    color: #F5A821;
+    border-color: #F5A821;
+  }
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
 
 //统一活动卡片
 ul.event-show-card-warp{
@@ -606,14 +652,14 @@ ul.event-show-card-warp{
 
   .desc-box{
     border-top: none;
-    height: 100px;
+    height: 130px;
     padding: 0;
 
     .hover-box{
       position: absolute;
       bottom: 0;
-      padding: 15px;
-      width: 216px;
+      padding: 12px 12px 15px;
+      width: 222px;
       background: #fff;
       //border:1px #F0F0F0;
       border-top: none;
@@ -624,10 +670,18 @@ ul.event-show-card-warp{
 
       .e-title{
         .c-4c4c4c;
-        height: 40px;
-        margin-bottom: 10px;
+        height: 20px;
+        margin-bottom: 14px;
         line-height: 20px;
         overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .e-tag-list{
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 26px;
+        font-size: 0;
       }
       .e-number{
         line-height: 20px;

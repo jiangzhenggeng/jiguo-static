@@ -1,7 +1,7 @@
 ({
     //appDir:'../develope',
     baseUrl: '../develope/script',
-    out:'../compression_3.9.2/script/main.js',
+    out:'../compression_3.9.5/script/main.js',
     name:'main',
     //optimize: "none",
     optimizeCss:'standard',
@@ -13,6 +13,7 @@
         'layer': 'lib/layer/layer',
         'touchSwipe': 'lib/jquery.touchSwipe',
         'swipebox': 'lib/swipebox/jquery.swipebox',
+			  'clipboard':'empty:',
         'socket.io': 'empty:'
     },
     shim: {

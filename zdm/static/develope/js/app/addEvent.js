@@ -4,6 +4,14 @@
 
 define(['jquery', 'layer', 'app/common', 'template', 'app/event'], function ($, layer, common, template, event) {
 
+//      新版pc标签数量限制
+    $('#P-pc-tag .icon').click(function (e) {
+       if($('#P-pc-tag .icon:checked').length>3){
+           layer.msg('最多只能选择3个新版PC标签');
+           e.preventDefault();
+       }
+    });
+
 //      是否添加规格
     $("[name=no_spec]").on('click', function () {
         if ($("[name=no_spec]:checked").val() == 0) {

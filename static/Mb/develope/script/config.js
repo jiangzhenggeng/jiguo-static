@@ -30,6 +30,7 @@ requirejs.config({
         'touchSwipe': 'lib/jquery.touchSwipe',
         'ZeroClipboard': 'lib/zeroclipboard/ZeroClipboard',
         'swipebox':'lib/swipebox/jquery.swipebox',
+        'clipboard':'lib/clipboard',
     },
     shim: {
         'cookie': {

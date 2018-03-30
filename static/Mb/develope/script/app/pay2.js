@@ -38,7 +38,7 @@ define(['jquery', 'app/unitTool'], function ($, tool) {
 					}, function (replyData) {
 						if (replyData.status == 0) {
 							tool.msg('支付成功');
-							window.location.href = 'http://m.jiguo.com/mb/pay/myorder.html?orderid=' + orderid;
+							window.location.href = 'http://m.jiguo.com/mb/pay/paysuccess.html?orderid=' + orderid;
 						}
 					}, 'json');
 				} else if (res.err_msg == "get_brand_wcpay_request:cancel") {

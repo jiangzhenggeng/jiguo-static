@@ -23,6 +23,8 @@ define([
 		})
 	}
 	function init(){
+		window.__no_session_cache__ = true;
+
 		var eventid=$('#eventid').val()||/(\d+)/.exec(window.location)[0];
 		//公布名单
 		function showPublishList() {
@@ -124,11 +126,14 @@ define([
 		function showapplyList() {
 			//申请列表
 			window.__no_session_cache__ = true;
-			new index.init({
+			var applyListLoadingFlageWrap = $('.apply-list-loading-flage-wrap')
+
+			var hander = new index.init({
 				url: '/api/comment/geteventapply.html',
 				size: 10,
 				boxDom: '#apply-list',
 				tplDom: '#apply-list-tpl',
+				autoLoading:false,
 				sendData: {
 					id:eventid
 				},
@@ -140,12 +145,44 @@ define([
 							$(this).after('<a href="javascript:;" class="look-more">展开</a>');
 						}
 					})
+					if(len<10){
+						applyListLoadingFlageWrap.hide()
+					}else{
+						applyListLoadingFlageWrap.find('.apply-list-loading-flage').hide()
+						applyListLoadingFlageWrap.find('.apply-list-loading-click').show()
+					}
 				}
 			});
 			$('body').on('click', '.look-more', function () {
 				$(this).siblings('.ugc').removeClass('text-ellipsis-5');
 				$(this).remove();
-			});
+			}).on('click','.apply-list-loading-click',function () {
+				hander.run()
+				applyListLoadingFlageWrap.find('.apply-list-loading-flage').show()
+				applyListLoadingFlageWrap.find('.apply-list-loading-click').hide()
+			})
+		}
+		// 更多试用
+		function showEventMoreList() {
+			var GetEventInfoEventListWrap = $('.bottom-more-list-wrap')
+			var lenNumber = 0
+			//申请列表
+			new index.init({
+				url: '/api/event/GetEventInfoEventList',
+				size: 5,
+				fireDom:'.event-loading-more-wrap .loading-more',
+				boxDom: '#bottom-more-list',
+				tplDom: '#bottom-more-list-tpl',
+				sendData: {
+					id:eventid
+				},
+				callBack:function (self, len) {
+					lenNumber += len
+					if(lenNumber<=0 && GetEventInfoEventListWrap.length){
+						GetEventInfoEventListWrap.hide()
+					}
+				}
+			})
 		}
 		//倒计时
 		function timeDown(dom) {
@@ -250,11 +287,20 @@ define([
 		showPublishList();
 		showMetaList();
 		showapplyList();
+		showEventMoreList()
 		//视频
 		var width = $('body').width() - 24;
 		videoAdapt.init({
 			width: width
 		});
+
+		//跳到第一个可预约的试用
+		$('body').on('click', '[appointment-immediately]', function () {
+			var offset = $('#meta-list').find('[data-goto-reserve]').first().closest('.meta-item').offset()
+			if(offset && offset.top){
+				$(window).scrollTop(offset.top - 62)
+			}
+		})
 //            判断登录
 		$('body').on('click', '[data-login]', function () {
 			if($(this).attr('href')=='javascript:;'){

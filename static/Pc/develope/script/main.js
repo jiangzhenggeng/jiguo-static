@@ -40,6 +40,7 @@ define("main",[
     'app/showScore',
     'app/md5',
     'app/login',
+    'app/topSlide',
     'vip',
     'showArticle',
     'showEvent',

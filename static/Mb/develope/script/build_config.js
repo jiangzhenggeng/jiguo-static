@@ -1,6 +1,6 @@
 requirejs.config({
 
-    baseUrl: 'http://cdn.jiguo.com/static/Mb/compression_3.9.2/script/',
+    baseUrl: 'http://cdn.jiguo.com/static/Mb/compression_3.9.5/script/',
 
     waitSeconds: 0,
 
@@ -13,7 +13,8 @@ requirejs.config({
         'socket.io': 'lib/socket.io',
         'touchSwipe': 'lib/jquery.touchSwipe',
         'ZeroClipboard': 'lib/zeroclipboard/ZeroClipboard',
-        'swipebox':'lib/swipebox/jquery.swipebox'
+        'swipebox':'lib/swipebox/jquery.swipebox',
+			  'clipboard':'lib/clipboard',
     },
     shim: {
         'cookie': {
