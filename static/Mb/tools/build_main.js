@@ -13,6 +13,7 @@
         'layer': 'lib/layer/layer',
         'touchSwipe': 'lib/jquery.touchSwipe',
         'swipebox': 'lib/swipebox/jquery.swipebox',
+			  'clipboard':'empty:',
         'socket.io': 'empty:'
     },
     shim: {

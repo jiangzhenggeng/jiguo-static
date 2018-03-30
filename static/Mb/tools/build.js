@@ -20,6 +20,7 @@
         'touchSlide': "empty:",
         'layer': "empty:",
         'ZeroClipboard': "empty:",
-        'swipebox': "empty:"
+        'swipebox': "empty:",
+			  'clipboard':'empty:',
     }
 })

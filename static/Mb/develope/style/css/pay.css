@@ -145,10 +145,8 @@
   line-height: 20px;
 }
 .price-row {
-  display: -webkit-flex;
   display: flex;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   margin: 18px 0;
   font-size: 14px;
@@ -160,7 +158,6 @@
   position: relative;
   display: block;
   margin: 0 12px;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-box-flex: 1;
@@ -268,7 +265,8 @@
   padding: 0 12px;
   line-height: 46px;
   background-color: #fff;
-  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
 }
 .order-submit span {
   color: #808080;
@@ -430,7 +428,8 @@
   content: '';
   right: 0;
   top: 50%;
-  transform: translateY(-50%) rotateZ(-90deg);
+  -webkit-transform: translateY(-50%) rotateZ(-90deg);
+          transform: translateY(-50%) rotateZ(-90deg);
   bottom: 0px;
   width: 10px;
   height: 10px;
@@ -446,7 +445,8 @@
   position: absolute;
   right: 15px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   height: 15px;
 }
 .add-address-box-wrap .show-address-box .add-address-change-btn .image {
@@ -454,9 +454,15 @@
   height: 100%;
 }
 .add-address-box-wrap .add-address-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .add-address-box-wrap .add-address-box .add-address-image {
   width: 19px;
@@ -471,7 +477,8 @@
   margin-left: 10px;
 }
 .order-add-address-btn-wrap-tpl * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .coupon__select {
   display: -webkit-box;
@@ -509,7 +516,6 @@
   background-repeat: no-repeat;
   background-size: 10px auto;
   -webkit-transform: rotateZ(-90deg);
-  -moz-transform: rotateZ(-90deg);
   transform: rotateZ(-90deg);
 }
 .coupon-select .layui-m-layercont,
@@ -523,32 +529,52 @@
   text-align: center;
   line-height: 42px;
   border-radius: 5px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 .coupon-select-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .coupon-select-wrap .coupon-select-header {
   height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .coupon-select-wrap .coupon-select-header .coupon-select-back,
 .coupon-select-wrap .coupon-select-header .coupon-select-close {
   height: 52px;
   width: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .coupon-select-wrap .coupon-select-header .coupon-select-title {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   line-height: 52px;
 }
 .coupon-select-wrap .coupon-select-body {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .coupon-select-wrap .coupon-select-body ul {
   margin-bottom: 56px;
@@ -568,16 +594,26 @@
   font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 .coupons__card-wrap {
   width: 9.46666667rem;
   height: 2.58666667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 0.26666667rem;
   /*coupons__card-status*/
 }
@@ -585,10 +621,19 @@
   width: 3.01333333rem;
   position: relative;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
   overflow: hidden;
   background-size: 100% 100%;
@@ -612,11 +657,22 @@
   overflow: hidden;
 }
 .coupons__card-wrap .coupons__card-right {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 0.32rem;
   color: #666666;
   line-height: 0.45333333rem;
@@ -631,10 +687,17 @@
   overflow: hidden;
 }
 .coupons__card-wrap .coupons__card-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 0.26666667rem;
   line-height: 0.45333333rem;
   font-size: 0.32rem;
@@ -675,7 +738,8 @@
   border-bottom: 1px solid #efefef;
   font-size: 12px;
   background: #fff;
-  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
   width: 100%;
   padding: 0 12px;
   color: #808080;

@@ -13,7 +13,8 @@ requirejs.config({
         'socket.io': 'lib/socket.io',
         'touchSwipe': 'lib/jquery.touchSwipe',
         'ZeroClipboard': 'lib/zeroclipboard/ZeroClipboard',
-        'swipebox':'lib/swipebox/jquery.swipebox'
+        'swipebox':'lib/swipebox/jquery.swipebox',
+			  'clipboard':'lib/clipboard',
     },
     shim: {
         'cookie': {
