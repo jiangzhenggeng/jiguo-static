@@ -24,6 +24,8 @@ define([
             $,scrollStatus,hDownload){
 
     // homeAjaxLoad.init();
+
+    lazyload.init();
     //公共模块
     common.collect();
 

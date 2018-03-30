@@ -604,6 +604,10 @@ define(['jquery', 'layer', 'app/common', 'template', 'laydate', 'app/addEvent'],
             layer.msg('请填写正确的试用名称');
             return false;
         }
+        if(formSelecter.find('#P-pc-tag .icon:checked').length<=0){
+            layer.msg('请至少选择一个新版PC标签');
+            return false;
+        }
         if (formSelecter.find('#Z-image-up-fengmian li').find('[type=hidden]').length <= 0) {
             layer.msg('请上传封面图片');
             return false;
