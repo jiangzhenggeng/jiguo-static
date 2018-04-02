@@ -217,8 +217,21 @@
   overflow: hidden;
   cursor: pointer;
 }
-.event-list-wrap {
-  background: #fff;
+.event-list-wrap,
+.event-list-wrap .first-no-data,
+.event-list-wrap .no-data,
+.event-list-wrap .loading-more,
+.event-list-wrap li.large.event {
+  background: #f2f3f8 !important;
+}
+.event-list-wrap li.large.event {
+  padding-top: 0;
+}
+.event-list-wrap li.large.event:before {
+  display: none;
+}
+.event-list-wrap li.large.event:last-child {
+  padding-bottom: 0;
 }
 .event-list-wrap .event-title {
   display: flex;

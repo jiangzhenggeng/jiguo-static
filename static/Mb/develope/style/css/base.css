@@ -1769,12 +1769,21 @@ a {
   width: 15px;
   height: 100%;
 }
+.mian-stream .event .mask-cover {
+  border-radius: 0 !important;
+}
 .mian-stream .event .stream-box {
   border-radius: 3px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
   background: #ffffff;
+}
+.mian-stream .event .stream-img {
+  border-radius: 5px 5px 0 0 !important;
+}
+.mian-stream .event .stream-img img {
+  border-radius: 0 !important;
 }
 .mian-stream .event .home-item-desc {
   padding: 18px 15px;

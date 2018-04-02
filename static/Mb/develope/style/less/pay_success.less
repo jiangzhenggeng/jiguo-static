@@ -1,4 +1,4 @@
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -81,7 +81,6 @@
     background: rgba(0, 0, 0, 0.3);
   }
 }
-
 
 //二维码
 .online-custom-service-wrap {
@@ -196,41 +195,40 @@
   }
 }
 
-
 //支付成功页面
 
-.pay-success-header-wrap{
+.pay-success-header-wrap {
   background: #fff;
   padding: 30px 12px;
 
-  .pay-success-header{
+  .pay-success-header {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .pay-success-header-left{
+    .pay-success-header-left {
       width: 67px;
       height: 73px;
     }
-    .image{
+    .image {
       width: 100%;
       height: 100%;
       display: block;
     }
-    .pay-success-header-right{
+    .pay-success-header-right {
       margin-left: 25px;
       color: #333;
       font-size: 12px;
       line-height: 23px;
     }
   }
-  .pay-success-header-btn{
+  .pay-success-header-btn {
     font-size: 12px;
     color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    border:1px solid #333;
+    border: 1px solid #333;
     height: 28px;
     width: 80px;
     margin: auto;
@@ -240,9 +238,26 @@
     cursor: pointer;
   }
 }
-.event-list-wrap{
-  background: #fff;
-  .event-title{
+
+.event-list-wrap {
+  &,
+  .first-no-data,
+  .no-data,
+  .loading-more,
+  li.large.event {
+    background: #f2f3f8 !important;
+  }
+  li.large.event {
+    padding-top: 0;
+    &:before {
+      display: none;
+    }
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+  .event-title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,14 +265,14 @@
     color: #333333;
     font-size: 12px;
     height: 45px;
-    .title{
+    .title {
       padding: 0 10px;
     }
-    .hi{
+    .hi {
       width: 27px;
       height: 4px;
     }
-    .image{
+    .image {
       width: 100%;
       height: 100%;
       display: block;

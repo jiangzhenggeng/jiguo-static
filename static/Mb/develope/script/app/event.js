@@ -128,6 +128,7 @@ define([
 			window.__no_session_cache__ = true;
 			var applyListLoadingFlageWrap = $('.apply-list-loading-flage-wrap')
 
+			var firstLoading = true
 			var hander = new index.init({
 				url: '/api/comment/geteventapply.html',
 				size: 10,
@@ -145,12 +146,20 @@ define([
 							$(this).after('<a href="javascript:;" class="look-more">展开</a>');
 						}
 					})
+
 					if(len<10){
-						applyListLoadingFlageWrap.hide()
+						if(firstLoading){
+							applyListLoadingFlageWrap.hide()
+						}
+
+						applyListLoadingFlageWrap.find('.apply-list-loading-flage').show()
+						applyListLoadingFlageWrap.find('.apply-list-loading-click').hide()
+						applyListLoadingFlageWrap.find('.no-data p').css('margin','auto')
 					}else{
 						applyListLoadingFlageWrap.find('.apply-list-loading-flage').hide()
 						applyListLoadingFlageWrap.find('.apply-list-loading-click').show()
 					}
+					firstLoading = false
 				}
 			});
 			$('body').on('click', '.look-more', function () {
