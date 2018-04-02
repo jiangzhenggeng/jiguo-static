@@ -2364,6 +2364,16 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
 .choice-event-content .respond li .desc-box .d-number {
   width: 227px;
 }
+.choice-event-content .respond li .desc-box .d-number .bottom-mall {
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
 .choice-event-content .respond li .choice-img-box {
   height: 160px;
 }
