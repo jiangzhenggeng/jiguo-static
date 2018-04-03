@@ -13,7 +13,7 @@ define(['require', 'jquery'], function (require, $) {
             //倒计时秒数
             intDiff: 60,
             //倒计时结束回调函数
-            callback: $.loop,
+            callback: $.noop,
             //倒计时框
             dom: null,
             //是否全局
@@ -21,7 +21,7 @@ define(['require', 'jquery'], function (require, $) {
             //在中途执行事件时间
             overTime: 0,
             //在中途执行的事件
-            overCallBack: $.loop
+            overCallBack: $.noop
         }, options);
 
         this.options.dom = $(this.options.dom);
@@ -61,9 +61,9 @@ define(['require', 'jquery'], function (require, $) {
             } else if (options.intDiff <= 0) {
                 // this.options.intDiff = 60;
                 if (options.isglobal) {
-                    options.callback();
+                    options.callback && options.callback();
                 } else {
-                    options.callback.call(options.dom);
+                    options.callback && options.callback.call(options.dom);
                 }
                 this.timer && clearInterval(this.timer);
                 return;

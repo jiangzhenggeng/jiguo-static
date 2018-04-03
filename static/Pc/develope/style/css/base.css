@@ -2011,7 +2011,7 @@ input[type=checkbox]:before {
   display: block;
   width: 13px;
   height: 13px;
-  background: url("../images/icon-nochecked.png") no-repeat center center;
+  background: #ffffff url("../images/icon-nochecked.png") no-repeat center center;
   background-size: 13px auto;
   position: absolute;
   top: 0;
@@ -2020,7 +2020,7 @@ input[type=checkbox]:before {
   cursor: pointer;
 }
 input[type=checkbox]:checked:before {
-  background: url("../images/icon-checked.png") no-repeat center center;
+  background: #ffffff url("../images/icon-checked.png") no-repeat center center;
   background-size: 13px auto;
 }
 p.open-btn {
