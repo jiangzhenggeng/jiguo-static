@@ -666,6 +666,16 @@
   width: 204px;
   left: 15px;
 }
+.top-wrap .top-list-box ul li .content-box .d-number .bottom-mall {
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
 .top-wrap .top-list-box ul li .content-box .d-number .avatar {
   width: 26px;
   height: 26px;
@@ -715,6 +725,7 @@
   font-size: 16px;
   height: 26px;
   color: #333333;
+  font-weight: bold;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;

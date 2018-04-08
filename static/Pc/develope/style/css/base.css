@@ -2011,7 +2011,7 @@ input[type=checkbox]:before {
   display: block;
   width: 13px;
   height: 13px;
-  background: url("../images/icon-nochecked.png") no-repeat center center;
+  background: #ffffff url("../images/icon-nochecked.png") no-repeat center center;
   background-size: 13px auto;
   position: absolute;
   top: 0;
@@ -2020,7 +2020,7 @@ input[type=checkbox]:before {
   cursor: pointer;
 }
 input[type=checkbox]:checked:before {
-  background: url("../images/icon-checked.png") no-repeat center center;
+  background: #ffffff url("../images/icon-checked.png") no-repeat center center;
   background-size: 13px auto;
 }
 p.open-btn {
@@ -2363,6 +2363,16 @@ ul.event-show-card-warp .desc-box .e-item-hide .e-item-hide-cell {
 }
 .choice-event-content .respond li .desc-box .d-number {
   width: 227px;
+}
+.choice-event-content .respond li .desc-box .d-number .bottom-mall {
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
 }
 .choice-event-content .respond li .choice-img-box {
   height: 160px;

@@ -847,3 +847,88 @@ body {
   color: #333;
   cursor: pointer;
 }
+.cancel-order-layer-box {
+  padding: 35px 30px 0;
+  position: relative;
+  font-size: 14px;
+}
+.cancel-order-layer-box .layer-title h3 {
+  font-size: 22px;
+  color: #333;
+  line-height: 30px;
+  text-align: center;
+}
+.cancel-order-layer-box .layer-title .close-btn {
+  float: right;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 30px;
+  background-position: -55px -55px;
+  cursor: pointer;
+}
+.cancel-order-layer-box .layer-title .close-btn:hover {
+  background-position: -87px -55px;
+}
+.cancel-order-layer-box .tips-wrap {
+  margin-top: 33px;
+}
+.cancel-order-layer-box h4 {
+  font-size: 16px;
+  color: #333;
+}
+.cancel-order-layer-box .cancel-reason-wrap {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #D8D8D8;
+}
+.cancel-order-layer-box .cancel-reason-wrap ul {
+  width: 85%;
+  margin: 25px 0 0 98px;
+}
+.cancel-order-layer-box .cancel-reason-wrap ul li {
+  width: 200px;
+  margin: 0 35px 15px 0;
+  color: #999;
+  line-height: 22px;
+  float: left;
+}
+.cancel-order-layer-box .cancel-reason-wrap ul li input {
+  margin-right: 12px;
+}
+.cancel-order-layer-box .submit {
+  width: 325px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #D8D8D8;
+  color: #fff;
+  border-radius: 2px;
+  margin: 35px auto 0;
+  cursor: pointer;
+}
+.cancel-order-layer-box .submit.ok {
+  background-color: #F66039;
+}
+input[type=radio] {
+  position: relative;
+  bottom: 2px;
+}
+input[type=radio]:before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: #ffffff url("../images/icon-radio-nochecked.png") no-repeat center center;
+  background-size: 22px auto;
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  z-index: 2;
+  cursor: pointer;
+}
+input[type=radio]:checked:before {
+  background: #ffffff url("../images/icon-radio-checked.png") no-repeat center center;
+  background-size: 22px auto;
+}

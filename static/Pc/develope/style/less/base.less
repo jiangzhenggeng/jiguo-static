@@ -348,7 +348,7 @@ input[type=checkbox]{
     display: block;
     width: 13px;
     height: 13px;
-    background: url("../images/icon-nochecked.png") no-repeat center center;
+    background: #fff url("../images/icon-nochecked.png") no-repeat center center;
     background-size: 13px auto;
     position: absolute;
     top: 0;
@@ -358,7 +358,7 @@ input[type=checkbox]{
   }
   &:checked{
     &:before{
-      background: url("../images/icon-checked.png") no-repeat center center;
+      background: #fff url("../images/icon-checked.png") no-repeat center center;
       background-size: 13px auto;
     }
   }
@@ -755,6 +755,16 @@ ul.event-show-card-warp{
         }
         .d-number{
           width: 227px;
+          .bottom-mall{
+            max-width: 72px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            bottom: 1px;
+          }
         }
       }
       .choice-img-box{
