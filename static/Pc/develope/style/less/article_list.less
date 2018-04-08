@@ -1,0 +1,256 @@
+.common-cell-title{
+  h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: #2d2d2d;
+  }
+}
+.join-vip{
+  background-color: #fff;
+  .content-wrap{
+    margin-top: 15px;
+    padding: 40px 0 32px 50px;
+    background-color: #F8F8F8;
+    dl{
+      height: 161px;
+      border-right: 1px dashed #FB594D;
+      float: left;
+      dt{
+        font-size: 24px;
+        color: #FB594D;
+        font-weight: bold;
+        margin-bottom: 24px;
+        line-height: 30px;
+        img{
+          height: 28px;
+          margin-right: 12px;
+          vertical-align: top;
+        }
+      }
+      dd{
+        color: #999999;
+        font-size: 14px;
+        line-height: 20px;
+        li:not(.vip-item){
+          &::before{
+            content: '·';
+            margin-right: 5px;
+            display: inline-block;
+            width: 5px;
+            line-height: 20px;
+          }
+        }
+        p{
+          margin-top: 20px;
+          padding-left: 10px;
+        }
+        .apply-btn{
+          display: block;
+          width: 95px;
+          height: 28px;
+          margin: 14px 0 0 40px;
+          color: #FB594D;
+          border: 1px solid #FB594D;
+          border-radius: 2px;
+          text-align: center;
+          line-height: 28px;
+        }
+      }
+      &:first-of-type{
+        width: 196px;
+        margin-right: 45px;
+      }
+      &:nth-of-type(2){
+        width: 265px;
+        margin-right: 36px;
+      }
+      &:nth-of-type(3){
+        width: 210px;
+        margin-right: 41px;
+      }
+      &:last-of-type{
+        width: 208px;
+        border-right: none;
+      }
+    }
+    .vip-list{
+      position: relative;
+      height: 102px;
+      overflow: hidden;
+      .vip-item{
+        font-size: 12px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+        border-bottom: 1px solid #D6D6D6;
+        .item-avatar{
+          float: left;
+          width: 23px;
+          height: 23px;
+          border-radius: 50%;
+          overflow: hidden;
+          img{
+            width: 100%;
+          }
+        }
+        .item-content{
+          margin-left: 33px;
+          width: 175px;
+          p{
+            padding-left: 0;
+            margin-top: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            min-height: 20px;
+          }
+        }
+        &:last-of-type{
+          border-bottom: none;
+        }
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 26px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: -webkit-linear-gradient(top, rgba(248, 248, 248, 0), rgba(248, 248, 248, 1));
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=transprent, endcolorstr=#f8f8f8, gradientType=0);
+        -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=transprent, endcolorstr=#f8f8f8, gradientType=0);
+        background: #f8f8f8; /* 一些不支持背景渐变的浏览器 */
+        background: -moz-linear-gradient(top, rgba(247, 247, 247, 0), rgba(248, 248, 248, 1));
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(248, 248, 248, 0)), to(rgba(248, 248, 248, 1)));
+      }
+    }
+  }
+}
+//一级分类头
+.hot-event-warp{
+  .common-cell-title,
+  .common-cell-title{
+    &> a{
+      padding: 0 9px;
+    }
+  }
+}
+//二级分类头
+.event-class-header{
+  text-align: center;
+  margin: 20px auto;
+  ul{
+    display: inline-block;
+    margin: auto;
+    background: #ebebeb;
+    padding: 2px;
+    border-radius:18px;
+  }
+  li{
+    width: 90px;
+    line-height: 30px;
+    display: inline-block;
+    &.on{
+      border-radius:15px;
+      background: #fff;
+      a{
+        color: #333333;
+      }
+    }
+    a{
+      display: block;
+      font-size: 12px;
+      color: #aeaeae;
+    }
+  }
+}
+//文章卡片
+.article-list{
+  .culling-wrap {
+    .choice-event-content {
+      .respond {
+        li {
+          height: 358px !important;
+          .choice-img-box {
+            height: 215px;
+            & + .desc-box {
+              bottom: 33px;
+              border-radius: 0;
+              -webkit-border-radius: 0;
+              -moz-border-radius: 0;
+            }
+          }
+          .product-wrap{
+            width: 314px;
+            height: 33px;
+            line-height: 33px;
+            padding: 0 15px;
+            position: absolute;
+            bottom: 0;
+            background-color: #fff;
+            border: 1px solid #f2f2f2;
+            border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
+            -moz-border-radius: 0 0 5px 5px;
+            .product-name{
+              width: 227px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .icon-right{
+              display: inline-block;
+              width: 6px;
+              height: 12px;
+              background: url("../images/article_list/icon-right.png") no-repeat center center;
+              background-size: 100% auto;
+              margin-left: 5px;
+              position: relative;
+              top: 1px;
+            }
+            &:hover{
+              .product-name{
+                color: #4c4c4c;
+              }
+              .article-num{
+                color: #FB594D;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//报告列表页
+.product-box{
+  height: 60px;
+  line-height: 60px;
+  background-color: rgba(255,255,255,0.6);
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  h3{
+    font-size: 22px;
+    max-width: 700px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .buy-btn{
+    width: 74px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #FB594D;
+    color: #fff;
+    border-radius: 2px;
+  }
+}
+.article-list-wrap{
+  margin-top: 75px;
+}

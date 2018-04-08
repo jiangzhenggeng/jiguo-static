@@ -592,7 +592,6 @@
 }
 .top-wrap .common-cell-title > a .type-list {
   font-size: 16px;
-  display: none;
 }
 .top-wrap .common-cell-title > a.on {
   font-size: 22px;
@@ -621,9 +620,6 @@
   overflow: hidden;
   padding: 15px 0 25px 0;
   height: 235px;
-}
-.top-wrap .top-list-box ul {
-  width: 120%;
 }
 .top-wrap .top-list-box ul li {
   width: 236px;
@@ -1072,11 +1068,11 @@
   height: 215px;
 }
 .culling-wrap .choice-event-content .respond li .choice-img-box + .desc-box {
-  width: 316px;
+  width: 314px;
   height: 75px;
 }
 .culling-wrap .choice-event-content .respond li .desc-box .d-number {
-  width: 316px;
+  width: 314px;
 }
 .culling-wrap .choice-event-content .respond li .desc-box .d-number .avatar {
   width: 26px;
