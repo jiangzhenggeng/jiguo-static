@@ -39,6 +39,10 @@ style/css/article.css
 ----------------
 style/css/article.css
 
+style/css/article_list.css
+----------------
+style/css/article_list.css
+
 style/css/base.css
 ----------------
 style/css/base.css
