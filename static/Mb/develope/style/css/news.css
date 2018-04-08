@@ -45,6 +45,7 @@ body,
   width: 32px;
   height: 32px;
   vertical-align: middle;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 .news-icon img {
@@ -62,6 +63,7 @@ body,
   min-height: 9px;
   border: 1px solid #fff;
   border-radius: 100%;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   background-color: #E6513F;
   z-index: 2;
@@ -91,6 +93,7 @@ body,
 }
 .news-icon .mask-num span {
   display: block;
+  -webkit-transform: scale(0.75);
   transform: scale(0.75);
   color: #fff;
   line-height: 14px;

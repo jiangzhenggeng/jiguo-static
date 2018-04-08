@@ -1,0 +1,17 @@
+<svg width="40px" height="39px" viewBox="0 0 40 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="刷新、首页、置顶" transform="translate(-323.000000, -487.000000)">
+            <g id="首页" transform="translate(324.000000, 487.000000)">
+                <circle id="Oval-3" stroke="#F66039" fill-opacity="0.8" fill="#FFFFFF" cx="19" cy="19.5" r="19"></circle>
+                <text font-family="PingFangSC-Medium, PingFang SC" font-size="10" font-weight="400" fill="#F56038">
+                    <tspan x="9" y="33">首页</tspan>
+                </text>
+                <polyline id="Path-2" stroke="#F66039" stroke-linecap="round" stroke-linejoin="round" points="11.9985962 9.79886347 19.2267789 4.98968506 26.3833008 9.79886347"></polyline>
+                <path d="M13.5816225,10.5107321 L13.5816225,16.9172787 C13.5816225,17.9939961 14.1324044,18.5477699 15.2339681,18.5786002 L23.175198,18.5323548 C24.2131765,18.5519237 24.7467871,18.013565 24.7760298,16.9172787 L24.7879326,10.5" id="Path-3" stroke="#F66039" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

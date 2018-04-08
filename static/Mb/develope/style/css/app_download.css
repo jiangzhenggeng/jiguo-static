@@ -63,5 +63,6 @@ body {
   line-height: 45px;
   color: #F66039;
   background-color: #fff;
+  -webkit-box-shadow: 0 4px 20px #dcdcdc;
   box-shadow: 0 4px 20px #dcdcdc;
 }

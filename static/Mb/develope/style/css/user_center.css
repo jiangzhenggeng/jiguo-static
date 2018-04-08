@@ -116,7 +116,9 @@ body {
   padding-right: 35px;
   font-size: 16px;
   display: block;
+  -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+  -webkit-transition-property: background-color;
   transition-property: background-color;
 }
 .table-view li a:before {
@@ -151,7 +153,6 @@ body {
   clear: both;
   height: 1px;
   -webkit-transform: scaleY(0.5);
-  -ms-transform: scaleY(0.5);
   transform: scaleY(0.5);
   left: 0px;
   width: 100%;
@@ -180,7 +181,6 @@ body {
   clear: both;
   height: 1px;
   -webkit-transform: scaleY(0.5);
-  -ms-transform: scaleY(0.5);
   transform: scaleY(0.5);
   left: 0px;
   width: 100%;
@@ -270,7 +270,8 @@ body {
 }
 .coupon-wrap .coupon-inner {
   height: 100%;
-  box-shadow: 1px 0px 1px 0 #e6e6e6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 0px 1px 0 #E6E6E6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 1px 0 #E6E6E6, 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -373,6 +374,7 @@ body {
   left: 0;
   top: 0;
   background-color: #E43020;
+  -webkit-transition: all 1s;
   transition: all 1s;
 }
 .coupon-wrap .coupon-right .pannle-desc {
@@ -484,6 +486,7 @@ body {
   position: absolute;
   bottom: -70px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 30px;
   height: 30px;
@@ -515,6 +518,7 @@ body {
   overflow: hidden;
   background-color: #f66b61;
   padding: 0 10px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .immediately-wrap .immediately-header .c1 {
@@ -523,6 +527,7 @@ body {
   position: absolute;
   bottom: 5px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .immediately-wrap .immediately-header .k1 {
@@ -604,6 +609,7 @@ body {
   position: absolute;
   bottom: -10px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 120px;
 }

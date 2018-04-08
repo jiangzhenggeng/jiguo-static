@@ -1,0 +1,31 @@
+<svg width="52px" height="50px" viewBox="0 0 52 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="23" cy="24" rx="23" ry="22"></ellipse>
+        <filter x="-10.9%" y="-9.1%" width="121.7%" height="122.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.53943048 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="红包开" transform="translate(-221.000000, -205.000000)">
+            <g id="Group-3" transform="translate(124.000000, 106.000000)">
+                <g id="Group-4" transform="translate(100.000000, 99.000000)">
+                    <g id="Oval-7">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#D4AF00" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <ellipse id="Oval-7-Copy" fill="#F0F618" cx="22" cy="23" rx="22" ry="21"></ellipse>
+                    <text id="開" font-family="STSongti-SC-Regular, Songti SC" font-size="28" font-weight="normal" fill="#D64141">
+                        <tspan x="9" y="31">開</tspan>
+                    </text>
+                    <path d="" id="Path-5" stroke="#979797"></path>
+                    <path d="M18.5622559,5.54321289 C20.5957031,4.9449056 22.6291504,4.85717773 24.6625977,5.2800293" id="Path-8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M3.90942383,15.9606934 C6.99389648,10.5902507 10.8949382,7.32356771 15.6125488,6.16064453" id="Path-7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

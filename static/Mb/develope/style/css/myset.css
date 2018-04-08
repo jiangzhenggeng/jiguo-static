@@ -19,6 +19,7 @@
   padding: 10px 12px;
   color: #808080;
   border-bottom: 1px solid #ededed;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 .list li .list-item img {

@@ -29,13 +29,10 @@ textarea {
   color: #595959 !important;
 }
 .wrapper {
-  display: -webkit-flex;
   display: flex;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
@@ -55,20 +52,18 @@ textarea {
   width: 100%;
   height: 40px;
   line-height: 40px;
+  -webkit-box-shadow: 0 1px 0 #eee;
   box-shadow: 0 1px 0 #eee;
   background-color: #fff;
   z-index: 100;
 }
 .nav-tab ul {
-  display: -webkit-flex;
   display: flex;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   width: 100%;
 }
 .nav-tab ul li {
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-box-flex: 1;
@@ -112,10 +107,8 @@ textarea {
   padding: 7px 0;
 }
 .feedback-item .label {
-  display: -webkit-flex;
   display: flex;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   color: #4d4d4d;
   font-size: 14px;
@@ -123,7 +116,6 @@ textarea {
 .feedback-item .label input,
 .feedback-item .label textarea {
   display: block;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-box-flex: 1;
@@ -173,7 +165,6 @@ textarea {
 }
 .feedback-type {
   position: relative;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-box-flex: 1;
@@ -275,6 +266,8 @@ textarea {
   color: #4A90E2;
 }
 .problem-tel {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   line-height: 35px;
 }
@@ -375,6 +368,7 @@ textarea {
   width: 100%;
   z-index: 10;
   background-color: #f2f2f2;
+  -webkit-box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
 .feedback-type-mask .type-list ul {

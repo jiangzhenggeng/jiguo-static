@@ -1,0 +1,28 @@
+<svg width="68px" height="75px" viewBox="0 0 68 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="27" y="4" width="23" height="8" rx="1.8"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="小程序首页改版-copy-3" transform="translate(-60.000000, -78.000000)">
+            <g id="Group" transform="translate(60.000000, 79.000000)">
+                <rect id="Rectangle-23" fill="#FF7D6C" x="13" y="7" width="49" height="63" rx="1.8"></rect>
+                <rect id="Rectangle-23" fill="#FFFFFF" x="17" y="10" width="41" height="56" rx="1.8"></rect>
+                <g id="Rectangle-6">
+                    <use fill="#FF7D6C" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#FFFFFF" stroke-width="0.9" x="27.45" y="4.45" width="22.1" height="7.1" rx="1.8"></rect>
+                </g>
+                <circle id="Oval-8" stroke="#FFFFFF" stroke-width="0.9" fill="#FF7D6C" cx="38.5" cy="5" r="4"></circle>
+                <circle id="Oval-9" stroke="#FFFFFF" stroke-width="0.9" fill="#14CB64" cx="54" cy="60" r="13"></circle>
+                <polyline id="Rectangle-20" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(53.000000, 57.500000) scale(-1, 1) rotate(45.000000) translate(-53.000000, -57.500000) " points="59 54 59 61 47 61"></polyline>
+                <rect id="Rectangle-24" fill="#D8D8D8" x="23" y="21" width="23" height="4" rx="1.8"></rect>
+                <rect id="Rectangle-24-Copy" fill="#D8D8D8" x="23" y="34" width="31" height="4" rx="1.8"></rect>
+                <rect id="Rectangle-24-Copy-2" fill="#D8D8D8" x="23" y="46" width="16" height="4" rx="1.8"></rect>
+                <circle id="Oval-10" stroke="#FFD55F" cx="65" cy="2" r="2"></circle>
+                <rect id="Rectangle-25" fill="#FFD55F" x="0" y="14" width="9" height="2" rx="1"></rect>
+                <rect id="Rectangle-25" fill="#FFD55F" transform="translate(4.500000, 15.000000) rotate(90.000000) translate(-4.500000, -15.000000) " x="0" y="14" width="9" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

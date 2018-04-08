@@ -4,6 +4,7 @@
 
 # netbeans project files
 nbproject
+node_modules/
 
 # zend studio for eclipse project files
 .buildpath
@@ -32,3 +33,4 @@ git.sh
 .gitignore
 static/Pc/compression_3.0
 .gitignore
+

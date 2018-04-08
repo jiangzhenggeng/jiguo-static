@@ -1,0 +1,24 @@
+<svg width="363px" height="202px" viewBox="0 0 363 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.84217094e-14,87.916756 L2.84217094e-14,29 C2.66631897e-14,14.6405965 11.6405965,3 26,3 L325,3 C339.359403,3 351,14.6405965 351,29 L351,87.2422347 C306.22973,102.515888 243.694318,112 174.5,112 C106.330044,112 44.6232948,102.794618 3.55271368e-14,87.916756 Z" id="path-1"></path>
+        <filter x="-3.3%" y="-6.0%" width="106.6%" height="121.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.229874321 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="红包开" transform="translate(-66.000000, -121.000000)">
+            <g id="Group-2" transform="translate(72.000000, 121.000000)">
+                <path d="M5.68434189e-14,87 C51.3988827,102.660455 111.405335,111.651384 175.5,111.651384 C239.594665,111.651384 299.601117,102.660455 351,87 L351,142.324477 L351,177.355469 C351,190.610303 340.254834,201.355469 327,201.355469 L24,201.355469 C10.745166,201.355469 1.623249e-15,190.610303 0,177.355469 L0,142.324477 L8.52651283e-14,87 Z" id="Combined-Shape" fill="#C82C2C"></path>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#F0F618" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M2.84217094e-14,84.916756 L2.84217094e-14,26 C2.66631897e-14,11.6405965 11.6405965,2.63777963e-15 26,0 L325,0 C339.359403,-2.63777963e-15 351,11.6405965 351,26 L351,84.2422347 C306.22973,99.5158884 243.694318,109 174.5,109 C106.330044,109 44.6232948,99.794618 3.55271368e-14,84.916756 Z" id="Combined-Shape" fill="#D64141"></path>
+            </g>
+        </g>
+    </g>
+</svg>

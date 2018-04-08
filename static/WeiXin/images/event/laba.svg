@@ -1,0 +1,17 @@
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="小程序首页改版" transform="translate(-15.000000, -406.000000)">
+            <g id="消息" transform="translate(16.000000, 407.000000)">
+                <polygon id="Path-2" fill="#EFEFEF" points="0 6.79347826 0 11.3863337 4.2283792 11.3863337 9 16 9 2 3.85714286 6.79347826"></polygon>
+                <polygon id="Path-2" stroke="#999999" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="0 4.69565217 0 11.4804902 4.2283792 11.4804902 9 16 9 0 3.85714286 4.69565217"></polygon>
+                <path d="M11,11 C12.171422,10.4484998 13,9.08881759 13,7.49887967 C13,5.91109072 12.1736603,4.5529355 11.004748,4" id="Oval" stroke="#999999" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14,1 L16,0" id="Path-4" stroke="#999999" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14,14.125 L15.9166667,14.9375" id="Path-4-Copy" stroke="#999999" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15,7.33333333 L16.9285714,7.33333333" id="Path-4-Copy-2" stroke="#999999" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
