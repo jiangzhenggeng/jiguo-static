@@ -1219,3 +1219,98 @@
   top: 50%;
   margin-top: -5px;
 }
+.good-wrap {
+  height: 531px;
+  background: url("../images/good_choice/bg.jpg") repeat-x center center;
+  background-size: auto 100%;
+}
+.good-wrap .good-title-wrap {
+  padding-top: 2px;
+}
+.good-wrap .good-title-wrap img {
+  display: block;
+  margin: 18px auto 0;
+}
+.good-wrap .good-title-wrap .jointly-issued {
+  height: 25px;
+  position: relative;
+  left: -15px;
+}
+.good-wrap .good-title-wrap .good-choice {
+  height: 78px;
+}
+.good-wrap .common-cell-title {
+  height: 37px;
+  line-height: 37px;
+  border-bottom: 1px solid #C8AC6E;
+}
+.good-wrap .common-cell-title a {
+  display: inline-block;
+  padding: 0 27px;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  top: 0;
+  text-align: center;
+  height: 37px;
+  line-height: 37px;
+  color: #8D764C;
+  vertical-align: middle;
+}
+.good-wrap .common-cell-title a.on {
+  font-size: 22px;
+  color: #462C00;
+  font-weight: bold;
+  border-bottom-color: #FB594D;
+}
+.good-wrap .common-cell-title a:first-of-type {
+  padding-left: 0;
+}
+.good-wrap .common-cell-title .vertical-line {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #C8AC6E;
+}
+.good-wrap .good-list .good-list-box {
+  height: 271px;
+  padding: 20px 0 38px 0;
+  overflow: hidden;
+}
+.good-wrap .good-list .good-list-box ul {
+  width: 300%;
+}
+.good-wrap .good-list .good-list-box ul li {
+  float: left;
+  margin-right: 20px;
+}
+.good-wrap .good-list .good-list-box ul li .item-img {
+  width: 236px;
+}
+.good-wrap .good-list .good-list-box ul li .item-img img {
+  width: 100%;
+}
+.good-wrap .good-list .prev-btn,
+.good-wrap .good-list .next-btn {
+  width: 14px;
+  height: 24px;
+  position: absolute;
+  top: 140px;
+  cursor: pointer;
+}
+.good-wrap .good-list .prev-btn {
+  left: -34px;
+  background: url("../images/good_choice/left_arrow.png") no-repeat center center;
+  background-size: 100% auto;
+}
+.good-wrap .good-list .prev-btn.prevStop {
+  display: none;
+}
+.good-wrap .good-list .next-btn {
+  right: -34px;
+  background: url("../images/good_choice/right_arrow.png") no-repeat center center;
+  background-size: 100% auto;
+}
+.good-wrap .good-list .next-btn.nextStop {
+  display: none;
+}

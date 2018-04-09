@@ -13,7 +13,7 @@
 }
 .join-vip .content-wrap dl {
   height: 161px;
-  border-right: 1px dashed #FB594D;
+  border-right: 1px dashed rgba(251, 89, 77, 0.4);
   float: left;
 }
 .join-vip .content-wrap dl dt {
@@ -22,6 +22,7 @@
   font-weight: bold;
   margin-bottom: 24px;
   line-height: 30px;
+  margin-top: -5px;
 }
 .join-vip .content-wrap dl dt img {
   height: 28px;
@@ -67,9 +68,21 @@
   width: 210px;
   margin-right: 41px;
 }
+.join-vip .content-wrap dl:nth-of-type(3) dt {
+  line-height: 33px;
+}
+.join-vip .content-wrap dl:nth-of-type(3) dt img {
+  height: 31px;
+}
 .join-vip .content-wrap dl:last-of-type {
   width: 208px;
   border-right: none;
+}
+.join-vip .content-wrap dl:last-of-type dt {
+  line-height: 33px;
+}
+.join-vip .content-wrap dl:last-of-type dt img {
+  height: 33px;
 }
 .join-vip .content-wrap .vip-list {
   position: relative;
@@ -80,7 +93,7 @@
   font-size: 12px;
   padding-bottom: 5px;
   margin-top: 5px;
-  border-bottom: 1px solid #D6D6D6;
+  border-bottom: 1px solid #ededed;
 }
 .join-vip .content-wrap .vip-list .vip-item .item-avatar {
   float: left;
@@ -103,6 +116,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   min-height: 20px;
+  color: #999;
 }
 .join-vip .content-wrap .vip-list .vip-item:last-of-type {
   border-bottom: none;
@@ -205,7 +219,7 @@
 .product-box {
   height: 60px;
   line-height: 60px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.95);
   position: fixed;
   top: 61px;
   left: 0;

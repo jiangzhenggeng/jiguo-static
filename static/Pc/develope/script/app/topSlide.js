@@ -1,8 +1,9 @@
 define(['jquery'], function ($) {
     //初始化轮播
-    function initSlide() {
+    function initSlide(dom) {
+        var dom = dom || '.top-list-box';
         var vis = 4;
-        var slideWrap = $('.top-list-box');
+        var slideWrap = $(dom);
         slideWrap.each(function () {
             var slideBox = $(this).find('ul');
             var slide = slideBox.find('li');
@@ -25,7 +26,7 @@ define(['jquery'], function ($) {
                 var that = this;
                 var pos = getPos(this);
                 var prevBtn = $(this).siblings('.prev-btn');
-                var slideBox = $(this).closest('.top-list-box').find('ul');
+                var slideBox = $(this).closest(dom).find('ul');
                 if ((pos.boxW - pos.wrapW - slideMr) <= pos.left || slideBox.is(':animated')) {
                     return;
                 }
@@ -50,7 +51,7 @@ define(['jquery'], function ($) {
                 var that = this;
                 var pos = getPos(this);
                 var nextBtn = $(this).siblings('.next-btn');
-                var slideBox = $(this).closest('.top-list-box').find('ul');
+                var slideBox = $(this).closest(dom).find('ul');
                 if (pos.left <= 0 || slideBox.is(':animated')) {
                     return;
                 }
@@ -70,19 +71,19 @@ define(['jquery'], function ($) {
                 });
             });
         });
-    }
 
-    //获取轮播组件位置信息
-    function getPos(that) {
-        var wrap = $(that).closest('.top-list-box');
-        var wrapW = wrap.width();
-        var slideBox = wrap.find('ul');
-        var boxW = slideBox.width();
-        var left = Math.abs(parseInt(slideBox.css('marginLeft')));
-        return {
-            wrapW: wrapW,
-            boxW: boxW,
-            left: left
+        //获取轮播组件位置信息
+        function getPos(that) {
+            var wrap = $(that).closest(dom);
+            var wrapW = wrap.width();
+            var slideBox = wrap.find('ul');
+            var boxW = slideBox.width();
+            var left = Math.abs(parseInt(slideBox.css('marginLeft')));
+            return {
+                wrapW: wrapW,
+                boxW: boxW,
+                left: left
+            }
         }
     }
 
