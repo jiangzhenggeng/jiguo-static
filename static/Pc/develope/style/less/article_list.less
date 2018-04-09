@@ -13,7 +13,7 @@
     background-color: #F8F8F8;
     dl{
       height: 161px;
-      border-right: 1px dashed #FB594D;
+      border-right: 1px dashed rgba(251,89,77,0.4);
       float: left;
       dt{
         font-size: 24px;
@@ -21,6 +21,7 @@
         font-weight: bold;
         margin-bottom: 24px;
         line-height: 30px;
+        margin-top: -5px;
         img{
           height: 28px;
           margin-right: 12px;
@@ -67,10 +68,22 @@
       &:nth-of-type(3){
         width: 210px;
         margin-right: 41px;
+        dt{
+          line-height: 33px;
+          img{
+            height: 31px;
+          }
+        }
       }
       &:last-of-type{
         width: 208px;
         border-right: none;
+        dt{
+          line-height: 33px;
+          img{
+            height: 33px;
+          }
+        }
       }
     }
     .vip-list{
@@ -81,7 +94,7 @@
         font-size: 12px;
         padding-bottom: 5px;
         margin-top: 5px;
-        border-bottom: 1px solid #D6D6D6;
+        border-bottom: 1px solid #ededed;
         .item-avatar{
           float: left;
           width: 23px;
@@ -102,6 +115,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             min-height: 20px;
+            color: #999;
           }
         }
         &:last-of-type{
@@ -226,7 +240,7 @@
 .product-box{
   height: 60px;
   line-height: 60px;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.95);
   position: fixed;
   top: 61px;
   left: 0;
