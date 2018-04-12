@@ -410,8 +410,21 @@ define([
 				time: 999999,
 				content: '预约中',
 			});
+
+			//来源携带参数
+			var cookie_eventid = $.cookie('eventid')||''
+			var spread = ''
+			var spread_code = ''
+			if(eventid==cookie_eventid){
+				spread = $.cookie('spread')||''
+				spread_code = $.cookie('spread_code')||''
+			}
+
 			$.get('/api/event/EventReserve',{
-				mid:mid
+				mid:mid,
+				eventid:eventid,
+				spread:spread,
+				spread_code:spread_code
 			},function (repalyData) {
 				//预约成功
 				if(repalyData.resultCode==0){
