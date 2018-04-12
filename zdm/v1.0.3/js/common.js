@@ -1020,7 +1020,14 @@ function cropperImage(dom, options, callback) {
 	_init(dom, options, callback);
 }
 
-
+//计算字数（中文算一个，英文算半个）
+function getLen(str) {
+    if (str == null) return 0;
+    if (typeof str != "string") {
+        str += "";
+    }
+    return (str.replace(/[^\x00-\xff]/g, "01").length) / 2;
+}
 
 
 
