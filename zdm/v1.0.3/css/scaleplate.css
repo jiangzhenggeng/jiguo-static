@@ -94,7 +94,11 @@
 .scaleplate.down .scaleplate-all.scaleplate-Plus{
 	width:328px;
 }
-
+.count-wrap{
+	position: absolute;
+	right: 30px;
+	top: 9px;
+}
 
 
 

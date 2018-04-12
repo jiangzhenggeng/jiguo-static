@@ -36,6 +36,7 @@ requirejs.config({
         'ZeroClipboard': 'lib/zeroclipboard/ZeroClipboard',
         //多文件上传插件
         'uploadify': 'http://'+window.location.host+'/protected/extensions/uploadify/jquery.uploadify.min',
+        'pjax': 'lib/jquery.pjax'
     },
     shim: {
         'socket.io': {
@@ -58,6 +59,9 @@ requirejs.config({
         },
         'layer': {
             deps: ['jquery']
+        },
+        'pjax': {
+          deps: ['jquery']
         },
         'ueditor': {
             deps: [
