@@ -1,0 +1,27 @@
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="6" width="42.0000017" height="42.0000017" rx="21.0000008"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="提单页未选" transform="translate(-111.000000, -1712.000000)">
+            <g id="提单页未选中">
+                <g id="弹窗" transform="translate(0.000000, 1198.000000)">
+                    <g id="表单" transform="translate(30.000000, 32.000000)">
+                        <g id="Group-11" transform="translate(19.000000, 376.000000)">
+                            <g id="Group-13" transform="translate(62.000000, 100.000000)">
+                                <g id="Group-10">
+                                    <g id="Rectangle-13">
+                                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                        <rect stroke="#999999" stroke-width="2.4000001" x="1.20000005" y="7.20000005" width="39.6000016" height="39.6000016" rx="19.8000008"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
