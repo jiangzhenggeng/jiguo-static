@@ -683,6 +683,7 @@ function editArticleAuthor(_this,uid){
 			$(layero).on('click','[data-edit-select]',function () {
 				$(_this).find('.Z-edit-author-face img').attr('src','http://s1.jiguo.com/avatar'+$(this).attr('data-uid')+'/230x230?time='+(+new Date()));
 				$(_this).find('.Z-edit-author-name').html($(this).attr('data-username'));
+				$(_this).find('.Z-edit-author-group').html(getGroupName($(this).attr('data-usergroupid')));
 				$(_this).find('[data-input-author]').val($(this).attr('data-username'));
 				$(_this).find('[data-input-uid]').val($(this).attr('data-uid'));
 				layer.closeAll();
@@ -710,7 +711,7 @@ function editArticleAuthor(_this,uid){
 						if(replayData[i].pass==1){
 							html += '<a class="layer-query already-add"></a>';
 						}else {
-							html += '<a class="layer-query" data-edit-select data-uid="'+replayData[i].uid+'" data-username="'+replayData[i].username+'"></a>';
+							html += '<a class="layer-query" data-edit-select data-uid="'+replayData[i].uid+'" data-username="'+replayData[i].username+'" data-usergroupid="'+replayData[i].groupid+'"></a>';
 						}
 
 						html += '</li>';
@@ -1027,6 +1028,33 @@ function getLen(str) {
         str += "";
     }
     return (str.replace(/[^\x00-\xff]/g, "01").length) / 2;
+}
+
+//极果groupid对应关系
+function getGroupName(groupid) {
+	var groupName = '';
+	switch (groupid){
+		case '0':
+			groupName = '用户';
+			break;
+        case '1':
+            groupName = '玩家';
+            break;
+        case '2':
+            groupName = '体验师';
+            break;
+        case '3':
+            groupName = '首席体验师';
+            break;
+        case '4':
+            groupName = '视频体验师';
+            break;
+        case '5':
+            groupName = '见习体验师';
+            break;
+		default: break;
+	}
+	return groupName;
 }
 
 
