@@ -37,7 +37,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                 layer.msg('操作失败');
             }
         })
-    };
+    }
 
     // 选择类型后赋值
     function _setVal(dom) {
@@ -49,7 +49,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         parentDom.trigger('blur');
         dom.attr('data-selected', '');
         dom.siblings('li').removeAttr('data-selected')
-    };
+    }
 
     // 选择类型
     function chooseType() {
@@ -63,7 +63,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         $('body').on('click', '[data-z-select] li', function () {
             _setVal($(this));
         })
-    };
+    }
 
     // 时间初始化
     function layerTime(startId, endId) {
@@ -92,7 +92,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         };
         laydate(startObj);
         laydate(endObj);
-    };
+    }
 
     // 上线、下线、删除
     function confirm(msg, url, data, callback) {
@@ -112,7 +112,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             }
 
         });
-    };
+    }
 
     function showBox(title, width, height, content, callback) {
         layer.open({
@@ -123,14 +123,14 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             content: content,
             success: callback
         })
-    };
+    }
 
     //图片上传
     function removeImage() {
         $('body').on('click', '[data-delete]', function () {
             $(this).parent().remove();
         });
-    };
+    }
 
     function upload(data, ul, input_name, multiple, callback, compatible) {
         var upUrl = 'http://zdm.jiguo.com/admin2/ajax/upload';
@@ -165,7 +165,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                 }
             }
         }
-    };
+    }
 
     function uploadMultiple(data, ul, input_name, compatible) {
         var upUrl = 'http://zdm.jiguo.com/admin2/ajax/multipleupload';
@@ -194,7 +194,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
                 }
             }
         }
-    };
+    }
 
     // 单图上传
     function upImage(dom, input_name, multiple, compatible) {
@@ -213,10 +213,10 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             }
             var data = new FormData();
             data.append('file', fileList[0]);
-            upload(data, ul, input_name, multiple, null,compatible);
+            upload(data, ul, input_name, multiple, null, compatible);
 
         })
-    };
+    }
 
     // 多图上传
     function upImageMultiple(dom, input_name, compatible) {
@@ -239,7 +239,7 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             uploadMultiple.cropper = cropper;
             uploadMultiple(data, ul, input_name, compatible);
         })
-    };
+    }
 
     //设置封面
     function setCover(selector) {
@@ -252,12 +252,41 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
             $(this).addClass('Z-block-red');
             $(selector).val($(this).closest('li').find('input[type="hidden"]').val());
         })
-    };
+    }
+
+    //极果groupid对应关系
+    function getGroupName(groupid) {
+        var groupName = '';
+        switch (groupid) {
+            case '0':
+                groupName = '用户';
+                break;
+            case '1':
+                groupName = '玩家';
+                break;
+            case '2':
+                groupName = '体验师';
+                break;
+            case '3':
+                groupName = '首席体验师';
+                break;
+            case '4':
+                groupName = '视频体验师';
+                break;
+            case '5':
+                groupName = '见习体验师';
+                break;
+            default:
+                break;
+        }
+        return groupName;
+    }
+
     return {
         //选择类型
         chooseType: chooseType,
         //选择类型后赋值
-        setVal:_setVal,
+        setVal: _setVal,
         // 时间初始化
         layerTime: layerTime,
         // 删除、下线、上线文章试用流的数据
@@ -275,6 +304,8 @@ define(['jquery', 'layer', 'laydate'], function ($, layer, laydate) {
         //设置封面
         setCover: setCover,
         //选择图片后上传
-        upload: upload
+        upload: upload,
+        //极果groupid对应关系
+        getGroupName: getGroupName
     }
 })
