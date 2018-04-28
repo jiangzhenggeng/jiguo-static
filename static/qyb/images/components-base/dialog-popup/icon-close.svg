@@ -1,0 +1,16 @@
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="弹窗" transform="translate(-299.000000, -24.000000)">
+            <g id="Group-11" transform="translate(50.000000, 26.000000)">
+                <g id="关闭" transform="translate(251.000000, 0.000000)">
+                    <circle id="Oval-2" stroke="#FFFFFF" stroke-width="3" fill="#FFD917" cx="12" cy="12" r="12"></circle>
+                    <rect id="Rectangle-5" fill="#333333" transform="translate(12.000000, 11.750000) rotate(-45.000000) translate(-12.000000, -11.750000) " x="6" y="11" width="12" height="1.5" rx="0.75"></rect>
+                    <rect id="Rectangle-5" fill="#333333" transform="translate(12.000000, 11.750000) rotate(45.000000) translate(-12.000000, -11.750000) " x="6" y="11" width="12" height="1.5" rx="0.75"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
