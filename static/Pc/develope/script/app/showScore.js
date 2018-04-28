@@ -114,6 +114,8 @@ define([
             var desc = '';
             if( score<6 ){
                 desc = '';
+            }else if(score<7){
+                desc = '尚需努力';
             }else if(score<8){
                 desc = '用心之作';
             }else if(score<9){
@@ -176,7 +178,7 @@ define([
                 var hasVideo = true;
                 if(replayDate.result.video==0){
                     hasVideo = false;
-                    TOTAL_SCORE = 9;
+                    TOTAL_SCORE = 9.7;
                 }
                 var html = userScoreCacheFn({
                         data:replayDate.result,
