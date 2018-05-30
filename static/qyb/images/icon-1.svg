@@ -1,0 +1,34 @@
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="12.5390625%" y1="7.58928571%" x2="74.3303571%" y2="87.4944196%" id="linearGradient-1">
+            <stop stop-color="#FF48A0" offset="0%"></stop>
+            <stop stop-color="#FF007A" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="17.5" cy="17.5" r="17.5"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的消息" transform="translate(-12.000000, -76.000000)">
+            <g id="钻石变动通知" transform="translate(12.000000, 73.000000)">
+                <g id="01d9cb5abf85c7a8012062e30648ee.jpg@1280w_1l_2o_100sh" transform="translate(0.000000, 3.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="diamond-copy-2" mask="url(#mask-3)">
+                        <g transform="translate(6.500000, 10.699997)">
+                            <path d="M5.06079287,0.0131547619 L16.7892925,0.0131547619 C17.9854093,0.0131547619 19.0932726,0.610138095 19.7056273,1.58464286 L21.4262295,4.32277619 C22.1506509,5.47557857 21.9289929,6.95154286 20.8940198,7.86666905 L12.5461249,15.2479476 C11.6330339,16.0552857 10.2170515,16.0552857 9.30391777,15.2479476 L0.956022852,7.86666905 C-0.0789928711,6.95154286 -0.300608203,5.47557857 0.423813184,4.32277619 L2.14441533,1.58464286 C2.75677012,0.610138095 3.86467607,0.0131547619 5.06079287,0.0131547619 Z" id="Shape" stroke="#FFFFFF" stroke-width="1.2" fill-rule="nonzero"></path>
+                            <path d="M3.39302334,0.428642857 C2.88603506,0.699833333 2.4524918,1.09443571 2.14445801,1.58464286 L0.423770508,4.32289762 C0.0395177734,4.93449286 -0.0784807617,5.63695714 0.0499306641,6.29841905 L6.9754418,6.29841905 L3.39302334,0.428642857 Z" id="Shape" stroke="#FFFFFF" stroke-width="1.2" fill-rule="nonzero"></path>
+                            <polygon id="Shape" stroke="#FFFFFF" stroke-width="1.2" stroke-linejoin="round" fill-rule="nonzero" points="6.9754418 6.29837857 14.8746009 6.29837857 10.9250427 0.0131547619"></polygon>
+                            <g id="Group" stroke="none" stroke-width="1" fill-rule="evenodd" transform="translate(6.956152, 0.404762)">
+                                <path d="M7.91844854,5.89361667 L14.8439597,5.89361667 C14.9723711,5.23211429 14.8543726,4.52960952 14.4700771,3.91805476 L12.7494323,1.17988095 C12.4413985,0.689633333 12.0078553,0.295111905 11.500867,0.0238809524 L7.91844854,5.89361667 Z" id="Shape" stroke="#FFFFFF" stroke-width="1.2" fill-rule="nonzero"></path>
+                                <path d="M0.0192894531,5.89361667 L3.31957832,15.3633048 C3.73728887,15.4754238 4.18051953,15.4772048 4.59895557,15.3684048 L7.91840586,5.89361667 L0.0192894531,5.89361667 Z" id="Shape" stroke="#FFFFFF" stroke-width="1.2" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

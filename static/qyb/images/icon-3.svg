@@ -1,0 +1,32 @@
+
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="17.9901957%" y1="0%" x2="81.7602762%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFE978" offset="0%"></stop>
+            <stop stop-color="#FFD917" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="17.5" cy="17.5" r="17.5"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的消息" transform="translate(-12.000000, -218.000000)">
+            <g id="留言消息" transform="translate(12.000000, 215.000000)">
+                <g id="01d9cb5abf85c7a8012062e30648ee.jpg@1280w_1l_2o_100sh" transform="translate(0.000000, 3.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="Group-12" mask="url(#mask-3)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2">
+                        <g transform="translate(6.500000, 7.000000)">
+                            <path d="M8.48846316,20.3217633 C9.28903276,20.4959127 10.1231749,20.5879735 10.9802525,20.5879735 C17.0444786,20.5879735 21.9605051,15.9791987 21.9605051,10.2939868 C21.9605051,4.60877486 17.0444786,0 10.9802525,0 C4.91602651,0 0,4.60877486 0,10.2939868 C0,13.8522886 1.92577916,16.9889126 4.85353452,18.8377932 L5.64860026,21.3035482 L8.48846316,20.3217633 Z" id="Oval-17" stroke-linejoin="round"></path>
+                            <path d="M5.2038737,7.76346842 L17.4443814,7.76346842" id="Path-56"></path>
+                            <path d="M5.2038737,12.1634684 L11.0079248,12.1634684" id="Path-56"></path>
+                            <path d="M14.0038737,12.1634684 L15.4325436,12.1634684" id="Path-56"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

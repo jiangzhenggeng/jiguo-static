@@ -1,7 +1,8 @@
 //加载
-.bg-white{
-  background-color: #f2f2f2!important;
+.bg-white {
+  background-color: #f2f2f2 !important;
 }
+
 .wrapper {
   margin-top: 62px;
 }
@@ -12,7 +13,7 @@
     background: #fff;
     border-radius: 3px;
     border: 1px solid #ebebeb;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
     .list-item {
@@ -77,7 +78,7 @@
         padding: 11px 0;
         font-size: 12px;
         color: #333;
-        .status{
+        .status {
           font-weight: 700;
         }
         .remarks {
@@ -114,7 +115,8 @@
     }
   }
 }
-.mask{
+
+.mask {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -125,7 +127,8 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
-.gopc{
+
+.gopc {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -134,26 +137,59 @@
   width: 80%;
   background-color: #fff;
   border-radius: 3px;
-  .mask-content{
+  .mask-content {
     padding: 20px 0;
-    div{
+    div {
       padding: 0 25px;
       text-align: center;
       line-height: 20px;
     }
-    img{
+    img {
       width: 110px;
     }
-    p{
+    p {
       color: #333;
       font-size: 14px;
     }
   }
-  .know{
+  .know {
     padding: 15px 0;
     border-top: 1px solid #d8d8d8;
     color: #e93838;
     text-align: center;
     cursor: pointer;
+  }
+}
+
+.go-app-btn-wrap {
+  border-top: 1px solid #d8d8d8;
+  display: flex;
+  .btn-1 {
+    flex: 1;
+    width: 50%;
+    padding: 15px 0;
+    color: #e93838;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    a{
+      color: #e93838;
+    }
+    &:after {
+      content: '';
+      display: block;
+      right: 0;
+      top: 0;
+      position: absolute;
+      height: 100%;
+      background: #d8d8d8;
+      width: 1px;
+    }
+    &:last-child:after {
+      display: none;
+    }
+    &.gary {
+      color: #999999;
+    }
   }
 }

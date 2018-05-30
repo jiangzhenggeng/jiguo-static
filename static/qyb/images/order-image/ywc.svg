@@ -1,0 +1,32 @@
+
+<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="96.9447545%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#26DDFF" offset="0%"></stop>
+            <stop stop-color="#00AEFC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="我的-copy-7" transform="translate(-259.000000, -567.000000)" stroke="#4FADFF" stroke-width="0.8">
+            <g id="Group-36" transform="translate(0.000000, 495.000000)">
+                <g id="Group-6">
+                    <g id="Group-19">
+                        <g id="Group-18" transform="translate(12.000000, 25.000000)">
+                            <g id="Group-26" transform="translate(239.250000, 48.000000)">
+                                <g id="Group-15" transform="translate(9.000000, 0.000000)">
+                                    <rect id="Rectangle-46" stroke-linejoin="round" x="0" y="0" width="15.8333333" height="16" rx="1.6"></rect>
+                                    <path d="M3.27142334,3.30625 L12.2755269,3.30625" id="Path-59"></path>
+                                    <path d="M3.27142334,6.50625 L12.2755269,6.50625" id="Path-59"></path>
+                                    <path d="M3.27142334,9.70625 L9.11140583,9.70625" id="Path-59"></path>
+                                    <polyline id="Path-60" stroke-linejoin="round" points="10.5375163 11.9892578 13.4258626 14.3722656 15.9018697 11.5570918 18.6865031 8.39101562"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

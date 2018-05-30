@@ -1,0 +1,136 @@
+@unit-cell-x2: 1*1px;
+html, body {
+  background: #fff;
+}
+
+.top-status {
+  height: 36*@unit-cell-x2;
+  background-color: #F66039;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14*@unit-cell-x2;
+  font-weight: bold;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  margin-top: 52*@unit-cell-x2;
+  .image {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .container-inner {
+    background-color: #fff;
+  }
+  .container-top-header-flage {
+    overflow: hidden;
+  }
+
+  .author-info {
+    padding: 20*@unit-cell-x2 12*@unit-cell-x2;
+    display: flex;
+    position: relative;
+    .author-face {
+      width: 36*@unit-cell-x2;
+      height: 36*@unit-cell-x2;
+      border-radius: 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .author-right {
+      margin-left: 12*@unit-cell-x2;
+      flex: 1;
+      width: 100%;
+      font-size: 14*@unit-cell-x2;
+      color: #333333;
+      display: flex;
+      align-items: center;
+    }
+    .author-time {
+      position: absolute;
+      right: 12*@unit-cell-x2;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999999;
+      font-size: 14*@unit-cell-x2;
+    }
+  }
+
+  .article-title {
+    color: #333333;
+    font-size: 16*@unit-cell-x2;
+    padding: 0 12*@unit-cell-x2;
+    font-weight: bold;
+  }
+
+  .parse-content {
+    margin-top: 12*@unit-cell-x2;
+    padding: 0 12*@unit-cell-x2;
+  }
+
+  .praise-wrap {
+    margin-top: 50*@unit-cell-x2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .praise {
+      width: 34*@unit-cell-x2;
+      height: 34*@unit-cell-x2;
+    }
+    .praise-text {
+      color: #666666;
+      margin-top: 12*@unit-cell-x2;
+    }
+  }
+  .share-btn-wrap {
+    margin: 38*@unit-cell-x2 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-box {
+    background: #F66039;
+    border-radius: 2*@unit-cell-x2;
+    color: #fff;
+    width: 102*@unit-cell-x2;
+    height: 36*@unit-cell-x2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F66039;
+    &.style2 {
+      background-color: #fff;
+      color: #F66039;
+      margin-top: 22*@unit-cell-x2;
+    }
+  }
+  #banner-inner {
+    position: relative;
+  }
+  .hd {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

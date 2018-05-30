@@ -1,0 +1,28 @@
+
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="17.5" cy="17.5" r="17.5"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的消息" transform="translate(-12.000000, -289.000000)">
+            <g id="留言消息" transform="translate(12.000000, 286.000000)">
+                <g id="Group-2" transform="translate(0.000000, 3.000000)">
+                    <g id="01d9cb5abf85c7a8012062e30648ee.jpg@1280w_1l_2o_100sh">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFA239" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="喇叭" transform="translate(7.000000, 9.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2">
+                        <path d="M0.911240522,5.94152018 L0.911240522,11.0963201 C0.911240522,11.6486049 1.35895577,12.0963201 1.91124052,12.0963201 L4.44108284,12.0963201 L12.1500337,16.1207584 C12.639619,16.3763452 13.2437004,16.1866519 13.4992872,15.6970665 C13.5738664,15.5542074 13.6128145,15.3954401 13.6128145,15.2342857 L13.6128145,1.81334383 C13.6128145,1.26105908 13.1650993,0.813343834 12.6128145,0.813343834 C12.4519977,0.813343834 12.2935529,0.852128942 12.1509189,0.926409533 L4.44108284,4.94152018 L1.91124052,4.94152018 C1.35895577,4.94152018 0.911240522,5.38923543 0.911240522,5.94152018 Z" id="Path-4" stroke-linejoin="round"></path>
+                        <path d="M4.26079963,5.37755534 L4.26079963,11.5654014" id="Path-5"></path>
+                        <path d="M17.2941176,14.2329317 C19.4710907,13.2957518 21,11.0891906 21,8.51646451 C21,5.94374082 19.4710936,3.73718144 17.2941176,2.8" id="Oval" stroke-linejoin="round"></path>
+                        <path d="M16.0588235,11.6666667 C17.2647693,11.1475109 18.1117168,9.92517459 18.1117168,8.49999926 C18.1117168,7.07482529 17.2647709,5.85248998 16.0588235,5.33333333" id="Oval-Copy" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

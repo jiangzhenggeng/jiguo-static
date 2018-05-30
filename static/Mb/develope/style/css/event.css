@@ -121,9 +121,10 @@
   margin: 10px 0;
   line-height: 25px;
 }
-.conTxt p img {
-  width: 100%;
+.conTxt img {
+  max-width: 100%;
   vertical-align: middle;
+  height: auto !important;
 }
 .artical {
   padding-bottom: 0;
@@ -624,7 +625,8 @@
   font-size: 16px;
   cursor: pointer;
   z-index: 1;
-  background: -o-linear-gradient(top, rgba(242, 242, 242, 0.84), #f2f2f2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 242, 242, 0.84)), to(#f2f2f2));
+  background: linear-gradient(top, rgba(242, 242, 242, 0.84), #f2f2f2);
 }
 .bottom-more-list-box {
   padding: 12px;
@@ -641,4 +643,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.light-experience {
+  height: 28px;
+  background-image: url(../images/lite.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-top: 10px;
+}
+.light-experience + .meta-content {
+  margin-top: 0 !important;
 }

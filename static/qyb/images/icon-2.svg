@@ -1,0 +1,32 @@
+
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="96.9447545%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#26DDFF" offset="0%"></stop>
+            <stop stop-color="#00AEFC" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="17.5" cy="17.5" r="17.5"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的消息" transform="translate(-12.000000, -147.000000)">
+            <g id="订单消息" transform="translate(12.000000, 144.000000)">
+                <g id="01d9cb5abf85c7a8012062e30648ee.jpg@1280w_1l_2o_100sh" transform="translate(0.000000, 3.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="Group-3" mask="url(#mask-3)" stroke="#FFFFFF" stroke-linecap="round">
+                        <g transform="translate(7.500000, 10.000000)">
+                            <rect id="Rectangle-46" stroke-width="1.2" stroke-linejoin="round" x="0" y="0" width="20" height="16" rx="2.16"></rect>
+                            <path d="M4.21052632,4.26666667 L15.185057,4.26666667" id="Path-59" stroke-width="1"></path>
+                            <path d="M4.21052632,10.6666667 L11.9756,10.6666667" id="Path-59" stroke-width="1"></path>
+                            <path d="M4.21052632,7.46666667 L15.185057,7.46666667" id="Path-59" stroke-width="1"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,6 +1,6 @@
 requirejs.config({
 
-    baseUrl: 'http://cdn.jiguo.com/static/Mb/compression_3.9.8/script/',
+    baseUrl: 'http://cdn.jiguo.com/static/Mb/compression_3.9.9/script/',
 
     waitSeconds: 0,
 
