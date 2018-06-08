@@ -1,0 +1,33 @@
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="26" height="26"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-copy-2" transform="translate(-252.000000, -1128.000000)">
+            <g id="icon-center" transform="translate(252.000000, 1128.000000)">
+                <g id="Mask" fill="#D8D8D8" fill-opacity="0.01" fill-rule="nonzero">
+                    <rect id="path-1" x="0" y="0" width="26" height="26"></rect>
+                </g>
+                <g id="Clipped">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="path-1"></g>
+                    <g id="Group" mask="url(#mask-2)">
+                        <g transform="translate(6.000000, 1.000000)">
+                            <g id="我的-copy" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                <ellipse id="Oval-13" stroke="#808080" stroke-width="0.864" fill="#FFFFFF" fill-rule="nonzero" cx="7" cy="7.47504679" rx="7" ry="6.70833333"></ellipse>
+                                <path d="M5.19230769,15.2950562 C5.19230769,16.5264642 6.09445733,17.5247176 7.20731529,17.5247176 C8.32017326,17.5247176 9.2223229,16.5264642 9.2223229,15.2950562" id="Oval-15" stroke="#808080" stroke-width="0.864" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round"></path>
+                                <path d="M14.5080547,22.9767813 C14.5080547,19.3125077 12.2891028,16.2217075 9.25694869,15.2598817 M5.24060961,15.2632208 C2.21383243,16.2288434 0,19.3167372 0,22.9767813" id="Oval-14" stroke="#808080" stroke-width="0.864"></path>
+                            </g>
+                            <path d="M3,6 L5,6" id="Path-28" stroke="#808080" stroke-width="0.8" stroke-linecap="round"></path>
+                            <path d="M8.5,6 L11,6" id="Path-28" stroke="#808080" stroke-width="0.8" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+
+<svg width="27px" height="26px" viewBox="0 0 27 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.5" y="0" width="26" height="26"></rect>
+        <path d="M2.08695652,7.04347826 L19.4782609,7.04347826 L19.4782609,17.9 C19.4782609,18.5075132 18.9857741,19 18.3782609,19 L3.18695652,19 C2.5794433,19 2.08695652,18.5075132 2.08695652,17.9 L2.08695652,7.04347826 Z" id="path-3"></path>
+        <path d="M0,0 L19.5652174,0 L19.5652174,4.33478261 C19.5652174,4.94229583 19.0727306,5.43478261 18.4652174,5.43478261 L1.1,5.43478261 C0.492486775,5.43478261 -5.21547662e-17,4.94229583 -6.66133815e-16,4.33478261 L0,0 Z" id="path-4"></path>
+        <rect id="path-5" x="8.43478261" y="1.83712166" width="4.34782609" height="16.1628783"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="趣易宝视觉规范" transform="translate(-62.000000, -909.000000)">
+            <g id="Group-15" transform="translate(62.000000, 909.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill-opacity="0.01" fill="#D8D8D8" xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(3.000000, 3.000000)">
+                        <g id="逛宝-copy" stroke="none" stroke-width="1" fill-rule="evenodd" transform="translate(0.000000, 2.000000)">
+                            <g id="Rectangle-10">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                <path stroke="#808080" stroke-width="0.8" d="M2.48695652,7.44347826 L2.48695652,17.9 C2.48695652,18.2865993 2.8003572,18.6 3.18695652,18.6 L18.3782609,18.6 C18.7648602,18.6 19.0782609,18.2865993 19.0782609,17.9 L19.0782609,7.44347826 L2.48695652,7.44347826 Z"></path>
+                            </g>
+                            <g id="Group-14" transform="translate(0.420914, 0.847911)">
+                                <g id="Group-16" transform="translate(0.579086, 1.837122)">
+                                    <g id="Rectangle-10-Copy" transform="translate(9.782609, 2.717391) scale(1, -1) translate(-9.782609, -2.717391) ">
+                                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                        <path stroke="#808080" stroke-width="0.8" d="M0.4,0.4 L0.4,4.33478261 C0.4,4.72138193 0.713400675,5.03478261 1.1,5.03478261 L18.4652174,5.03478261 C18.8518167,5.03478261 19.1652174,4.72138193 19.1652174,4.33478261 L19.1652174,0.4 L0.4,0.4 Z"></path>
+                                    </g>
+                                </g>
+                                <g id="Rectangle-12">
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                    <rect stroke="#808080" stroke-width="0.8" x="8.83478261" y="2.23712166" width="3.54782609" height="15.3628783"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <path d="M6.50289571,4.99580415 C4.89625658,4.40797821 4.06326675,3.56699749 4.00392621,2.47286201 C3.94458567,1.37872653 4.55789731,0.787756253 5.84386113,0.699951172 C7.03445453,0.715743793 7.94782597,1.49988998 8.58397544,3.05238974 C9.20513611,4.32345931 10.0104776,4.98698581 11,5.04296924 C11.8976013,5.06727285 12.6346882,4.40374635 13.2112607,3.05238974 C13.9201319,1.16502968 15.147819,0.414951102 16.8943221,0.802154017 C18.0988168,1.20283267 18.3192043,2.0828221 17.5554845,3.44212231 C17.0702633,4.16234148 16.3911569,4.69595712 15.5181654,5.04296924" id="Path-26" stroke="#808080" stroke-width="0.8" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

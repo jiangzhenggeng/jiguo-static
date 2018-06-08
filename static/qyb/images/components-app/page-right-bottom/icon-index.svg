@@ -1,0 +1,31 @@
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16.7999992" height="16"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="包邮提交成功" transform="translate(-320.000000, -539.000000)">
+            <g id="Group-19-Copy-2" transform="translate(305.000000, 532.000000)">
+                <g id="Group-15" transform="translate(15.000000, 7.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill-opacity="0.01" fill="#D8D8D8" xlink:href="#path-1"></use>
+                    <g mask="url(#mask-2)" stroke="#FFFFFF" stroke-width="0.8">
+                        <g id="逛宝-copy" transform="translate(0.000000, 1.523810)">
+                            <path d="M2.01264822,5.76645963 L2.01264822,13.6485505 C2.01264822,13.8847295 2.20410917,14.0761905 2.44028822,14.0761905 L14.2237434,14.0761905 C14.4599224,14.0761905 14.6513834,13.8847295 14.6513834,13.6485505 L14.6513834,5.76645963 L2.01264822,5.76645963 Z" id="Rectangle-10"></path>
+                            <g id="Group-14" transform="translate(0.325252, 0.646027)">
+                                <g id="Group-16" transform="translate(0.447475, 1.399712)">
+                                    <path d="M0.4,0.4 L0.4,3.31314675 C0.4,3.5493258 0.59146095,3.74078675 0.82764,3.74078675 L14.2909371,3.74078675 C14.5271161,3.74078675 14.7185771,3.5493258 14.7185771,3.31314675 L14.7185771,0.4 L0.4,0.4 Z" id="Rectangle-10-Copy" transform="translate(7.559289, 2.070393) scale(1, -1) translate(-7.559289, -2.070393) "></path>
+                                </g>
+                                <rect id="Rectangle-12" x="6.91778656" y="1.79971174" width="2.55968379" height="11.514574"></rect>
+                            </g>
+                        </g>
+                        <path d="M5.02496487,3.80632697 C3.783471,3.35845959 3.13979703,2.71771238 3.09394298,1.88408534 C3.04808893,1.05045831 3.52201156,0.600195241 4.51571087,0.533296131 C5.43571487,0.545328604 6.14150189,1.14277332 6.63307193,2.32563028 C7.11305972,3.29406424 7.73536907,3.79960824 8.5,3.84226227 C9.19360098,3.86077931 9.76316813,3.35523531 10.2087014,2.32563028 C10.7564655,0.887641658 11.7051329,0.316153221 13.0547035,0.611164965 C13.9854494,0.91644394 14.1557488,1.58691208 13.5656016,2.62256938 C13.190658,3.17130779 12.665894,3.57787209 11.9913097,3.84226227" id="Path-26" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

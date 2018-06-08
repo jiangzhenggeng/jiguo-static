@@ -55,6 +55,8 @@
     textarea.value = editor.hasContents() ?
       (editor.options.allHtmlEnabled ? editor.getAllHtml() : editor.getContent(null, null, true)) :
       ''
+		editor.fireEvent('setValue', textarea.value);
+
   }
 
   function loadPlugins(me) {

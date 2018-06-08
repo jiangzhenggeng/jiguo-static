@@ -267,12 +267,12 @@ window.UEDITOR_CONFIG = {
   , elementPathEnabled: false
 
   //wordCount
-  , wordCount: false          //是否开启字数统计
-  //,maximumWords:10000       //允许的最大字符数
+  , wordCount: true          //是否开启字数统计
+  ,maximumWords:10000       //允许的最大字符数
   //字数统计提示，{#count}代表当前字数，{#leave}代表还可以输入多少字符数,留空支持多语言自动切换，否则按此配置显示
-  //,wordCountMsg:''   //当前已输入 {#count} 个字符，您还可以输入{#leave} 个字符
+  ,wordCountMsg:'<div class="word-count-wrap">字数统计 <span class="count">{#count}</span>/<span class="leave">10000</span> 字符</div>'   //当前已输入 {#count} 个字符，您还可以输入{#leave} 个字符
   //超出字数限制提示  留空支持多语言自动切换，否则按此配置显示
-  //,wordOverFlowMsg:''    //<span style="color:red;">你输入的字符个数已经超出最大允许值，服务器可能会拒绝保存！</span>
+  ,wordOverFlowMsg:'<div class="word-count-wrap word-count-over-flow"><span style="color:red;">字数超限</span></div>'    //<span style="color:red;">你输入的字符个数已经超出最大允许值，服务器可能会拒绝保存！</span>
 
   //tab
   //点击tab键时移动的距离,tabSize倍数，tabNode什么字符做为单位

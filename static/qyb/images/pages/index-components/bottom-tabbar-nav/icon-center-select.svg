@@ -1,0 +1,30 @@
+
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="26" height="26"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="趣易宝视觉规范" transform="translate(-223.000000, -909.000000)">
+            <g id="我的" transform="translate(223.000000, 909.000000)">
+                <g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill-opacity="0.01" fill="#D8D8D8" xlink:href="#path-1"></use>
+                    <g mask="url(#mask-2)">
+                        <g transform="translate(6.000000, 2.000000)">
+                            <circle id="Oval-13" stroke="#0C0C0C" stroke-width="0.864" fill="#FFFFFF" fill-rule="evenodd" cx="6.5" cy="6.5" r="6.5"></circle>
+                            <path d="M4,10.0044686 C4.64017495,10.6197171 5.5229181,11 6.49767945,11 C7.47479854,11 8.35945376,10.6178753 9,10" id="Oval-13" stroke="#0C0C0C" stroke-width="0.864" fill="none" stroke-linecap="round"></path>
+                            <path d="M12,22 C12,18.6862915 9.76142375,16 7,16 C4.23857625,16 2,18.6862915 2,22" id="Oval-14" stroke="none" fill="#FFD917" fill-rule="evenodd"></path>
+                            <path d="M5,14 C5,15.1045695 5.8954305,16 7,16 C8.1045695,16 9,15.1045695 9,14" id="Oval-15" stroke="#0C0C0C" stroke-width="0.864" fill="#FFFFFF" fill-rule="evenodd" stroke-linecap="round"></path>
+                            <path d="M14,22 C14,18.2012997 11.8587531,14.9971111 8.93278141,14 M5.05708972,14.0034616 C2.13630666,15.0045088 0,18.2056844 0,22" id="Oval-14" stroke="#0C0C0C" stroke-width="0.864" fill="none"></path>
+                        </g>
+                    </g>
+                    <path d="M23.4990227,8.08250464 C22.850591,7.79162935 22.5058252,8.36313872 22.5,8.37275546 C22.4941748,8.36301382 22.149409,7.79150446 21.5009773,8.08250464 C20.8518985,8.3737546 20.5561075,9.8166409 22.3818778,10.9571618 C22.4336574,10.989509 22.4748653,10.9990009 22.4998921,11 C22.5251347,10.9990009 22.5662347,10.989509 22.6181222,10.9571618 C24.4438925,9.8166409 24.1481015,8.3737546 23.4990227,8.08250464 Z" id="Shape-Copy" stroke="#0C0C0C" stroke-width="0.8" fill="#FFD917" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(22.500000, 9.500000) rotate(33.000000) translate(-22.500000, -9.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

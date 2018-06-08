@@ -1,0 +1,40 @@
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="26" height="26"></rect>
+        <path d="M4.08695652,13.0434783 L21.4782609,13.0434783 L21.4782609,23.9 C21.4782609,24.5075132 20.9857741,25 20.3782609,25 L5.18695652,25 C4.5794433,25 4.08695652,24.5075132 4.08695652,23.9 L4.08695652,13.0434783 Z" id="path-3"></path>
+        <path d="M0,0 L19.5652174,0 L19.5652174,4.33478261 C19.5652174,4.94229583 19.0727306,5.43478261 18.4652174,5.43478261 L1.1,5.43478261 C0.492486775,5.43478261 -5.21547662e-17,4.94229583 -6.66133815e-16,4.33478261 L0,0 Z" id="path-4"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="趣易宝视觉规范" transform="translate(-107.000000, -909.000000)">
+            <g id="逛宝" transform="translate(107.000000, 909.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill-opacity="0.01" fill="#D8D8D8" xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(0.000000, -1.000000)">
+                        <rect id="Rectangle-8" stroke="none" fill-opacity="0.01" fill="#D8D8D8" fill-rule="evenodd" x="0" y="1" width="26" height="26"></rect>
+                        <path d="M12.5892706,11.0190301 C11.2292516,10.4920822 10.5061405,11.5274252 10.4939227,11.5448468 C10.481705,11.527199 9.75859386,10.4918559 8.39857483,11.0190301 C7.03719827,11.5466569 6.41680695,14.1605813 10.2461735,16.2267423 C10.3547759,16.2853424 10.4412053,16.3025378 10.4936965,16.3043478 C10.5466402,16.3025378 10.6328433,16.2853424 10.741672,16.2267423 C14.5710385,14.1605813 13.9506472,11.5466569 12.5892706,11.0190301 Z" id="Shape" stroke="#0C0C0C" stroke-width="0.8" fill="none" fill-rule="nonzero"></path>
+                        <g id="Rectangle-10" stroke="none" fill="none">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <path stroke="#0C0C0C" stroke-width="0.8" d="M4.48695652,13.4434783 L4.48695652,23.9 C4.48695652,24.2865993 4.8003572,24.6 5.18695652,24.6 L20.3782609,24.6 C20.7648602,24.6 21.0782609,24.2865993 21.0782609,23.9 L21.0782609,13.4434783 L4.48695652,13.4434783 Z"></path>
+                        </g>
+                        <path d="M6.47719938,7.68615443 C5.7723824,7.41306863 5.39763692,7.94962536 5.39130518,7.95865396 C5.38497343,7.94950811 5.01022795,7.41295138 4.30541098,7.68615443 C3.59989047,7.959592 3.27837855,9.31423358 5.26291147,10.3850019 C5.31919364,10.4153709 5.36398487,10.4242822 5.39118792,10.4252203 C5.41862548,10.4242822 5.46329946,10.4153709 5.51969889,10.3850019 C7.50423181,9.31423358 7.18271988,7.959592 6.47719938,7.68615443 Z" id="Shape-Copy" stroke="#0C0C0C" stroke-width="0.8" fill="#FFD917" fill-rule="nonzero"></path>
+                        <g id="Group-14" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(5.420914, 0.847911)">
+                            <rect id="Rectangle-12" fill="#FFD917" x="5.43478261" y="14.6956203" width="4.34782609" height="8.69565217"></rect>
+                            <g id="Group-16" transform="translate(10.916527, 7.837122) rotate(30.000000) translate(-10.916527, -7.837122) translate(0.916527, 4.837122)">
+                                <g id="Rectangle-10-Copy" transform="translate(9.782609, 2.717391) scale(1, -1) translate(-9.782609, -2.717391) ">
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                    <path stroke="#0C0C0C" stroke-width="0.8" d="M0.4,0.4 L0.4,4.33478261 C0.4,4.72138193 0.713400675,5.03478261 1.1,5.03478261 L18.4652174,5.03478261 C18.8518167,5.03478261 19.1652174,4.72138193 19.1652174,4.33478261 L19.1652174,0.4 L0.4,0.4 Z"></path>
+                                </g>
+                                <rect id="Rectangle-12" fill="#FFD917" x="7.60869565" y="2.5216276" width="4.34782609" height="2.17391304"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

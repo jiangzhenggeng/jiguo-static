@@ -2,17 +2,16 @@
  * Created by jiangzg on 2017/5/4.
  */
 define([
-	'app/downLoadErweima','jquery', 'index',
+	'app/downLoadErweima','jquery', 'index','app/createShareCover',
 	'app/login', 'layer', 'app/tplEngine',
 	'app/countdown', 'app/videoAdapt', 'app/lazyload',
 	'app/function','cookie'
 ], function (
-	downLoadErweima,$, index,
+	downLoadErweima,$, index,createShareCover,
 	login, layer, tplEngine,
 	countdown, videoAdapt,
 	lazyload,fc
 ) {
-
 
 	var publiclistNum = -1
 
@@ -310,12 +309,55 @@ define([
 				$(window).scrollTop(offset.top - 62)
 			}
 		})
+
+		//一键申请
+		$('body').on('click', '[data-is_simple_apply=1]', function (e) {
+			if($(this).attr('data-status')!=3){
+				e.preventDefault()
+				var _this = $(this)
+				if(_this.attr('data-has_first_simple_apply')!=1){
+					createShareCover.toApplySemplExec(_this)
+				}else{
+					createShareCover.showFirstApplySempl(_this).then(function () {
+						createShareCover.toApplySemplExec(_this)
+					})
+				}
+			}
+		})
+
+
+		$.get('/api/comment/GetCommentAvatar',{
+			id:eventid,
+			size:33
+		},function (replayData) {
+
+			var tpl = '\
+				<% for( var i in data){ %>\
+				<li>\
+				<img src="<%=data[i].avatar%>/230x230" class="avatar">\
+				</li>\
+				<% } %>\
+				'
+			if(replayData.resultCode==0 && replayData.result && replayData.result.length){
+				var tplFunCache = tplEngine.init(tpl)
+				var html = tplFunCache({data:replayData.result||[]})
+				$('#apply-simple-list').html(html)
+			}else{
+				$('#apply-simple-list').parent().remove()
+			}
+
+		},'json')
+
 //            判断登录
 		$('body').on('click', '[data-login]', function () {
 			if($(this).attr('href')=='javascript:;'){
 				return;
 			}
-			login.login( $(this).attr('href') );
+			if( $(this).attr('data-is_simple_apply')==1 ){
+				login.login( window.location.href );
+			}else{
+				login.login( $(this).attr('href') );
+			}
 			return false;
 		});
 //            判断用户组
